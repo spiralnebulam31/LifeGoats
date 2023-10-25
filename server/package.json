@@ -1,0 +1,29 @@
+{
+  "name": "life-goats-server",
+  "version": "1.0.0",
+  "description": "A server created for the Life Goats project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnastasiaAdamoudi/LifeGoats.git"
+  },
+  "author": "Anastasia Adamoudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnastasiaAdamoudi/LifeGoats/issues"
+  },
+  "homepage": "https://github.com/AnastasiaAdamoudi/LifeGoats#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
