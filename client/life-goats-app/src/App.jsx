@@ -1,22 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Program from './components/Program/Program';
-import Contact from './components/Contact/Contact';
+import LandingPage from './components/LandingPage/LandingPage';
 import Footer from './components/Footer/Footer';
 
 function App() {
 
   return (
-    <div className="App">
+    <div className="bg-cover bg-n-repeat bg-center overflow-x-hidden">
       <Navbar />
       <Router>
         <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/program" element={<Program />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<LandingPage />} />
         </Routes>
       </Router>
       <Footer />

@@ -2,10 +2,7 @@
 // import { Link } from "react-router-dom";
 // import { styles } from "../styles.js";
 // import { navLinks } from "../constants/constants";
-import logo from '../assets/logo.svg';
-import logo2 from '../assets/logo2.svg';
-import logo3 from '../assets/logo3.svg';
-import logo4 from '../assets/logo4.svg';
+import logo from '../../assets/life-goats-logo.svg';
 
 // const Navbar = () => {
 //   const [active, setActive] = useState("");
@@ -109,7 +106,7 @@ function Navbar() {
         <div className="flex w-full mx-auto justify-between gap-20"> {/* beginning of flex div */}
           <div className="flex items-center justify-start"> {/* beginning of left side div */}
             <img
-                src={logo4}
+                src={logo}
                 alt="logo"
                 className="w-20 md:w-[70px] h-auto"
               />

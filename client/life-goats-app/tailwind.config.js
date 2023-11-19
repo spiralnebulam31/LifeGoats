@@ -14,10 +14,10 @@ export const theme = {
       }
     },
     colors: {
-      background: "#C7D1D8",
-      primaryT:  "#303848",
-      secondaryT: "#607DFA",
-      tertiaryT: "#94B766",
+      background: "#e6ecf0",
+      primary:  "#303848",
+      secondary: "#607DFA",
+      tertiary: "#618c27",
       "black-100": "#100d25",
       "black-200": "#090325",
       "white-100": "#f3f3f3",
