@@ -18,6 +18,7 @@ export const theme = {
       primary:  "#303848",
       secondary: "#607DFA",
       tertiary: "#618c27",
+      "earth": "#4D3D11",
       "black-100": "#100d25",
       "black-200": "#090325",
       "white-100": "#f3f3f3",
@@ -34,8 +35,7 @@ export const theme = {
       'xl': '1280px'
     },
     backgroundImage: {
-      // "wizard-hat": "url('/src/assets/wizard-hat.png')",
-      // "magic": "url('/src/assets/magic.png')",
+      // "two-goats": "url('/src/assets/two-goats.svg')"
     }
   },
 };

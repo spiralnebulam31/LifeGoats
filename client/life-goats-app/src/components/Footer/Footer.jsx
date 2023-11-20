@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Popup from "reactjs-popup";
-import { Link } from "react-router-dom";
+import { goatLeft, goatRight, grass } from "../../assets";
 
 const Footer = () => {
   const [privacyOpen, setPrivacyOpen] = useState(false);
@@ -10,23 +10,41 @@ const Footer = () => {
   const closeAccessibilityModal = () => setAccessibilityOpen(false);
 
   return (
-    <div className="bg-background flex flex-col items-center justify-center bottom-0 w-full">
-      <div className="mx-auto mb-0.1 mt-3">
-        <p className="text-primary font-body font-bold text-md mb-1">
+    <div className="bg-background bg-cover bg-center bg-no-repeat relative inset-0 w-full h-[320px] flex flex-col items-center justify-center bottom-0">
+    <img src={grass} alt="grass" className="flex absolute bottom-0 right-0 left-0 w-full h-auto object-cover" />
+    <div className="flex flex-row justify-center items-center w-full gap-40">
+        <img src={goatLeft} alt="goat-left" className="w-[200px]" />
+        <img src={goatRight} alt="goat-right" className="w-[200px]" />
+    </div>
+
+      <div className="flex flex-col justify-center items-center mx-auto mb-0.1 mt-3 z-0">
+      <div className="flex flex-row justify-center items-center">
+        <p className="text-background font-body font-bold text-lg mb-1">
           Copyright
-          <span className="text-secondary font-links font-bold text-md mx-2">
+          <span className="text-earth font-links font-bold text-lg mx-2">
             ©
           </span>
           2023 Life Goats
         </p>
+        </div>
+        <div className="flex flex-row justify-center items-center">
+        <p className="text-background font-body font-bold text-md mb-1 mt-1">
+          Developed by
+          <a href="https://anastasiaadamoudi.com/"
+          target="_blank" rel="noreferrer"
+          className="text-background font-links font-bold underline text-md mx-2">
+          Anastasia Adamoudi
+          </a>
+        </p>
+        </div>
       </div>
 
-      <div className="mx-auto mb-0.1 mt-0.1">
+      <div className="mx-auto mb-0.1 mt-0.1 z-0">
         <div className="flex flex-row gap-2 ">
           <button
             type="button"
             onClick={() => setPrivacyOpen((o) => !o)}
-            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-sm no-underline"
+            className="pb-3 pt-2 text-background hover:text-earth font-links font-bold text-sm no-underline"
           >
             Privacy Policy
           </button>
@@ -36,7 +54,7 @@ const Footer = () => {
             onClose={closePrivacyModal}
           >
             <div className="fixed bottom-0 right-2 left-3">
-              <div className="flex flex-col justify-center items-center mx-auto rounded-lg bg-gradient-to-b from-secondary to-tertiary p-8 text-white w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
+              <div className="flex flex-col justify-center items-center mx-auto rounded-lg bg-gradient-to-b from-secondary via-tertiary to-earth p-8 text-white w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
                 <div className="grid grid-cols-10 gap-4">
                   <p className="col-span-9">
                     In case you contact Maria via the contact form, she will only use
@@ -53,13 +71,13 @@ const Footer = () => {
               </div>
             </div>
           </Popup>
-          <span className="text-secondary font-links font-bold text-md mx-2 pb-3 pt-2">
+          <span className="text-earth font-links font-bold text-md mx-2 pb-3 pt-2">
             |
           </span>
           <button
             type="button"
             onClick={() => setAccessibilityOpen((o) => !o)}
-            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-sm no-underline"
+            className="pb-3 pt-2 text-background hover:text-earth font-links font-bold text-sm no-underline"
           >
             Web Accessibility Statement
           </button>
@@ -69,7 +87,7 @@ const Footer = () => {
             onClose={closeAccessibilityModal}
           >
             <div className="fixed bottom-0 right-2 left-3">
-              <div className="flex flex-col justify-center items-center mx-auto rounded-lg bg-gradient-to-b from-secondary to-tertiary p-8 text-white  w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
+              <div className="flex flex-col justify-center items-center mx-auto rounded-lg bg-gradient-to-b from-secondary via-tertiary to-earth p-8 text-white  w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
                 <div className="grid grid-cols-10 gap-4">
                   <p className="col-span-9">
                     This website is built to be accessible to as many people as
@@ -92,4 +110,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;
