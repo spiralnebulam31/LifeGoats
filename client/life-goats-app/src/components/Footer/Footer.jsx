@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Popup from "reactjs-popup";
-import { goatLeft, goatRight, grass } from "../../assets";
+
 
 const Footer = () => {
   const [privacyOpen, setPrivacyOpen] = useState(false);
