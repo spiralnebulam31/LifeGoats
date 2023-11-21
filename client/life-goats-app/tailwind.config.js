@@ -17,7 +17,7 @@ export const theme = {
       background: "#e6ecf0",
       primary:  "#303848",
       secondary: "#607DFA",
-      tertiary: "#618c27",
+      tertiary: "#94B766",
       "earth": "#4D3D11",
       "black-100": "#100d25",
       "black-200": "#090325",
@@ -34,9 +34,6 @@ export const theme = {
       'lg': '1024px',
       'xl': '1280px'
     },
-    backgroundImage: {
-      // "two-goats": "url('/src/assets/two-goats.svg')"
-    }
   },
 };
 export const plugins = [];

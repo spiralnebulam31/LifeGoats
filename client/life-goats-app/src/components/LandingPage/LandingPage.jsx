@@ -1,4 +1,4 @@
-import { Hero, About, Program, Parallax, Contact } from "./";
+import { Hero, About, Program, Details, Location, Parallax, Contact } from "./";
 
 const LandingPage = () => {
   return (
@@ -6,6 +6,8 @@ const LandingPage = () => {
         <Hero /> 
         <About />
         <Program />
+        <Details />
+        <Location />
         <Parallax />
         <Contact />
       </div>

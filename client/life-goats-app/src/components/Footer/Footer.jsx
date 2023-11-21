@@ -10,18 +10,13 @@ const Footer = () => {
   const closeAccessibilityModal = () => setAccessibilityOpen(false);
 
   return (
-    <div className="bg-background bg-cover bg-center bg-no-repeat relative inset-0 w-full h-[320px] flex flex-col items-center justify-center bottom-0">
-    <img src={grass} alt="grass" className="flex absolute bottom-0 right-0 left-0 w-full h-auto object-cover" />
-    <div className="flex flex-row justify-center items-center w-full gap-40">
-        <img src={goatLeft} alt="goat-left" className="w-[200px]" />
-        <img src={goatRight} alt="goat-right" className="w-[200px]" />
-    </div>
+    <div className="bg-primary bg-cover bg-center bg-no-repeat relative inset-0 w-full h-[320px] flex flex-col items-center justify-center bottom-0">
 
       <div className="flex flex-col justify-center items-center mx-auto mb-0.1 mt-3 z-0">
       <div className="flex flex-row justify-center items-center">
         <p className="text-background font-body font-bold text-lg mb-1">
           Copyright
-          <span className="text-earth font-links font-bold text-lg mx-2">
+          <span className="text-secondary font-links font-bold text-lg mx-2">
             ©
           </span>
           2023 Life Goats
@@ -32,7 +27,7 @@ const Footer = () => {
           Developed by
           <a href="https://anastasiaadamoudi.com/"
           target="_blank" rel="noreferrer"
-          className="text-background font-links font-bold underline text-md mx-2">
+          className="text-tertiary hover:text-secondary font-links font-bold underline text-md mx-2">
           Anastasia Adamoudi
           </a>
         </p>
@@ -44,7 +39,7 @@ const Footer = () => {
           <button
             type="button"
             onClick={() => setPrivacyOpen((o) => !o)}
-            className="pb-3 pt-2 text-background hover:text-earth font-links font-bold text-sm no-underline"
+            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-sm no-underline"
           >
             Privacy Policy
           </button>
@@ -71,13 +66,13 @@ const Footer = () => {
               </div>
             </div>
           </Popup>
-          <span className="text-earth font-links font-bold text-md mx-2 pb-3 pt-2">
+          <span className="text-secondary font-links font-bold text-md mx-2 pb-3 pt-2">
             |
           </span>
           <button
             type="button"
             onClick={() => setAccessibilityOpen((o) => !o)}
-            className="pb-3 pt-2 text-background hover:text-earth font-links font-bold text-sm no-underline"
+            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-sm no-underline"
           >
             Web Accessibility Statement
           </button>
