@@ -4,9 +4,10 @@ export const content = ["./index.html",
 export const theme = {
   extend: {
     fontFamily: {
-      title: ['League Spartan'],
-      body: ['Roboto'],
-      links: ['DM Sans'],
+      title: ['Luckiest Guy'],
+      subtitle: ['GFS Neohellenic'],
+      body: ['Catamaran'],
+      links: ['Neucha'],
       fallbacks: {
         title: ['Roboto', 'Arial', 'sans-serif'],
         body: ['Roboto', 'Arial', 'sans-serif'],

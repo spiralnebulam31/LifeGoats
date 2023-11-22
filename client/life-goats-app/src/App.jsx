@@ -4,18 +4,17 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Footer from './components/Footer/Footer';
 
 function App() {
-
   return (
-    <div className="bg-cover bg-n-repeat bg-center overflow-x-hidden">
-      <Navbar />
-      <Router>
+    <Router>
+      <div className="bg-cover bg-n-repeat bg-center overflow-x-hidden">
+        <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
         </Routes>
-      </Router>
-      <Footer />
-    </div>
-  )
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

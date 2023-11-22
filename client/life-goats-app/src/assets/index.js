@@ -1,5 +1,6 @@
 import lifeGoatsLogo from './navbar/life-goats-logo.svg';
 import menuMountain from './navbar/menu-mountain.svg';
+import menuClose from './navbar/menu-close.svg';
 
 import heroBackground from './hero/hero-bg.webp';
 import heroBackground2 from './hero/hero-bg-2.webp';
@@ -26,6 +27,7 @@ import phone from './contact/phone.svg';
 export {
     lifeGoatsLogo,
     menuMountain,
+    menuClose,
     heroBackground,
     heroBackground2,
     accommodationIcon,
