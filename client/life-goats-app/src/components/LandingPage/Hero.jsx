@@ -29,7 +29,7 @@ const Hero = () => {
           </motion.h1>
           <motion.p
             variants={heroVariant}
-            className="text-primary font-body max-w-md md:max-w-2xl font-bold lg:text-[40px] sm:text-[36px] xs:text-[30px] text-[26px] lg:leading-[40px] mt-2 z-40 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] text-center">
+            className="text-primary font-links max-w-md md:max-w-2xl font-bold lg:text-[40px] sm:text-[36px] xs:text-[30px] text-[26px] lg:leading-[40px] mt-2 z-40 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] text-center">
            Mount Olympus coaching conversations 
           </motion.p>
           </motion.div>
