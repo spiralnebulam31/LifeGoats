@@ -4,6 +4,7 @@ import menuClose from './navbar/menu-close.svg';
 
 import heroBackground from './hero/hero-bg.webp';
 import heroBackground2 from './hero/hero-bg-2.webp';
+import goatPrints from './hero/goat-prints.svg';
 
 import accommodationIcon from './details/accommodation-icon.svg';
 import altitudeIcon from './details/altitude-icon.svg';
@@ -30,6 +31,7 @@ export {
     menuClose,
     heroBackground,
     heroBackground2,
+    goatPrints,
     accommodationIcon,
     altitudeIcon,
     durationIcon,
