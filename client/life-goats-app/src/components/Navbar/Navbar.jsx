@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
      
-    <nav className={styles.paddingX + " fixed w-full top-0 z-50 bg-background shadow-xl"}>
+    <nav className={"fixed w-full top-0 z-50 bg-background shadow-xl pr-8 pl-5 py-2"}>
 
       <div className="flex w-full mx-auto justify-between gap-20"> {/* beginning of flex div */}
         <div className="flex items-center justify-start"> {/* beginning of left side div */}
@@ -25,7 +25,7 @@ const Navbar = () => {
             <img
               src={lifeGoatsLogo}
               alt="logo"
-              className="w-20 lg:w-[70px] h-auto"
+              className="w-20 lg:w-[70px] h-auto top-0 left-0 object-contain"
             />
             <p className="text-primary text-[26px] font-title cursor-pointer lg:block hidden">
               Life Goats

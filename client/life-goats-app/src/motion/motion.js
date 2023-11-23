@@ -1,3 +1,39 @@
+export const fadeIn = (direction, type, delay, duration) => {
+    return {
+      hidden: {
+        opacity: 0,
+      },
+      show: {
+        x: 0,
+        opacity: 1,
+        transition: {
+          type: type,
+          duration: duration,
+          delay: delay,
+          staggerChildren: 0.1,
+        },
+      },
+    };
+  };
+
+  export const textVariant = (delay) => {
+    return {
+      hidden: {
+        y: -50,
+        opacity: 0,
+      },
+      show: {
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "spring",
+          duration: 1,
+          staggerChildren: 0.1,
+        },
+      },
+    };
+  };
+
 export const heroVariant = {
     initial: {
       y:-500,
@@ -56,3 +92,37 @@ export const heroVariant = {
       repeatType: "loop",
     },
   }}
+
+  export const floatFromLeftVariant = {
+    initial: {
+      x: -200,
+      y: 100,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.1,
+      },
+    },
+    }
+
+    export const floatFromRightVariant = {
+      initial: {
+        x: +200,
+        y: 100,
+        opacity: 0,
+      },
+      animate: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 1,
+          staggerChildren: 0.1,
+        },
+      },
+      }

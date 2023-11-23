@@ -29,41 +29,41 @@ export const navLinks = [
     },
   ];
 
-  const details = [
+ export const details = [
     {
       name: "Accomodation",
       icon: accommodationIcon,
       alt: "accommodation icon",
-      text: ""
+      text: "local hotels, free camping"
     },
     {
         name: "Altitude",
         icon: altitudeIcon,
         alt: "altitude icon",
-        text: ""
+        text: "2917m"
     },
     {
         name: "Duration",
         icon: durationIcon,
         alt: "duration icon",
-        text: ""
+        text: "4 days"
       },
       {
         name: "Elements",
         icon: elementsIcon,
         alt: "elements icon",
-        text: ""
+        text: "sea, mountain"
       },
       {
         name: "Group",
         icon: groupIcon,
         alt: "group icon",
-        text: ""
+        text: "15 people"
       }
     ]
     
 
-  const program = [
+ export const program = [
     {
       index: 0,
       alt: "goat",

@@ -4,20 +4,17 @@ import {
   heroGoatPrintsVariant,
   goatPrintsSliderVariant,
 } from "../../motion/motion.js";
-import { styles } from "../../styles.js";
 import {
-  goatPrints
+  goatPrints,
+  heroBackground2
 } from "../../assets";
 
 const Hero = () => {
   return (
       <section className="bg-background relative w-full h-screen mx-auto overflow-hidden">
+      <img src={heroBackground2} alt="hero background" className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-50" />
       <div
-        className={
-          styles.paddingX +
-          " absolute inset-0 top-[180px] max-w-7xl mx-auto flex flex-row items-start gap-5"
-        }
-      >
+        className="absolute inset-0 top-[180px] max-w-7xl mx-auto flex flex-row items-start gap-5">
         {/* Hero text */}
         <motion.div
           className="flex flex-col justify-center items-center mx-auto"
@@ -27,12 +24,12 @@ const Hero = () => {
         >
           <motion.h1
             variants={heroVariant}
-            className="text-earth font-title font-bold lg:text-[80px] text-[60px] lg:leading-[98px] leading-[80px] my-2 text-shadow-2xl z-40 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] flex flex-wrap justify-center items-center gap-1 md:gap-4">
+            className="text-earth font-title font-bold lg:text-[80px] text-[60px] lg:leading-[98px] leading-[80px] my-2 z-40 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] flex flex-wrap justify-center items-center gap-1 md:gap-4">
             LIFE GOATS
           </motion.h1>
           <motion.p
             variants={heroVariant}
-            className="text-primary font-body max-w-md md:max-w-2xl font-bold lg:text-[40px] sm:text-[36px] xs:text-[30px] text-[26px] lg:leading-[40px] mt-2 text-shadow-xl z-40 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] text-center">
+            className="text-primary font-body max-w-md md:max-w-2xl font-bold lg:text-[40px] sm:text-[36px] xs:text-[30px] text-[26px] lg:leading-[40px] mt-2 z-40 [text-shadow:_0_2px_0_rgb(0_0_0_/_40%)] text-center">
            Mount Olympus coaching conversations 
           </motion.p>
           </motion.div>
