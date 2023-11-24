@@ -4,7 +4,7 @@ export const content = ["./index.html",
 export const theme = {
   extend: {
     fontFamily: {
-      title: ['Luckiest Guy'],
+      title: ['Lilita One'],
       subtitle: ['GFS Neohellenic'],
       body: ['Catamaran'],
       links: ['Neucha'],
