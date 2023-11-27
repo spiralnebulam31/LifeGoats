@@ -17,7 +17,8 @@ import goat from './overview/goat.webp';
 import nature from './overview/nature.webp';
 import peace from './overview/peace.webp';
 import refuge from './overview/refuge.webp';
-import mountainBG from './overview/mountain-bg.webp';
+import food from './overview/food.webp';
+import hikers from './overview/hikers.webp';
 import transparentMountainBG from './overview/transparent-mountain-bg.svg';
 
 import lifeGoats1 from './parallax/life-goats-1.webp';
@@ -44,7 +45,8 @@ export {
     nature,
     peace,
     refuge,
-    mountainBG,
+    food,
+    hikers,
     transparentMountainBG,
     lifeGoats1,
     lifeGoats2,
