@@ -6,7 +6,8 @@ import {
 } from "../../motion/motion.js";
 import {
   goatPrints,
-  heroBackground2
+  heroBackground2,
+  calendar,
 } from "../../assets";
 
 const Hero = () => {
@@ -24,21 +25,24 @@ const Hero = () => {
         >
           <motion.h1
             variants={heroVariant}
-            className="text-earth font-title font-bold lg:text-[85px] text-[75px] lg:leading-[98px] leading-[80px] my-2 z-40 flex flex-wrap justify-center items-center gap-1 md:gap-4">
+            className="text-earth font-title font-bold lg:text-[85px] text-[75px] lg:leading-[80px] leading-[70px] mt-2 z-40 flex flex-wrap justify-center items-center gap-1 md:gap-4">
             LIFE GOATS
           </motion.h1>
           <motion.div
             variants={heroVariant}
-            className="text-primary max-w-md md:max-w-xl font-bold lg:text-[34px] text-[28px] lg:leading-[40px] my-2 z-40 text-center">
+            className="text-primary max-w-md md:max-w-xl font-bold lg:text-[38px] text-[30px] lg:leading-[40px] mb-4 z-40 text-center">
+          <p className="font-body lg:text-[28px] text-[20px]">of</p>
           <p className="font-subtitle">Mount Olympus</p>
-          <p className="font-body">coaching conversations</p>
           </motion.div>
           <motion.div
             variants={heroVariant}
-            className="text-primary font-body max-w-md md:max-w-3xl font-bold lg:text-[28px] text-[21px] lg:leading-[40px] my-2 z-40 text-center">
-          <p className="mb-2">May 2024 (tentatively Tuesday 28 - Friday 31)</p>
-          <p>A collaborative retreat for coaches, therapists, carers and other <span className="underline">people centered professionals</span>.</p>
-          <p className="mt-2 font-bold lg:text-[32px] text-[26px]">A retreat from us, for us. </p>
+            className="text-primary font-body max-w-md md:max-w-3xl font-bold lg:text-[28px] text-[19px] lg:leading-[40px] leading-[35px] mt-2 mb-3 z-40 text-center">
+          <div className="flex flex-row justify-center items-center gap-2">
+          <img src={calendar} alt="calendar" className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] object-contain z-40 mb-5" />
+          <p className="mb-5">May 2024 (tentatively Tuesday 28th - Friday 31st)</p>
+          </div>
+          <p className="lg:text-[26px] text-[21px]">A collaborative retreat for coaches, therapists, carers and other <span className="underline">people centered professionals</span>.</p>
+          <p className="mt-4 font-bold lg:text-[32px] text-[26px]">A retreat from us, for us. </p>
           </motion.div>
           </motion.div>
 
