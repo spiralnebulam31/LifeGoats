@@ -2,7 +2,7 @@ import { Hero, About, EventOverview, Details, Location, Parallax, Contact } from
 
 const LandingPage = () => {
   return (
-      <div className="bg-cover bg-n-repeat bg-center overflow-x-hidden">
+      <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
         <Hero /> 
         <About />
         <EventOverview />

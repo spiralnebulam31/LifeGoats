@@ -4,7 +4,7 @@ import { transparentMountainBG } from "../../assets";
 const EventOverview = () => {
   return (
     <section id="event-overview" className="bg-gradient-to-b from-[#2F6FB7] via-[#96beeb] to-[#e1f0fc]
-      relative bg-cover max-w-screen min-h-screen inset-0 left-0 right-0 bottom-0 top-0
+      relative bg-cover w-screen min-h-screen inset-0 left-0 right-0 bottom-0 top-0
       overflow-hidden">
 
         <motion.div className="text-start w-[80%] lg:w-[90%] mx-auto lg:mr-4 lg:ml-[15%]
@@ -28,7 +28,7 @@ const EventOverview = () => {
         <img
           src={transparentMountainBG}
           alt="mountain top"
-          className="absolute w-screen h-full object-fit:cover z-40 left-0 bottom-0
+          className="absolute w-screen h-full object-contain object-bottom z-40 left-0 bottom-0
           right-0 overflow-hidden"
         />
         </div>

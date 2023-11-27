@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <Router>
-      <div className="bg-cover bg-n-repeat bg-center overflow-x-hidden">
+      <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
