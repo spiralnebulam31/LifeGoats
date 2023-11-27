@@ -1,7 +1,14 @@
-import { motion } from "framer-motion";
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { transparentMountainBG } from "../../assets";
+import { overviewData } from "../../constants/constants";
+import OverviewCard from "./OverviewCard";
 
 const EventOverview = () => {
+
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <section id="event-overview" className="bg-gradient-to-b from-[#2F6FB7] via-[#96beeb] to-[#e1f0fc]
       relative bg-cover w-screen min-h-screen inset-0 left-0 right-0 bottom-0 top-0
@@ -21,6 +28,15 @@ const EventOverview = () => {
 
         <motion.div className=" h-[200px] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2
         pb-20">
+
+          <motion.div className="flex flex-wrap px-9 space-x-6 justify-center w-full">
+            <motion.div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5
+            lg:grid-cols-8 xl:grid-cols-10 gap-2 mt-10 mb-10" ref={ref} animate={isInView ? "animate" : "initial"}>
+              {overviewData.map((overview, index) => (
+                <OverviewCard key={index} {...overview} />
+              ))}
+            </motion.div>
+          </motion.div>
 
         </motion.div>
 

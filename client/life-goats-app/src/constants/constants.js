@@ -18,8 +18,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "program",
-    title: "Program",
+    id: "overview",
+    title: "Overview",
   },
   {
     id: "location",
@@ -64,7 +64,7 @@ export const details = [
   },
 ];
 
-export const overview = [
+export const overviewData = [
   {
     index: 0,
     alt: "goat",
