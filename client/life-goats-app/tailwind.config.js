@@ -5,7 +5,7 @@ export const theme = {
   extend: {
     fontFamily: {
       title: ['Luckiest Guy'],
-      subtitle: ['GFS Neohellenic'],
+      subtitle: ['Cinzel'],
       body: ['Catamaran'],
       links: ['Neucha'],
       fallbacks: {
