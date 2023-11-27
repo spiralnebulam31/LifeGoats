@@ -12,28 +12,21 @@ const OverviewCard = ({ index, alt, image, title, text }) => {
         >
         <motion.div
           variants={fadeIn('left', 'spring', 0.5, 1.25)}
-          className="bg-gradient-to-b from-secondary via-tertiary to-earth p-[2px] m-3 w-[100px] rounded-2xl shadow-card"
+          className="bg-background m-3 w-full h-full rounded-2xl shadow-lg"
           style={{
             transform: 'translateZ(60px)',
           }}
         >
-          <motion.div
-            options={{
-              max: 45,
-              scale: 1,
-              speed: 450
-            }}
-            className="bg-background1 rounded-2xl flex justify-evenly items-center flex-col p-3"
-          >
             <img
               src={image}
               alt={alt}
-              className="w-full object-contain rounded-2xl max-h-20"
+              className="w-full object-cover h-40 rounded-t-xl"
             />
-            <h2 className="text-tertiary font-subtitle text-center text-[14px] font-bold max-w-6xl pt-2">{title}</h2>
-            <p className="text-primary font-body text-center text-[14px] max-w-6xl pt-2">{text}</p>
+            <div className="px-6 pt-3 pb-1 flex flex-col mx-auto">
+            <h2 className="text-tertiary font-subtitle text-center text-[14px] font-bold max-w-6xl pt-2 pb-1">{title}</h2>
+            <p className="text-primary font-body text-center text-[14px] md:text-[16px] max-w-6xl pt-2 pb-1">{text}</p>
+            </div>
           </motion.div>
-        </motion.div>
       </Tilt>
     );
   };

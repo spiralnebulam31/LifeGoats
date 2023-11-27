@@ -12,13 +12,14 @@ const Location = () => {
             <p className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider">
               discover
             </p>
-            <h2 className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] pb-3 mt-0">
+            <h2 className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] pb-3 mt-0"
+            style={{ textShadow: "2px 2px 3px rgba(0, 0, 0, 0.5)" }}>
               The Location
             </h2>
 
             {locationDataInfo.map((data) => (
               <div key={data.index} className="flex flex-row items-center">
-                {data.paragraph && <p className="pb-5">{data.paragraph}</p>}
+                {data.paragraph && <p className="pb-5 md:text-[16px] text-[14px]">{data.paragraph}</p>}
                 {data.googleMapsLink && (
                   <p className="font-links font-bold">
                     <a

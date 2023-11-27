@@ -25,7 +25,8 @@ const Hero = () => {
         >
           <motion.h1
             variants={heroVariant}
-            className="text-earth font-title font-bold lg:text-[85px] text-[75px] lg:leading-[80px] leading-[70px] mt-2 z-40 flex flex-wrap justify-center items-center gap-1 md:gap-4">
+            className="text-earth font-title font-bold lg:text-[85px] text-[75px] lg:leading-[80px] leading-[70px] mt-2 z-40 flex flex-wrap justify-center items-center gap-1 md:gap-4"
+            style={{ textShadow: "3px 2px 3px rgba(0, 0, 0, 0.3)" }}>
             LIFE GOATS
           </motion.h1>
           <motion.div

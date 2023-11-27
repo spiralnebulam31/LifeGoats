@@ -21,32 +21,27 @@ const EventOverview = () => {
             A retreat from us, for us.
           </p>
           <h2 className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] pb-3 mt-0">
+          sm:text-[45px] text-[40px] outline-background-2 pb-4 mt-0"
+          style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}>
             What to expect
           </h2>
         </motion.div>
 
-        <motion.div className=" h-[200px] grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2
-        pb-20">
-
-          <motion.div className="flex flex-wrap px-9 space-x-6 justify-center w-full">
-            <motion.div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5
-            lg:grid-cols-8 xl:grid-cols-10 gap-2 mt-10 mb-10" ref={ref} animate={isInView ? "animate" : "initial"}>
+        <motion.div className="flex flex-row justify-evenly items-center">
+            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-5"
+            ref={ref} animate={isInView ? "animate" : "initial"}>
               {overviewData.map((overview, index) => (
                 <OverviewCard key={index} {...overview} />
               ))}
             </motion.div>
           </motion.div>
 
-        </motion.div>
-
-        <div className="w-screen min-h-screen overflow-hidden">
-        <img
-          src={transparentMountainBG}
-          alt="mountain top"
-          className="absolute w-screen h-full object-contain object-bottom z-40 left-0 bottom-0
-          right-0 overflow-hidden"
-        />
+          <div className="w-full mt-8 md:mt-2 lg:mt-1 xl:mt-0">
+          <img
+            src={transparentMountainBG}
+            alt="mountain top"
+            className="w-full h-auto object-contain object-bottom z-40"
+          />
         </div>
 
     </section>
