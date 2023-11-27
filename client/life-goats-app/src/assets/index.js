@@ -13,11 +13,12 @@ import durationIcon from './details/duration-icon.svg';
 import elementsIcon from './details/elements-icon.svg';
 import groupIcon from './details/group-icon.svg';
 
-import goat from './program/goat.webp';
-import nature from './program/nature.webp';
-import peace from './program/peace.webp';
-import refuge from './program/refuge.webp';
-import programBG from './program/program-bg.webp';
+import goat from './overview/goat.webp';
+import nature from './overview/nature.webp';
+import peace from './overview/peace.webp';
+import refuge from './overview/refuge.webp';
+import mountainBG from './overview/mountain-bg.webp';
+import transparentMountainBG from './overview/transparent-mountain-bg.svg';
 
 import lifeGoats1 from './parallax/life-goats-1.webp';
 import lifeGoats2 from './parallax/life-goats-2.webp';
@@ -43,7 +44,8 @@ export {
     nature,
     peace,
     refuge,
-    programBG,
+    mountainBG,
+    transparentMountainBG,
     lifeGoats1,
     lifeGoats2,
     lifeGoats3,

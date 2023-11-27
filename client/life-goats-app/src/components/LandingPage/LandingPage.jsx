@@ -1,11 +1,11 @@
-import { Hero, About, Program, Details, Location, Parallax, Contact } from "./";
+import { Hero, About, EventOverview, Details, Location, Parallax, Contact } from "./";
 
 const LandingPage = () => {
   return (
       <div className="bg-cover bg-n-repeat bg-center overflow-x-hidden">
         <Hero /> 
         <About />
-        <Program />
+        <EventOverview />
         <Details />
         <Location />
         <Parallax />

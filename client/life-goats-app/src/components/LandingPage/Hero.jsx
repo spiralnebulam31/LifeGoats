@@ -42,7 +42,7 @@ const Hero = () => {
           <p className="mb-5">May 2024 (tentatively Tuesday 28th - Friday 31st)</p>
           </div>
           <p className="lg:text-[26px] text-[21px]">A collaborative retreat for coaches, therapists, carers and other <span className="underline">people centered professionals</span>.</p>
-          <p className="mt-4 font-bold lg:text-[32px] text-[26px]">A retreat from us, for us. </p>
+          {/* <p className="mt-4 font-bold lg:text-[32px] text-[26px]">A retreat from us, for us.</p> */}
           </motion.div>
           </motion.div>
 
