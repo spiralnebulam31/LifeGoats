@@ -3,7 +3,7 @@ import { aboutText } from '../../constants/constants';
 
 const About = () => {
   return (
-    <section id="about" className="overflow-hidden bg-gradient-to-b from-background via-[#96beeb] to-[#2F6FB7] relative bg-cover w-full h-screen top-0 left-0 right-0 bottom-0 pt-5 pb-10">
+    <section id="about" className="overflow-hidden bg-gradient-to-b from-background via-[#96beeb] to-[#2F6FB7] relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 pt-5 pb-10">
       
       <motion.div className="text-start w-[80%] lg:w-[90%] mx-auto lg:mr-4 lg:ml-[15%]
         pt-6 mb-5 z-10 overflow-hidden">
@@ -18,10 +18,10 @@ const About = () => {
           </h2>
         </motion.div>
 
-        <motion.div className="flex flex-col justify-center items-center mx-auto bg-gradient-to-b from-secondary via-tertiary to-earth p-2 m-3 w-[55%] rounded-2xl shadow-card">
-        <div className="w-full h-auto py-4 bg-background rounded-2xl">
+        <motion.div className="flex flex-col justify-center items-center mx-auto bg-gradient-to-b from-secondary via-tertiary to-earth p-2 m-3 w-[80%] lg:w-[55%] h-auto rounded-2xl shadow-card">
+        <div className="w-full py-4 bg-background rounded-2xl">
         {aboutText.map((text) => (
-          <div key={text.index} className="w-full px-10 py-3">
+          <div key={text.index} className="w-full h-auto px-10 py-3">
             {text.paragraph && <p className="md:text-[16px] text-[14px] font-body text-primary">{text.paragraph}</p>}
             {text.endText && <p className="md:text-[18px] text-[16px] font-bold font-body text-primary">{text.endText}</p>}
           </div>
