@@ -24,6 +24,8 @@ import transparentMountainBG from './overview/transparent-mountain-bg.svg';
 import lifeGoats1 from './parallax/life-goats-1.webp';
 import lifeGoats2 from './parallax/life-goats-2.webp';
 import lifeGoats3 from './parallax/life-goats-3.webp';
+import lifeGoats4 from './parallax/life-goats-4.webp';
+import lifeGoats5 from './parallax/life-goats-5.webp';
 
 import email from './contact/email.svg';
 import phone from './contact/phone.svg';
@@ -51,6 +53,8 @@ export {
     lifeGoats1,
     lifeGoats2,
     lifeGoats3,
+    lifeGoats4,
+    lifeGoats5,
     email,
     phone,
 }
