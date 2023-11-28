@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
-import { fadeIn } from '../../motion/motion.js';
+import { fadeIn } from '../../../motion/motion.js';
 
 const OverviewCard = ({ index, alt, image, title, text }) => {
     return (

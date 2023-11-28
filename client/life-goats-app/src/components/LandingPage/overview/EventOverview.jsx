@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { transparentMountainBG } from "../../assets";
-import { overviewData } from "../../constants/constants";
+import { transparentMountainBG } from "../../../assets";
+import { overviewData } from "../../../constants/constants";
 import OverviewCard from "./OverviewCard";
 
 const EventOverview = () => {

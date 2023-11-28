@@ -3,12 +3,12 @@ import {
   heroVariant,
   heroGoatPrintsVariant,
   goatPrintsSliderVariant,
-} from "../../motion/motion.js";
+} from "../../../motion/motion.js";
 import {
   goatPrints,
   heroBackground2,
   calendar,
-} from "../../assets";
+} from "../../../assets/index.js";
 
 const Hero = () => {
   return (

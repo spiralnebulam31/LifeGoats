@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { locationData, locationDataInfo } from "../../constants/constants";
+import { locationData, locationDataInfo } from "../../../constants/constants";
 import { motion } from "framer-motion";
 
 const Location = () => {

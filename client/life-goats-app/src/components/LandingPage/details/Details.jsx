@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { floatFromLeftVariant } from '../../motion/motion.js';
-import { details } from '../../constants/constants.js';
+import { floatFromLeftVariant } from '../../../motion/motion.js';
+import { details } from '../../../constants/constants.js';
 import DetailCard from './DetailCard.jsx';
 
 const Details = () => {

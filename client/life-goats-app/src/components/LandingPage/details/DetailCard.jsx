@@ -1,6 +1,6 @@
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
-import { fadeIn } from '../../motion/motion.js';
+import { fadeIn } from '../../../motion/motion.js';
 
 const DetailCard = ({ index, name, icon, alt, text }) => {
     return (
