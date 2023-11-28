@@ -18,7 +18,7 @@ const About = () => {
           </h2>
         </motion.div>
 
-        <motion.div className="flex flex-col justify-center items-center mx-auto bg-gradient-to-b from-secondary via-tertiary to-earth p-2 m-3 w-[80%] lg:w-[55%] h-auto rounded-2xl shadow-card">
+        <motion.div className="flex flex-col justify-center items-center mx-auto bg-gradient-to-b from-secondary via-tertiary to-earth p-2 m-3 w-[80%] lg:w-[55%] h-auto rounded-2xl shadow-lg">
         <div className="w-full py-4 bg-background rounded-2xl">
         {aboutText.map((text) => (
           <div key={text.index} className="w-full h-auto px-10 py-3">
