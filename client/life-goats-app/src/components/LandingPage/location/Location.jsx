@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Location = () => {
   return (
     <section id="location" className="overflow-hidden">
-      <div className="bg-background relative bg-cover w-full h-auto left-0 right-0 bottom-0 top-0 pb-10 pt-14">
+      <div className="bg-background relative bg-cover w-full h-auto left-0 right-0 bottom-0 top-0 pb-16 pt-14">
         <motion.div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 lg:gap-2">
           <motion.div className="text-start w-[80%] lg:w-[70%] mx-auto lg:mr-4 lg:ml-auto pt-6 mb-5">
             <p className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider">
@@ -18,14 +18,14 @@ const Location = () => {
             </h2>
 
             {locationDataInfo.map((data) => (
-              <div key={data.index} className="flex flex-row items-center">
+              <div key={data.index} className="flex flex-row items-center text-primary">
                 {data.paragraph && <p className="pb-5 md:text-[16px] text-[14px]">{data.paragraph}</p>}
                 {data.googleMapsLink && (
                   <p className="font-links font-bold">
                     <a
                       href={data.googleMapsLink}
                       alt="Google Maps link"
-                      className="hover:text-tertiary"
+                      className="hover:text-tertiary md:text-[18px] text-[16px]"
                     >
                       See on Google Maps
                     </a>
