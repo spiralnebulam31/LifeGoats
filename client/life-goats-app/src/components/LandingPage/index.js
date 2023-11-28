@@ -1,10 +1,11 @@
 import LandingPage from "./LandingPage";
-import Hero from "./Hero";
-import About from "./About";
-import Program from "./Program";
-import Details from "./Details";
-import Location from "./Location";
-import Parallax from "./Parallax";
-import Contact from "./Contact";
+import Hero from "./hero/Hero";
+import About from "./about/About";
+import EventOverview from "./overview/EventOverview";
+import Details from "./details/Details";
+import Location from "./location/Location";
+import Program from "./program/Program";
+import Parallax from "./parallax/Parallax";
+import Contact from "./contact/Contact";
 
-export { LandingPage, Hero, About, Program, Details, Location, Parallax, Contact };
+export { LandingPage, Hero, About, EventOverview, Details, Location, Program, Parallax, Contact };
