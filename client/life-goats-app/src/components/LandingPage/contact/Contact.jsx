@@ -46,14 +46,14 @@ const Contact = ({
   };
 
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-20px" });
 
   return (
     <section id="contact" className="overflow-hidden">
-      <div className="bg-background relative bg-cover w-full left-0 right-0 bottom-0 top-0 pb-10 pt-14">
+      <div className="bg-background relative bg-cover w-full inset-0 pb-10 pt-14">
         {/* Title */}
         <motion.div
-        className="text-start w-[80%] lg:w-[90%] mx-auto lg:mr-4 lg:ml-[15%]
+        className="text-start w-[80%] lg:w-[90%] mx-12 sm:mx-20 md:mx-[10.5%] lg:mr-4 lg:ml-[13.6%]
         pt-6 mb-5 overflow-hidden"
       >
         <p
@@ -72,22 +72,22 @@ const Contact = ({
       </motion.div>
         {/* End of title */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 mt-1">
           {/* Contact Information */}
           <motion.div
-          className="mb-6 text-center w-[90%] md:w-[75%] xl:w-[70%] mx-auto"
+          className="mb-6 text-center w-[80%] lg:w-[80%] mx-auto flex items-center flex-col lg:mx-24 xl:mx-36"
           variants={floatFromLeftVariant} initial="initial" ref={ref} animate={isInView ? "animate" : "initial"}
           >
-            <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-8 mb-5 leading-[30px]">
+            <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-3 mb-5 leading-[30px]">
               <p>For any questions or suggestions, feel free to reach out to the host, Maria:</p>
             </div>
 
             {/* Contact Info Container */}
-            <div className="bg-gradient-to-b from-secondary via-tertiary to-earth p-2 rounded-lg shadow-card text-center">
+            <div className="bg-gradient-to-b from-secondary via-tertiary to-earth p-2 rounded-lg shadow-lg text-center w-[80%] md:w-[60%] lg:w-[80%] mx-auto lg:mx-16">
               <div className="bg-background w-full rounded-lg border pb-3 pt-3">
 
                 {/* Contact Links */}
-                <div className="flex flex-col gap-5 py-3 font-links">
+                <div className="flex flex-col gap-5 py-3 font-links text-lg">
                   <ContactLink
                     href="mailto:maria.telikiozoglou@gmail.com"
                     onMouseEnter={handleEmailMouseEnter}
@@ -116,7 +116,7 @@ const Contact = ({
 
           {/* Contact Form */}
           <motion.div
-          className="text-center w-[80%] md:w-[75%] xl:w-[70%] mx-auto pt-8 mb-5"
+          className="text-center w-[80%] xl:w-[70%] mx-auto lg:mr-[28%] pt-6 mb-5"
           variants={floatFromRightVariant} initial="initial" ref={ref} animate={isInView ? "animate" : "initial"}
           >
             <p className="text-primary font-body text-lg max-w-lg xl:max-w-6xl pb-5 mx-auto">
@@ -133,7 +133,7 @@ const Contact = ({
               <div className="mb-1 =">
                 <button
                   type="submit"
-                  className="bg-primary hover:bg-tertiary mt-1 font-links font-bold uppercase text-md md:text-xl text-background hover:text-earth py-2 px-4 rounded-md items-center mx-auto"
+                  className="bg-primary hover:bg-tertiary mt-1 font-links font-bold uppercase text-md md:text-xl text-background hover:text-earth py-2 px-4 rounded-md items-center mx-auto shadow-lg"
                 >
                   Send
                 </button>
@@ -165,7 +165,7 @@ const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
 );
 
 const ContactInput = ({ type, placeholder, name }) => (
-  <div className="mb-4 flex items-center bg-gradient-to-b from-secondary via-tertiary to-earth p-2 rounded-lg shadow-card">
+  <div className="mb-4 flex items-center bg-gradient-to-b from-secondary via-tertiary to-earth p-2 rounded-lg shadow-lg w-[80%] md:w-[60%] lg:w-[90%] mx-auto lg:ml-[5%]">
     {type === 'textarea' ? (
       <textarea
         name={name}
