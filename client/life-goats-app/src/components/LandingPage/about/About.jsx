@@ -9,7 +9,7 @@ const About = () => {
         pt-6 mb-5 z-10 overflow-hidden">
           <p className="md:text-[18px] text-[14px] text-secondary font-subtitle
           font-bold uppercase tracking-wider">
-            Maria's reflections
+            Your host's reflections
           </p>
           <h2 className="text-earth font-bold font-title uppercase md:text-[55px]
           sm:text-[45px] text-[40px] outline-background-2 pb-4 mt-0"

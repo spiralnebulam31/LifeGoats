@@ -30,7 +30,9 @@ import lifeGoats6 from './parallax/life-goats-6.webp';
 import lifeGoats7 from './parallax/life-goats-7.webp';
 
 import email from './contact/email.svg';
+import emailHover from './contact/email-hover.svg';
 import phone from './contact/phone.svg';
+import phoneHover from './contact/phone-hover.svg';
 
 export {
     lifeGoatsLogo,
@@ -60,5 +62,7 @@ export {
     lifeGoats6,
     lifeGoats7,
     email,
+    emailHover,
     phone,
+    phoneHover,
 }
