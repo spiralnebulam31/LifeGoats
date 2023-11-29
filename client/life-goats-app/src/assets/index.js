@@ -26,6 +26,8 @@ import lifeGoats2 from './parallax/life-goats-2.webp';
 import lifeGoats3 from './parallax/life-goats-3.webp';
 import lifeGoats4 from './parallax/life-goats-4.webp';
 import lifeGoats5 from './parallax/life-goats-5.webp';
+import lifeGoats6 from './parallax/life-goats-6.webp';
+import lifeGoats7 from './parallax/life-goats-7.webp';
 
 import email from './contact/email.svg';
 import phone from './contact/phone.svg';
@@ -55,6 +57,8 @@ export {
     lifeGoats3,
     lifeGoats4,
     lifeGoats5,
+    lifeGoats6,
+    lifeGoats7,
     email,
     phone,
 }

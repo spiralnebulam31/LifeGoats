@@ -10,7 +10,7 @@ const EventOverview = () => {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
   const cardsY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
 
   return (
