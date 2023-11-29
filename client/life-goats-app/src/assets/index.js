@@ -20,6 +20,8 @@ import refuge from './overview/refuge.webp';
 import food from './overview/food.webp';
 import hikers from './overview/hikers.webp';
 import transparentMountainBG from './overview/transparent-mountain-bg.svg';
+import cloud1 from './overview/cloud1.svg';
+import cloud2 from './overview/cloud2.svg';
 
 import lifeGoats1 from './parallax/life-goats-1.webp';
 import lifeGoats2 from './parallax/life-goats-2.webp';
@@ -54,6 +56,8 @@ export {
     food,
     hikers,
     transparentMountainBG,
+    cloud1,
+    cloud2,
     lifeGoats1,
     lifeGoats2,
     lifeGoats3,

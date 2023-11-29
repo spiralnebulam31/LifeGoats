@@ -5,7 +5,9 @@ import { overviewData } from "../../../constants/constants";
 import OverviewCard from "./OverviewCard";
 
 const EventOverview = () => {
+
   const ref = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -15,13 +17,13 @@ const EventOverview = () => {
 
   return (
     <section
-      id="event-overview"
+      id="overview"
       ref={ref}
       className="bg-gradient-to-b from-[#2F6FB7] via-[#96beeb] to-[#e1f0fc]
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden"
     >
       <motion.div
-        className="text-start w-[80%] lg:w-[90%] mx-auto lg:mr-4 lg:ml-[15%]
+        className="text-start w-[80%] lg:w-[90%] mx-auto lg:mx-[6%] xl:mx-[13%]
         pt-6 mb-5 overflow-hidden"
       >
         <p

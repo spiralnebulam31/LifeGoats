@@ -84,7 +84,7 @@ const Contact = ({
 
             {/* Contact Info Container */}
             <div className="bg-gradient-to-b from-secondary via-tertiary to-earth p-2 rounded-lg shadow-lg text-center w-[80%] md:w-[60%] lg:w-[80%] mx-auto lg:mx-16">
-              <div className="bg-background w-full rounded-lg border pb-3 pt-3">
+              <div className="bg-background w-full rounded-lg border pb-3 pt-4">
 
                 {/* Contact Links */}
                 <div className="flex flex-col gap-5 py-3 font-links text-lg">
