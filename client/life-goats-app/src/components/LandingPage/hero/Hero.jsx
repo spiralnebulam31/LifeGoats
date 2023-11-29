@@ -37,7 +37,7 @@ const Hero = () => {
           </motion.div>
           <motion.div
             variants={heroVariant}
-            className="text-primary font-body max-w-md md:max-w-3xl font-bold lg:text-[28px] text-[19px] lg:leading-[40px] leading-[35px] mt-2 mb-3 z-40 text-center">
+            className="text-primary font-body max-w-md md:max-w-2xl font-bold lg:text-[28px] text-[19px] lg:leading-[40px] leading-[35px] mt-2 mb-3 z-40 text-center">
           <div className="flex flex-row justify-center items-center gap-2">
           <img src={calendar} alt="calendar" className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] object-contain z-40 mb-5" />
           <p className="mb-5">May 2024 (tentatively Tuesday 28th - Friday 31st)</p>

@@ -64,21 +64,6 @@ export const heroVariant = {
     },
   }
 
-  export const starryHeroVariant1 = {
-    initial: {
-      x: -500,
-      opacity: 0,
-    },
-  animate: {
-        x: 0,
-        opacity : 0.4,
-    transition: {
-      duration: 2.5,
-      delay: 0.5,
-      type: "spring",
-    },
-  }}
-
 
   export const goatPrintsSliderVariant = {
     initial: {
@@ -92,6 +77,38 @@ export const heroVariant = {
       repeatType: "loop",
     },
   }}
+
+  export const cloud1Variant = {
+    initial: {
+      x:-500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1.5,
+        delay: 0.5,
+      },
+    },
+  }
+
+  export const cloud2Variant = {
+    initial: {
+      x:500,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1.5,
+        delay: 0.5,
+      },
+    },
+  }
 
   export const floatFromLeftVariant = {
     initial: {

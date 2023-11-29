@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import Footer from './components/Footer/Footer';
 
 function App() {
+
   return (
     <Router>
       <div className="bg-cover bg-n-repeat bg-center overflow-hidden">

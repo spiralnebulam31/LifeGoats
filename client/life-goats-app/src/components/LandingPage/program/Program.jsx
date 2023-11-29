@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const Program = () => {
   return (
-    <section id="event-overview" className="bg-background
-      relative bg-cover w-screen h-auto inset-0 left-0 right-0 bottom-0 top-0 pb-10
+    <section id="program" className="bg-background
+      relative bg-cover w-screen h-screen inset-0 left-0 right-0 bottom-0 top-0 pb-10
       overflow-hidden">
 
         <motion.div className="text-start w-[80%] lg:w-[90%] mx-auto lg:mr-4 lg:ml-[13%] xl:ml-[13.4%]
