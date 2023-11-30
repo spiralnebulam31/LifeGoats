@@ -8,6 +8,12 @@ import heroBackground from './hero/hero-bg.webp';
 import heroBackground2 from './hero/hero-bg-2.webp';
 import goatPrints from './hero/goat-prints.svg';
 import calendar from './hero/calendar.svg';
+import BG1 from './hero/bg1.webp';
+import BG2 from './hero/bg2.webp';
+import BG3 from './hero/bg3.webp';
+import BG4 from './hero/bg4.svg';
+
+import photo1 from './about/photo1.svg';
 
 import accommodationIcon from './details/accommodation-icon.svg';
 import altitudeIcon from './details/altitude-icon.svg';
@@ -41,8 +47,13 @@ export {
     menuClose,
     heroBackground,
     heroBackground2,
+    BG1,
+    BG2,
+    BG3,
+    BG4,
     goatPrints,
     calendar,
+    photo1,
     accommodationIcon,
     altitudeIcon,
     durationIcon,

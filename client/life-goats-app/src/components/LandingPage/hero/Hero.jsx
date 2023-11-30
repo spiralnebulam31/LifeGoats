@@ -7,13 +7,18 @@ import {
 import {
   goatPrints,
   heroBackground2,
+  BG1,
+  BG2,
+  BG3,
+  BG4,
+  transparentMountainBG3,
   calendar,
 } from "../../../assets/index.js";
 
 const Hero = () => {
   return (
-      <section className="bg-background relative w-full h-screen mx-auto overflow-hidden">
-      <img src={heroBackground2} alt="hero background" className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-40" />
+      <section className="bg-background relative w-screen h-screen mx-auto overflow-hidden">
+      <img src={heroBackground2} alt="hero background" className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 opacity-40" />
       <div
         className="absolute inset-0 top-[150px] md:top-[160px] max-w-7xl mx-auto flex flex-row items-start gap-5">
         {/* Hero text */}

@@ -63,7 +63,7 @@ const EventOverview = () => {
       <div
         className="absolute inset-0 z-20 bg-no-repeat"
         style={{
-          backgroundImage: `url(${transparentMountainBG})`,
+          backgroundImage: `url(${transparentMountainBG2})`,
           backgroundPosition: "bottom",
           backgroundSize: "contain"
         }}>
