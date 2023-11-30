@@ -10,7 +10,7 @@ const Footer = () => {
   const closeAccessibilityModal = () => setAccessibilityOpen(false);
 
   return (
-    <div className="bg-primary bg-cover bg-center bg-no-repeat relative inset-0 w-full h-[120px] flex flex-col items-center justify-center bottom-0 overflow-hidden">
+    <div className="bg-primary bg-contain bg-center bg-no-repeat bg-fixed z-1 relative inset-0 w-full h-[120px] flex flex-col items-center justify-center bottom-0 overflow-hidden">
 
       <div className="flex flex-col justify-center items-center mx-auto mb-0.1 mt-3 z-0">
       <div className="flex flex-row justify-center items-center">

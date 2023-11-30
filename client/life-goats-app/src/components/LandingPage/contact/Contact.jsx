@@ -12,6 +12,7 @@ const Contact = ({
   handleEmailMouseEnter,
   handleEmailMouseLeave,
 }) => {
+  
   const form = useRef();
 
   const openPopup = () => {
@@ -49,7 +50,7 @@ const Contact = ({
   const isInView = useInView(ref, { margin: "-20px" });
 
   return (
-    <section id="contact" className="overflow-hidden">
+    <section id="contact" className="overflow-hidden z-10 mb-[-10]">
       <div className="bg-background relative bg-cover w-full inset-0 pb-10 pt-14">
         {/* Title */}
         <motion.div
@@ -156,7 +157,7 @@ const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
       onMouseLeave={onMouseLeave}
       target="_blank"
       rel="noreferrer"
-      className="text-secondary hover:text-tertiary flex items-center whitespace-nowrap text-md lg:text-xl"
+      className="text-secondary hover:text-tertiary flex items-center whitespace-nowrap text-md lg:text-xl tracking-wide"
     >
       <img src={icon} alt={`${text} icon`} className="w-[20px] h-[20px] object-contain" />
       <p className="ml-2">{text}</p>
