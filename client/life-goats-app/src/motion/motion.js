@@ -112,34 +112,30 @@ export const heroVariant = {
 
   export const floatFromLeftVariant = {
     initial: {
-      x: -200,
-      y: 100,
+      x: -500,
       opacity: 0,
     },
     animate: {
       x: 0,
-      y: 0,
       opacity: 1,
       transition: {
         duration: 1,
-        staggerChildren: 0.1,
+        delay: 0.5,
       },
     },
     }
 
     export const floatFromRightVariant = {
       initial: {
-        x: +200,
-        y: 100,
+        x: 500,
         opacity: 0,
       },
       animate: {
         x: 0,
-        y: 0,
         opacity: 1,
         transition: {
           duration: 1,
-          staggerChildren: 0.1,
+          delay: 0.5,
         },
       },
       }

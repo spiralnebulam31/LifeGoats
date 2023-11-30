@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
 import { fadeIn } from '../../../motion/motion.js';
 
 const OverviewCard = ({ index, alt, image, title, text, yMoving }) => {
   return (
-    <Tilt
+    <motion.div
       className="w-[250px] h-[450px] z-0"
       style={{
         transformStyle: 'preserve-3d',
@@ -13,9 +12,6 @@ const OverviewCard = ({ index, alt, image, title, text, yMoving }) => {
       <motion.div
         variants={fadeIn('left', 'spring', 0.5, 1.25)}
         className="z-0 bg-background m-3 w-full h-full rounded-2xl shadow-lg overflow-hidden"
-        style={{
-          transform: 'translateZ(60px)'
-        }}
       >
         <img
           src={image}
@@ -31,7 +27,7 @@ const OverviewCard = ({ index, alt, image, title, text, yMoving }) => {
           </p>
         </div>
       </motion.div>
-    </Tilt>
+    </motion.div>
   );
 };
 
