@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { transparentMountainBG, transparentMountainBG2, transparentMountainBG3 } from "../../../assets";
+import { transparentMountainBG } from "../../../assets";
 import { overviewData } from "../../../constants/constants";
 import OverviewCard from "./OverviewCard";
 
