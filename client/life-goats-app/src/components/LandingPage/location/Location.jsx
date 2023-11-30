@@ -1,9 +1,12 @@
+import { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { locationData, locationDataInfo } from "../../../constants/constants";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { fadeIn, textVariant, floatFromLeftVariant, floatFromRightVariant } from "../../../motion/motion.js";
 
 const Location = () => {
+
   return (
     <section id="location" className="overflow-hidden">
       <div className="bg-background relative bg-cover w-full h-auto left-0 right-0 bottom-0 top-0 pb-16 pt-14">
@@ -17,6 +20,9 @@ const Location = () => {
               The Location
             </h2>
 
+            <motion.div
+              variants={floatFromLeftVariant} initial="initial" whileInView="animate" viewport={{once: true}}
+            >
             {locationDataInfo.map((data) => (
               <div key={data.index} className="flex flex-row items-center text-primary">
                 {data.paragraph && <p className="pb-5 md:text-[16px] text-[14px]">{data.paragraph}</p>}
@@ -33,9 +39,12 @@ const Location = () => {
                 )}
               </div>
             ))}
+            </motion.div>
           </motion.div>
 
-          <motion.div className="flex mb-6 pt-6 items-center mx-auto lg:ml-4 lg:mr-auto w-[90%] md:w-[80%] xl:w-[75%] z-0">
+          <motion.div className="flex mb-6 pt-6 items-center mx-auto lg:ml-4 lg:mr-auto w-[90%] md:w-[80%] xl:w-[75%] z-0"
+          variants={floatFromRightVariant} initial="initial" whileInView="animate" viewport={{once: true}}
+          >
             <MapContainer
               attribution='&amp;copy <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
               center={[40.102947, 22.502612]}

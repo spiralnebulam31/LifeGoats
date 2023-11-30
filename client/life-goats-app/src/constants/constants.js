@@ -87,7 +87,7 @@ export const details = [
     name: "Group",
     icon: groupIcon,
     alt: "group icon",
-    text: "15 people",
+    text: "20 people",
   },
 ];
 
@@ -132,7 +132,7 @@ export const overviewData = [
     alt: "group of hikers",
     image: hikers,
     title: "Exclusivity",
-    text: "The retreat is invite-only, offering you the opportunity to engage with a remarkable and diverse group of like-minded individuals",
+    text: "The retreat is invite-only, offering you the opportunity to engage with a remarkable and diverse group of like-minded individuals.",
   },
 ];
 

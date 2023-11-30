@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn, textVariant, floatFromLeftVariant, floatFromRightVariant } from "../../../motion/motion.js";
 import emailjs from "@emailjs/browser";
 import { phone, phoneHover, email, emailHover } from "../../../assets/index.js";
@@ -12,15 +12,16 @@ const Contact = ({
   handleEmailMouseEnter,
   handleEmailMouseLeave,
 }) => {
+  
   const form = useRef();
 
   const openPopup = () => {
-    alert("Email Sent!");
+    alert("Email Sent! Maria will reply to you as soon as possible.");
   };
 
-  const templateCode = import.meta.env.VITE_TEMPLATE_CODE;
-  const serviceCode = import.meta.env.VITE_SERVICE_CODE;
-  const userID = import.meta.env.VITE_USER_ID;
+  const templateCode = import.meta.env.VITE_EMAILJS_TEMPLATE_CODE;
+  const serviceCode = import.meta.env.VITE_EMAILJS_SERVICE_CODE;
+  const userID = import.meta.env.VITE_EMAILJS_USER_ID;
   
 
   const sendEmail = (e) => {
@@ -45,11 +46,8 @@ const Contact = ({
       );
   };
 
-  const ref = useRef();
-  const isInView = useInView(ref, { margin: "-20px" });
-
   return (
-    <section id="contact" className="overflow-hidden">
+    <section id="contact" className="overflow-hidden z-10 mb-[-10]">
       <div className="bg-background relative bg-cover w-full inset-0 pb-10 pt-14">
         {/* Title */}
         <motion.div
@@ -76,7 +74,7 @@ const Contact = ({
           {/* Contact Information */}
           <motion.div
           className="mb-6 text-center w-[80%] lg:w-[80%] mx-auto flex items-center flex-col lg:mx-24 xl:mx-36"
-          variants={floatFromLeftVariant} initial="initial" ref={ref} animate={isInView ? "animate" : "initial"}
+          variants={floatFromLeftVariant} initial="initial" whileInView="animate" viewport={{once: true}}
           >
             <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-3 mb-5 leading-[30px]">
               <p>For any questions or suggestions, feel free to reach out to the host, Maria:</p>
@@ -117,7 +115,7 @@ const Contact = ({
           {/* Contact Form */}
           <motion.div
           className="text-center w-[80%] xl:w-[70%] mx-auto lg:mr-[28%] pt-6 mb-5"
-          variants={floatFromRightVariant} initial="initial" ref={ref} animate={isInView ? "animate" : "initial"}
+          variants={floatFromRightVariant} initial="initial" whileInView="animate" viewport={{once: true}}
           >
             <p className="text-primary font-body text-lg max-w-lg xl:max-w-6xl pb-5 mx-auto">
               Or send a message below:
@@ -156,7 +154,7 @@ const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
       onMouseLeave={onMouseLeave}
       target="_blank"
       rel="noreferrer"
-      className="text-secondary hover:text-tertiary flex items-center whitespace-nowrap text-md lg:text-xl"
+      className="text-secondary hover:text-tertiary flex items-center whitespace-nowrap text-md lg:text-xl tracking-wide"
     >
       <img src={icon} alt={`${text} icon`} className="w-[20px] h-[20px] object-contain" />
       <p className="ml-2">{text}</p>
@@ -170,14 +168,14 @@ const ContactInput = ({ type, placeholder, name }) => (
       <textarea
         name={name}
         placeholder={placeholder}
-        className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-white font-body"
+        className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-primary font-body"
       />
     ) : (
       <input
         type={type}
         placeholder={placeholder}
         name={name}
-        className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-white font-body"
+        className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-primary font-body"
       />
     )}
   </div>

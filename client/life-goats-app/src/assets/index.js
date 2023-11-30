@@ -1,3 +1,5 @@
+import goatPrintSingle from './goat-prints/goat-print-single.svg';
+
 import lifeGoatsLogo from './navbar/life-goats-logo.svg';
 import menuMountain from './navbar/menu-mountain.svg';
 import menuClose from './navbar/menu-close.svg';
@@ -20,16 +22,12 @@ import refuge from './overview/refuge.webp';
 import food from './overview/food.webp';
 import hikers from './overview/hikers.webp';
 import transparentMountainBG from './overview/transparent-mountain-bg.svg';
+import transparentMountainBG2 from './overview/transparent-mountain-bg-2.svg';
+import transparentMountainBG3 from './overview/transparent-mountain-bg-3.svg';
 import cloud1 from './overview/cloud1.svg';
 import cloud2 from './overview/cloud2.svg';
 
-import lifeGoats1 from './parallax/life-goats-1.webp';
-import lifeGoats2 from './parallax/life-goats-2.webp';
-import lifeGoats3 from './parallax/life-goats-3.webp';
-import lifeGoats4 from './parallax/life-goats-4.webp';
-import lifeGoats5 from './parallax/life-goats-5.webp';
-import lifeGoats6 from './parallax/life-goats-6.webp';
-import lifeGoats7 from './parallax/life-goats-7.webp';
+import lifeGoatsWalkingMountain from './parallax/life-goats-walking-mountain.webp';
 
 import email from './contact/email.svg';
 import emailHover from './contact/email-hover.svg';
@@ -37,6 +35,7 @@ import phone from './contact/phone.svg';
 import phoneHover from './contact/phone-hover.svg';
 
 export {
+    goatPrintSingle,
     lifeGoatsLogo,
     menuMountain,
     menuClose,
@@ -56,15 +55,11 @@ export {
     food,
     hikers,
     transparentMountainBG,
+    transparentMountainBG2,
+    transparentMountainBG3,
     cloud1,
     cloud2,
-    lifeGoats1,
-    lifeGoats2,
-    lifeGoats3,
-    lifeGoats4,
-    lifeGoats5,
-    lifeGoats6,
-    lifeGoats7,
+    lifeGoatsWalkingMountain,
     email,
     emailHover,
     phone,
