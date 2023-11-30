@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { fadeIn, textVariant, floatFromLeftVariant, floatFromRightVariant } from "../../../motion/motion.js";
 import emailjs from "@emailjs/browser";
 import { phone, phoneHover, email, emailHover } from "../../../assets/index.js";
@@ -16,7 +16,7 @@ const Contact = ({
   const form = useRef();
 
   const openPopup = () => {
-    alert("Email Sent!");
+    alert("Email Sent! Maria will reply to you as soon as possible.");
   };
 
   const templateCode = import.meta.env.VITE_EMAILJS_TEMPLATE_CODE;
@@ -38,16 +38,13 @@ const Contact = ({
         (result) => {
           console.log(result.text);
           form.current.reset();
-          openPopup("Email Sent!");
+          openPopup();
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
-
-  const ref = useRef();
-  const isInView = useInView(ref, { margin: "-20px" });
 
   return (
     <section id="contact" className="overflow-hidden z-10 mb-[-10]">
@@ -77,7 +74,7 @@ const Contact = ({
           {/* Contact Information */}
           <motion.div
           className="mb-6 text-center w-[80%] lg:w-[80%] mx-auto flex items-center flex-col lg:mx-24 xl:mx-36"
-          variants={floatFromLeftVariant} initial="initial" ref={ref} animate={isInView ? "animate" : "initial"}
+          variants={floatFromLeftVariant} initial="initial" whileInView="animate" viewport={{once: true}}
           >
             <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-3 mb-5 leading-[30px]">
               <p>For any questions or suggestions, feel free to reach out to the host, Maria:</p>
@@ -118,7 +115,7 @@ const Contact = ({
           {/* Contact Form */}
           <motion.div
           className="text-center w-[80%] xl:w-[70%] mx-auto lg:mr-[28%] pt-6 mb-5"
-          variants={floatFromRightVariant} initial="initial" ref={ref} animate={isInView ? "animate" : "initial"}
+          variants={floatFromRightVariant} initial="initial" whileInView="animate" viewport={{once: true}}
           >
             <p className="text-primary font-body text-lg max-w-lg xl:max-w-6xl pb-5 mx-auto">
               Or send a message below:
