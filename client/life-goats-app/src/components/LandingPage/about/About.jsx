@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { aboutText } from '../../../constants/constants';
-import { photo1 } from '../../../assets';
+import { aboutPhoto } from '../../../assets';
 
 const About = () => {
   return (
-    <section id="about" className="overflow-hidden bg-gradient-to-b from-background via-[#96beeb] to-[#2F6FB7] relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 pt-5 pb-16">
+    <section id="about" className="overflow-hidden bg-background relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 pt-5 pb-16">
       
       <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-8 mb-5 z-10 overflow-hidden">
@@ -20,7 +20,7 @@ const About = () => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-8 mb-8">
-  <img src={photo1} alt="host Maria with dog Ruby on Mount Olympus" className="w-[85%] md:w-[80%] lg:w-[55%] h-auto rounded-2xl drop-shadow-xl" />
+  <img src={aboutPhoto} alt="host Maria with dog Ruby on Mount Olympus" className="w-[85%] md:w-[80%] lg:w-[55%] h-auto rounded-2xl drop-shadow-xl" />
   <div className="w-[85%] md:w-[80%] lg:w-[35%] py-4 mt-5 lg:mt-0 bg-background rounded-2xl drop-shadow-xl opacity-85 lg:-ml-20 opacity-80">
     {aboutText.map((text) => (
       <div key={text.index} className="w-full px-6 py-2">

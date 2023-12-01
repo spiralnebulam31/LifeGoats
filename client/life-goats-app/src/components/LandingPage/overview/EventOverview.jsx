@@ -19,7 +19,7 @@ const EventOverview = () => {
     <section
       id="overview"
       ref={ref}
-      className="bg-gradient-to-b from-[#2F6FB7] via-[#96beeb] to-[#e1f0fc]
+      className="bg-background
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden"
     >
       <motion.div

@@ -13,13 +13,19 @@ import BG2 from './hero/bg2.webp';
 import BG3 from './hero/bg3.webp';
 import BG4 from './hero/bg4.svg';
 
-import photo1 from './about/photo1.svg';
+import aboutPhoto from './about/photo1.svg';
 
 import accommodationIcon from './details/accommodation-icon.svg';
 import altitudeIcon from './details/altitude-icon.svg';
 import durationIcon from './details/duration-icon.svg';
 import elementsIcon from './details/elements-icon.svg';
 import groupIcon from './details/group-icon.svg';
+import photo1 from './details/photo-1.png';
+import photo2 from './details/photo-2.svg';
+import photo3 from './details/photo-3.svg';
+import photo4 from './details/photo-4.png';
+import photo5 from './details/photo-5.svg';
+import photo6 from './details/photo-6.svg';
 
 import goat from './overview/goat.webp';
 import nature from './overview/nature.webp';
@@ -56,12 +62,18 @@ export {
     BG4,
     goatPrints,
     calendar,
-    photo1,
+    aboutPhoto,
     accommodationIcon,
     altitudeIcon,
     durationIcon,
     elementsIcon,
     groupIcon,
+    photo1,
+    photo2,
+    photo3,
+    photo4,
+    photo5,
+    photo6,
     goat,
     nature,
     peace,
