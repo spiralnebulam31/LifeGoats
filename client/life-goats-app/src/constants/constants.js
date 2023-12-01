@@ -124,7 +124,7 @@ export const overviewData = [
     index: 4,
     alt: "food",
     image: food,
-    title: "Traditinal Food",
+    title: "Traditional Food",
     text: "The local cuisine is a unique blend of Mediterranean and Balkan influences, with a variety of dishes that are sure to satisfy every taste.",
   },
   {

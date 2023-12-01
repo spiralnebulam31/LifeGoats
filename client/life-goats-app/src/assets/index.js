@@ -33,6 +33,9 @@ import transparentMountainBG3 from './overview/transparent-mountain-bg-3.svg';
 import cloud1 from './overview/cloud1.svg';
 import cloud2 from './overview/cloud2.svg';
 
+import mountainStefani from './location/mountain-stefani.webp';
+import mountainEnipeas from './location/mountain-enipeas.webp';
+
 import lifeGoatsWalkingMountain from './parallax/life-goats-walking-mountain.webp';
 
 import email from './contact/email.svg';
@@ -70,6 +73,8 @@ export {
     transparentMountainBG3,
     cloud1,
     cloud2,
+    mountainStefani,
+    mountainEnipeas,
     lifeGoatsWalkingMountain,
     email,
     emailHover,

@@ -20,8 +20,8 @@ const About = () => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-8 mb-8">
-  <img src={photo1} alt="host Maria with dog Ruby on Mount Olympus" className="w-[85%] md:w-[80%] lg:w-[55%] h-auto rounded-2xl shadow-card" />
-  <div className="w-[85%] md:w-[80%] lg:w-[35%] py-4 mt-5 lg:mt-0 bg-background rounded-2xl shadow-card opacity-85 lg:-ml-20 opacity-80">
+  <img src={photo1} alt="host Maria with dog Ruby on Mount Olympus" className="w-[85%] md:w-[80%] lg:w-[55%] h-auto rounded-2xl drop-shadow-xl" />
+  <div className="w-[85%] md:w-[80%] lg:w-[35%] py-4 mt-5 lg:mt-0 bg-background rounded-2xl drop-shadow-xl opacity-85 lg:-ml-20 opacity-80">
     {aboutText.map((text) => (
       <div key={text.index} className="w-full px-6 py-2">
         {text.paragraph && <p className="md:text-[15px] text-[14px] font-body text-primary">{text.paragraph}</p>}
