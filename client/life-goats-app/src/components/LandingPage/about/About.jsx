@@ -4,7 +4,7 @@ import { aboutPhoto } from '../../../assets';
 
 const About = () => {
   return (
-    <section id="about" className="overflow-hidden bg-background relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 pt-5 pb-16">
+    <section id="about" className="overflow-hidden bg-gradient-to-b from-background via-blue-100 to-blue-400 relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 pt-5 pb-16">
       
       <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-8 mb-5 z-10 overflow-hidden">

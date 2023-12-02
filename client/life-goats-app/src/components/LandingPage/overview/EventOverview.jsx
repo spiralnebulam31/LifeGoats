@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { transparentMountainBG, transparentMountainBG2, transparentMountainBG3 } from "../../../assets";
 import { overviewData } from "../../../constants/constants";
 import OverviewCard from "./OverviewCard";
 
@@ -19,13 +18,12 @@ const EventOverview = () => {
     <section
       id="overview"
       ref={ref}
-      className="bg-background
+      className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden"
     >
       <motion.div
-        className="text-start w-[80%] lg:w-[90%] mx-auto lg:mx-[6%] xl:mx-[13%]
-        pt-6 mb-5 overflow-hidden"
-      >
+        className="text-center w-[80%] lg:w-[90%] mx-auto
+        pt-8 mb-5 z-10 overflow-hidden">
         <p
           className="md:text-[18px] text-[14px] text-background font-subtitle
           font-bold uppercase tracking-wider"
@@ -45,7 +43,7 @@ const EventOverview = () => {
         className="flex flex-row justify-evenly items-center"
       >
         <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-20 mt-1 mb-[70%] md:mb-[100%] lg:mb-[70%] mr-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-20 mt-1 mb-[70%] md:mb-[100%] lg:mb-[50%] mr-8"
         >
           {overviewData.map((overview, index) => (
             <motion.div
