@@ -15,10 +15,8 @@ const Navbar = () => {
       }
     >
       <div className="flex w-full mx-auto justify-between gap-20">
-        {" "}
         {/* beginning of flex div */}
         <div className="flex items-center justify-start">
-          {" "}
           {/* beginning of left side div */}
           <Link
             to="/"
@@ -75,12 +73,12 @@ const Navbar = () => {
           <motion.div
             className={`${!mobile ? "hidden" : "flex"}
               absolute right-0 top-0 bottom-0 w-[50%] h-screen mx-0 my-0
-              z-10 flex-col items-end gap-60 bg-gradient-to-b from-secondary via-tertiary to-earth shadow-lg rounded-tl-xl rounded-bl-xl`}
+              z-10 flex-col items-end gap-60`}
             initial={mobile ? "open" : "closed"}
             animate={mobile ? "open" : "closed"}
           >
             
-              <ul className="list-none font-links font-bold flex flex-col justify-center text-center items-center gap-6 bg-background px-16 rounded-tl-xl rounded-bl-xl w-[90%] h-screen">
+              <ul className="list-none font-links font-bold flex flex-col justify-center text-center items-center gap-6 bg-background px-16 w-[90%] h-screen">
                 {navLinks.map((link) => (
                   <motion.div key={link.id}>
                     <li

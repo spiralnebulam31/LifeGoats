@@ -50,8 +50,8 @@ const Location = () => {
           </div>
 
             <div className="relative flex flex-col mx-auto w-[80%] md:w-[70%] lg:w-[60%] xl:w-[35%] p-4 -mt-10 -mb-10 rotate-6 lg:rotate-0 lg:mb-0 lg:mt-2 xl:-mt-16 lg:-ml-20 lg:-mr-6 xl:-ml-24 xl:-mr-10 z-10 rounded-2xl bg-background drop-shadow-xl opacity-85 opacity-80">
-            {locationDataInfo.map((data) => (
-              <div key={data.index} className="items-center text-primary">
+            {locationDataInfo.map((data, index) => (
+              <div key={index} className="items-center text-primary">
                 {data.paragraph && <p className="pb-5 md:text-[15px] text-[14px]">{data.paragraph}</p>}
                 {data.googleMapsLink && (
                   <p className="font-links font-bold">

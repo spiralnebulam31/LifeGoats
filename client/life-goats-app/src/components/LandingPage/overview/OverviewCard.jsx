@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../../motion/motion.js';
+import { Tilt } from 'react-tilt';
 
 const OverviewCard = ({ index, alt, image, title, text, yMoving }) => {
   return (
-    <motion.div
-      className="w-[250px] h-[450px] z-0"
+    <Tilt
+      className="w-[250px] h-[380px] lg:h-[450px] z-0"
       style={{
         transformStyle: 'preserve-3d',
       }}
@@ -27,7 +28,7 @@ const OverviewCard = ({ index, alt, image, title, text, yMoving }) => {
           </p>
         </div>
       </motion.div>
-    </motion.div>
+    </Tilt>
   );
 };
 

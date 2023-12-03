@@ -5,19 +5,19 @@ import OverviewCard from "./OverviewCard";
 
 const EventOverview = () => {
 
-  const ref = useRef(null);
+  // const ref = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start start", "end start"],
+  // });
 
-  const cardsY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+  // const cardsY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
 
   return (
     <section
       id="overview"
-      ref={ref}
+      // ref={ref}
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden"
     >
@@ -43,15 +43,18 @@ const EventOverview = () => {
         className="flex flex-row justify-evenly items-center"
       >
         <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-20 mt-1 mb-[70%] md:mb-[100%] lg:mb-[50%] mr-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-20 mt-1 mb-20 mr-8"
         >
           {overviewData.map((overview, index) => (
             <motion.div
         key={index}
         className="relative z-10"
-        style={{ y: cardsY }}
+        // style={{ y: cardsY }}
       >
-  <OverviewCard key={index} {...overview} yMoving={cardsY} />
+  {/* <OverviewCard key={index} {...overview} yMoving={cardsY} /> */}
+
+  <OverviewCard key={index} {...overview} />
+
     </motion.div>
 ))}
 
