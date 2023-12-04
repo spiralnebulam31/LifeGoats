@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant, floatFromLeftVariant, floatFromRightVariant } from "../../../motion/motion.js";
 import emailjs from "@emailjs/browser";
-import { phone, phoneHover, email, emailHover } from "../../../assets/index.js";
+import { phone, phoneHover, email, emailHover, transparentMountainBG2 } from "../../../assets";
 
 const Contact = ({
   phoneIsHovered,
@@ -47,15 +47,13 @@ const Contact = ({
   };
 
   return (
-    <section id="contact" className="overflow-hidden z-10 mb-[-10]">
-      <div className="bg-background relative bg-cover w-full inset-0 pb-10 pt-14">
+    <section id="contact" className="overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background relative bg-cover w-full h-full inset-0 pb-32 pt-14">
         {/* Title */}
         <motion.div
-        className="text-start w-[80%] lg:w-[90%] mx-12 sm:mx-20 md:mx-[10.5%] lg:mr-4 lg:ml-[13.6%]
-        pt-6 mb-5 overflow-hidden"
+        className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden"
       >
         <p
-          className="md:text-[18px] text-[14px] text-secondary font-subtitle
+          className="md:text-[18px] text-[14px] text-background font-subtitle
           font-bold uppercase tracking-wider"
         >
           Ways to reach out
@@ -70,22 +68,20 @@ const Contact = ({
       </motion.div>
         {/* End of title */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 mt-1">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 mt-1 mb-20 sm:mb-44 lg:mb-[50vh]">
           {/* Contact Information */}
           <motion.div
-          className="mb-6 text-center w-[80%] lg:w-[80%] mx-auto flex items-center flex-col lg:mx-24 xl:mx-36"
-          variants={floatFromLeftVariant} initial="initial" whileInView="animate" viewport={{once: true}}
+          className="text-center justify-start w-[80%] lg:w-[85%] mx-auto flex items-center flex-col lg:mx-24 xl:mx-36"
           >
-            <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-3 mb-5 leading-[30px]">
-              <p>For any questions or suggestions, feel free to reach out to the host, Maria:</p>
+            <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-1 lg:pt-10 mb-5 leading-[30px]">
+              <p>For any questions or suggestions, feel free to reach out to Maria:</p>
             </div>
 
             {/* Contact Info Container */}
-            <div className="bg-gradient-to-b from-secondary via-tertiary to-earth p-2 rounded-lg shadow-lg text-center w-[80%] md:w-[60%] lg:w-[80%] mx-auto lg:mx-16">
-              <div className="bg-background w-full rounded-lg border pb-3 pt-4">
+            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[80%] md:w-[60%] lg:w-[80%] mx-auto lg:mx-16">
 
                 {/* Contact Links */}
-                <div className="flex flex-col gap-5 py-3 font-links text-lg">
+                <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
                   <ContactLink
                     href="mailto:maria.telikiozoglou@gmail.com"
                     onMouseEnter={handleEmailMouseEnter}
@@ -107,15 +103,13 @@ const Contact = ({
 
               </div>
               {/* End of Contact Info */}
-            </div>
             {/* End of Contact Info Container */}
           </motion.div>
           {/* End of Contact Information */}
 
           {/* Contact Form */}
           <motion.div
-          className="text-center w-[80%] xl:w-[70%] mx-auto lg:mr-[28%] pt-6 mb-5"
-          variants={floatFromRightVariant} initial="initial" whileInView="animate" viewport={{once: true}}
+          className="text-center justify-start w-[80%] xl:w-[70%] mx-auto lg:mr-[28%]"
           >
             <p className="text-primary font-body text-lg max-w-lg xl:max-w-6xl pb-5 mx-auto">
               Or send a message below:
@@ -131,7 +125,7 @@ const Contact = ({
               <div className="mb-1 =">
                 <button
                   type="submit"
-                  className="bg-primary hover:bg-tertiary mt-1 font-links font-bold uppercase text-md md:text-xl text-background hover:text-earth py-2 px-4 rounded-md items-center mx-auto shadow-lg"
+                  className="bg-primary hover:bg-tertiary mt-1 font-links font-bold uppercase text-md md:text-xl text-background hover:text-earth py-2 px-4 rounded-2xl items-center mx-auto drop-shadow-xl"
                 >
                   Send
                 </button>
@@ -140,7 +134,11 @@ const Contact = ({
           </motion.div>
           {/* End of Contact Form */}
         </div>
-      </div>
+
+        <div className="absolute right-0 left-0 bottom-0 z-20 bg-no-repeat w-full">
+          <img src={transparentMountainBG2} alt="transparent mountain background" className="w-screen h-auto" />
+    </div>
+
     </section>
   );
 };
@@ -163,7 +161,7 @@ const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
 );
 
 const ContactInput = ({ type, placeholder, name }) => (
-  <div className="mb-4 flex items-center bg-gradient-to-b from-secondary via-tertiary to-earth p-2 rounded-lg shadow-lg w-[80%] md:w-[60%] lg:w-[90%] mx-auto lg:ml-[5%]">
+  <div className="mb-4 flex items-center bg-background drop-shadow-xl p-2 rounded-lg w-[80%] md:w-[60%] lg:w-[90%] mx-auto lg:ml-[5%]">
     {type === 'textarea' ? (
       <textarea
         name={name}

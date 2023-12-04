@@ -8,12 +8,24 @@ import heroBackground from './hero/hero-bg.webp';
 import heroBackground2 from './hero/hero-bg-2.webp';
 import goatPrints from './hero/goat-prints.svg';
 import calendar from './hero/calendar.svg';
+import BG1 from './hero/bg1.webp';
+import BG2 from './hero/bg2.webp';
+import BG3 from './hero/bg3.webp';
+import BG4 from './hero/bg4.svg';
+
+import aboutPhoto from './about/photo1.svg';
 
 import accommodationIcon from './details/accommodation-icon.svg';
 import altitudeIcon from './details/altitude-icon.svg';
 import durationIcon from './details/duration-icon.svg';
 import elementsIcon from './details/elements-icon.svg';
 import groupIcon from './details/group-icon.svg';
+import photo1 from './details/photo-1.png';
+import photo2 from './details/photo-2.svg';
+import photo3 from './details/photo-3.svg';
+import photo4 from './details/photo-4.png';
+import photo5 from './details/photo-5.svg';
+import photo6 from './details/photo-6.svg';
 
 import goat from './overview/goat.webp';
 import nature from './overview/nature.webp';
@@ -26,6 +38,9 @@ import transparentMountainBG2 from './overview/transparent-mountain-bg-2.svg';
 import transparentMountainBG3 from './overview/transparent-mountain-bg-3.svg';
 import cloud1 from './overview/cloud1.svg';
 import cloud2 from './overview/cloud2.svg';
+
+import mountainStefani from './location/mountain-stefani.webp';
+import mountainEnipeas from './location/mountain-enipeas.webp';
 
 import lifeGoatsWalkingMountain from './parallax/life-goats-walking-mountain.webp';
 
@@ -41,13 +56,24 @@ export {
     menuClose,
     heroBackground,
     heroBackground2,
+    BG1,
+    BG2,
+    BG3,
+    BG4,
     goatPrints,
     calendar,
+    aboutPhoto,
     accommodationIcon,
     altitudeIcon,
     durationIcon,
     elementsIcon,
     groupIcon,
+    photo1,
+    photo2,
+    photo3,
+    photo4,
+    photo5,
+    photo6,
     goat,
     nature,
     peace,
@@ -59,6 +85,8 @@ export {
     transparentMountainBG3,
     cloud1,
     cloud2,
+    mountainStefani,
+    mountainEnipeas,
     lifeGoatsWalkingMountain,
     email,
     emailHover,

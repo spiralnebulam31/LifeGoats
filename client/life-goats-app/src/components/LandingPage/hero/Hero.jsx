@@ -7,13 +7,18 @@ import {
 import {
   goatPrints,
   heroBackground2,
+  BG1,
+  BG2,
+  BG3,
+  BG4,
+  transparentMountainBG3,
   calendar,
 } from "../../../assets/index.js";
 
 const Hero = () => {
   return (
-      <section className="bg-background relative w-full h-screen mx-auto overflow-hidden">
-      <img src={heroBackground2} alt="hero background" className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 opacity-40" />
+      <section className="bg-background relative w-screen h-screen mx-auto overflow-hidden">
+      <img src={heroBackground2} alt="hero background" className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 opacity-40" />
       <div
         className="absolute inset-0 top-[150px] md:top-[160px] max-w-7xl mx-auto flex flex-row items-start gap-5">
         {/* Hero text */}
@@ -25,7 +30,7 @@ const Hero = () => {
         >
           <motion.h1
             variants={heroVariant}
-            className="text-earth font-title font-bold lg:text-[85px] text-[75px] lg:leading-[80px] leading-[70px] mt-2 z-40 flex flex-wrap justify-center items-center mb-4 gap-1 md:gap-4"
+            className="text-earth font-title font-bold lg:text-[85px] text-[75px] lg:leading-[80px] leading-[70px] mt-28 lg:mt-2 z-40 flex flex-wrap justify-center items-center mb-4 gap-1 md:gap-4"
             style={{ textShadow: "3px 2px 3px rgba(0, 0, 0, 0.3)" }}>
             LIFE GOATS
           </motion.h1>
@@ -36,12 +41,12 @@ const Hero = () => {
           </motion.div>
           <motion.div
             variants={heroVariant}
-            className="text-primary font-body max-w-md md:max-w-2xl font-bold lg:text-[28px] text-[19px] lg:leading-[40px] leading-[35px] mt-2 mb-3 z-40 text-center">
+            className="text-primary font-body max-w-md md:max-w-2xl font-bold lg:text-[28px] text-[17px] lg:leading-[40px] leading-[35px] mt-2 mb-3 z-40 text-center">
           <div className="flex flex-row justify-center items-center gap-2">
           <img src={calendar} alt="calendar" className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] object-contain z-40 mb-5" />
           <p className="mb-5">May 2024 (tentatively Tuesday 28th - Friday 31st)</p>
           </div>
-          <p className="lg:text-[26px] text-[21px]">A collaborative retreat for coaches, therapists, carers and other people centered professionals.</p>
+          <p className="lg:text-[26px] text-[21px] max-w-sm md:max-w-2xl">A collaborative retreat for coaches, therapists, carers and other people centered professionals.</p>
           <p className="mt-4 font-bold font-subtitle lg:text-[32px] text-[26px]">A retreat from us, for us.</p>
           </motion.div>
           </motion.div>
