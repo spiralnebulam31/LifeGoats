@@ -7,7 +7,7 @@ import {
   Program,
   Parallax,
   Contact,
-} from "./";
+} from "../components/LandingPage";
 import { useState } from "react";
 
 const LandingPage = () => {
