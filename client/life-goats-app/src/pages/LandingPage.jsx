@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 
 const LandingPage = () => {
+  const [preloader, setPreloader] = useState(true);
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
   const [emailIsHovered, setEmailIsHovered] = useState(false);
 
