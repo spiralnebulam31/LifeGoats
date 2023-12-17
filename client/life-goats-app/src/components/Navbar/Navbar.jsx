@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { navLinks } from "../../constants/constants";
+import { homeLinks } from "../../constants/constants";
 import {
   lifeGoatsLogo,
   menuMountain,
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center justify-end">
           <ul className="list-none hidden lg:flex flex-row gap-10">
-            {navLinks.map((link) => (
+            {homeLinks.map((link) => (
               <li
                 key={link.id}
                 className={`${

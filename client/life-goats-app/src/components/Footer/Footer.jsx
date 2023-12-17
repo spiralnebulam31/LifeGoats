@@ -1,8 +1,12 @@
 import { useState } from "react";
 import Popup from "reactjs-popup";
-
+import { facebook, instagram, downArrow } from "../../assets";
+import HomeDropdown from "./HomeDropdown";
+import { homeLinks } from "../../constants/constants";
 
 const Footer = () => {
+  const [toggleDropdown, setToggleDropdown] = useState(false);
+
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const closePrivacyModal = () => setPrivacyOpen(false);
 
@@ -10,27 +14,83 @@ const Footer = () => {
   const closeAccessibilityModal = () => setAccessibilityOpen(false);
 
   return (
-    <div className="bg-primary bg-contain bg-center bg-no-repeat bg-fixed z-1 relative inset-0 w-full h-[120px] flex flex-col items-center justify-center bottom-0 overflow-hidden">
-
+    <div className="bg-primary bg-contain bg-center bg-no-repeat bg-fixed z-1 relative inset-0 w-full h-auto flex flex-col items-center justify-center bottom-0 overflow-hidden">
       <div className="flex flex-col justify-center items-center mx-auto mb-0.1 mt-3 z-0">
-      <div className="flex flex-row justify-center items-center">
-        <p className="text-background font-body font-bold text-lg mb-1">
-          Copyright
-          <span className="text-secondary font-links font-bold text-lg mx-2">
-            ©
-          </span>
-          2023 Life Goats
-        </p>
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-background font-body font-bold text-lg mb-1">
+            Follow us on
+          </p>
+          <div className="flex flex-row justify-center items-center">
+            <a
+              href="https://www.facebook.com/Life-Goats"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={facebook} alt="facebook" className="w-8 h-8 mx-2" />
+            </a>
+            <a
+              href="https://www.instagram.com/life_goats/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={instagram} alt="instagram" className="w-8 h-8 mx-2" />
+            </a>
+          </div>
+        </div>
+
+        <div className="items-center w-[90%] my-2">
+          <h2 className="text-background font-body font-bold text-lg mb-1">
+            Home
+          </h2>
+          <ul className="list-none hidden lg:flex flex-row gap-10">
+            {homeLinks.map((link) => (
+              <li
+                key={link.id}
+                className="hover:text-tertiary text-[20px] font-links font-bold cursor-pointer"
+              >
+                <a href={`#${link.id}`}>{link.title}</a>
+              </li>
+            ))}
+          </ul>
+          <div className="lg:hidden flex flex-1 justify-end items-center gap-">
+            <img
+              src={downArrow}
+              alt="menu"
+              className="w-16 h-auto cursor-pointer object-contain z-30"
+              onClick={() => setToggleDropdown(!toggleDropdown)}
+            />
+          </div>
+          <HomeDropdown
+            toggleDropdown={toggleDropdown}
+            setToggleDropdown={setToggleDropdown}
+          />
+        </div>
+
+        <div className="items-center w-[90%] my-2">
+          <hr className="border-2 border-secondary" />
+        </div>
+
+        <div className="flex flex-row justify-center items-center">
+          <p className="text-background font-body font-bold text-lg mb-1">
+            Copyright
+            <span className="text-secondary font-links font-bold text-lg mx-2">
+              ©
+            </span>
+            2023 Life Goats
+          </p>
         </div>
         <div className="flex flex-row justify-center items-center">
-        <p className="text-background font-body font-bold text-md mb-1 mt-1">
-          Developed by
-          <a href="https://anastasiaadamoudi.com/"
-          target="_blank" rel="noreferrer"
-          className="text-tertiary hover:text-secondary font-links font-bold underline text-md mx-2">
-          Anastasia Adamoudi
-          </a>
-        </p>
+          <p className="text-background font-body font-bold text-md mb-1 mt-1">
+            Designed & developed by
+            <a
+              href="https://anastasiaadamoudi.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-tertiary hover:text-secondary font-links font-bold underline text-md mx-2"
+            >
+              Anastasia Adamoudi
+            </a>
+          </p>
         </div>
       </div>
 
@@ -39,7 +99,7 @@ const Footer = () => {
           <button
             type="button"
             onClick={() => setPrivacyOpen((o) => !o)}
-            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-sm no-underline"
+            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
           >
             Privacy Policy
           </button>
@@ -48,31 +108,15 @@ const Footer = () => {
             closeOnDocumentClick
             onClose={closePrivacyModal}
           >
-            <div className="fixed bottom-0 right-2 left-3">
-              <div className="flex flex-col justify-center items-center mx-auto rounded-lg bg-gradient-to-b from-secondary via-tertiary to-earth p-8 text-white w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
-                <div className="grid grid-cols-10 gap-4">
-                  <p className="col-span-9">
-                    In case you contact Maria via the contact form, she will only use
-                    your email address to reply to your message. She will not
-                    share your name or email address with any third parties.
-                  </p>
-                  <a
-                    className="col-span-1 cursor-pointer text-6xl my-auto"
-                    onClick={closePrivacyModal}
-                  >
-                    &times;
-                  </a>
-                </div>
-              </div>
-            </div>
+            {/* Privacy Policy content */}
           </Popup>
-          <span className="text-secondary font-links font-bold text-md mx-2 pb-3 pt-2">
+          <span className="text-secondary font-links font-bold text-2xl mx-2 pb-3 pt-2">
             |
           </span>
           <button
             type="button"
             onClick={() => setAccessibilityOpen((o) => !o)}
-            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-sm no-underline"
+            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
           >
             Web Accessibility Statement
           </button>
@@ -81,28 +125,12 @@ const Footer = () => {
             closeOnDocumentClick
             onClose={closeAccessibilityModal}
           >
-            <div className="fixed bottom-0 right-2 left-3">
-              <div className="flex flex-col justify-center items-center mx-auto rounded-lg bg-gradient-to-b from-secondary via-tertiary to-earth p-8 text-white  w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
-                <div className="grid grid-cols-10 gap-4">
-                  <p className="col-span-9">
-                    This website is built to be accessible to as many people as
-                    possible. If you have any accessibility requirements, please
-                    contact the developer Anastasia at anastasiaadamoudi@gmail.com and she will do her best to accommodate them.
-                  </p>
-                  <a
-                    className="col-span-1 cursor-pointer text-6xl my-auto"
-                    onClick={closeAccessibilityModal}
-                  >
-                    &times;
-                  </a>
-                </div>
-              </div>
-            </div>
+            {/* Accessibility Statement content */}
           </Popup>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Footer;

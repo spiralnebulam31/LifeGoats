@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { navLinks } from "../../constants/constants";
+import { homeLinks } from "../../constants/constants";
 
 const MobileMenu = ({ active, setActive, mobile, setMobile }) => {
     return (
@@ -12,7 +12,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile }) => {
         animate={mobile ? "open" : "closed"}
       >
         <ul className="list-none font-links font-bold flex flex-col justify-center text-center items-center gap-6 bg-background px-16 w-[90%] h-screen">
-          {navLinks.map((link) => (
+          {homeLinks.map((link) => (
             <motion.div key={link.id}>
               <li
                 key={link.id}
