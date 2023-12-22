@@ -135,7 +135,7 @@ const Contact = ({
           {/* End of Contact Form */}
         </div>
 
-        <div className="absolute right-0 left-0 bottom-0 z-20 bg-no-repeat w-full">
+        <div className="absolute right-0 left-0 bottom-0 z-20 bg-no-repeat w-full pointer-events-none">
           <img src={transparentMountainBG2} alt="transparent mountain background" className="w-screen h-auto" />
     </div>
 

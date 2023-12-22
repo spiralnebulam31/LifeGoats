@@ -32,7 +32,8 @@ const Footer = ({ modalState, setModalState }) => {
       
       <div className="flex flex-col justify-center items-center mx-auto mb-0.1 mt-3 z-0">
         
-        {/*Social Media*/}
+
+        {/* Social Media
         <div className="flex flex-col justify-center items-center">
           <p className="text-background font-body font-bold text-lg mb-1">Follow us on</p>
           <div className="flex flex-row justify-center items-center">
@@ -45,7 +46,7 @@ const Footer = ({ modalState, setModalState }) => {
           </div>
         </div>
 
-        {/*Home Links*/}
+        Home Links
         <div className="items-center w-[90%] my-2">
           <h2 className="text-background font-body font-bold text-lg mb-1">Home</h2>
           <div className="hidden md:flex md:items-center md:justify-center">
@@ -66,12 +67,12 @@ const Footer = ({ modalState, setModalState }) => {
           )}
         </div>
 
-        {/*Navigation Links*/}
+        Navigation Links
 
-        {/*Horizontal Line*/}
+        Horizontal Line
         <div className="items-center w-[90%] my-2">
           <hr className="border-2 border-secondary" />
-        </div>
+        </div> */}
 
         {/*Copyright & Developer*/}
         <div className="flex flex-row justify-center items-center">

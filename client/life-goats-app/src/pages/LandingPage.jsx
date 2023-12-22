@@ -11,7 +11,7 @@ import {
 import { useState } from "react";
 
 const LandingPage = () => {
-  const [preloader, setPreloader] = useState(true);
+
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
   const [emailIsHovered, setEmailIsHovered] = useState(false);
 
@@ -32,7 +32,8 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
+
+        <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
       <Hero />
       <About />
       <EventOverview />
