@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { overviewData } from "../../../constants/constants";
 import OverviewCard from "./OverviewCard";
 
-const EventOverview = () => {
+const EventOverview = ( { isSmallScreen } ) => {
 
   // const ref = useRef(null);
 
@@ -19,8 +19,7 @@ const EventOverview = () => {
       id="overview"
       // ref={ref}
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden"
-    >
+      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden">
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-8 mb-5 z-10 overflow-hidden">

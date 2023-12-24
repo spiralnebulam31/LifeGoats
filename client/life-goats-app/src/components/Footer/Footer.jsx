@@ -28,7 +28,7 @@ const Footer = ({ modalState, setModalState }) => {
   };
 
   return (
-    <div className="bg-primary bg-contain bg-center bg-no-repeat bg-fixed z-1 relative inset-0 w-full h-auto flex flex-col items-center justify-center bottom-0 overflow-hidden">
+    <footer className="bg-primary bg-contain bg-center bg-no-repeat bg-fixed z-1 relative inset-0 w-full h-auto flex flex-col items-center justify-center bottom-0 overflow-hidden">
       
       <div className="flex flex-col justify-center items-center mx-auto mb-0.1 mt-3 z-0">
         
@@ -127,7 +127,7 @@ const Footer = ({ modalState, setModalState }) => {
         </div>
       </div>
 
-    </div>
+    </footer>
   );
 };
 

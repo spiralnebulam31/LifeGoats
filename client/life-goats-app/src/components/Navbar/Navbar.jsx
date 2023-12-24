@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={"fixed w-full top-0 z-50 bg-background shadow-xl pr-8 pl-5 py-2"}>
+    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl pr-8 pl-5 py-2">
       <div className="flex w-full mx-auto justify-between gap-20">
         <div className="flex items-center justify-start">
           <Link

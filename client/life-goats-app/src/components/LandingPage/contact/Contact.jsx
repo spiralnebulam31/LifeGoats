@@ -47,7 +47,8 @@ const Contact = ({
   };
 
   return (
-    <section id="contact" className="overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background relative bg-cover w-full h-full inset-0 pb-32 pt-14">
+    <section id="contact" className="overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background
+    relative bg-cover w-full h-full inset-0 pb-32 pt-14">
         {/* Title */}
         <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden"

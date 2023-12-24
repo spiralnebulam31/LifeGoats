@@ -9,8 +9,11 @@ import {
   Contact,
 } from "../components/LandingPage";
 import { useState } from "react";
+import MediaQuery from "react-responsive";
 
 const LandingPage = () => {
+
+  const isSmallScreen = MediaQuery({ query: "(max-width: 768px)" });
 
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
   const [emailIsHovered, setEmailIsHovered] = useState(false);
@@ -33,17 +36,16 @@ const LandingPage = () => {
 
   return (
 
-        <div className="bg-cover bg-n-repeat bg-center overflow-hidden"
-        data-scroll-container
-        >
-      <Hero />
-      <About />
-      <EventOverview />
-      <Details />
-      <Location />
-      <Program />
+        <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
+      <Hero isSmallScreen={isSmallScreen} />
+      <About isSmallScreen={isSmallScreen} />
+      <EventOverview isSmallScreen={isSmallScreen} />
+      <Details isSmallScreen={isSmallScreen} />
+      <Location isSmallScreen={isSmallScreen} />
+      <Program isSmallScreen={isSmallScreen} />
       <Parallax />
       <Contact
+        isSmallScreen={isSmallScreen}
         emailIsHovered={emailIsHovered}
         handleEmailMouseEnter={handleEmailMouseEnter}
         handleEmailMouseLeave={handleEmailMouseLeave}

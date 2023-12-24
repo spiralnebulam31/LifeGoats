@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 import { goatPrintSingle } from "../../../assets";
 
-const Program = () => {
+const Program = ( { isSmallScreen } ) => {
   return (
     <section
       id="program"
       className="bg-background
       relative bg-cover w-screen h-screen inset-0 left-0 right-0 bottom-0 top-0
-      overflow-hidden"
-    >
+      overflow-hidden">
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-8 mb-5 z-10 overflow-hidden">

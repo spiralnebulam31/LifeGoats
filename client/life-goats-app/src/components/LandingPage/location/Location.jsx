@@ -1,57 +1,72 @@
-import { useRef } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import { locationData, locationDataInfo } from "../../../constants/constants";
-import { motion } from "framer-motion";
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import {
+  floatFromLeftLocation, 
+  floatFromRightLocation1, 
+  floatFromRightLocation2, 
+  floatFromDownLocation, 
+  floatFromDownPreTitle, 
+  floatFromDownMainTitle,
+  floatFromLeftLocationMobile,
+  floatFromRightLocation1Mobile,
+  floatFromRightLocation2Mobile,
+  floatFromDownLocationMobile
+ } from '../../../motion/home-sections';
 import { mountainStefani, mountainEnipeas } from "../../../assets";
+import { locationDataInfo } from "../../../constants/constants";
+import MapDisplay from './MapDisplay';
 
-const Location = () => {
+const Location = ( { isSmallScreen } ) => {
+
+  const mapDisplayRef = useRef();
+  const locationInfoRef = useRef();
+  const mountainStefaniRef = useRef();
+  const mountainEnipeasRef = useRef();
+
+  const mapDisplayInView = useInView(mapDisplayRef, { threshold: 0.5 });
+  const locationInfoInView = useInView(locationInfoRef, { threshold: 0.5 });
+  const mountainStefaniInView = useInView(mountainStefaniRef, { threshold: 0.5 });
+  const mountainEnipeasInView = useInView(mountainEnipeasRef, { threshold: 0.5 });
 
   return (
-    <section id="location" className="bg-background relative bg-cover w-full h-auto left-0 right-0 bottom-0 top-0 pb-16 pt-14 overflow-hidden">
+    <section id="location" className="bg-background relative bg-cover w-full h-auto left-0 right-0 bottom-0 top-0
+    pb-5 pt-14 overflow-hidden">
         
-          <div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
-            <p className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider">
+          <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
+            <motion.p className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider"
+            variants={floatFromDownPreTitle} initial="initial" whileInView="animate" viewport={{once: true}}
+            >
               discover
-            </p>
-            <h2 className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] pb-1 mt-0"
-            style={{ textShadow: "2px 2px 3px rgba(0, 0, 0, 0.5)" }}>
+            </motion.p>
+            <motion.h2 className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] pb-1 mt-0"
+            style={{ textShadow: "2px 2px 3px rgba(0, 0, 0, 0.5)" }}
+            variants={floatFromDownMainTitle} initial="initial" whileInView="animate" viewport={{once: true}}
+            >
               The Location
-            </h2>
-          </div>
+            </motion.h2>
+          </motion.div>
           
-          <div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-8 mb-8"
-              // variants={floatFromLeftVariant} initial="initial" whileInView="animate" viewport={{once: true}}
-            >
+          <motion.div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-0 mb-8">
+          <motion.div
+          className="flex mb-6 pt-6 justify-center items-center mx-auto z-2 lg:ml-20 lg:mr-auto w-[80%] md:w-[80%] lg:w-[45%] xl:w-[35%] z-0"
+          variants={isSmallScreen ? floatFromLeftLocationMobile : floatFromLeftLocation}
+          initial="initial"
+          ref={mapDisplayRef}
+          animate={mapDisplayInView ? 'animate' : 'initial'}
+        >
+          <MapDisplay />
+        </motion.div>
 
-          <div className="flex mb-6 pt-6 justify-center items-center mx-auto z-2 lg:ml-20 lg:mr-auto w-[80%] md:w-[80%] lg:w-[45%] xl:w-[35%] z-0">
-            <MapContainer
-              attribution='&amp;copy <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-              center={[40.102947, 22.502612]}
-              zoom={11}
-              scrollWheelZoom={false}
-              className="w-[450px] md:w-[550px] lg:w-[400px] xl:w-[550px] h-[400px] lg:h-[450px] xl:h-[550px] z-0 -rotate-6 object-contain rounded-2xl drop-shadow-xl"
-            >
-              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-              {locationData.map((location) => (
-                <Marker
-                  key={location.id}
-                  position={[location.lat, location.lng]}
-                >
-                  <Popup>
-                    <h2 className="font-links font-bold">{location.name}</h2>
-                    <p className="font-body">Latitude: {location.lat}</p>
-                    <p className="font-body">Longitude: {location.lng}</p>
-                  </Popup>
-                </Marker>
-              ))}
-            </MapContainer>
-          </div>
-
-            <div className="relative flex flex-col mx-auto w-[80%] md:w-[70%] lg:w-[60%] xl:w-[35%] p-4 -mt-10 -mb-10 rotate-6 lg:rotate-0 lg:mb-0 lg:mt-2 xl:-mt-16 lg:-ml-20 lg:-mr-6 xl:-ml-24 xl:-mr-10 z-10 rounded-2xl bg-background drop-shadow-xl opacity-85 opacity-80">
+        <motion.div
+          className="relative flex flex-col mx-auto w-[80%] md:w-[70%] lg:w-[60%] xl:w-[35%] p-4 -mt-10 -mb-10 rotate-6 lg:rotate-0 lg:mb-0 lg:mt-2 xl:-mt-16 lg:-ml-20 lg:-mr-6 xl:-ml-24 xl:-mr-10 z-10 rounded-2xl bg-background drop-shadow-xl opacity-85 opacity-80"
+          variants={isSmallScreen ? floatFromDownLocationMobile : floatFromDownLocation}
+          initial="initial"
+          ref={locationInfoRef}
+          animate={locationInfoInView ? 'animate' : 'initial'}
+        >
             {locationDataInfo.map((data, index) => (
-              <div key={index} className="items-center text-primary">
+              <motion.div key={index} className="items-center text-primary">
                 {data.paragraph && <p className="pb-5 md:text-[15px] text-[14px]">{data.paragraph}</p>}
                 {data.googleMapsLink && (
                   <p className="font-links font-bold">
@@ -64,17 +79,33 @@ const Location = () => {
                     </a>
                   </p>
                 )}
-              </div>
+              </motion.div>
             ))}
-            </div>
+            </motion.div>
 
-          <div className="flex flex-col items-center justify-center relative mx-auto z-2 mb-6 mt-2 lg:mt-6 xl:-mt-16 pt-6 lg:mr-28 lg:ml-auto w-[85%] md:w-[70%] lg:w-[40%] xl:w-[28%] h-auto">
-          <img src={mountainStefani} alt="Stefani on Mount Olympus" className="rounded-2xl drop-shadow-xl -rotate-6 mb-2" />
-          <img src={mountainEnipeas} alt="Enipeas on Mount Olympus" className="rounded-2xl drop-shadow-xl rotate-6 mt-2" />
-          </div>
+          <motion.div className="flex flex-col items-center justify-center relative mx-auto z-2 mb-6 mt-2 lg:mt-6 xl:-mt-16 pt-6 lg:mr-28 lg:ml-auto w-[85%] md:w-[70%] lg:w-[40%] xl:w-[28%] h-auto">
+          <motion.img
+            src={mountainStefani}
+            alt="Stefani on Mount Olympus"
+            className="rounded-2xl drop-shadow-xl -rotate-6 mb-2"
+            variants={isSmallScreen ? floatFromRightLocation1Mobile : floatFromRightLocation1}
+            initial="initial"
+            ref={mountainStefaniRef}
+            animate={mountainStefaniInView ? 'animate' : 'initial'}
+          />
+          <motion.img
+            src={mountainEnipeas}
+            alt="Enipeas on Mount Olympus"
+            className="rounded-2xl drop-shadow-xl rotate-6 mt-2"
+            variants={isSmallScreen ? floatFromRightLocation2Mobile : floatFromRightLocation2}
+            initial="initial"
+            ref={mountainEnipeasRef}
+            animate={mountainEnipeasInView ? 'animate' : 'initial'}
+          />
+          </motion.div>
 
 
-        </div>
+        </motion.div>
 
     </section>
   );

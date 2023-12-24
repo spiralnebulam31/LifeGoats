@@ -5,7 +5,7 @@ import LandingPage from './pages/LandingPage';
 import Footer from './components/Footer/Footer';
 import { lifeGoatsLogo } from "./assets/index.js";
 
-function App() {
+const App = () => {
 
   const [preloader, setPreloader] = useState(true);
   const [timer, setTimer] = useState(0);
@@ -50,10 +50,10 @@ function App() {
       </div>
     ) : (
     <Router>
-      <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
+      <div id="loco-scroll-container" className="bg-cover bg-n-repeat bg-center overflow-hidden">
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage preloader={preloader} />} />
         </Routes>
         <Footer modalState={modalState} setModalState={setModalState} closeModal={closeModal} />
       </div>

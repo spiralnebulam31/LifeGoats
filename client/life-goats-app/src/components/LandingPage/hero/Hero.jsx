@@ -15,7 +15,7 @@ import {
   calendar,
 } from "../../../assets/index.js";
 
-const Hero = () => {
+const Hero = ( { isSmallScreen } ) => {
   return (
       <section className="bg-background relative w-screen h-screen mx-auto overflow-hidden">
       <img src={heroBackground2} alt="hero background" className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 opacity-40" />

@@ -9,7 +9,7 @@ import {
 } from "../../../assets/index.js";
 import { motion } from "framer-motion";
 
-const Details = () => {
+const Details = ( { isSmallScreen } ) => {
   return (
     <section
       id="details"
