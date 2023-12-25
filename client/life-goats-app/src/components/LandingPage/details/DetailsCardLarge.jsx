@@ -1,14 +1,17 @@
 import DetailCard from './DetailCard.jsx';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { details } from '../../../constants/constants.js';
 import { useMediaQuery } from "react-responsive";
+import { fadeIn } from '../../../motion/motion';
 
 const DetailsCardLarge = () => {
 
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
-    <motion.div className="flex items-center justify-center mx-auto">
+    <motion.div className="flex items-center justify-center mx-auto"
+      variants={fadeIn} initial="initial" whileInView="animate"
+    >
         <motion.div className="flex flex-wrap px-2 space-x-2 justify-center w-full mx-auto my-auto">
         
         {isSmallScreen && (

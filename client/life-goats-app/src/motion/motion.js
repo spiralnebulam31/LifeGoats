@@ -1,20 +1,17 @@
-export const fadeIn = (direction, type, delay, duration) => {
-    return {
-      hidden: {
-        opacity: 0,
+export const fadeIn = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 3,
+        delay: 0.5,
+        type: "spring",
+        staggerChildren: 1
       },
-      show: {
-        x: 0,
-        opacity: 1,
-        transition: {
-          type: type,
-          duration: duration,
-          delay: delay,
-          staggerChildren: 0.1,
-        },
-      },
-    };
-  };
+    },
+    }
 
   export const textVariant = (delay) => {
     return {

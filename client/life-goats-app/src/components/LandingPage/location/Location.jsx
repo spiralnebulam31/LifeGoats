@@ -29,8 +29,8 @@ const Location = ( { isSmallScreen } ) => {
   const mountainEnipeasInView = useInView(mountainEnipeasRef, { threshold: 0.5 });
 
   return (
-    <section id="location" className="bg-background relative bg-cover w-full h-auto left-0 right-0 bottom-0 top-0
-    pb-5 pt-14 overflow-hidden">
+    <section id="location" className="bg-background relative bg-cover w-full h-auto min-h-full left-0 right-0 bottom-0 top-0
+    pb-5 pt-10 overflow-hidden">
         
           <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
             <motion.p className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider"
@@ -53,6 +53,7 @@ const Location = ( { isSmallScreen } ) => {
           initial="initial"
           ref={mapDisplayRef}
           animate={mapDisplayInView ? 'animate' : 'initial'}
+          viewport={isSmallScreen ? {once: true} : {once: false}}
         >
           <MapDisplay />
         </motion.div>
@@ -64,6 +65,7 @@ const Location = ( { isSmallScreen } ) => {
           initial="initial"
           ref={locationInfoRef}
           animate={locationInfoInView ? 'animate' : 'initial'}
+          viewport={isSmallScreen ? {once: true} : {once: false}}
         >
             {locationDataInfo.map((data, index) => (
               <motion.div key={index} className="items-center text-primary">
@@ -92,6 +94,7 @@ const Location = ( { isSmallScreen } ) => {
             initial="initial"
             ref={mountainStefaniRef}
             animate={mountainStefaniInView ? 'animate' : 'initial'}
+            viewport={isSmallScreen ? {once: true} : {once: false}}
           />
           <motion.img
             src={mountainEnipeas}
@@ -101,6 +104,7 @@ const Location = ( { isSmallScreen } ) => {
             initial="initial"
             ref={mountainEnipeasRef}
             animate={mountainEnipeasInView ? 'animate' : 'initial'}
+            viewport={isSmallScreen ? {once: true} : {once: false}}
           />
           </motion.div>
 
