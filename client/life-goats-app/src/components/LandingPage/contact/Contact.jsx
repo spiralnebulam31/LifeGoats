@@ -1,6 +1,7 @@
 import { useRef } from "react";
-import { motion } from "framer-motion";
-import { fadeIn, textVariant, floatFromLeftVariant, floatFromRightVariant } from "../../../motion/motion.js";
+import { motion, useInView } from "framer-motion";
+import { floatFromLeftContact, floatFromRightContact } from "../../../motion/home-sections";
+import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../../motion/home-sections";
 import emailjs from "@emailjs/browser";
 import { phone, phoneHover, email, emailHover, transparentMountainBG2 } from "../../../assets";
 
@@ -11,7 +12,14 @@ const Contact = ({
   emailIsHovered,
   handleEmailMouseEnter,
   handleEmailMouseLeave,
+  isSmallScreen,
 }) => {
+
+  const leftSideRef = useRef();
+  const rightSideRef = useRef();
+
+  const leftSideView = useInView({ threshold: 0.5 });
+  const rightSideView = useInView({ threshold: 0.5 });
   
   const form = useRef();
 
@@ -53,26 +61,29 @@ const Contact = ({
         <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden"
       >
-        <p
+        <motion.p
           className="md:text-[18px] text-[14px] text-background font-subtitle
           font-bold uppercase tracking-wider"
+          variants={floatFromDownPreTitle} initial="initial" whileInView="animate" viewport={{once: true}}
         >
           Ways to reach out
-        </p>
-        <h2
+        </motion.p>
+        <motion.h2
           className="text-earth font-bold font-title uppercase md:text-[55px]
           sm:text-[45px] text-[40px] outline-background-2 pb-4 mt-0"
           style={{ textShadow: "3px 2px 3px rgba(0, 0, 0, 0.3)" }}
+          variants={floatFromDownMainTitle} initial="initial" whileInView="animate" viewport={{once: true}}
         >
           Contact Life Goats
-        </h2>
+        </motion.h2>
       </motion.div>
         {/* End of title */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 mt-1 mb-20 sm:mb-44 lg:mb-[50vh]">
+        <motion.div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 mt-1 mb-20 sm:mb-44 lg:mb-[50vh]">
           {/* Contact Information */}
           <motion.div
           className="text-center justify-start w-[80%] lg:w-[85%] mx-auto flex items-center flex-col lg:mx-24 xl:mx-36"
+          variants={floatFromLeftContact} initial="initial" whileInView={isSmallScreen ? "initial" : "animate"} ref={leftSideRef}
           >
             <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-1 lg:pt-10 mb-5 leading-[30px]">
               <p>For any questions or suggestions, feel free to reach out to Maria:</p>
@@ -111,6 +122,7 @@ const Contact = ({
           {/* Contact Form */}
           <motion.div
           className="text-center justify-start w-[80%] xl:w-[70%] mx-auto lg:mr-[28%]"
+          variants={floatFromRightContact} initial="initial" whileInView={isSmallScreen ? "initial" : "animate"} ref={rightSideRef}
           >
             <p className="text-primary font-body text-lg max-w-lg xl:max-w-6xl pb-5 mx-auto">
               Or send a message below:
@@ -134,7 +146,7 @@ const Contact = ({
             </form>
           </motion.div>
           {/* End of Contact Form */}
-        </div>
+        </motion.div>
 
         <div className="absolute right-0 left-0 bottom-0 z-20 bg-no-repeat w-full pointer-events-none">
           <img src={transparentMountainBG2} alt="transparent mountain background" className="w-screen h-auto" />

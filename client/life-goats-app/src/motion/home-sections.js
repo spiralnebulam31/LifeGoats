@@ -290,3 +290,35 @@ export const floatFromLeftDetails2 = {
     },
   },
 };
+
+
+// Contact
+export const floatFromLeftContact = {
+  initial: {
+    x: -100,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 0.3,
+    },
+  },
+  }
+
+  export const floatFromRightContact = {
+    initial: {
+      x: 100,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 0.3,
+      },
+    },
+    }
