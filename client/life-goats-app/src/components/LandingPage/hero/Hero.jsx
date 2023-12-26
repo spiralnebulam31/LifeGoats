@@ -53,7 +53,7 @@ const Hero = ({ isSmallScreen }) => {
                 alt="calendar"
                 className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] object-contain z-40 mb-5"
               />
-              <p className="mb-5">tentatively Tuesday 28th - Friday 31st</p>
+              <p className="mb-5">tentatively Tue 28th - Fri 31st May</p>
             </div>
             <p className="lg:text-[30px] md:text-[28px] text-[23px] max-w-sm md:max-w-2xl">
               A collaborative retreat for coaches, therapists, carers and other
@@ -75,12 +75,12 @@ const Hero = ({ isSmallScreen }) => {
           <a href="#about">
             <motion.div
               variants={heroGoatPrintsVariant}
-              className="w-[35px] h-[75px] rounded-3xl border-4 border-primary flex justify-center items-start z-40"
+              className="w-[35px] h-[75px] rounded-3xl border-4 border-primary flex justify-start items-start z-40"
             >
               <motion.div variants={goatPrintsSliderVariant}>
                 <img
                   src={goatPrints}
-                  alt="arrow star"
+                  alt="goat hoof prints"
                   className="w-[60px] h-[60px] object-contain z-50"
                 />
               </motion.div>

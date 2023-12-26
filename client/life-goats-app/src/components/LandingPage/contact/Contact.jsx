@@ -90,7 +90,7 @@ const Contact = ({
             </div>
 
             {/* Contact Info Container */}
-            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[80%] md:w-[60%] lg:w-[80%] mx-auto lg:mx-16">
+            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] md:w-[60%] lg:w-[80%] mx-auto lg:mx-16">
 
                 {/* Contact Links */}
                 <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">

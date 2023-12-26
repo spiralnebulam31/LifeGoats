@@ -79,7 +79,7 @@ export const floatFromUpHeroTitle = {
       x: 0
     },
   animate: {
-        y: [0, 30, 0],
+        y: [0, 20, 0],
     transition: {
       duration: 3,
       repeat: Infinity,

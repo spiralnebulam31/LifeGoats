@@ -10,7 +10,7 @@ const MapDisplay = () => {
               center={[40.102947, 22.502612]}
               zoom={11}
               scrollWheelZoom={false}
-              className="w-[450px] md:w-[550px] lg:w-[400px] xl:w-[550px] h-[400px] lg:h-[450px] xl:h-[550px] z-0 object-contain rounded-2xl drop-shadow-xl"
+              className="w-[300px] md:w-[550px] lg:w-[400px] xl:w-[550px] h-[400px] lg:h-[450px] xl:h-[550px] z-0 object-contain rounded-2xl drop-shadow-xl"
             >
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
