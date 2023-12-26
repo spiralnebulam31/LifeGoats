@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
@@ -7,23 +6,24 @@ import {
 import { overviewData } from "../../../constants/constants";
 import OverviewCard from "./OverviewCard";
 
-const EventOverview = ( { isSmallScreen } ) => {
-
+const EventOverview = ({ isSmallScreen }) => {
   return (
     <section
       id="overview"
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden">
+      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden"
+    >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-8 mb-5 z-10 overflow-hidden">
+        pt-8 mb-5 z-10 overflow-hidden"
+      >
         <motion.p
           className="md:text-[18px] text-[14px] text-background font-subtitle
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
           animate="animate"
-          viewport={{once: true}}
+          viewport={{ once: true }}
         >
           A retreat from us, for us.
         </motion.p>
@@ -34,32 +34,38 @@ const EventOverview = ( { isSmallScreen } ) => {
           variants={floatFromDownMainTitle}
           initial="initial"
           animate="animate"
-          viewport={{once: true}}
+          viewport={{ once: true }}
         >
           What to expect
         </motion.h2>
       </motion.div>
 
-      <motion.div
-        className="flex flex-row justify-evenly items-center"
-      >
-        <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 mb-10 md:mb-14"
-        >
+      <motion.div className="flex flex-row justify-evenly items-center">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 mb-10 md:mb-14">
           {overviewData.map((overview, index) => (
             <motion.div
-        key={index}
-        className="relative z-10"
-      >
-
-  <OverviewCard key={index} {...overview} />
-
-    </motion.div>
-))}
-
+              key={index}
+              className="relative z-10"
+              initial={{
+                opacity: 0,
+                translateX: index % 2 === 0 ? -100 : 100,
+                translateY: -100,
+              }}
+              whileInView={{
+                opacity: 1,
+                translateX: 0,
+                translateY: 0,
+                transition: {
+                  duration: 0.8,
+                  delay: index * 0.2,
+                }
+              }}
+              >
+              <OverviewCard key={index} {...overview} />
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
-
     </section>
   );
 };
