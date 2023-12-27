@@ -12,7 +12,7 @@ const Program = ({ isSmallScreen }) => {
       id="program"
       className="bg-background
       relative bg-cover w-screen h-screen inset-0 left-0 right-0 bottom-0 top-0
-      overflow-hidden pt-2 pb-12"
+      overflow-hidden pt-2 pb-12 z-10"
     >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto

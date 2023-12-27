@@ -14,7 +14,7 @@ const About = ( { isSmallScreen } ) => {
   
   return (
     <section id="about" className="overflow-hidden bg-gradient-to-b from-background via-blue-100 to-blue-400 relative bg-cover
-    w-full h-auto min-f-full left-0 right-0 bottom-0 top-0 pt-2 pb-12">
+    w-full h-auto min-h-full left-0 right-0 top-0 pt-2 pb-12 z-10">
       
       <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-14 mb-5 z-10 overflow-hidden">

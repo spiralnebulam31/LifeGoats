@@ -11,7 +11,7 @@ const EventOverview = ({ isSmallScreen }) => {
     <section
       id="overview"
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12"
+      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
     >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto

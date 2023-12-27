@@ -28,9 +28,9 @@ const Footer = ({ modalState, setModalState }) => {
   };
 
   return (
-    <footer className="bg-primary bg-contain bg-center bg-no-repeat bg-fixed z-1 relative inset-0 w-full h-auto flex flex-col items-center justify-center bottom-0 overflow-hidden">
+    <footer className="bg-primary bg-contain bg-center bg-no-repeat fixed z-1 bottom-0 left-0 right-0 w-full h-[130px] flex flex-col items-center justify-center overflow-hidden">
       
-      <div className="flex flex-col justify-center items-center mx-auto mb-0.1 mt-3 z-0">
+      <div className="flex flex-col justify-center items-center align-middle mx-auto my-auto gap-3">
         
 
         {/* Social Media
@@ -76,7 +76,7 @@ const Footer = ({ modalState, setModalState }) => {
 
         {/*Copyright & Developer*/}
         <div className="flex flex-row justify-center items-center">
-          <p className="text-background font-body font-bold text-lg mb-1">
+          <p className="text-background font-body font-bold text-lg">
             Copyright
             <span className="text-secondary font-links font-bold text-lg mx-2">©</span>
             2023 Life Goats
@@ -84,7 +84,7 @@ const Footer = ({ modalState, setModalState }) => {
         </div>
 
         <div className="flex flex-row justify-center items-center">
-          <p className="text-background font-body font-bold text-md mb-1 mt-1">
+          <p className="text-background font-body font-bold text-md">
             Designed & developed by
             <a
               href="https://anastasiaadamoudi.com/"
@@ -96,28 +96,26 @@ const Footer = ({ modalState, setModalState }) => {
             </a>
           </p>
         </div>
-      </div>
 
       {/*Privacy & Accessibility Modals*/}
-      <div className="mx-auto mb-0.1 mt-0.1 z-0">
-        <div className="flex flex-row gap-2 ">
+        <div className="flex flex-row gap-2">
 
           <button
             type="button"
             onClick={togglePrivacyModal}
-            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
           >
             Privacy Policy
           </button>
 
           <PrivacyModal isOpen={privacyOpen} onClose={togglePrivacyModal} />
 
-          <span className="text-secondary font-links font-bold text-2xl mx-2 pb-3 pt-2">|</span>
+          <span className="text-secondary font-links font-bold mx-2">|</span>
 
           <button
             type="button"
             onClick={toggleAccessibilityModal}
-            className="pb-3 pt-2 text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
           >
             Web Accessibility Statement
           </button>

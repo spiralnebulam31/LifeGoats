@@ -16,7 +16,7 @@ import {
 const Hero = ({ isSmallScreen }) => {
 
   return (
-    <section className="bg-background relative w-screen h-screen mx-auto overflow-hidden">
+    <section className="bg-background sticky top-0 w-screen h-screen mx-auto overflow-hidden z-10">
       <img
         src={heroBackground2}
         alt="hero background"

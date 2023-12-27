@@ -30,7 +30,7 @@ const Location = ( { isSmallScreen } ) => {
 
   return (
     <section id="location" className="bg-background relative bg-cover w-full h-auto min-h-full left-0 right-0 bottom-0 top-0
-    pt-2 pb-12 overflow-hidden">
+    pt-2 pb-12 overflow-hidden z-10">
         
           <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
             <motion.p className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider"
