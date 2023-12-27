@@ -11,7 +11,7 @@ const EventOverview = ({ isSmallScreen }) => {
     <section
       id="overview"
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden"
+      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12"
     >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
@@ -41,7 +41,7 @@ const EventOverview = ({ isSmallScreen }) => {
       </motion.div>
 
       <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 mb-10 md:mb-14">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 mb-2 md:mb-4">
           {overviewData.map((overview, index) => (
             <motion.div
               key={index}

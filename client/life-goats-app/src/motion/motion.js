@@ -28,16 +28,6 @@ export const mobileNav = {
       damping: 15,
       ease: "easeInOut",
     },
-    exit: {
-      scaleX: 0,
-      transition: {
-        duration: 0.3,
-        type: "spring",
-        stiffness: 50,
-        damping: 15,
-        ease: "easeInOut",
-      },
-    },
   },
 };
 

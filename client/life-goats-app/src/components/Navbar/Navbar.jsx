@@ -2,13 +2,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { homeLinks } from "../../constants/constants";
-import {
-  lifeGoatsLogo,
-  menuMountain,
-  menuClose
-} from "../../assets";
+import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
 import MobileMenu from "./MobileMenu";
-import { mobileNav } from "../../motion/motion";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -31,14 +26,13 @@ const Navbar = () => {
     };
   }, []);
 
-
   return (
-    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl pr-8 pl-5 py-2">
+    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[90px] align-middle my-auto">
       <div className="flex w-full mx-auto justify-between gap-20">
         <div className="flex items-center justify-start">
           <Link
             to="/"
-            className="flex items-center gap-2"
+            className="flex flex-row items-center justify-start gap-2 my-auto"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -47,7 +41,7 @@ const Navbar = () => {
             <img
               src={lifeGoatsLogo}
               alt="logo"
-              className="w-20 lg:w-[70px] h-auto top-0 left-0 object-contain"
+              className="w-[80px] h-auto cursor-pointer object-contain"
             />
             <p className="text-primary text-[26px] font-title cursor-pointer lg:block hidden">
               Life Goats
@@ -70,7 +64,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="lg:hidden flex flex-1 justify-end items-center gap-">
+          <div className="lg:hidden flex flex-1 justify-end items-center">
             <img
               src={mobile ? menuClose : menuMountain}
               alt="menu"
@@ -78,21 +72,19 @@ const Navbar = () => {
               onClick={() => setMobile(!mobile)}
             />
           </div>
-          <motion.div 
-
-    >
-          <AnimatePresence>
-          {mobile && (
-            <MobileMenu
-              key="mobile-menu-animation"
-              active={active}
-              setActive={setActive}
-              mobile={mobile}
-              setMobile={setMobile}
-            />
-          )}
-        </AnimatePresence>
-        </motion.div>
+          <motion.div>
+            <AnimatePresence>
+              {mobile && (
+                <MobileMenu
+                  key="mobile-menu-animation"
+                  active={active}
+                  setActive={setActive}
+                  mobile={mobile}
+                  setMobile={setMobile}
+                />
+              )}
+            </AnimatePresence>
+          </motion.div>
         </div>
       </div>
     </nav>

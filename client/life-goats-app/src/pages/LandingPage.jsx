@@ -12,7 +12,6 @@ import { useState } from "react";
 import MediaQuery from "react-responsive";
 
 const LandingPage = () => {
-
   const isSmallScreen = MediaQuery({ query: "(max-width: 768px)" });
 
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
@@ -35,8 +34,7 @@ const LandingPage = () => {
   };
 
   return (
-
-        <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
+    <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
       <Hero isSmallScreen={isSmallScreen} />
       <About isSmallScreen={isSmallScreen} />
       <EventOverview isSmallScreen={isSmallScreen} />

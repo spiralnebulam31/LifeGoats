@@ -30,7 +30,7 @@ const Location = ( { isSmallScreen } ) => {
 
   return (
     <section id="location" className="bg-background relative bg-cover w-full h-auto min-h-full left-0 right-0 bottom-0 top-0
-    pb-5 pt-10 overflow-hidden">
+    pt-2 pb-12 overflow-hidden">
         
           <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
             <motion.p className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider"
@@ -46,7 +46,7 @@ const Location = ( { isSmallScreen } ) => {
             </motion.h2>
           </motion.div>
           
-          <motion.div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-0 mb-8">
+          <motion.div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-0 mb-4">
           <motion.div
           className="flex mb-6 pt-6 justify-center items-center mx-auto z-2 lg:ml-20 lg:mr-auto w-[80%] md:w-[80%] lg:w-[45%] xl:w-[35%] z-0"
           variants={isSmallScreen ? floatFromLeftLocationMobile : floatFromLeftLocation}
