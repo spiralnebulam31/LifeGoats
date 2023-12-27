@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { homeLinks } from "../../constants/constants";
 import {
@@ -8,6 +8,7 @@ import {
   menuClose
 } from "../../assets";
 import MobileMenu from "./MobileMenu";
+import { mobileNav } from "../../motion/motion";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -77,6 +78,9 @@ const Navbar = () => {
               onClick={() => setMobile(!mobile)}
             />
           </div>
+          <motion.div 
+
+    >
           <AnimatePresence>
           {mobile && (
             <MobileMenu
@@ -88,6 +92,7 @@ const Navbar = () => {
             />
           )}
         </AnimatePresence>
+        </motion.div>
         </div>
       </div>
     </nav>
