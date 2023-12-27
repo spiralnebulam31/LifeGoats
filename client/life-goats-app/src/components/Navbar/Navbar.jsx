@@ -1,12 +1,8 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { navLinks } from "../../constants/constants";
-import {
-  lifeGoatsLogo,
-  menuMountain,
-  menuClose
-} from "../../assets";
+import { homeLinks } from "../../constants/constants";
+import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
 import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
@@ -18,13 +14,25 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <nav className={"fixed w-full top-0 z-50 bg-background shadow-xl pr-8 pl-5 py-2"}>
-      <div className="flex w-full mx-auto justify-between gap-20">
+    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px] align-middle my-auto">
+      <div className="flex w-full mx-auto my-auto justify-between align-middle text-center gap-20">
         <div className="flex items-center justify-start">
           <Link
             to="/"
-            className="flex items-center gap-2"
+            className="flex flex-row items-center justify-start gap-2 my-auto"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -33,7 +41,7 @@ const Navbar = () => {
             <img
               src={lifeGoatsLogo}
               alt="logo"
-              className="w-20 lg:w-[70px] h-auto top-0 left-0 object-contain"
+              className="h-[65px] w-auto cursor-pointer object-contain -mt-0.5"
             />
             <p className="text-primary text-[26px] font-title cursor-pointer lg:block hidden">
               Life Goats
@@ -42,7 +50,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center justify-end">
           <ul className="list-none hidden lg:flex flex-row gap-10">
-            {navLinks.map((link) => (
+            {homeLinks.map((link) => (
               <li
                 key={link.id}
                 className={`${
@@ -56,20 +64,27 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="lg:hidden flex flex-1 justify-end items-center gap-">
+          <div className="lg:hidden flex flex-1 justify-end items-center">
             <img
               src={mobile ? menuClose : menuMountain}
               alt="menu"
-              className="w-16 h-auto cursor-pointer object-contain z-30"
+              className="h-[60px] w-auto cursor-pointer object-contain z-30"
               onClick={() => setMobile(!mobile)}
             />
           </div>
-          <MobileMenu
-            active={active}
-            setActive={setActive}
-            mobile={mobile}
-            setMobile={setMobile}
-          />
+          <motion.div>
+            <AnimatePresence>
+              {mobile && (
+                <MobileMenu
+                  key="mobile-menu-animation"
+                  active={active}
+                  setActive={setActive}
+                  mobile={mobile}
+                  setMobile={setMobile}
+                />
+              )}
+            </AnimatePresence>
+          </motion.div>
         </div>
       </div>
     </nav>

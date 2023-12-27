@@ -1,141 +1,64 @@
-export const fadeIn = (direction, type, delay, duration) => {
-    return {
-      hidden: {
-        opacity: 0,
-      },
-      show: {
-        x: 0,
-        opacity: 1,
-        transition: {
-          type: type,
-          duration: duration,
-          delay: delay,
-          staggerChildren: 0.1,
-        },
-      },
-    };
-  };
-
-  export const textVariant = (delay) => {
-    return {
-      hidden: {
-        y: -50,
-        opacity: 0,
-      },
-      show: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: "spring",
-          duration: 1,
-          staggerChildren: 0.1,
-        },
-      },
-    };
-  };
-
-export const heroVariant = {
-    initial: {
-      y:-500,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: 0.5,
-      },
-    },
-  }
-
-  export const heroGoatPrintsVariant = {
-    initial: {
-      y: 500,
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: 0.5,
-      },
-    },
-  }
-
-
-  export const goatPrintsSliderVariant = {
-    initial: {
-      x: 0
-    },
+export const fadeIn = {
+  initial: {
+    opacity: 0,
+  },
   animate: {
-        y: [0, 20, 0],
+    opacity: 1,
     transition: {
       duration: 3,
-      repeat: Infinity,
-      repeatType: "loop",
+      delay: 0.5,
+      type: "spring",
+      staggerChildren: 1,
     },
-  }}
+  },
+};
 
-  export const cloud1Variant = {
-    initial: {
-      x:-500,
-      opacity: 0,
+export const mobileNav = {
+  initial: {
+    scaleX: 0,
+    x: 100,
+  },
+  animate: {
+    scaleX: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      type: "spring",
+      stiffness: 50,
+      damping: 15,
+      ease: "easeInOut",
     },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        duration: 1.5,
-        delay: 0.5,
-      },
-    },
-  }
+  },
+};
 
-  export const cloud2Variant = {
-    initial: {
-      x:500,
-      opacity: 0,
+export const linkReveal = {
+  animate: {
+    transition: {
+      staggerChildren: 0.4,
+      delayChildren: 0.4,
     },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        duration: 1.5,
-        delay: 0.5,
-      },
-    },
-  }
+  },
+};
 
-  export const floatFromLeftVariant = {
-    initial: {
-      x: -500,
-      opacity: 0,
+export const listItem = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
     },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        delay: 0.5,
-      },
+  },
+  exit: {
+    opacity: 0,
+    y: 20,
+    transition: {
+      duration: 0.3,
+      ease: "easeInOut",
     },
-    }
-
-    export const floatFromRightVariant = {
-      initial: {
-        x: 500,
-        opacity: 0,
-      },
-      animate: {
-        x: 0,
-        opacity: 1,
-        transition: {
-          duration: 1,
-          delay: 0.5,
-        },
-      },
-      }
+  },
+};

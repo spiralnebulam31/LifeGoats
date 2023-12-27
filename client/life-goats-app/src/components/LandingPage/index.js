@@ -1,4 +1,3 @@
-import LandingPage from "./LandingPage";
 import Hero from "./hero/Hero";
 import About from "./about/About";
 import EventOverview from "./overview/EventOverview";
@@ -8,4 +7,4 @@ import Program from "./program/Program";
 import Parallax from "./parallax/Parallax";
 import Contact from "./contact/Contact";
 
-export { LandingPage, Hero, About, EventOverview, Details, Location, Program, Parallax, Contact };
+export { Hero, About, EventOverview, Details, Location, Program, Parallax, Contact };

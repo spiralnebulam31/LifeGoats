@@ -12,7 +12,7 @@ import {
   hikers,
 } from "../assets";
 
-export const navLinks = [
+export const homeLinks = [
   {
     id: "about",
     title: "About",

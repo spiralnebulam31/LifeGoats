@@ -49,6 +49,13 @@ import emailHover from './contact/email-hover.svg';
 import phone from './contact/phone.svg';
 import phoneHover from './contact/phone-hover.svg';
 
+import facebook from './social/facebook.svg';
+import facebookHover from './social/facebook-hover.svg';
+import instagram from './social/instagram.svg';
+import instagramHover from './social/instagram-hover.svg';
+
+import downArrow from './navigation/down-arrow.svg';
+
 export {
     goatPrintSingle,
     lifeGoatsLogo,
@@ -92,4 +99,9 @@ export {
     emailHover,
     phone,
     phoneHover,
+    facebook,
+    facebookHover,
+    instagram,
+    instagramHover,
+    downArrow
 }
