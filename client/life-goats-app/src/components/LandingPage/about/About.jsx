@@ -33,7 +33,7 @@ const About = ( { isSmallScreen } ) => {
           </motion.h2>
         </motion.div>
 
-        <motion.div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-8 mb-8">
+        <motion.div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-2 lg:mt-6 mb-8">
   <motion.img src={aboutPhoto} alt="host Maria with dog Ruby on Mount Olympus" className="w-[75%] md:w-[80%] lg:w-[55%] h-auto rounded-2xl drop-shadow-xl"
   variants={floatFromLeftAbout} initial="initial" ref={photoRef} animate={photoInView ? "animate" : "initial"}
   />

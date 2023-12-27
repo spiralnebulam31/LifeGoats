@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[90px] align-middle my-auto">
+    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px] align-middle my-auto">
       <div className="flex w-full mx-auto justify-between gap-20">
         <div className="flex items-center justify-start">
           <Link
@@ -41,7 +41,7 @@ const Navbar = () => {
             <img
               src={lifeGoatsLogo}
               alt="logo"
-              className="w-[80px] h-auto cursor-pointer object-contain"
+              className="h-[65px] w-auto cursor-pointer object-contain"
             />
             <p className="text-primary text-[26px] font-title cursor-pointer lg:block hidden">
               Life Goats
@@ -68,7 +68,7 @@ const Navbar = () => {
             <img
               src={mobile ? menuClose : menuMountain}
               alt="menu"
-              className="w-16 h-auto cursor-pointer object-contain z-30"
+              className="h-[60px] w-auto cursor-pointer object-contain z-30"
               onClick={() => setMobile(!mobile)}
             />
           </div>
