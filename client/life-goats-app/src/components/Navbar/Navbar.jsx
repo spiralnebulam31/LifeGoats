@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { homeLinks } from "../../constants/constants";
 import {
@@ -17,6 +17,19 @@ const Navbar = () => {
     setActive(link.title);
     window.scrollTo(0, 0);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-background shadow-xl pr-8 pl-5 py-2">
@@ -64,12 +77,17 @@ const Navbar = () => {
               onClick={() => setMobile(!mobile)}
             />
           </div>
-          <MobileMenu
-            active={active}
-            setActive={setActive}
-            mobile={mobile}
-            setMobile={setMobile}
-          />
+          <AnimatePresence>
+          {mobile && (
+            <MobileMenu
+              key="mobile-menu-animation"
+              active={active}
+              setActive={setActive}
+              mobile={mobile}
+              setMobile={setMobile}
+            />
+          )}
+        </AnimatePresence>
         </div>
       </div>
     </nav>
