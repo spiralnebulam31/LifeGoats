@@ -7,7 +7,7 @@ import { lifeGoatsLogo } from "./assets/index.js";
 
 const App = () => {
   const [preloader, setPreloader] = useState(true);
-  const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState(2);
 
   const id = useRef(null);
 

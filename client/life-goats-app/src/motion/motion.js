@@ -34,8 +34,8 @@ export const mobileNav = {
 export const linkReveal = {
   animate: {
     transition: {
-      staggerChildren: 0.4,
-      delayChildren: 0.4,
+      staggerChildren: 0.3,
+      delayChildren: 0.3,
     },
   },
 };
@@ -49,7 +49,7 @@ export const listItem = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.2,
       ease: "easeInOut",
     },
   },

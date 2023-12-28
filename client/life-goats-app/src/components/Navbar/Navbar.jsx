@@ -14,25 +14,13 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px] align-middle my-auto">
-      <div className="flex w-full mx-auto my-auto justify-between align-middle text-center gap-20">
-        <div className="flex items-center justify-start">
+    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px]">
+      <div className="flex w-full mx-auto justify-between gap-20">
+        <div className="flex justify-start">
           <Link
             to="/"
-            className="flex flex-row items-center justify-start gap-2 my-auto"
+            className="flex flex-row items-center =justify-start gap-2"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -41,7 +29,7 @@ const Navbar = () => {
             <img
               src={lifeGoatsLogo}
               alt="logo"
-              className="h-[65px] w-auto cursor-pointer object-contain -mt-0.5"
+              className="h-[65px] w-auto cursor-pointer object-contain pb-1"
             />
             <p className="text-primary text-[26px] font-title cursor-pointer lg:block hidden">
               Life Goats
@@ -64,7 +52,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="lg:hidden flex flex-1 justify-end items-center">
+          <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
             <img
               src={mobile ? menuClose : menuMountain}
               alt="menu"

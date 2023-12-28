@@ -5,10 +5,8 @@ import { homeLinks } from "../../constants/constants";
 const MobileMenu = ({ active, setActive, mobile, setMobile }) => {
   return (
     <motion.div
-      className={`${
-        !mobile ? "hidden" : "flex"
-      } absolute right-0 top-0 bottom-0 w-[60%] h-screen mx-0 my-0
-        z-10 flex-col items-end gap-60`}
+      className="flex lg:hidden absolute right-0 top-0 bottom-0 w-[60%] h-screen mx-0 my-0
+        z-10 flex-col items-end gap-60"
       variants={mobileNav}
       initial="initial"
       animate="animate"
