@@ -33,6 +33,8 @@ import cloud2 from './overview/cloud2.svg';
 
 import mountainStefani from './location/mountain-stefani.webp';
 import mountainEnipeas from './location/mountain-enipeas.webp';
+import mapPin from './location/map-pin.svg';
+import pinShadow from './location/pin-shadow.svg';
 
 import lifeGoatsWalkingMountain from './parallax/life-goats-walking-mountain.webp';
 
@@ -80,6 +82,8 @@ export {
     cloud2,
     mountainStefani,
     mountainEnipeas,
+    mapPin,
+    pinShadow,
     lifeGoatsWalkingMountain,
     email,
     emailHover,

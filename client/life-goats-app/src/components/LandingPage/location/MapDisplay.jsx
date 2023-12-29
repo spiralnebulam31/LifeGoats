@@ -1,8 +1,21 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import { locationData } from "../../../constants/constants";
+import { mapPin, pinShadow } from "../../../assets/index.js";
 
 const MapDisplay = () => {
+
+  const customMarker = new L.icon({
+    iconUrl: mapPin,
+    shadowUrl: pinShadow,
+    iconSize: [40, 40],
+    shadowSize: [40, 55],
+    iconAnchor: [20, 40],
+    shadowAnchor: [20, 40],
+    popupAnchor: [0, -40]
+  });
+
   return (
     <div>
       <MapContainer
@@ -18,6 +31,7 @@ const MapDisplay = () => {
                 <Marker
                   key={location.id}
                   position={[location.lat, location.lng]}
+                  icon={customMarker}
                 >
                   <Popup>
                     <h2 className="font-links font-bold">{location.name}</h2>
