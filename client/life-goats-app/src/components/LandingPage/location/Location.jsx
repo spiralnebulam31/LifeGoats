@@ -13,7 +13,7 @@ import {
   floatFromDownLocationMobile
  } from '../../../motion/home-sections';
 import { mountainStefani, mountainEnipeas } from "../../../assets";
-import { locationDataInfo } from "../../../constants/constants";
+import { locationDataInfo } from "../../../constants/location";
 import MapDisplay from './MapDisplay';
 
 const Location = ( { isSmallScreen } ) => {

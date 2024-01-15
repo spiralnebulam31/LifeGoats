@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../motion/home-sections';
-import { aboutText } from '../../../constants/constants';
+import { aboutText } from '../../../constants/about';
 import { aboutPhoto } from '../../../assets';
 
 const About = ( { isSmallScreen } ) => {

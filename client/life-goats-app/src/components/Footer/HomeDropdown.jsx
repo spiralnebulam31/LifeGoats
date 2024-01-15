@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import HomeLinks from "../LinksColumns/HomeLinks";
-import { homeLinks } from "../../constants/constants";
+import { homeLinks } from "../../constants/navLinks";
 
 const HomeDropdown = ({ toggleDropdown, setToggleDropdown }) => (
   <motion.div

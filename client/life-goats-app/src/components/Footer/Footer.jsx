@@ -5,7 +5,7 @@ import HomeDropdown from "./HomeDropdown";
 import PrivacyModal from "./PrivacyModal";
 import AccessibilityModal from "./AccessibilityModal";
 import HomeLinks from "../LinksColumns/HomeLinks";
-import { homeLinks } from "../../constants/constants";
+import { homeLinks } from "../../constants/navLinks";
 
 const Footer = ({ modalState, setModalState }) => {
 
