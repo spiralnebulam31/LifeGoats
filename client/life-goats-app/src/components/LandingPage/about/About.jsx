@@ -41,9 +41,10 @@ const About = ( { isSmallScreen } ) => {
   variants={floatFromRightAbout} initial="initial" ref={textRef} animate={textInView ? "animate" : "initial"}
   >
     {aboutText.map((text, index) => (
-      <motion.div key={index} className="w-full px-6 py-2">
-        {text.paragraph && <p className="md:text-[15px] text-[14px] font-body text-primary">{text.paragraph}</p>}
-        {text.endText && <p className="md:text-[16px] text-[15px] font-bold font-body text-secondary">{text.endText}</p>}
+      <motion.div key={index} className="w-full px-6 py-2 font-body text-primary">
+        {text.paragraph && <p className="md:text-[15px] text-[14px]">{text.paragraph}</p>}
+        {text.lastParagraph && <p className="md:text-[15px] text-[14px] font-bold">{text.lastParagraph}</p>}
+        {text.endText && <p className="md:text-[17px] text-[16px] font-bold text-center">{text.endText}</p>}
       </motion.div>
     ))}
   </motion.div>

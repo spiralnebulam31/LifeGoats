@@ -13,10 +13,14 @@ export const aboutText = [
     },
     {
       paragraph:
-        "We deserve to recharge our batteries, be in community and reinvent ourselves. In fact, our performance in the long run depends on that.",
+        "We deserve to recharge our batteries, be in community and enjoy reinventing ourselves. In fact, our performance in the long run depends on that.",
     },
     {
-      endText:
-        "So come on over and spend some time climbing Mt. Olympus with us.",
+      lastParagraph:
+        "This May I’m inviting you to come together and visit me in one of my favorite places. I’m hosting an overnight hike to the peak of Mt. Olympus, Greece. There will also be quality time at sea level!",
+    },
+    {
+      endText:        
+        "Do come! We would love to have you!",
     },
   ];

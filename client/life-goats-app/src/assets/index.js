@@ -25,9 +25,12 @@ import photo6 from './details/photo-6.svg';
 import goat from './overview/goat.webp';
 import nature from './overview/nature.webp';
 import peace from './overview/peace.webp';
-import refuge from './overview/refuge.webp';
+import challenge from './overview/challenge.webp';
 import food from './overview/food.webp';
 import hikers from './overview/hikers.webp';
+import theLandAtTheFootOfTheMountain from './location/the-land-at-the-foot-of-the-mountain.webp';
+import theOldDiscotechByTheSea from './location/the-old-discotech-by-the-sea.webp';
+import mountOlympus from './location/mount-olympus.webp';
 import cloud1 from './overview/cloud1.svg';
 import cloud2 from './overview/cloud2.svg';
 
@@ -37,6 +40,11 @@ import mapPin from './location/map-pin.svg';
 import pinShadow from './location/pin-shadow.svg';
 
 import lifeGoatsWalkingMountain from './parallax/life-goats-walking-mountain.webp';
+
+import program from './program/program.svg';
+import program2 from './program/program2.svg';
+import pricing from './program/pricing.svg';
+import pricing2 from './program/pricing2.svg';
 
 import email from './contact/email.svg';
 import emailHover from './contact/email-hover.svg';
@@ -74,10 +82,13 @@ export {
     goat,
     nature,
     peace,
-    refuge,
+    challenge,
     food,
     hikers,
     transparentMountainBG2,
+    theLandAtTheFootOfTheMountain,
+    theOldDiscotechByTheSea,
+    mountOlympus,
     cloud1,
     cloud2,
     mountainStefani,
@@ -85,6 +96,10 @@ export {
     mapPin,
     pinShadow,
     lifeGoatsWalkingMountain,
+    program,
+    program2,
+    pricing,
+    pricing2,
     email,
     emailHover,
     phone,

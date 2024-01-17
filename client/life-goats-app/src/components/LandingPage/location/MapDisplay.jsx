@@ -3,8 +3,11 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { locationData } from "../../../constants/location";
 import { mapPin, pinShadow } from "../../../assets/index.js";
+import { useMediaQuery } from "react-responsive";
 
 const MapDisplay = () => {
+
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 
   const customMarker = new L.icon({
     iconUrl: mapPin,
@@ -34,9 +37,15 @@ const MapDisplay = () => {
                   icon={customMarker}
                 >
                   <Popup>
-                    <h2 className="font-links font-bold">{location.name}</h2>
-                    <p className="font-body">Latitude: {location.lat}</p>
-                    <p className="font-body">Longitude: {location.lng}</p>
+                    <h2 className="font-links font-bold text-lg">{location.name}</h2>
+                    <p className="font-body">({location.lat}, {location.lng})</p>
+                    <img src={location.image} alt={location.alt} className="h-[200px] w-auto object-cover rounded-2xl" />
+                    {!isSmallScreen && (
+                      <p className="font-body">{location.description}</p>
+                    )}
+                    {!isSmallScreen && location.extraDescription && (
+                      <p className="font-body">{location.extraDescription}</p>
+                    )}
                   </Popup>
                 </Marker>
               ))}
