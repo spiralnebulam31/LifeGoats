@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../motion/motion";
-import { homeLinks } from "../../constants/constants";
+import { homeLinks } from "../../constants/navLinks";
 
 const MobileMenu = ({ active, setActive, mobile, setMobile }) => {
   return (

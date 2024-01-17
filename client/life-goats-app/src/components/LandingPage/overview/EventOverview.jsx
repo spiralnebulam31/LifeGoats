@@ -3,7 +3,7 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../../../motion/home-sections";
-import { overviewData } from "../../../constants/constants";
+import { overviewData } from "../../../constants/overview";
 import OverviewCard from "./OverviewCard";
 
 const EventOverview = ({ isSmallScreen }) => {

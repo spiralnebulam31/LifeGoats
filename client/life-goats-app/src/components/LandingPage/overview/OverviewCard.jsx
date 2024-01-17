@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const OverviewCard = ({ index, alt, image, title, text, yMoving }) => {
   return (
     <motion.div
-      className="w-[250px] h-[380px] lg:h-[450px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
+      className="w-[280px] h-[400px] lg:h-[470px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
       >
         <img
           src={image}

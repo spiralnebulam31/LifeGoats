@@ -5,7 +5,7 @@ import HomeDropdown from "./HomeDropdown";
 import PrivacyModal from "./PrivacyModal";
 import AccessibilityModal from "./AccessibilityModal";
 import HomeLinks from "../LinksColumns/HomeLinks";
-import { homeLinks } from "../../constants/constants";
+import { homeLinks } from "../../constants/navLinks";
 
 const Footer = ({ modalState, setModalState }) => {
 
@@ -79,7 +79,7 @@ const Footer = ({ modalState, setModalState }) => {
           <p className="text-background font-body font-bold text-lg">
             Copyright
             <span className="text-secondary font-links font-bold text-lg mx-2">©</span>
-            2023 Life Goats
+            2023-2024 Life Goats
           </p>
         </div>
 

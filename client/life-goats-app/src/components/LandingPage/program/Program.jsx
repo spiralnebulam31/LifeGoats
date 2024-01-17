@@ -5,8 +5,25 @@ import {
   floatFromDownMainTitle,
 } from "../../../motion/home-sections";
 import GoatPrintsWalking from "../../Loaders/GoatPrintsWalking";
+import {
+  program,
+  program2,
+  pricing,
+  pricing2,
+} from "../../../assets/index.js";
 
-const Program = ({ isSmallScreen }) => {
+const Program = ({
+  isSmallScreen,
+  programIsHovered,
+  setProgramIsHovered,
+  pricingIsHovered,
+  setPricingIsHovered,
+  handleProgramMouseEnter,
+  handleProgramMouseLeave,
+  handlePricingMouseEnter,
+  handlePricingMouseLeave,
+}) => {  
+  
   return (
     <section
       id="program"
@@ -37,7 +54,7 @@ const Program = ({ isSmallScreen }) => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          Program
+          Program & Accommodation
         </motion.h2>
       </motion.div>
 
@@ -48,15 +65,43 @@ const Program = ({ isSmallScreen }) => {
         initial="initial"
         whileInView="animate"
       >
-        <p className="pb-5"> Stay tuned to find out more about: </p>
+        <a
+              href="/Life Goats The Program.pdf"
+              download="Life Goats The Program.pdf"
+              target="_blank"
+              rel="noreferrer"
+              // onMouseEnter={handleProgramMouseEnter}
+              // onMouseLeave={handleProgramMouseLeave}
+            >
+              {/* <img
+                src={programIsHovered ? program2 : program}
+                alt="resume"
+                className="w-[40px] h-[40px] object-contain shadow-lg mt-4"
+              /> */}
+              <p className="pb-2 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the program</p>
+            </a>
+            <a
+              href="/Life Goats Cost Analysis.pdf"
+              download="Life Goats Cost Analysis.pdf"
+              target="_blank"
+              rel="noreferrer"
+              // onMouseEnter={handlePricingMouseEnter}
+              // onMouseLeave={handlePricingMouseLeave}
+            >
+              {/* <img
+                src={pricingIsHovered ? pricing2 : pricing}
+                alt="resume"
+                className="w-[40px] h-[40px] object-contain shadow-lg mt-4"
+              /> */}
+              <p className="pb-10 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the accommodation options</p>
+            </a>
+        <p className="pb-2"> Stay tuned to find out more about: </p>
         <ul className="list-disc list-inside text-center">
-        <li> The program </li>
-        <li> Accommodation options </li>
         <li> Hiking information </li>
         <li> Opportunities to contribute creatively to the program </li>
         </ul>
-        <p className="pt-5"> And more! </p>
-        <p className="flex flex-wrap justify-center text-center mx-auto pt-5 font-bold uppercase font-subtitle md:text-[20px] text-[16px]">
+        <p className="pt-2"> And more! </p>
+        <p className="flex flex-wrap justify-center text-center mx-auto pt-10 font-bold uppercase font-subtitle md:text-[20px] text-[16px]">
           More information coming soon
         </p>
 
