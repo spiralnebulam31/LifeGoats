@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PricingDisplay = () => {
+const ExtraCostsCard = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const PricingDisplay = () => {
   )
 }
 
-export default PricingDisplay;
+export default ExtraCostsCard
