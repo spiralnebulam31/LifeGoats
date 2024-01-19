@@ -5,23 +5,9 @@ import {
   floatFromDownMainTitle,
 } from "../../../motion/home-sections";
 import GoatPrintsWalking from "../../Loaders/GoatPrintsWalking";
-import {
-  program,
-  program2,
-  pricing,
-  pricing2,
-} from "../../../assets/index.js";
 
 const Program = ({
   isSmallScreen,
-  programIsHovered,
-  setProgramIsHovered,
-  pricingIsHovered,
-  setPricingIsHovered,
-  handleProgramMouseEnter,
-  handleProgramMouseLeave,
-  handlePricingMouseEnter,
-  handlePricingMouseLeave,
 }) => {  
   
   return (
@@ -54,7 +40,7 @@ const Program = ({
           whileInView="animate"
           viewport={{ once: true }}
         >
-          Program & Accommodation
+          Program
         </motion.h2>
       </motion.div>
 
@@ -70,14 +56,7 @@ const Program = ({
               download="Life Goats The Program.pdf"
               target="_blank"
               rel="noreferrer"
-              // onMouseEnter={handleProgramMouseEnter}
-              // onMouseLeave={handleProgramMouseLeave}
             >
-              {/* <img
-                src={programIsHovered ? program2 : program}
-                alt="resume"
-                className="w-[40px] h-[40px] object-contain shadow-lg mt-4"
-              /> */}
               <p className="pb-2 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the program</p>
             </a>
             <a
@@ -85,14 +64,7 @@ const Program = ({
               download="Life Goats Cost Analysis.pdf"
               target="_blank"
               rel="noreferrer"
-              // onMouseEnter={handlePricingMouseEnter}
-              // onMouseLeave={handlePricingMouseLeave}
             >
-              {/* <img
-                src={pricingIsHovered ? pricing2 : pricing}
-                alt="resume"
-                className="w-[40px] h-[40px] object-contain shadow-lg mt-4"
-              /> */}
               <p className="pb-10 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the accommodation options</p>
             </a>
         <p className="pb-2"> Stay tuned to find out more about: </p>

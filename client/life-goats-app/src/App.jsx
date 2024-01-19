@@ -7,25 +7,6 @@ import { lifeGoatsLogo } from "./assets/index.js";
 
 const App = () => {
 
-  const [programIsHovered, setProgramIsHovered] = useState(false);
-  const [pricingIsHovered, setPricingIsHovered] = useState(false);
-
-  const handleProgramMouseEnter = () => {
-    setProgramIsHovered(true);
-  }
-
-  const handleProgramMouseLeave = () => {
-    setProgramIsHovered(false);
-  }
-
-  const handlePricingMouseEnter = () => {
-    setPricingIsHovered(true);
-  }
-
-  const handlePricingMouseLeave = () => {
-    setPricingIsHovered(false);
-  }
-
   const [preloader, setPreloader] = useState(true);
   const [timer, setTimer] = useState(2);
 
@@ -77,15 +58,7 @@ const App = () => {
       >
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage
-          preloader={preloader} 
-          programIsHovered={programIsHovered}
-          handleProgramMouseEnter={handleProgramMouseEnter}
-          handleProgramMouseLeave={handleProgramMouseLeave}
-          pricingIsHovered={pricingIsHovered}
-          handlePricingMouseEnter={handlePricingMouseEnter}
-          handlePricingMouseLeave={handlePricingMouseLeave}
-          />} />
+          <Route path="/" element={<LandingPage preloader={preloader} />} />
         </Routes>
         <Footer
           modalState={modalState}
