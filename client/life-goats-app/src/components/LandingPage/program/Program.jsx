@@ -45,7 +45,7 @@ const Program = ({
       </motion.div>
 
       <motion.div
-        className="flex flex-col justify-center items-center mx-auto py-4 bg-background rounded-2xl drop-shadow-xl text-primary
+        className="flex flex-col justify-center items-center mx-auto py-4 bg-background text-primary
         font-body md:text-[16px] text-[14px] w-[80%] lg:w-[45%]"
         variants={fadeIn}
         initial="initial"
@@ -57,15 +57,7 @@ const Program = ({
               target="_blank"
               rel="noreferrer"
             >
-              <p className="pb-2 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the program</p>
-            </a>
-            <a
-              href="/Life Goats Cost Analysis.pdf"
-              download="Life Goats Cost Analysis.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <p className="pb-10 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the accommodation options</p>
+              <p className="pb-2 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the program as a PDF file</p>
             </a>
         <p className="pb-2"> Stay tuned to find out more about: </p>
         <ul className="list-disc list-inside text-center">

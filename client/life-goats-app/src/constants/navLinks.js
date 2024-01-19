@@ -16,6 +16,10 @@ export const homeLinks = [
     title: "Program",
   },
   {
+    id: "pricing",
+    title: "Pricing",
+  },
+  {
     id: "contact",
     title: "Contact",
   },

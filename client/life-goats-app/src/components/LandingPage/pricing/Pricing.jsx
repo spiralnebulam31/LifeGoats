@@ -86,6 +86,15 @@ const Pricing = () => {
             <AdditionalCostsCard key={index} {...item} />
           ))}
         </motion.div>
+
+        <a
+              href="/Life Goats Cost Analysis.pdf"
+              download="Life Goats Cost Analysis.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p className="pb-10 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the pricing information as a PDF file</p>
+            </a>
     </section>
   )
 }
