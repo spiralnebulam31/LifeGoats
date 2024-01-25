@@ -1,3 +1,7 @@
+import { useState } from "react";
+import ProgramTab from "./ProgramTab";
+import DateButton from "./DateButton";
+import { programData } from "../../../constants/program";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../motion/motion";
 import {
@@ -9,11 +13,17 @@ import GoatPrintsWalking from "../../Loaders/GoatPrintsWalking";
 const Program = ({
   isSmallScreen,
 }) => {  
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  const toggleTabCick = (index) => {
+    setActiveTab(index);
+  };
   
   return (
     <section
       id="program"
-      className="bg-background
+      className="bg-gradient-to-b from-background via-blue-100 to-blue-400
       relative bg-cover w-screen h-screen inset-0 left-0 right-0 bottom-0 top-0
       overflow-hidden pt-2 pb-12 z-10"
     >
@@ -42,6 +52,35 @@ const Program = ({
         >
           Program
         </motion.h2>
+      </motion.div>
+
+      <motion.div
+        className="flex flex-col justify-center items-center mx-auto py-4 bg-background rounded-2xl drop-shadow-xl text-primary
+        font-body md:text-[16px] text-[14px] w-[80%] lg:w-[45%]"
+        variants={fadeIn}
+        initial="initial"
+        whileInView="animate"
+      >
+        {programData.map((item, index) => (
+          <DateButton key={index} date={item.date} />
+        ))}
+      </motion.div>
+
+      <motion.div
+        className="flex flex-col justify-center items-center mx-auto py-4 bg-background rounded-2xl drop-shadow-xl text-primary
+        font-body md:text-[16px] text-[14px] w-[80%] lg:w-[45%]"
+        variants={fadeIn}
+        initial="initial"
+        whileInView="animate"
+      >
+        {programData.map((item, index) => (
+          <ProgramTab
+            key={index}
+            index={item.index}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
       </motion.div>
 
       <motion.div
