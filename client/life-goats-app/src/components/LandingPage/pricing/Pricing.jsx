@@ -50,7 +50,7 @@ const Pricing = () => {
       </motion.div>
 
       <motion.div
-        className="flex flex-col md:flex-row justify-center items-start mx-auto gap-12 py-4 text-primary
+        className="flex flex-col md:flex-row justify-center items-center md:items-start mx-auto gap-12 py-4 text-primary
         font-body md:text-[16px] text-[14px] w-[90%] lg:w-[70%]"
         variants={fadeIn}
         initial="initial"
@@ -81,26 +81,40 @@ const Pricing = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-col justify-center items-center mx-auto py-4 rounded-2xl drop-shadow-xl text-primary
-          font-body md:text-[16px] text-[14px]"
+          className="flex flex-col justify-center items-center mx-auto py-4 mt-5 mb-7 bg-background rounded-2xl drop-shadow-xl text-primary
+          font-body md:text-[16px] text-[14px] w-[80%] md:w-[55%]"
           variants={fadeIn}
           initial="initial"
           whileInView="animate"
         >
-          <p className="text-center text-bold text-earth text-lg">Additional costs</p>
+        <p className="text-center text-bold text-tertiary uppercase font-links font-bold text-3xl py-2">Additional costs</p>
           {additionalCosts.map((item, index) => (
             <AdditionalCostsCard key={index} {...item} />
           ))}
         </motion.div>
 
+        <motion.div
+          variants={fadeIn}
+          initial="initial"
+          whileInView="animate"
+        >
         <a
               href="/Life Goats Cost Analysis.pdf"
               download="Life Goats Cost Analysis.pdf"
               target="_blank"
               rel="noreferrer"
             >
-              <p className="pb-10 text-center text-bold cursor-pointer underline text-earth hover:text-tertiary text-lg">Click here to download the pricing information as a PDF file</p>
+              <p className="flex justify-center mx-auto w-[70%] pt-3 font-bold font-body text-center text-bold cursor-pointer underline text-primary hover:text-tertiary text-lg">Click here to download the pricing information as a PDF file</p>
             </a>
+
+            <p className="flex flex-wrap justify-center text-center mx-auto pt-4 font-bold uppercase font-subtitle md:text-[20px] text-[16px]">
+            More details about the accommodation options and the cost analysis coming soon
+        </p>
+        </motion.div>
+
+        <motion.div className="w-[90%]">
+          <GoatPrintsWalking />
+        </motion.div>
     </section>
   )
 }

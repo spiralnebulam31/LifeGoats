@@ -101,13 +101,13 @@ const MainPricingCard = ({
           >
             {/* Rest of the expanded content */}
             <motion.div
-              className="flex flex-col w-full mx-auto"
+              className="flex flex-col w-[90%] mx-auto"
               variants={fadeIn}
             >
               {notes && (
                 <ul className="pb-2 text-center text-bold text-primary font-body text-md">
                   {notes.map((note, index) => (
-                    <li key={index}>{note}</li>
+                    <li key={index}>➤ {note}</li>
                   ))}
                 </ul>
               )}
