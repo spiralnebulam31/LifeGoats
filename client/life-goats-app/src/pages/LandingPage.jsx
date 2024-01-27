@@ -5,6 +5,7 @@ import {
   Details,
   Location,
   Program,
+  Pricing,
   Parallax,
   Contact,
 } from "../components/LandingPage";
@@ -41,6 +42,7 @@ const LandingPage = () => {
       <Details isSmallScreen={isSmallScreen} />
       <Location isSmallScreen={isSmallScreen} />
       <Program isSmallScreen={isSmallScreen} />
+      <Pricing isSmallScreen={isSmallScreen} />
       <Parallax />
       <Contact
         isSmallScreen={isSmallScreen}

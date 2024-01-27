@@ -41,10 +41,9 @@ import pinShadow from './location/pin-shadow.svg';
 
 import lifeGoatsWalkingMountain from './parallax/life-goats-walking-mountain.webp';
 
-import program from './program/program.svg';
-import program2 from './program/program2.svg';
-import pricing from './program/pricing.svg';
-import pricing2 from './program/pricing2.svg';
+import locationIcon from './pricing/location.svg';
+import priceIcon from './pricing/price.svg';
+import priceIcon2 from './pricing/price2.svg';
 
 import email from './contact/email.svg';
 import emailHover from './contact/email-hover.svg';
@@ -96,10 +95,9 @@ export {
     mapPin,
     pinShadow,
     lifeGoatsWalkingMountain,
-    program,
-    program2,
-    pricing,
-    pricing2,
+    locationIcon,
+    priceIcon,
+    priceIcon2,
     email,
     emailHover,
     phone,
