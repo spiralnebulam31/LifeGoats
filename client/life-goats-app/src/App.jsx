@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { Navbar, Footer } from "./components/index";
-import { LandingPage, TheHike } from "./pages/index";
+import { LandingPage, TheRoute, NeededItems, SafetyConsiderations } from "./pages/index";
 import { lifeGoatsLogo } from "./assets/index.js";
 
 const App = () => {
@@ -58,7 +58,10 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage preloader={preloader} />} />
-          <Route path="/the-hike" element={<TheHike />} />
+          <Route path="/the-hike" element={<TheRoute />} />
+          <Route path="/needed-items" element={<NeededItems />} />
+          <Route path="/safety-considerations" element={<SafetyConsiderations />}
+          />
         </Routes>
         <Footer
           modalState={modalState}

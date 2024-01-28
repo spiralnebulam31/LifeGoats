@@ -1,6 +1,6 @@
 import {
   Hero,
-  About,
+  Intro,
   EventOverview,
   Details,
   Location,
@@ -37,7 +37,7 @@ const LandingPage = () => {
   return (
     <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
       <Hero isSmallScreen={isSmallScreen} />
-      <About isSmallScreen={isSmallScreen} />
+      <Intro isSmallScreen={isSmallScreen} />
       <EventOverview isSmallScreen={isSmallScreen} />
       <Details isSmallScreen={isSmallScreen} />
       <Location isSmallScreen={isSmallScreen} />

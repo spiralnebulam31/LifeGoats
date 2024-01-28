@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TheHike = () => {
+const NeededItems = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const TheHike = () => {
   )
 }
 
-export default TheHike;
+export default NeededItems;

@@ -1,4 +1,6 @@
 import LandingPage from './LandingPage';
-import TheHike from './TheHike';
+import TheRoute from './TheRoute';
+import NeededItems from './NeededItems';
+import SafetyConsiderations from './SafetyConsiderations';
 
-export { LandingPage, TheHike };
+export { LandingPage, TheRoute, NeededItems, SafetyConsiderations };
