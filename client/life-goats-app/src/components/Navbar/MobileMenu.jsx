@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../motion/motion";
-import { homeLinks } from "../../constants/navLinks";
 
-const MobileMenu = ({ active, setActive, mobile, setMobile }) => {
+const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks }) => {
   return (
     <motion.div
       className="flex lg:hidden absolute right-0 top-0 bottom-0 w-[60%] h-screen mx-0 my-0

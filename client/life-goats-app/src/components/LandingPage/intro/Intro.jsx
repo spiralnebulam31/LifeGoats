@@ -58,4 +58,4 @@ const Intro = ( { isSmallScreen } ) => {
   )
 }
 
-export default About
+export default Intro;
