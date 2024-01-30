@@ -38,7 +38,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-end">
-        <div className="hidden lg:flex flex-row items-center justify-end gap-20">
+        <div className="hidden lg:flex flex-row items-center justify-end gap-10">
         <HomeLinkDropdown
             active={active}
             setActive={setActive}
@@ -84,6 +84,8 @@ const Navbar = () => {
                   mobile={mobile}
                   setMobile={setMobile}
                   homeLinks={homeLinks}
+                  hikeLinks={hikeLinks}
+                  handleLinkClick={handleLinkClick}
                 />
               )}
             </AnimatePresence>
