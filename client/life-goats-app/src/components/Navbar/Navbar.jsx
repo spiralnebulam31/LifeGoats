@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { homeLinks } from "../../constants/navLinks";
+import { homeLinks, hikeLinks } from "../../constants/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
 import MobileMenu from "./MobileMenu";
+import { HomeLinkDropdown, HikeLinkDropdown } from "../LinksColumns";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -37,21 +38,34 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-end">
-          <ul className="list-none hidden lg:flex flex-row gap-10">
-            {homeLinks.map((link) => (
-              <li
-                key={link.id}
-                className={`${
-                  active === link.title
-                    ? "text-secondary underline"
-                    : "text-primary"
-                } hover:text-tertiary text-[20px] font-links font-bold cursor-pointer`}
-                onClick={() => handleLinkClick(link)}
-              >
-                <a href={`#${link.id}`}>{link.title}</a>
-              </li>
-            ))}
-          </ul>
+        <div className="hidden lg:flex flex-row items-center justify-end gap-10">
+        <HomeLinkDropdown
+            active={active}
+            setActive={setActive}
+            handleLinkClick={handleLinkClick}
+            homeLinks={homeLinks}
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+          />
+          <HikeLinkDropdown
+            active={active}
+            setActive={setActive}
+            handleLinkClick={handleLinkClick}
+            hikeLinks={hikeLinks}
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+          />
+
+          <Link
+            to="/contact"
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+            onClick={() => {
+              setActive("Contact");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Contact
+          </Link>
+        </div>
+
           <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
             <img
               src={mobile ? menuClose : menuMountain}
@@ -69,6 +83,9 @@ const Navbar = () => {
                   setActive={setActive}
                   mobile={mobile}
                   setMobile={setMobile}
+                  homeLinks={homeLinks}
+                  hikeLinks={hikeLinks}
+                  handleLinkClick={handleLinkClick}
                 />
               )}
             </AnimatePresence>

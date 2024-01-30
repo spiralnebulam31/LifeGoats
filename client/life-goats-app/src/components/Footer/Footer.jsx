@@ -1,11 +1,10 @@
-// Footer.js
 import { useState } from "react";
 import { facebook, instagram, downArrow } from "../../assets";
-import HomeDropdown from "./HomeDropdown";
+// import HomeDropdown from "./HomeDropdown";
 import PrivacyModal from "./PrivacyModal";
 import AccessibilityModal from "./AccessibilityModal";
-import HomeLinks from "../LinksColumns/HomeLinks";
-import { homeLinks } from "../../constants/navLinks";
+// import HomeLinks from "../LinksColumns/HomeLinks";
+// import { homeLinks } from "../../constants/navLinks";
 
 const Footer = ({ modalState, setModalState }) => {
 

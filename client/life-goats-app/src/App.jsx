@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import LandingPage from "./pages/LandingPage";
-import Footer from "./components/Footer/Footer";
+import { Navbar, Footer } from "./components/index";
+import { LandingPage, TheRoute, NeededItems, SafetyConsiderations, Contact } from "./pages/index";
 import { lifeGoatsLogo } from "./assets/index.js";
 
 const App = () => {
@@ -59,6 +58,10 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage preloader={preloader} />} />
+          <Route path="/the-route" element={<TheRoute />} />
+          <Route path="/needed-items" element={<NeededItems />} />
+          <Route path="/safety-considerations" element={<SafetyConsiderations />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer
           modalState={modalState}

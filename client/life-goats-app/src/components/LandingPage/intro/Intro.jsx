@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../motion/home-sections';
-import { aboutText } from '../../../constants/about';
+import { introText } from '../../../constants/intro';
 import { aboutPhoto } from '../../../assets';
 
-const About = ( { isSmallScreen } ) => {
+const Intro = ( { isSmallScreen } ) => {
 
   const photoRef = useRef();
   const textRef = useRef();
@@ -13,7 +13,7 @@ const About = ( { isSmallScreen } ) => {
   const textInView = useInView(textRef, { threshold: 0.5 });
   
   return (
-    <section id="about" className="overflow-hidden bg-gradient-to-b from-background via-blue-100 to-blue-400 relative bg-cover
+    <section id="intro" className="overflow-hidden bg-gradient-to-b from-background via-blue-100 to-blue-400 relative bg-cover
     w-full h-auto min-h-full left-0 right-0 top-0 pt-2 pb-12 z-10">
       
       <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto
@@ -40,7 +40,7 @@ const About = ( { isSmallScreen } ) => {
   <motion.div className="w-[85%] md:w-[80%] lg:w-[35%] py-4 mt-5 lg:mt-0 bg-background rounded-2xl drop-shadow-xl opacity-85 lg:-ml-20 opacity-80"
   variants={floatFromRightAbout} initial="initial" ref={textRef} animate={textInView ? "animate" : "initial"}
   >
-    {aboutText.map((text, index) => (
+    {introText.map((text, index) => (
       <motion.div key={index} className="w-full px-6 py-2 font-body text-primary">
         {text.paragraph && <p className="md:text-[15px] text-[14px]">{text.paragraph}</p>}
         {text.lastParagraph && <p className="md:text-[15px] text-[14px] font-bold">{text.lastParagraph}</p>}
@@ -58,4 +58,4 @@ const About = ( { isSmallScreen } ) => {
   )
 }
 
-export default About
+export default Intro;
