@@ -23,7 +23,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
         animate="animate"
       >
         <h2
-          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer"
+          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
           onClick={() => setIsHomeOpen(!isHomeOpen)}
         >
           Home
@@ -62,7 +62,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
         </AnimatePresence>
 
         <h2
-          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer"
+          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
           onClick={() => setIsHikeOpen(!isHikeOpen)}
         >
           The Hike
@@ -93,7 +93,12 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <a href={link.link}>{link.title}</a>
+                  <Link
+                key={link.id}
+                to={link.link}
+              >
+                {link.title}
+              </Link>
                 </motion.div>
               ))}
             </motion.div>
