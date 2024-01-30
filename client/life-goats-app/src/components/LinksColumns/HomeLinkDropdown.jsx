@@ -1,16 +1,37 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { downArrow, downArrowHover } from "../../assets";
+import { useState } from "react";
 
 const HomeLinkDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => {
+
+    const [arrowHovered, setArrowHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+      setArrowHovered(true);
+    };
+  
+    const handleMouseLeave = () => {
+      setArrowHovered(false);
+    };
+
   return (
     <div className="relative inline-block text-left">
       <div>
-        <button
-          type="button"
-          className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-          onClick={() => setActive("Home")}
-        >
-          Home
+      <button
+  type="button"
+  className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+  onClick={() => setActive(active === "Home" ? null : "Home")}
+  onMouseEnter={handleMouseEnter}
+  onMouseLeave={handleMouseLeave}
+>
+        <div className="flex flex-row items-center justify-center gap-2">
+          <p>Home</p>
+          {arrowHovered ? (
+            <img src={downArrowHover} alt="down arrow" className="h-[20px] w-auto" />
+            ) : (
+            <img src={downArrow} alt="down arrow" className="h-[16px] w-auto" />
+            )}
+            </div>
         </button>
       </div>
       {active === "Home" && (

@@ -57,6 +57,7 @@ import instagram from './social/instagram.svg';
 import instagramHover from './social/instagram-hover.svg';
 
 import downArrow from './navigation/down-arrow.svg';
+import downArrowHover from './navigation/down-arrow-hover.svg';
 
 export {
     goatPrintSingle,
@@ -106,5 +107,6 @@ export {
     facebookHover,
     instagram,
     instagramHover,
-    downArrow
+    downArrow,
+    downArrowHover,
 }
