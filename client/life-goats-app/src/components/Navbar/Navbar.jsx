@@ -38,7 +38,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-end">
-
+        <div className="hidden lg:flex flex-row items-center justify-end gap-20">
         <HomeLinkDropdown
             active={active}
             setActive={setActive}
@@ -51,6 +51,20 @@ const Navbar = () => {
             handleLinkClick={handleLinkClick}
             hikeLinks={hikeLinks}
           />
+
+          <Link
+            to="/contact"
+            className={`${
+              active === "Contact" ? "text-secondary underline" : "text-primary"
+            } hover:text-tertiary text-[20px] hover:text-[24px] font-medium cursor-pointer leading-7`}
+            onClick={() => {
+              setActive("Contact");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Contact
+          </Link>
+        </div>
 
           <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
             <img
@@ -69,7 +83,7 @@ const Navbar = () => {
                   setActive={setActive}
                   mobile={mobile}
                   setMobile={setMobile}
-                  homeLinks={navLinks[0].groupLinks}
+                  homeLinks={homeLinks}
                 />
               )}
             </AnimatePresence>
