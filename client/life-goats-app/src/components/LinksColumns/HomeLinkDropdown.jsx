@@ -7,9 +7,7 @@ const HomeLinkDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => 
       <div>
         <button
           type="button"
-          className={`inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 ${
-            active === "Home" ? "text-primary" : ""
-          }`}
+          className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
           onClick={() => setActive("Home")}
         >
           Home
@@ -25,16 +23,15 @@ const HomeLinkDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => 
         >
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {homeLinks.map((link) => (
-              <Link
+              <a href={`/#${link.id}`}
                 key={link.id}
-                to={`/${link.id}`}
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                 onClick={() => {
                   handleLinkClick(link);
                 }}
               >
                 {link.title}
-              </Link>
+              </a>
             ))}
           </div>
         </motion.div>

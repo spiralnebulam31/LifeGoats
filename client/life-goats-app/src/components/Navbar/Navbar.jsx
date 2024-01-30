@@ -44,19 +44,19 @@ const Navbar = () => {
             setActive={setActive}
             handleLinkClick={handleLinkClick}
             homeLinks={homeLinks}
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
           />
           <HikeLinkDropdown
             active={active}
             setActive={setActive}
             handleLinkClick={handleLinkClick}
             hikeLinks={hikeLinks}
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
           />
 
           <Link
             to="/contact"
-            className={`${
-              active === "Contact" ? "text-secondary underline" : "text-primary"
-            } hover:text-tertiary text-[20px] hover:text-[24px] font-medium cursor-pointer leading-7`}
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             onClick={() => {
               setActive("Contact");
               window.scrollTo(0, 0);
