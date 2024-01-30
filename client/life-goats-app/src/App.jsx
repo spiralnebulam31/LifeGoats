@@ -58,7 +58,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage preloader={preloader} />} />
-          <Route path="/the-hike" element={<TheRoute />} />
+          <Route path="/the-route" element={<TheRoute />} />
           <Route path="/needed-items" element={<NeededItems />} />
           <Route path="/safety-considerations" element={<SafetyConsiderations />} />
           <Route path="/contact" element={<Contact />} />
