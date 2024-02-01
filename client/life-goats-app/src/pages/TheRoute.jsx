@@ -4,14 +4,15 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../motion/home-sections";
-import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
+import RouteTimeline from "../components/TheHike/RouteTimeline";
+import { ascentData, descentData, totalAscentData, totalDescentData, routeText } from "../constants/theHike";
 
 const TheRoute = () => {  
 
   return (
     <motion.div
-      className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 bottom-0 top-0
-      overflow-hidden pt-2 pb-2"
+      className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
+      overflow-hidden pt-2 pb-2 z-10 mb-[129px]"
     >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
@@ -40,21 +41,27 @@ const TheRoute = () => {
         </motion.h2>
       </motion.div>
 
+      <motion.div className="flex flex-col justify-center items-center mx-auto w-[90%]">
       <motion.div
-        className="flex flex-col justify-center items-center mx-auto mt-2 py-4 text-primary
-        font-body md:text-[16px] text-[14px] w-[80%] lg:w-[45%]"
+        className="flex flex-col lg:flex-row gap-10 justify-center items-start mx-auto mt-2 py-4 text-primary
+        font-body md:text-[16px] text-[14px] w-[90%]"
         variants={fadeIn}
         initial="initial"
         whileInView="animate"
       >
 
-        <p className="flex flex-wrap justify-center text-center mx-auto pt-4 pb-8 font-bold uppercase font-subtitle md:text-[20px] text-[16px]">
-          coming soon
-        </p>
+        <RouteTimeline routeTimelineData={ascentData} totalData={totalAscentData} title="The Ascent" />
+        <RouteTimeline routeTimelineData={descentData} totalData={totalDescentData} title="The Descent" />
 
-        <motion.div className="w-[90%] pb-80">
-          <GoatPrintsWalking />
+      </motion.div>
+
+      <motion.div className="flex flex-col justify-center items-start mx-auto my-3 py-4 text-primary
+        font-body md:text-[16px] text-[14px] w-[70%]">
+            {routeText.map((text) => (
+              <p key={text} className="font-medium text-lg font-body py-2">{text}</p>
+            ))}
         </motion.div>
+
       </motion.div>
     </motion.div>
   );
