@@ -6,7 +6,7 @@ const RouteAltimeter = ({ routeTimelineData, totalData, title }) => {
     const altitudes = routeTimelineData.map(data => data.altitude);
   
     // Create labels for the chart
-    const labels = routeTimelineData.map((data, index) => `Point ${index + 1}`);
+    const labels = routeTimelineData.map(data => data.location); 
   
     // Define the chart data
     const data = {
@@ -15,8 +15,8 @@ const RouteAltimeter = ({ routeTimelineData, totalData, title }) => {
         {
           label: title,
           data: altitudes,
-          borderColor: 'rgba(0, 0, 0, 0.5)',
-          backgroundColor: 'rgba(0, 0, 0, 0.1)',
+          borderColor: '#4D3D11',
+          backgroundColor: '#7BA862',
           fill: true,
         },
       ],
@@ -30,14 +30,36 @@ const RouteAltimeter = ({ routeTimelineData, totalData, title }) => {
           beginAtZero: true,
         },
       },
+      plugins: {
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const altitude = context.parsed.y;
+  
+              return [
+                `Altitude: ${altitude}`,
+              ];
+            }
+          }
+        }
+      },
+      pointStyle: 'circle',
+        radius: 5,
+        pointHoverRadius: 7,
+        pointBackgroundColor: '#c8f2b1',
+        pointBorderColor: '#4D3D11',
+        pointHoverBackgroundColor: '#c8f2b1',
+        pointHoverBorderColor: '#4D3D11',
+        pointHoverBorderWidth: 3,
+        pointBorderWidth: 2,
+
     };
   
     return (
-      <div>
+      <div className="flex flex-col items-center justify-center w-full pb-10">
         <Line data={data} options={options} />
       </div>
     );
   };
   
   export default RouteAltimeter;
-  

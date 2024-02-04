@@ -42,9 +42,9 @@ const TheRoute = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-col justify-center items-center mx-auto w-[90%]">
+
       <motion.div
-        className="flex flex-col lg:flex-row gap-10 justify-center items-start mx-auto mt-2 py-4 text-primary
+        className="flex flex-col gap-10 justify-center items-start mx-auto py-10 text-primary
         font-body md:text-[16px] text-[14px] w-[90%]"
         variants={fadeIn}
         initial="initial"
@@ -59,6 +59,7 @@ const TheRoute = () => {
 
       </motion.div>
 
+      <motion.div className="flex flex-col justify-center items-center mx-auto w-[90%]">
       {/* <motion.div className="flex flex-col justify-center items-start mx-auto my-3 py-4 text-primary
         font-body md:text-[16px] text-[14px] w-[70%]">
             {routeText.map((text) => (
