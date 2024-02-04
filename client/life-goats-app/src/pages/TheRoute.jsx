@@ -5,6 +5,7 @@ import {
   floatFromDownMainTitle,
 } from "../motion/home-sections";
 import RouteTimeline from "../components/TheHike/RouteTimeline";
+import RouteAltimeter from "../components/TheHike/RouteAltimeter";
 import { ascentData, descentData, totalAscentData, totalDescentData, routeText } from "../constants/theHike";
 
 const TheRoute = () => {  
@@ -50,17 +51,20 @@ const TheRoute = () => {
         whileInView="animate"
       >
 
-        <RouteTimeline routeTimelineData={ascentData} totalData={totalAscentData} title="The Ascent" />
-        <RouteTimeline routeTimelineData={descentData} totalData={totalDescentData} title="The Descent" />
+        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="The Ascent" />
+        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="The Descent" />
+
+        {/* <RouteTimeline routeTimelineData={ascentData} totalData={totalAscentData} title="The Ascent" />
+        <RouteTimeline routeTimelineData={descentData} totalData={totalDescentData} title="The Descent" /> */}
 
       </motion.div>
 
-      <motion.div className="flex flex-col justify-center items-start mx-auto my-3 py-4 text-primary
+      {/* <motion.div className="flex flex-col justify-center items-start mx-auto my-3 py-4 text-primary
         font-body md:text-[16px] text-[14px] w-[70%]">
             {routeText.map((text) => (
               <p key={text} className="font-medium text-lg font-body py-2">{text}</p>
             ))}
-        </motion.div>
+        </motion.div> */}
 
       </motion.div>
     </motion.div>
