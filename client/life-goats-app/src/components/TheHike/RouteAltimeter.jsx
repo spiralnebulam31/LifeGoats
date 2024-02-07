@@ -35,7 +35,6 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title }) => {
             font: {
               size: 18,
               family: 'Neucha',
-              style: 'uppercase',
               weight: 'bold',
             }
           },

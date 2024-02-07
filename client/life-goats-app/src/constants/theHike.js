@@ -1,4 +1,18 @@
-import { mountainEnipeas } from "../assets"
+import {
+    apostolidis,
+    apostolidis2,
+    mytikas,
+    mytikas2,
+    mytikas3,
+    petrostrouga,
+    prionia,
+    walking,
+    walking2,
+    walking3,
+    walking4,
+    walking5,
+    walking6
+} from '../assets/the-hike';
 
 export const ascentData = [
     {
@@ -79,54 +93,80 @@ export const routeText = [
 export const imageSliderData = [
     {
         id: 1,
-        location: "Gortsia",
-        photo: mountainEnipeas,
-        alt: "Gortsia",
+        photo: walking,
+        alt: "Hiking on the trail",
+        caption: "Hiking on the trail"
     },
     {
         id: 2,
-        location: "Petrostrouga Refuge",
-        link: "https://petrostrouga.gr/",
-        photo: mountainEnipeas,
-        alt: "Petrostrouga Refuge",
+        photo: walking2,
+        alt: "Hiking on the trail",
+        caption: "Hiking on the trail"
     },
     {
         id: 3,
-        location: "Apostolidis Refuge",
-        link: "https://www.apostolidisrefuge.gr/en/index.html",
-        photo: mountainEnipeas,
-        alt: "Apostolidis Refuge",
+        photo: walking3,
+        alt: "Hiking on the trail",
+        caption: "Hiking on the trail"
     },
     {
         id: 4,
-        location: "Apostolidis Refuge",
-        link: "https://www.apostolidisrefuge.gr/en/index.html",
-        photo: mountainEnipeas,
-        alt: "Apostolidis Refuge",
+        photo: walking4,
+        alt: "Hiking on the trail",
+        caption: "Hiking on the trail"
     },
     {
         id: 5,
-        location: "Mytikas Peak",
-        photo: mountainEnipeas,
-        alt: "Mytikas Peak",
+        photo: petrostrouga,
+        alt: "Petrostrouga Refuge",
+        caption: "Petrostrouga Refuge"
     },
     {
         id: 6,
-        location: "Mytikas Peak",
-        photo: mountainEnipeas,
-        alt: "Mytikas Peak",
+        photo: apostolidis,
+        alt: "Apostolidis Refuge",
+        caption: "Apostolidis Refuge"
     },
     {
         id: 7,
-        location: "Spilios Agapitos Refuge",
-        link: "https://www.mountolympus.gr/en",
-        photo: mountainEnipeas,
-        alt: "Spilios Agapitos Refuge",
+        photo: apostolidis2,
+        alt: "Apostolidis Refuge",
+        caption: "Apostolidis Refuge"
     },
     {
         id: 8,
-        location: "Prionia",
-        link: "https://youingreece.com/mount-olympus/prionia",
-        photo: mountainEnipeas,
+        photo: mytikas,
+        alt: "Mytikas Peak",
+        caption: "Mytikas Peak"
+    },
+    {
+        id: 9,
+        photo: mytikas2,
+        alt: "Mytikas Peak",
+        caption: "Mytikas Peak"
+    },
+    {
+        id: 10,
+        photo: mytikas3,
+        alt: "Mytikas Peak",
+        caption: "Mytikas Peak"
+    },
+    {
+        id: 11,
+        photo: walking5,
+        alt: "Hiking on the trail",
+        caption: "Hiking on the trail"
+    },
+    {
+        id: 12,
+        photo: walking6,
+        alt: "Hiking on the trail",
+        caption: "Hiking on the trail"
+    },
+    {
+        id: 13,
+        photo: prionia,
+        alt: "Prionia",
+        caption: "Prionia"
     }
 ];

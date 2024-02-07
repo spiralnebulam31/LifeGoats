@@ -31,7 +31,6 @@ const TheRoute = () => {
 
     <RouteImageSlider imageSliderData={imageSliderData} />
 
-
     </motion.div>
   );
 };
