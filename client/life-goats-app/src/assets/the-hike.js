@@ -2,7 +2,7 @@ import apostolidis from './the-hike/apostolidis.webp';
 import apostolidis2 from './the-hike/apostolidis-2.webp';
 import mytikas from './the-hike/mytikas.webp';
 import mytikas2 from './the-hike/mytikas-2.webp';
-import mytikas3 from './the-hike/mytikas-2.webp';
+import mytikas3 from './the-hike/mytikas-3.webp';
 import petrostrouga from './the-hike/petrostrouga.webp';
 import prionia from './the-hike/prionia.webp';
 import walking from './the-hike/walking.webp';
