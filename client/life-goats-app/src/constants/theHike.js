@@ -3,7 +3,7 @@ import { mountainEnipeas } from "../assets"
 export const ascentData = [
     {
         id: 1,
-        location: "Gortsia",
+        location: "Gortsia 🚗",
         altitude: 1137,
         link: "",
         photo: mountainEnipeas,
@@ -12,7 +12,7 @@ export const ascentData = [
     },
     {
         id: 2,
-        location: "Petrostrouga Refuge",
+        location: "Petrostrouga Refuge 🏠",
         altitude: 1940,
         link: "https://petrostrouga.gr/",
         photo: mountainEnipeas,
@@ -21,7 +21,7 @@ export const ascentData = [
     },
     {
         id: 3,
-        location: "Apostolidis Refuge",
+        location: "Apostolidis Refuge 🏠",
         altitude: 2697,
         link: "https://www.apostolidisrefuge.gr/en/index.html",
         photo: mountainEnipeas,
@@ -30,7 +30,7 @@ export const ascentData = [
     },
     {
         id: 4,
-        location: "Mytikas Peak",
+        location: "Mytikas Peak ⛰️",
         altitude: 2917,
         link: "",
         photo: mountainEnipeas,
@@ -42,7 +42,7 @@ export const ascentData = [
 export const descentData = [
     {
         id: 1,
-        location: "Mytikas Peak",
+        location: "Mytikas Peak ⛰️",
         altitude: 2917,
         link: "",
         photo: mountainEnipeas,
@@ -51,7 +51,7 @@ export const descentData = [
     },
     {
         id: 2,
-        location: "Apostolidis Refuge",
+        location: "Apostolidis Refuge 🏠",
         altitude: 2697,
         link: "https://www.apostolidisrefuge.gr/en/index.html",
         photo: mountainEnipeas,
@@ -60,7 +60,7 @@ export const descentData = [
     },
     {
         id: 3,
-        location: "Spilios Agapitos Refuge",
+        location: "Spilios Agapitos Refuge 🏠",
         altitude: 2100,
         link: "https://www.mountolympus.gr/en",
         photo: mountainEnipeas,
@@ -69,7 +69,7 @@ export const descentData = [
     },
     {
         id: 4,
-        location: "Prionia",
+        location: "Prionia 🚗",
         altitude: 1075,
         link: "https://youingreece.com/mount-olympus/prionia",
         photo: mountainEnipeas,

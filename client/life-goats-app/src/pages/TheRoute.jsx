@@ -15,11 +15,11 @@ const TheRoute = () => {
       className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
       overflow-hidden pt-2 pb-2 z-10 mb-[129px]"
     >
-      <motion.div
+      {/*<motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-28 mb-5 z-10 overflow-hidden"
       >
-        <motion.p
+         <motion.p
           className="md:text-[18px] text-[14px] text-secondary font-subtitle
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
@@ -40,19 +40,19 @@ const TheRoute = () => {
         >
           The Route
         </motion.h2>
-      </motion.div>
+      </motion.div> */}
 
 
       <motion.div
-        className="flex flex-col gap-10 justify-center items-start mx-auto py-10 text-primary
+        className="flex flex-col gap-10 justify-center items-start mx-auto pt-28 pb-10 text-primary
         font-body md:text-[16px] text-[14px] w-[90%]"
         variants={fadeIn}
         initial="initial"
         whileInView="animate"
       >
 
-        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="The Ascent" />
-        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="The Descent" />
+        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" totalAltitude={1780} />
+        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" totalAltitude={1842} />
 
         {/* <RouteTimeline routeTimelineData={ascentData} totalData={totalAscentData} title="The Ascent" />
         <RouteTimeline routeTimelineData={descentData} totalData={totalDescentData} title="The Descent" /> */}
@@ -60,12 +60,12 @@ const TheRoute = () => {
       </motion.div>
 
       <motion.div className="flex flex-col justify-center items-center mx-auto w-[90%]">
-      {/* <motion.div className="flex flex-col justify-center items-start mx-auto my-3 py-4 text-primary
+      <motion.div className="flex flex-col justify-center items-start mx-auto my-3 py-4 text-primary
         font-body md:text-[16px] text-[14px] w-[70%]">
             {routeText.map((text) => (
               <p key={text} className="font-medium text-lg font-body py-2">{text}</p>
             ))}
-        </motion.div> */}
+        </motion.div>
 
       </motion.div>
     </motion.div>
