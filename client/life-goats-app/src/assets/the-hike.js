@@ -12,6 +12,9 @@ import walking4 from './the-hike/walking-4.webp';
 import walking5 from './the-hike/walking-5.webp';
 import walking6 from './the-hike/walking-6.webp';
 
+import arrowNext from './the-hike/arrow-next.svg';
+import arrowPrevious from './the-hike/arrow-previous.svg';
+
 export {
     apostolidis,
     apostolidis2,
@@ -25,5 +28,7 @@ export {
     walking3,
     walking4,
     walking5,
-    walking6
+    walking6,
+    arrowNext,
+    arrowPrevious
 };

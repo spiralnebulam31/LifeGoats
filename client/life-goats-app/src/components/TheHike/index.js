@@ -1,5 +1,5 @@
 import RouteAltimeter from './RouteAltimeter';
 import RouteInfoTextDisplay from './RouteInfoTextDisplay';
-import RouteImageSlider from './RouteImageSlider';
+import ImageCarousel from './ImageCarousel';
 
-export { RouteAltimeter, RouteInfoTextDisplay, RouteImageSlider };
+export { RouteAltimeter, RouteInfoTextDisplay, ImageCarousel };

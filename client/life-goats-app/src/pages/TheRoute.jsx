@@ -4,7 +4,7 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../motion/home-sections";
-import { RouteAltimeter, RouteInfoTextDisplay, RouteImageSlider } from "../components/TheHike";
+import { RouteAltimeter, RouteInfoTextDisplay, ImageCarousel } from "../components/TheHike";
 import { ascentData, descentData, totalAscentData, totalDescentData, routeText, imageSliderData } from "../constants/theHike";
 
 const TheRoute = () => {  
@@ -29,7 +29,7 @@ const TheRoute = () => {
 
     <RouteInfoTextDisplay routeText={routeText} />
 
-    <RouteImageSlider imageSliderData={imageSliderData} />
+    <ImageCarousel imageSliderData={imageSliderData} />
 
     </motion.div>
   );
