@@ -17,12 +17,6 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title }) => {
           data: altitudes,
           borderColor: '#4D3D11',
           backgroundColor: '#7BA862',
-          titleFont: {
-            size: 18,
-            family: 'Neucha',
-            style: 'uppercase',
-            weight: 'bold',
-          },
           fill: true,
         },
       ],
@@ -37,7 +31,7 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title }) => {
           title: {
             display: true,
             text: 'Altitude (m)',
-            color: '#4D3D11',
+            color: '#7BA862',
             font: {
               size: 18,
               family: 'Neucha',
