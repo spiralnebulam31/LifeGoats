@@ -7,7 +7,7 @@ const RouteInfoTextDisplay = ( { routeText } ) => {
     <motion.div className="flex flex-col justify-center items-center text-center mx-auto my-3 py-2 px-4 text-primary
       font-body md:text-[16px] text-[14px] w-full lg:w-1/3">
       <motion.h2
-        className="text-lg font-subtitle font-bold text-tertiary mb-2"
+        className="text-xl font-subtitle font-bold text-tertiary mb-2"
         >
         The Trail
       </motion.h2>
@@ -20,7 +20,7 @@ const RouteInfoTextDisplay = ( { routeText } ) => {
     <motion.div className="flex flex-col justify-center items-center text-center mx-auto my-3 py-2 px-4 text-primary
       font-body md:text-[16px] text-[14px] w-full lg:w-1/3">
       <motion.h2
-        className="text-lg font-subtitle font-bold text-tertiary mb-2"
+        className="text-xl font-subtitle font-bold text-tertiary mb-2"
         >
         The Reassurance
       </motion.h2>
@@ -33,7 +33,7 @@ const RouteInfoTextDisplay = ( { routeText } ) => {
     <motion.div className="flex flex-col justify-center items-center text-center mx-auto my-3 py-2 px-4 text-primary
       font-body md:text-[16px] text-[14px] w-full lg:w-1/3">
       <motion.h2
-        className="text-lg font-subtitle font-bold text-tertiary mb-2"
+        className="text-xl font-subtitle font-bold text-tertiary mb-2"
         >
         The Challenge
       </motion.h2>
