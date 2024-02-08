@@ -15,7 +15,7 @@ const TheRoute = () => {
       overflow-hidden pt-2 pb-2 z-10 mb-[129px]"
     >
       <motion.div
-        className="flex flex-col gap-10 justify-center items-start mx-auto pt-28 pb-10 text-primary
+        className="flex flex-col gap-10 justify-center items-start mx-auto pt-28 pb-3 lg:pb-10 text-primary
         font-body md:text-[16px] text-[14px] w-[90%]"
         variants={fadeIn}
         initial="initial"
