@@ -29,7 +29,7 @@ export const ascentData = [
     },
     {
         id: 3,
-        location: "Apostolidis Refuge 🏠",
+        location: "Yiosos Apostolidis Refuge 🏠",
         altitude: 2697,
         description: "The Apostolidis Refuge is located at the Muses Plateau. We're going to spend the night here before ascending to Mytikas peak."
     },
@@ -50,7 +50,7 @@ export const descentData = [
     },
     {
         id: 2,
-        location: "Apostolidis Refuge 🏠",
+        location: "Yiosos Apostolidis Refuge 🏠",
         altitude: 2697,
         description: "After a short break at the refuge to gather our things, we will start following the trail down the mountain."
     },
@@ -88,6 +88,29 @@ export const routeText = [
     "But it is not always sunny on Mount Olympus even during the summer and especially the upper parts of the mountain can disappear in thick clouds really quickly.",
     "Therefore, it is important to come prepared as we will!",
     "The final ascent to Mytikas peak is a different kind of challenge. The elevation gain of approximately 250 meters doesn’t pose many difficulties but scrambling high up the steep rocky slopes of the summit requires a good mental game and HELMETS!"
+];
+
+export const routeLinks = [
+    {
+        id: 1,
+        title: "Petrostrouga Refuge",
+        link: "https://petrostrouga.gr/"
+    },
+    {
+        id: 2,
+        title: "Yiosos Apostolidis Refuge",
+        link: "https://www.apostolidisrefuge.gr/en/index.html"
+    },
+    {
+        id: 3,
+        title: "Spilios Agapitos Refuge",
+        link: "https://www.mountolympus.gr/en/"
+    },
+    {
+        id: 4,
+        title: "Prionia Parking Lot",
+        link: "https://youingreece.com/mount-olympus/prionia"
+    }
 ];
 
 export const imageSliderData = [

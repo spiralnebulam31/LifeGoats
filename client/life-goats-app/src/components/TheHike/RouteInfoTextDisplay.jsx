@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const RouteInfoTextDisplay = ( { routeText } ) => {
   return (
-    <motion.div className="flex flex-col lg:flex-row justify-center items-start mx-auto w-[90%] mb-10">
+    <motion.div className="flex flex-col lg:flex-row justify-center items-start mx-auto w-[90%] mb-1">
 
     <motion.div className="flex flex-col justify-center items-center text-center mx-auto my-3 py-2 px-4 text-primary
       font-body md:text-[16px] text-[14px] w-full lg:w-1/3">

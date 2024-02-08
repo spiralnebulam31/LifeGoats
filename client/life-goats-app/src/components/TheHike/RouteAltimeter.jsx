@@ -1,7 +1,7 @@
 import { Line } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 
-const RouteAltimeter = ({ routeTimelineData, totalAltitude, title }) => {
+const RouteAltimeter = ({ routeTimelineData, totalAltitude, title, difference }) => {
     // Extract altitude data from routeTimelineData
     const altitudes = routeTimelineData.map(data => data.altitude);
   
@@ -13,7 +13,7 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title }) => {
       labels: labels,
       datasets: [
         {
-          label: title + ' altitude difference: ' + totalAltitude,
+          label: title + ' altitude ' + difference + ': ' + totalAltitude,
           data: altitudes,
           borderColor: '#4D3D11',
           backgroundColor: '#7BA862',
@@ -30,7 +30,7 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title }) => {
           beginAtZero: true,
           title: {
             display: true,
-            text: 'Altitude (m)',
+            text: 'Altimeter (m)',
             color: '#7BA862',
             font: {
               size: 18,
@@ -111,7 +111,7 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title }) => {
     };
   
     return (
-      <div className="flex flex-col items-center justify-center w-full h-[350px] pb-10">
+      <div className="flex flex-col items-center justify-center w-full lg:w-[70%] h-[350px] pb-10">
         <Line data={data} options={options} />
       </div>
     );

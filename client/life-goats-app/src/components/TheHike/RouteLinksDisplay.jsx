@@ -1,0 +1,29 @@
+import { mapPin } from "../../assets";
+import { motion } from "framer-motion";
+
+const RouteLinksDisplay = ( { routeLinks } ) => {
+  return (
+    <div className="flex flex-col justify-center items-center mx-auto gap-10 w-[90%] lg:w-[80%]">
+          <motion.h2 className="text-xl font-subtitle font-bold text-tertiary mb-1">
+        The Stops
+      </motion.h2>
+      <div className="flex flex-col lg:flex-row justify-center items-center mx-auto w-full mb-4">
+        {routeLinks.map((link) => (
+            <div key={link.id} className="flex flex-row justify-center items-center mx-auto w-full mb-4">
+            <img src={mapPin} alt="Map Pin" className="w-8 h-8" />
+            <a
+                href={link.link}
+                target="_blank"
+                rel="noreferrer"
+                className="cursor-pointer text-primary font-body font-bold text-lg ml-2 underline hover:text-secondary"
+            >
+                {link.title}
+            </a>
+            </div>
+        ))}
+        </div>
+    </div>
+  )
+}
+
+export default RouteLinksDisplay

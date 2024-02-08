@@ -4,8 +4,8 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../motion/home-sections";
-import { RouteAltimeter, RouteInfoTextDisplay, ImageCarousel } from "../components/TheHike";
-import { ascentData, descentData, totalAscentData, totalDescentData, routeText, imageSliderData } from "../constants/theHike";
+import { RouteAltimeter, RouteInfoTextDisplay, RouteLinksDisplay, ImageCarousel } from "../components/TheHike";
+import { ascentData, descentData, totalAscentData, totalDescentData, routeText, routeLinks, imageSliderData } from "../constants/theHike";
 
 const TheRoute = () => {  
 
@@ -15,22 +15,34 @@ const TheRoute = () => {
       overflow-hidden pt-2 pb-2 z-10 mb-[129px]"
     >
       <motion.div
-        className="flex flex-col gap-10 justify-center items-start mx-auto pt-28 pb-3 lg:pb-10 text-primary
-        font-body md:text-[16px] text-[14px] w-[90%]"
+        className="flex flex-col lg:flex-row gap-4 lg:gap-20 justify-center items-center mx-auto pt-28 pb-3 text-primary
+        font-body md:text-[16px] text-[14px] w-[90%] lg:w-[80%]"
         variants={fadeIn}
         initial="initial"
         whileInView="animate"
       >
 
-        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" totalAltitude={1780} />
-        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" totalAltitude={1842} />
+        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" difference="gain" totalAltitude={1780} />
+        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" difference="loss" totalAltitude={1842} />
 
-      </motion.div>
+        </motion.div>
 
+        <motion.div
+        className="flex flex-col gap-10 justify-center items-start mx-auto pt-1 lg:pt-10 pb-3 lg:pb-10 text-primary
+        font-body md:text-[16px] text-[14px] w-φθλλ"
+        variants={fadeIn}
+        initial="initial"
+        whileInView="animate"
+      >
+     
     <RouteInfoTextDisplay routeText={routeText} />
+
+    <RouteLinksDisplay routeLinks={routeLinks} />
 
     <ImageCarousel imageSliderData={imageSliderData} />
 
+
+</motion.div>
     </motion.div>
   );
 };
