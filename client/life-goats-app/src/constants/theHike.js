@@ -11,7 +11,11 @@ import {
     walking3,
     walking4,
     walking5,
-    walking6
+    walking6,
+    petrostrougaDrawing,
+    apostolidisDrawing,
+    agapitosDrawing,
+    prioniaDrawing
 } from '../assets/the-hike';
 
 export const ascentData = [
@@ -29,7 +33,7 @@ export const ascentData = [
     },
     {
         id: 3,
-        location: "Yiosos Apostolidis Refuge 🏠",
+        location: "Giosos Apostolidis Refuge 🏠",
         altitude: 2697,
         description: "The Apostolidis Refuge is located at the Muses Plateau. We're going to spend the night here before ascending to Mytikas peak."
     },
@@ -50,7 +54,7 @@ export const descentData = [
     },
     {
         id: 2,
-        location: "Yiosos Apostolidis Refuge 🏠",
+        location: "Giosos Apostolidis Refuge 🏠",
         altitude: 2697,
         description: "After a short break at the refuge to gather our things, we will start following the trail down the mountain."
     },
@@ -94,22 +98,30 @@ export const routeLinks = [
     {
         id: 1,
         title: "Petrostrouga Refuge",
-        link: "https://petrostrouga.gr/"
+        link: "https://petrostrouga.gr/",
+        photo: petrostrougaDrawing,
+        alt: "Petrostrouga Refuge"
     },
     {
         id: 2,
-        title: "Yiosos Apostolidis Refuge",
-        link: "https://www.apostolidisrefuge.gr/en/index.html"
+        title: "Giosos Apostolidis Refuge",
+        link: "https://www.apostolidisrefuge.gr/en/index.html",
+        photo: apostolidisDrawing,
+        alt: "Apostolidis Refuge"
     },
     {
         id: 3,
         title: "Spilios Agapitos Refuge",
-        link: "https://www.mountolympus.gr/en/"
+        link: "https://www.mountolympus.gr/en/",
+        photo: agapitosDrawing,
+        alt: "Agapitos Refuge"
     },
     {
         id: 4,
         title: "Prionia Parking Lot",
-        link: "https://youingreece.com/mount-olympus/prionia"
+        link: "https://youingreece.com/mount-olympus/prionia",
+        photo: prioniaDrawing,
+        alt: "Prionia"
     }
 ];
 

@@ -15,6 +15,11 @@ import walking6 from './the-hike/walking-6.webp';
 import arrowNext from './the-hike/arrow-next.svg';
 import arrowPrevious from './the-hike/arrow-previous.svg';
 
+import petrostrougaDrawing from './the-hike/petrostrouga-drawing.svg';
+import apostolidisDrawing from './the-hike/apostolidis-drawing.svg';
+import agapitosDrawing from './the-hike/agapitos-drawing.svg';
+import prioniaDrawing from './the-hike/prionia-drawing.svg';
+
 export {
     apostolidis,
     apostolidis2,
@@ -30,5 +35,9 @@ export {
     walking5,
     walking6,
     arrowNext,
-    arrowPrevious
+    arrowPrevious,
+    petrostrougaDrawing,
+    apostolidisDrawing,
+    agapitosDrawing,
+    prioniaDrawing
 };

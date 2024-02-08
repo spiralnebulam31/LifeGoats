@@ -12,7 +12,7 @@ const TheRoute = () => {
   return (
     <motion.div
       className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
-      overflow-hidden pt-2 pb-2 z-10 mb-[129px]"
+      overflow-hidden pt-2 pb-2 z-10 mb-[139px]"
     >
       <motion.div
         className="flex flex-col lg:flex-row gap-4 lg:gap-20 justify-center items-center mx-auto pt-28 pb-3 text-primary
@@ -29,7 +29,7 @@ const TheRoute = () => {
 
         <motion.div
         className="flex flex-col gap-10 justify-center items-start mx-auto pt-1 lg:pt-10 pb-3 lg:pb-10 text-primary
-        font-body md:text-[16px] text-[14px] w-φθλλ"
+        font-body md:text-[16px] text-[14px] w-full"
         variants={fadeIn}
         initial="initial"
         whileInView="animate"

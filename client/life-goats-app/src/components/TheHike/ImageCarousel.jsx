@@ -49,7 +49,7 @@ const ImageCarousel = ({ imageSliderData }) => {
             <img
               src={imageSliderData[currentIndex].photo}
               alt={imageSliderData[currentIndex].alt}
-              className="w-[90%] max-h-[500px]"
+              className="w-[90%] max-h-[450px]"
             />
             <p className="text-center text-primary font-body text-md mt-4">
               {imageSliderData[currentIndex].caption}
