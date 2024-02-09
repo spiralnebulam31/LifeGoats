@@ -72,7 +72,7 @@ const Hero = ({ isSmallScreen }) => {
           animate="animate"
           className="absolute bottom-5 md:bottom-70 w-full flex justify-center items-center mx-auto z-40"
         >
-          <a href="#about">
+          <a href="/#intro">
             <motion.div
               variants={heroGoatPrintsVariant}
               className="w-[35px] h-[75px] rounded-3xl border-4 border-primary flex justify-start items-start z-40"
