@@ -19,11 +19,11 @@ const TheHistory= () => {
       >
 
         <motion.h1
-            className="text-earth font-title text-5xl lg:text-7xl font-bold">
+            className="text-earth font-title text-4xl lg:text-6xl font-bold">
             A brief history
         </motion.h1>
         <motion.h2
-            className="text-primary font-subtitle text-2xl lg:text-4xl font-bold">
+            className="text-primary font-subtitle text-xl lg:text-3xl font-bold">
             by Maria
         </motion.h2>
        
@@ -48,7 +48,7 @@ const TheHistory= () => {
 <br />
 <p>My parents purchased this piece of land in 1988. Surrounded by farm fields, it was far from the touristic villas and vacation homes of our peers, but the location was phenomenal!</p>
 <br />
-<p>Breakfast with a view of the mountain and less than a ten-minute walk to the beach, my siblings and I spent our summers and long weekends there, away from the big concrete jungle of the city of Thessaloniki where we moved in 1994.</p>
+<p>Breakfast with a view of the mountain and less than a ten-minute walk to the beach, my siblings and I spent our summers and long weekends there, away from the big concrete jungle of the city of Thessaloniki where we moved to in 1994.</p>
 <br />
 <p>Exploring mountain trails and endless hours at the beach, we camped at the Land as often as the weather conditions allowed.</p>
 <br />

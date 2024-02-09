@@ -47,7 +47,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
                   variants={listItem}
                   className={`${
                     active === link.title ? "text-secondary underline" : "text-primary"
-                  } hover:text-tertiary text-[20px] hover:text-[24px] font-medium cursor-pointer w-[86px]`}
+                  } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
                   onClick={() => {
                     setMobile(!mobile);
                     setActive(link.title);
@@ -86,7 +86,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
                   variants={listItem}
                   className={`${
                     active === link.title ? "text-secondary underline" : "text-primary"
-                  } hover:text-tertiary text-[20px] hover:text-[24px] font-medium cursor-pointer w-[86px]`}
+                  } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
                   onClick={() => {
                     setMobile(!mobile);
                     setActive(link.title);
@@ -113,8 +113,11 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
       >
         <Link
             to="/the-history"
-            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-            onClick={() => {
+            className={`${
+                    active === "The History" ? "text-secondary underline" : "text-primary"
+                  } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+                  onClick={() => {
+                    setMobile(!mobile);
               setActive("The History");
               window.scrollTo(0, 0);
             }}
@@ -131,7 +134,9 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
       >
         <Link
           to="/contact"
-          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer"
+          className={`${
+                    active === "Contact" ? "text-secondary underline" : "text-primary"
+                  } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
           onClick={() => {
             setMobile(!mobile);
             setActive("Contact");
