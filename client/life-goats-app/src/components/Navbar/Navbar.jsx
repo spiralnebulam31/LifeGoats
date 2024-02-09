@@ -55,6 +55,17 @@ const Navbar = () => {
           />
 
           <Link
+            to="/the-history"
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+            onClick={() => {
+              setActive("The History");
+              window.scrollTo(0, 0);
+            }}
+          >
+            The History
+          </Link>
+
+          <Link
             to="/contact"
             className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             onClick={() => {

@@ -19,7 +19,7 @@ const TheRoute = () => {
         font-body md:text-[16px] text-[14px] w-[90%] lg:w-[80%]"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        animate="animate"
       >
 
         <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" difference="gain" totalAltitude={1780} />

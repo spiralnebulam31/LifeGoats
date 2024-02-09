@@ -105,6 +105,24 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
           )}
         </AnimatePresence>
 
+        <motion.div
+        className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+        variants={linkReveal}
+        initial="initial"
+        animate="animate"
+      >
+        <Link
+            to="/the-history"
+            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+            onClick={() => {
+              setActive("The History");
+              window.scrollTo(0, 0);
+            }}
+          >
+            The History
+          </Link>
+      </motion.div>
+
       <motion.div
         className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
         variants={linkReveal}
