@@ -44,7 +44,7 @@ export const programData = [
             "After summiting we rejoin the rest at Apostolidis refuge and prepare for our descent.",
             "Plan to depart from the refuge by 10am.",
             "Descend breaking as necessary till we reach Spilios Agapitos Zolota – longer break with an option to order food or coffee (approx. 3-4 hours).",
-            "Possible stop at waterfalls for a cold blunge guided by our Wim Hoff method trained colleague Matt.",
+            "Possible stop at waterfalls for a cold plunge guided by our Wim Hoff method trained colleague Matt.",
             "Continue descending to Proionia where we will be received by our vehicles ( another 3 hours approx.).",
             "Transport to sea level for a sunset dip in the sea 7pm.",
             "And a sea side tavern restaurant reservation directly after at Psarokokalos.",

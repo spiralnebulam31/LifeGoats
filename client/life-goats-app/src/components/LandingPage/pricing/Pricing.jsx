@@ -104,7 +104,7 @@ const Pricing = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <p className="flex justify-center mx-auto w-[70%] pt-3 font-bold font-body text-center text-bold cursor-pointer underline text-primary hover:text-tertiary text-lg">Click here to download the pricing information as a PDF file</p>
+              <p className="flex justify-center mx-auto w-[70%] pt-3 font-bold font-links text-center text-bold cursor-pointer underline text-primary hover:text-tertiary text-xl">Click here to download the pricing information as a PDF file</p>
             </a>
 
             <p className="flex flex-wrap justify-center text-center mx-auto pt-4 font-bold uppercase font-subtitle md:text-[20px] text-[16px]">

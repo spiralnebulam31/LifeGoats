@@ -4,58 +4,45 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../motion/home-sections";
-import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
+import { RouteAltimeter, RouteInfoTextDisplay, RouteLinksDisplay, ImageCarousel } from "../components/TheHike";
+import { ascentData, descentData, totalAscentData, totalDescentData, routeText, routeLinks, imageSliderData } from "../constants/theHike";
 
 const TheRoute = () => {  
 
   return (
     <motion.div
-      className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 bottom-0 top-0
-      overflow-hidden pt-2 pb-2"
+      className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
+      overflow-hidden pt-2 pb-2 z-10 mb-[139px]"
     >
       <motion.div
-        className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-28 mb-5 z-10 overflow-hidden"
+        className="flex flex-col lg:flex-row gap-4 lg:gap-20 justify-center items-center mx-auto pt-28 pb-3 text-primary
+        font-body md:text-[16px] text-[14px] w-[90%] lg:w-[80%]"
+        variants={fadeIn}
+        initial="initial"
+        animate="animate"
       >
-        <motion.p
-          className="md:text-[18px] text-[14px] text-secondary font-subtitle
-          font-bold uppercase tracking-wider"
-          variants={floatFromDownPreTitle}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          Information about
-        </motion.p>
-        <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 mt-0"
-          style={{ textShadow: "2px 2px 3px rgba(0,0,0, 0.3)" }}
-          variants={floatFromDownMainTitle}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-        >
-          The Route
-        </motion.h2>
-      </motion.div>
 
-      <motion.div
-        className="flex flex-col justify-center items-center mx-auto mt-2 py-4 text-primary
-        font-body md:text-[16px] text-[14px] w-[80%] lg:w-[45%]"
+        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" difference="gain" totalAltitude={1780} />
+        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" difference="loss" totalAltitude={1842} />
+
+        </motion.div>
+
+        <motion.div
+        className="flex flex-col gap-10 justify-center items-start mx-auto pt-1 lg:pt-10 pb-3 lg:pb-10 text-primary
+        font-body md:text-[16px] text-[14px] w-full"
         variants={fadeIn}
         initial="initial"
         whileInView="animate"
       >
+     
+    <RouteInfoTextDisplay routeText={routeText} />
 
-        <p className="flex flex-wrap justify-center text-center mx-auto pt-4 pb-8 font-bold uppercase font-subtitle md:text-[20px] text-[16px]">
-          coming soon
-        </p>
+    <RouteLinksDisplay routeLinks={routeLinks} />
 
-        <motion.div className="w-[90%] pb-80">
-          <GoatPrintsWalking />
-        </motion.div>
-      </motion.div>
+    <ImageCarousel imageSliderData={imageSliderData} />
+
+
+</motion.div>
     </motion.div>
   );
 };

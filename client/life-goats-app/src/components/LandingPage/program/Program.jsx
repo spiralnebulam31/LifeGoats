@@ -8,7 +8,6 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../../../motion/home-sections";
-import GoatPrintsWalking from "../../Loaders/GoatPrintsWalking";
 
 const Program = ({
   isSmallScreen,
@@ -20,10 +19,10 @@ const Program = ({
     setActiveTab(index);
   };
 
-  const handleDateChange = (event) => {
-    const selectedIndex = parseInt(event.target.value);
-    setActiveTab(selectedIndex);
-  };
+  // const handleDateChange = (event) => {
+  //   const selectedIndex = parseInt(event.target.value);
+  //   setActiveTab(selectedIndex);
+  // };
   
   return (
     <section
@@ -118,16 +117,19 @@ const Program = ({
               target="_blank"
               rel="noreferrer"
             >
-              <p className="pt-3 pb-2 text-center text-bold cursor-pointer font-bold font-body text-bold underline text-primary hover:text-tertiary text-lg">Click here to download the program as a PDF file</p>
+              <p className="pt-3 pb-2 text-center text-bold cursor-pointer font-bold font-links text-bold underline text-primary hover:text-tertiary text-xl">Click here to download the program as a PDF file</p>
             </a>
 
-        <p className="flex flex-wrap justify-center text-center mx-auto pt-4 font-bold uppercase font-subtitle md:text-[20px] text-[16px]">
-          More information about the hike coming soon
-        </p>
+            <a
+              href="/the-route"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p className="pt-3 pb-2 text-center text-bold cursor-pointer font-bold font-links text-bold underline text-primary hover:text-tertiary text-xl">Click here for more information about the hike</p>
+            </a>
 
-        <motion.div className="w-[90%]">
-          <GoatPrintsWalking />
-        </motion.div>
+
+
       </motion.div>
     </section>
   );

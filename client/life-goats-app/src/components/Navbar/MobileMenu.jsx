@@ -47,7 +47,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
                   variants={listItem}
                   className={`${
                     active === link.title ? "text-secondary underline" : "text-primary"
-                  } hover:text-tertiary text-[20px] hover:text-[24px] font-medium cursor-pointer w-[86px]`}
+                  } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
                   onClick={() => {
                     setMobile(!mobile);
                     setActive(link.title);
@@ -86,7 +86,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
                   variants={listItem}
                   className={`${
                     active === link.title ? "text-secondary underline" : "text-primary"
-                  } hover:text-tertiary text-[20px] hover:text-[24px] font-medium cursor-pointer w-[86px]`}
+                  } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
                   onClick={() => {
                     setMobile(!mobile);
                     setActive(link.title);
@@ -105,6 +105,27 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
           )}
         </AnimatePresence>
 
+        <motion.div
+        className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+        variants={linkReveal}
+        initial="initial"
+        animate="animate"
+      >
+        <Link
+            to="/the-history"
+            className={`${
+                    active === "The History" ? "text-secondary underline" : "text-primary"
+                  } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+                  onClick={() => {
+                    setMobile(!mobile);
+              setActive("The History");
+              window.scrollTo(0, 0);
+            }}
+          >
+            The History
+          </Link>
+      </motion.div>
+
       <motion.div
         className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
         variants={linkReveal}
@@ -113,7 +134,9 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
       >
         <Link
           to="/contact"
-          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer"
+          className={`${
+                    active === "Contact" ? "text-secondary underline" : "text-primary"
+                  } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
           onClick={() => {
             setMobile(!mobile);
             setActive("Contact");
