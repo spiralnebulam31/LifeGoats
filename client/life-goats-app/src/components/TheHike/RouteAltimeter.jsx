@@ -111,7 +111,7 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title, difference })
     };
   
     return (
-      <div className="flex flex-col items-center justify-center w-full lg:w-[50%] xl:w-[70%] h-[350px] pb-10">
+      <div className="flex flex-col items-center justify-center w-full lg:w-[50%] xl:w-[60%] h-[350px] pb-10">
         <Line data={data} options={options} />
       </div>
     );
