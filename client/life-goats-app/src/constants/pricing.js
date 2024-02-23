@@ -69,7 +69,7 @@ export const additionalCosts = [
         description: "Restaurant dinner arrangement right after our descent on the evening of May 30th (Psarokokalos)"
     },
     {
-        description: "Medical mountain guides (Panos and Savvas)"
+        description: "Medically trained mountain guides"
     }
 ];
 

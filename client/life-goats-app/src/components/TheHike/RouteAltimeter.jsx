@@ -1,5 +1,4 @@
 import { Line } from 'react-chartjs-2';
-import Chart from 'chart.js/auto';
 
 const RouteAltimeter = ({ routeTimelineData, totalAltitude, title, difference }) => {
     // Extract altitude data from routeTimelineData
