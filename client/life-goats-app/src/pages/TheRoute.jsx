@@ -22,8 +22,12 @@ const TheRoute = () => {
         animate="animate"
       >
 
-        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" difference="gain" totalAltitude={1780} />
-        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" difference="loss" totalAltitude={1842} />
+        {/* <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" difference="gain" totalAltitude={1780} />
+        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" difference="loss" totalAltitude={1842} /> */}
+
+        <div className="flex flex-col items-center  mx-auto justify-center text-justify w-[80%] lg:w-[60%] font-title text-xl">
+        <p><span className="text-secondary">Note:</span> Something is wrong with the altimeters of the hike. They will be back up as soon as possible. Thank you for your patience!</p>
+        </div>
 
         </motion.div>
 
