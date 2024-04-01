@@ -1,4 +1,6 @@
 import { Line } from 'react-chartjs-2';
+import { Chart, LinearScale, CategoryScale, Title, Tooltip, PointElement, LineElement, Filler } from 'chart.js';
+Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineElement, Filler);
 
 const RouteAltimeter = ({ routeTimelineData, totalAltitude, title, difference }) => {
     // Extract altitude data from routeTimelineData

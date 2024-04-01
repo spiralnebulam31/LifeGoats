@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../motion/motion";
-import {
-  floatFromDownPreTitle,
-  floatFromDownMainTitle,
-} from "../motion/home-sections";
 import { RouteAltimeter, RouteInfoTextDisplay, RouteLinksDisplay, ImageCarousel } from "../components/TheHike";
 import { ascentData, descentData, totalAscentData, totalDescentData, routeText, routeLinks, imageSliderData } from "../constants/theHike";
 
@@ -22,12 +18,12 @@ const TheRoute = () => {
         animate="animate"
       >
 
-        {/* <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" difference="gain" totalAltitude={1780} />
-        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" difference="loss" totalAltitude={1842} /> */}
+        <RouteAltimeter routeTimelineData={ascentData} totalData={totalAscentData} title="Ascent" difference="gain" totalAltitude={1780} />
+        <RouteAltimeter routeTimelineData={descentData} totalData={totalDescentData} title="Descent" difference="loss" totalAltitude={1842} />
 
-        <div className="flex flex-col items-center  mx-auto justify-center text-justify w-[80%] lg:w-[60%] font-title text-xl">
+        {/* <div className="flex flex-col items-center  mx-auto justify-center text-justify w-[80%] lg:w-[60%] font-title text-xl">
         <p><span className="text-secondary">Note:</span> Something is wrong with the altimeters of the hike. They will be back up as soon as possible. Thank you for your patience!</p>
-        </div>
+        </div> */}
 
         </motion.div>
 
