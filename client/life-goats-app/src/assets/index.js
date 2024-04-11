@@ -59,6 +59,10 @@ import instagramHover from './social/instagram-hover.svg';
 import downArrow from './navigation/down-arrow.svg';
 import downArrowHover from './navigation/down-arrow-hover.svg';
 
+import neededItemsBG from './needed-items-bg.webp';
+import historyBG from './history-bg.webp';
+import safetyConsiderationsBG from './safety-considerations-bg.webp';
+
 export {
     goatPrintSingle,
     lifeGoatsLogo,
@@ -109,4 +113,7 @@ export {
     instagramHover,
     downArrow,
     downArrowHover,
+    neededItemsBG,
+    historyBG,
+    safetyConsiderationsBG,
 }
