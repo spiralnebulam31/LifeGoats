@@ -57,7 +57,7 @@ const NeededItemsText = () => {
         </li>
         <li>
           🐐 2 pairs of <span className="font-bold">wool socks</span> and 2
-          pairs of <span className="font-bold"></span>underwear!!
+          pairs of <span className="font-bold">underwear</span>!!
         </li>
         <li>
           🐐 <span className="font-bold">Gloves</span>, a{" "}
