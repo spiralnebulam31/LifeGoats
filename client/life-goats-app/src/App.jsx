@@ -58,9 +58,9 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage preloader={preloader} />} />
-          <Route path="/the-route" element={<TheRoute />} />
-          <Route path="/needed-items" element={<NeededItems />} />
-          <Route path="/safety-considerations" element={<SafetyConsiderations />} />
+          <Route path="/the-hike/the-route" element={<TheRoute />} />
+          <Route path="/the-hike/needed-items" element={<NeededItems />} />
+          <Route path="/the-hike/safety-considerations" element={<SafetyConsiderations />} />
           <Route path="/the-history" element={<TheHistory />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
