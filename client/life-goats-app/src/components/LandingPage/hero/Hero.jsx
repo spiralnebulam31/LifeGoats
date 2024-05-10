@@ -53,7 +53,7 @@ const Hero = ({ isSmallScreen }) => {
                 alt="calendar"
                 className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] object-contain z-40 mb-5"
               />
-              <p className="mb-5">Tue 28th - Fri 31st May</p>
+              <p className="mb-5">Tue 28th - Fri 31st May 2024</p>
             </div>
             <p className="lg:text-[30px] md:text-[28px] text-[23px] max-w-sm md:max-w-2xl">
               A collaborative retreat for coaches, therapists, carers, educators and other

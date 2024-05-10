@@ -23,12 +23,12 @@ export const programData = [
         title: "Mountain day #1",
         description: [
             "Wake up calls at 4:30am,",
-            "Hike to Petrostrunga refuge- usually takes 3 hours but we will give ourselves 5 to get there to respect all fitness levels. We will break as often as needed along the trail.",
-            "Coffee break at Petrostunga around 10:30am.",
-            "Continue towards Apostolidis Refuge at the Plateau of the Muses (typically 4 hours – we will again give ourselves 5-6 hours) arriving long before nightfall by 5pm.",
+            "Hike to Petrostrouga refuge - usually takes 3 hours but we will give ourselves 5 to get there to respect all fitness levels. We will break as often as needed along the trail.",
+            "Coffee break at Petrostrouga around 10:30am.",
+            "Continue towards Kakalos Refuge at the Plateau of the Muses (typically 4 hours – we will again give ourselves 5-6 hours) arriving long before nightfall by 5pm.",
             "Settle into the refuge.",
             "Order food/ hang out inside the refuge.",
-            "Free to independently hike around the surrounding hills if you have more energy to burn off (preferably in pairs so no one gets lost).",
+            "Free to independently hike around the surrounding hills if you have more energy to burn off (preferably in pairs, so no one gets lost).",
             "This evening is another time slot opportunity for a presentation from a fellow coach."
         ]
     },
@@ -40,11 +40,11 @@ export const programData = [
             "Wake up by 6:30am for those wanting to summit the peak of mount Olympus",
             "Group departs from refuge around 7am.",
             "Those choosing not to can look forward to an easy morning around the refuge area (exploring nearby hills or enjoying each others company with a killer view and a cozy cup of coffee from the refuge).",
-            "Hiking/Scrambling to the peak will take us about 2 hours.",
-            "After summiting we rejoin the rest at Apostolidis refuge and prepare for our descent.",
+            "Hiking/scrambling to the peak will take us about 2 hours.",
+            "After summiting, we rejoin the rest at Kakalos Refuge and prepare for our descent.",
             "Plan to depart from the refuge by 10am.",
-            "Descend breaking as necessary till we reach Spilios Agapitos Zolota – longer break with an option to order food or coffee (approx. 3-4 hours).",
-            "Continue descending to Proionia where we will be received by our vehicles ( another 3 hours approx.).",
+            "Descend breaking as necessary till we reach Spilios Agapitos (Zolota) – longer break with an option to order food or coffee (approximately 3-4 hours).",
+            "Continue descending to Prionia where we will be received by our vehicles (another 3 hours approximately).",
             "Transport to sea level for a sunset dip in the sea 7pm.",
             "And a sea side tavern restaurant reservation directly after at Psarokokalos.",
             "Transport to accommodation for a well deserved shower and a good night's sleep."
@@ -57,7 +57,7 @@ export const programData = [
         description: [
             "Easy morning at hotels.",
             "Transport to Plaka Litochorou around 11am – our venue for the day is the Discotech.",
-            "Coffee and bakery/ Drinks and a sea food fiesta prepared with love.",
+            "Coffee and bakery/drinks and a sea food fiesta prepared with love.",
             "Swimming, Sunning and Socializing.",
             "Another good opportunity for brainstorming and workshop time.",
             "Transfer to hotel accommodation for the night when you are good and sick of everything.",

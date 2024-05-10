@@ -13,7 +13,7 @@ import {
     walking5,
     walking6,
     petrostrougaDrawing,
-    apostolidisDrawing,
+    kakalosDrawing,
     agapitosDrawing,
     prioniaDrawing
 } from '../assets/the-hike';
@@ -31,11 +31,17 @@ export const ascentData = [
         altitude: 1940,
         description: "The Petrostrouga Refuge is located at the foot of the Petrostrouga peak. It's a small refuge with a capacity of 20 people."
     },
+    // {
+    //     id: 3,
+    //     location: "Giosos Apostolidis Refuge 🏠",
+    //     altitude: 2697,
+    //     description: "The Apostolidis Refuge is located at the Muses Plateau. We're going to spend the night here before ascending to Mytikas peak."
+    // },
     {
         id: 3,
-        location: "Giosos Apostolidis Refuge 🏠",
-        altitude: 2697,
-        description: "The Apostolidis Refuge is located at the Muses Plateau. We're going to spend the night here before ascending to Mytikas peak."
+        location: "Christos Kakalos Refuge 🏠",
+        altitude: 2650,
+        description: "The Kakalos Refuge is located at the Muses Plateau. We're going to spend the night here before ascending to Mytikas peak."
     },
     {
         id: 4,
@@ -52,10 +58,16 @@ export const descentData = [
         altitude: 2917,
         description: "Our descent from Mytikas peak will take us back to the Apostolidis Refuge."
     },
+    // {
+    //     id: 2,
+    //     location: "Giosos Apostolidis Refuge 🏠",
+    //     altitude: 2697,
+    //     description: "After a short break at the refuge to gather our things, we will start following the trail down the mountain."
+    // },
     {
         id: 2,
-        location: "Giosos Apostolidis Refuge 🏠",
-        altitude: 2697,
+        location: "Christos Kakalos Refuge 🏠",
+        altitude: 2650,
         description: "After a short break at the refuge to gather our things, we will start following the trail down the mountain."
     },
     {
@@ -85,7 +97,7 @@ export const totalDescentData =
     };
 
 export const routeText = [
-    "The trail from Gortsia to the Muses Plateau where our refuge for the night is located (Apostolidis) is one of the most frequented trails at Mount Olympus.",
+    "The trail from Gortsia to the Muses Plateau where our refuge for the night is located (Kakalos Refuge) is one of the most frequented trails at Mount Olympus.",
     "The trail itself is marked by red and yellow paint completed by a few wooden signs along the way and a map at the trailhead.",
     "The path is clear and easy to follow all the way up to the Muses Plateau. But at around 11 km in length and over 1.700 elevation gain it is definitely challenging.",
     "Getting lost here on a clear, sunny summer day would be almost impossible.",
@@ -104,10 +116,10 @@ export const routeLinks = [
     },
     {
         id: 2,
-        title: "Giosos Apostolidis Refuge",
-        link: "https://www.apostolidisrefuge.gr/en/index.html",
-        photo: apostolidisDrawing,
-        alt: "Apostolidis Refuge"
+        title: "Christos Kakalos Refuge",
+        link: "https://www.olympus-climbing.gr/index.php?page=refuges&id=4&language=en",
+        photo: kakalosDrawing,
+        alt: "Kakalos Refuge"
     },
     {
         id: 3,

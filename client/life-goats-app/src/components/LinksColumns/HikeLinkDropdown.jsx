@@ -5,14 +5,14 @@ import { useState } from "react";
 
 const HikeLinkDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) => {
 
-  const [arrowHovered, setArrowHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
-    setArrowHovered(true);
+    setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    setArrowHovered(false);
+    setIsHovered(false);
   };
 
   return (
@@ -26,12 +26,12 @@ const HikeLinkDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) => 
             onMouseLeave={handleMouseLeave}
         >
         <div className="flex flex-row items-center justify-center gap-2">
-          <p>The Hike</p>
-          {arrowHovered ? (
-            <img src={downArrowHover} alt="down arrow" className="h-[20px] w-auto" />
-            ) : (
-            <img src={downArrow} alt="down arrow" className="h-[16px] w-auto" />
-            )}
+        <p className={`${isHovered ? 'hovered' : ''}`}>The Hike</p>
+            <img
+              src={isHovered ? downArrowHover : downArrow}
+              alt="down arrow"
+              className={`h-[20px] w-auto ${isHovered ? 'hovered' : ''}`}
+            />
             </div>
         </button>
       </div>

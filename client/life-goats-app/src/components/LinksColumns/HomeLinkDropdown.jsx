@@ -4,34 +4,34 @@ import { useState } from "react";
 
 const HomeLinkDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => {
 
-    const [arrowHovered, setArrowHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
-      setArrowHovered(true);
+      setIsHovered(true);
     };
   
     const handleMouseLeave = () => {
-      setArrowHovered(false);
+      setIsHovered(false);
     };
 
   return (
     <div className="relative inline-block text-left">
       <div>
-      <button
-  type="button"
-  className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-  onClick={() => setActive(active === "Home" ? null : "Home")}
-  onMouseEnter={handleMouseEnter}
-  onMouseLeave={handleMouseLeave}
->
-        <div className="flex flex-row items-center justify-center gap-2">
-          <p>Home</p>
-          {arrowHovered ? (
-            <img src={downArrowHover} alt="down arrow" className="h-[20px] w-auto" />
-            ) : (
-            <img src={downArrow} alt="down arrow" className="h-[16px] w-auto" />
-            )}
-            </div>
+        <button
+          type="button"
+          className={`text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7 ${isHovered ? 'hovered' : ''}`}
+          onClick={() => setActive(active === "Home" ? null : "Home")}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="flex flex-row items-center justify-center gap-2">
+            <p className={`${isHovered ? 'hovered' : ''}`}>Home</p>
+            <img
+              src={isHovered ? downArrowHover : downArrow}
+              alt="down arrow"
+              className={`h-[20px] w-auto ${isHovered ? 'hovered' : ''}`}
+            />
+          </div>
         </button>
       </div>
       {active === "Home" && (
@@ -44,7 +44,8 @@ const HomeLinkDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => 
         >
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {homeLinks.map((link) => (
-              <a href={`/#${link.id}`}
+              <a
+                href={`/#${link.id}`}
                 key={link.id}
                 className="bg-background block px-4 py-2 text-lg font-links font-bold text-primary hover:bg-secondary hover:text-background"
                 onClick={() => {

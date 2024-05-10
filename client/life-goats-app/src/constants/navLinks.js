@@ -32,17 +32,17 @@ export const homeLinks = [
 export const hikeLinks = [
       {
         id: "the-route",
-        link: "/the-route",
+        link: "/the-hike/the-route",
         title: "The Route",
       },
       {
         id: "needed-items",
-        link: "/needed-items",
+        link: "/the-hike/needed-items",
         title: "Needed Items",
       },
       {
         id: "safety-considerations",
-        link: "/safety-considerations",
+        link: "/the-hike/safety-considerations",
         title: "Safety Considerations",
       },
     ];

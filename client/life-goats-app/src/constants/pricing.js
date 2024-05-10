@@ -45,7 +45,7 @@ export const pricingData = [
 
 export const additionalCosts = [
     {
-        description: "Bed at the Mt. Olympus Refuge for the night of May 29th (Apostolidis refuge)"
+        description: "Bed at the Mt. Olympus Refuge for the night of May 29th (Kakalos Refuge)"
     },
     {
         description: "Ingredients for two feasts (one @ the Land and one @ the Discotech)"
