@@ -28,8 +28,6 @@ import peace from './overview/peace.webp';
 import challenge from './overview/challenge.webp';
 import food from './overview/food.webp';
 import hikers from './overview/hikers.webp';
-import theLandAtTheFootOfTheMountain from './location/the-land-at-the-foot-of-the-mountain.webp';
-import theOldDiscotechByTheSea from './location/the-old-discotech-by-the-sea.webp';
 import mountOlympus from './location/mount-olympus.webp';
 import cloud1 from './overview/cloud1.svg';
 import cloud2 from './overview/cloud2.svg';
@@ -90,8 +88,6 @@ export {
     food,
     hikers,
     transparentMountainBG2,
-    theLandAtTheFootOfTheMountain,
-    theOldDiscotechByTheSea,
     mountOlympus,
     cloud1,
     cloud2,

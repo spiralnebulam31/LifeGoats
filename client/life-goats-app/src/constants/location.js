@@ -1,30 +1,10 @@
 import {
-  theLandAtTheFootOfTheMountain,
-  theOldDiscotechByTheSea,
   mountOlympus,
 } from "../assets/index.js";
 
 export const locationData = [
     {
       id: 0,
-      name: "The Land at the foot of the mountain",
-      image: theLandAtTheFootOfTheMountain,
-      alt: "the land at the foot of the mountain",
-      description: "This small piece of property owned by Maria’s parents since 1988 has been a humble yet beautiful refuge away from the city and a place of gathering over the years. Indoor plumbing, solar heater for warm water, a well with delicious fresh spring water and on the electric grid are but a few amenities this ‘venue’ boasts -the abstinence of Wi-Fi adding to its value. Outdoor kitchen and dining area complete with a charming traditional wood burning brick oven with a stunning view of Mt Olympus.",
-      lat: 40.15165,
-      lng: 22.53653,
-    },
-    {
-      id: 1,
-      name: "The Old Discotech by the sea",
-      image: theOldDiscotechByTheSea,
-      alt: "the old discotech by the sea",
-      description: "Owned by family friends, this retired discotech will be the perfect venue to host our 4th more relaxed beach day at sea level, after our challenging hike up the mountain.",
-      lat: 40.10408,
-      lng: 22.56345,
-    },
-    {
-      id: 2,
       name: "Mount Olympus",
       image: mountOlympus,
       alt: "the land at the foot of the mountain",
@@ -33,6 +13,22 @@ export const locationData = [
       lat: 40.06677,
       lng: 22.40607,
     },
+    {
+      id: 1,
+      name: "Litochoro",
+      alt: "Litochoro town",
+      description: "A small town at the foot of Mount Olympus",
+      lat: 40.1029,
+      lng: 22.5026,
+    },
+    {
+      id: 2,
+      name: "Plaka",
+      alt: "Plaka beach",
+      description: "A beach location near Litochoro",
+      lat: 40.1000,
+      lng: 22.5628,
+    }
   ];
   
   export const locationDataInfo = [
