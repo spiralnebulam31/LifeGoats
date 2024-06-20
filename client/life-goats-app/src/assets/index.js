@@ -66,6 +66,9 @@ import neededItemsBG from './needed-items-bg.webp';
 import historyBG from './history-bg.webp';
 import safetyConsiderationsBG from './safety-considerations-bg.webp';
 
+import MtOlympusMay2024 from './events/mt-olympus-may-2024.webp';
+import upcomingEvents from './events/upcoming-events.webp';
+
 export {
     goatPrintSingle,
     olympus2024BG1,
@@ -121,4 +124,6 @@ export {
     neededItemsBG,
     historyBG,
     safetyConsiderationsBG,
+    MtOlympusMay2024,
+    upcomingEvents
 }
