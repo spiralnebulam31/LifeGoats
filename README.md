@@ -28,9 +28,8 @@ You can visit the live website here:
 
 ## Roadmap
 
-- Integrate animated transitions, enhancing user engagement.
-- Expand the website into a multi-page experience. This evolution will guide users beyond the initial landing page, inviting them to delve deeper into the rich history and intricate details surrounding the retreat.
-- Eventually develop a server to facilitate user authentication, enabling a streamlined process for individuals to secure their spot at future events.
+- Redesign the website to establish a sense of community rather than a sole retreat.
+- Develop a server to facilitate user authentication, enabling a streamlined process for individuals to secure their spot at future events.
 
 
 
@@ -96,6 +95,6 @@ There is a Node.js server connected with the app, to be developed and used in th
 
 **Collaboration:** Trello
 
-**Development:** React.js, React Router, TailwindCSS, Framer Motion, React Tilt
+**Development:** React.js, React Router, TailwindCSS, Framer Motion, Chart.js, Node.js, Express
 
 
