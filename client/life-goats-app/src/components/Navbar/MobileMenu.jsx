@@ -3,9 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../motion/motion";
 import { Link } from "react-router-dom";
 
-const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks }) => {
+const MobileMenu = ({
+  active,
+  setActive,
+  mobile,
+  setMobile,
+  homeLinks,
+  pastLinks,
+}) => {
   const [isHomeOpen, setIsHomeOpen] = useState(false);
-  const [isHikeOpen, setIsHikeOpen] = useState(false);
+  const [isPastEventsOpen, setIsPastEventsOpen] = useState(false);
 
   return (
     <motion.div
@@ -46,7 +53,9 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
                   key={link.id}
                   variants={listItem}
                   className={`${
-                    active === link.title ? "text-secondary underline" : "text-primary"
+                    active === link.title
+                      ? "text-secondary underline"
+                      : "text-primary"
                   } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
                   onClick={() => {
                     setMobile(!mobile);
@@ -61,18 +70,41 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
           )}
         </AnimatePresence>
 
+        <motion.div
+          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+          variants={linkReveal}
+          initial="initial"
+          animate="animate"
+        >
+          <Link
+            to="/the-history"
+            className={`${
+              active === "The History"
+                ? "text-secondary underline"
+                : "text-primary"
+            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+            onClick={() => {
+              setMobile(!mobile);
+              setActive("The History");
+              window.scrollTo(0, 0);
+            }}
+          >
+            The History
+          </Link>
+        </motion.div>
+
         <h2
           className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
-          onClick={() => setIsHikeOpen(!isHikeOpen)}
+          onClick={() => setIsPastEventsOpen(!isPastEventsOpen)}
         >
-          The Hike
+          Past Events
         </h2>
         <AnimatePresence>
-          {isHikeOpen && (
+          {isPastEventsOpen && (
             <motion.div
               layout
               initial="closed"
-              animate={isHikeOpen ? "open" : "closed"}
+              animate={isPastEventsOpen ? "open" : "closed"}
               exit="closed"
               variants={{
                 open: { opacity: 1, height: "auto" },
@@ -80,12 +112,14 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
               }}
               className="flex flex-col gap-3 pb-4"
             >
-              {hikeLinks.map((link) => (
+              {pastLinks.map((link) => (
                 <motion.div
                   key={link.id}
                   variants={listItem}
                   className={`${
-                    active === link.title ? "text-secondary underline" : "text-primary"
+                    active === link.title
+                      ? "text-secondary underline"
+                      : "text-primary"
                   } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
                   onClick={() => {
                     setMobile(!mobile);
@@ -93,12 +127,9 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
                     window.scrollTo(0, 0);
                   }}
                 >
-                  <Link
-                key={link.id}
-                to={link.link}
-              >
-                {link.title}
-              </Link>
+                  <Link key={link.id} to={link.link}>
+                    {link.title}
+                  </Link>
                 </motion.div>
               ))}
             </motion.div>
@@ -106,46 +137,48 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, hikeLinks
         </AnimatePresence>
 
         <motion.div
-        className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
-        variants={linkReveal}
-        initial="initial"
-        animate="animate"
-      >
-        <Link
-            to="/the-history"
+          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+          variants={linkReveal}
+          initial="initial"
+          animate="animate"
+        >
+          <Link
+            to="/upcoming-events"
             className={`${
-                    active === "The History" ? "text-secondary underline" : "text-primary"
-                  } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
-                  onClick={() => {
-                    setMobile(!mobile);
-              setActive("The History");
+              active === "Upcoming Events"
+                ? "text-secondary underline"
+                : "text-primary"
+            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+            onClick={() => {
+              setMobile(!mobile);
+              setActive("Upcoming Events");
               window.scrollTo(0, 0);
             }}
           >
-            The History
+            Upcoming Events
           </Link>
-      </motion.div>
+        </motion.div>
 
-      <motion.div
-        className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
-        variants={linkReveal}
-        initial="initial"
-        animate="animate"
-      >
-        <Link
-          to="/contact"
-          className={`${
-                    active === "Contact" ? "text-secondary underline" : "text-primary"
-                  } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
-          onClick={() => {
-            setMobile(!mobile);
-            setActive("Contact");
-            window.scrollTo(0, 0);
-          }}
+        <motion.div
+          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+          variants={linkReveal}
+          initial="initial"
+          animate="animate"
         >
-          Contact
-        </Link>
-      </motion.div>
+          <Link
+            to="/contact"
+            className={`${
+              active === "Contact" ? "text-secondary underline" : "text-primary"
+            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+            onClick={() => {
+              setMobile(!mobile);
+              setActive("Contact");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Contact
+          </Link>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { homeLinks, hikeLinks } from "../../constants/navLinks";
+import { homeLinks, pastLinks } from "../../constants/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
 import MobileMenu from "./MobileMenu";
-import { HomeLinkDropdown, HikeLinkDropdown } from "../LinksColumns";
+import { HomeLinksDropdown, PastLinksDropdown } from "../LinksColumns";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -38,44 +38,56 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center justify-end">
-        <div className="hidden lg:flex flex-row items-center justify-end gap-10">
-        <HomeLinkDropdown
-            active={active}
-            setActive={setActive}
-            handleLinkClick={handleLinkClick}
-            homeLinks={homeLinks}
-            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-          />
-          <HikeLinkDropdown
-            active={active}
-            setActive={setActive}
-            handleLinkClick={handleLinkClick}
-            hikeLinks={hikeLinks}
-            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-          />
+          <div className="hidden lg:flex flex-row items-center justify-end gap-10">
+            <HomeLinksDropdown
+              active={active}
+              setActive={setActive}
+              handleLinkClick={handleLinkClick}
+              homeLinks={homeLinks}
+              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+            />
 
-          <Link
-            to="/the-history"
-            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-            onClick={() => {
-              setActive("The History");
-              window.scrollTo(0, 0);
-            }}
-          >
-            The History
-          </Link>
+            <Link
+              to="/the-history"
+              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              onClick={() => {
+                setActive("The History");
+                window.scrollTo(0, 0);
+              }}
+            >
+              The History
+            </Link>
 
-          <Link
-            to="/contact"
-            className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-            onClick={() => {
-              setActive("Contact");
-              window.scrollTo(0, 0);
-            }}
-          >
-            Contact
-          </Link>
-        </div>
+            <PastLinksDropdown
+              active={active}
+              setActive={setActive}
+              handleLinkClick={handleLinkClick}
+              pastLinks={pastLinks}
+              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+            />
+
+            <Link
+              to="/upcoming-events"
+              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              onClick={() => {
+                setActive("Upcoming Events");
+                window.scrollTo(0, 0);
+              }}
+            >
+              Upcoming Events
+            </Link>
+
+            <Link
+              to="/contact"
+              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              onClick={() => {
+                setActive("Contact");
+                window.scrollTo(0, 0);
+              }}
+            >
+              Contact
+            </Link>
+          </div>
 
           <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
             <img
@@ -95,7 +107,7 @@ const Navbar = () => {
                   mobile={mobile}
                   setMobile={setMobile}
                   homeLinks={homeLinks}
-                  hikeLinks={hikeLinks}
+                  pastLinks={pastLinks}
                   handleLinkClick={handleLinkClick}
                 />
               )}

@@ -1,11 +1,16 @@
 import goatPrintSingle from './goat-prints/goat-print-single.svg';
 
+import olympus2024BG1 from './olympus2024-1.jpg';
+import olympus2024BG2 from './olympus2024-2.jpg';
+import olympus2024BG3 from './olympus2024-3.jpg';
+
 import lifeGoatsLogo from './navbar/life-goats-logo.svg';
 import menuMountain from './navbar/menu-mountain.svg';
 import menuClose from './navbar/menu-close.svg';
 
 import heroBackground2 from './hero/hero-bg-2.webp';
 import goatPrints from './hero/goat-prints.svg';
+import goatPrintsLight from './hero/goat-prints-light.svg';
 import calendar from './hero/calendar.svg';
 
 import aboutPhoto from './about/photo1.svg';
@@ -63,11 +68,15 @@ import safetyConsiderationsBG from './safety-considerations-bg.webp';
 
 export {
     goatPrintSingle,
+    olympus2024BG1,
+    olympus2024BG2,
+    olympus2024BG3,
     lifeGoatsLogo,
     menuMountain,
     menuClose,
     heroBackground2,
     goatPrints,
+    goatPrintsLight,
     calendar,
     aboutPhoto,
     accommodationIcon,

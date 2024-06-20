@@ -1,6 +1,13 @@
-import HomeLinks from './HomeLinks';
-import HomeLinkDropdown from './HomeLinkDropdown';
-// import PageLinks from './PageLinks';
-import HikeLinkDropdown from './HikeLinkDropdown';
+import Links from './Links';
+import HomeLinksDropdown from './HomeLinksDropdown';
+import HikeLinkDropdown from './HikeLinksDropdown';
+import UpcomingLinksDropdown from './UpcomingLinksDropdown';
+import PastLinksDropdown from './PastLinksDropdown';
 
-export { HomeLinks, HomeLinkDropdown, HikeLinkDropdown };
+export { 
+    Links,
+    HomeLinksDropdown, 
+    HikeLinkDropdown, 
+    UpcomingLinksDropdown, 
+    PastLinksDropdown 
+};

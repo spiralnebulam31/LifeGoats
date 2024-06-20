@@ -13,6 +13,21 @@ export const floatFromUpHeroTitle = {
     },
   }
 
+  export const floatFromUpHomeHeroTitle = {
+    initial: {
+      y:-200,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        delay: 0.5,
+      },
+    },
+  }
+
   export const floatFromUpHeroSubtitle = {
     initial: {
       y:-100,
@@ -60,14 +75,14 @@ export const floatFromUpHeroTitle = {
 
   export const heroGoatPrintsVariant = {
     initial: {
-      y: 100,
+      y: 200,
       opacity: 0,
     },
     animate: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 1.3,
+        duration: 1,
         delay: 0.5,
       },
     },

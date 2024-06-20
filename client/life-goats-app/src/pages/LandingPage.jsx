@@ -1,19 +1,14 @@
 import {
   Hero,
   Intro,
-  EventOverview,
-  Details,
-  Location,
-  Program,
-  Pricing,
+  Testimonials,
+  Overview,
   Parallax,
   Contact,
 } from "../components/LandingPage";
 import { useState } from "react";
-import MediaQuery from "react-responsive";
 
-const LandingPage = () => {
-  const isSmallScreen = MediaQuery({ query: "(max-width: 768px)" });
+const LandingPage = ( {isSmallScreen} ) => {
 
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
   const [emailIsHovered, setEmailIsHovered] = useState(false);
@@ -38,11 +33,8 @@ const LandingPage = () => {
     <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
       <Hero isSmallScreen={isSmallScreen} />
       <Intro isSmallScreen={isSmallScreen} />
-      <EventOverview isSmallScreen={isSmallScreen} />
-      <Details isSmallScreen={isSmallScreen} />
-      <Location isSmallScreen={isSmallScreen} />
-      <Program isSmallScreen={isSmallScreen} />
-      <Pricing isSmallScreen={isSmallScreen} />
+      <Testimonials isSmallScreen={isSmallScreen} />
+      <Overview isSmallScreen={isSmallScreen} />
       <Parallax />
       <Contact
         isSmallScreen={isSmallScreen}

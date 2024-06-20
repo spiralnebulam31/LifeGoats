@@ -1,10 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { Navbar, Footer } from "./components/index";
-import { LandingPage, TheRoute, NeededItems, SafetyConsiderations, TheHistory, Contact } from "./pages/index";
+import { 
+  LandingPage, 
+  TheHistory, 
+  TheTeam,
+  PastEvents, 
+  UpcomingEvents, 
+  MtOlympusMay2024, 
+  Contact 
+} from "./pages/index";
 import { lifeGoatsLogo } from "./assets/index.js";
+import MediaQuery from "react-responsive";
+
 
 const App = () => {
+
+  const isSmallScreen = MediaQuery({ query: "(max-width: 768px)" });
 
   const [preloader, setPreloader] = useState(true);
   const [timer, setTimer] = useState(2);
@@ -57,12 +69,13 @@ const App = () => {
       >
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage preloader={preloader} />} />
-          <Route path="/the-hike/the-route" element={<TheRoute />} />
-          <Route path="/the-hike/needed-items" element={<NeededItems />} />
-          <Route path="/the-hike/safety-considerations" element={<SafetyConsiderations />} />
-          <Route path="/the-history" element={<TheHistory />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<LandingPage preloader={preloader} isSmallScreen={isSmallScreen} />} isSmallScreen={isSmallScreen} />
+          <Route path="/about/the-history" element={<TheHistory />} isSmallScreen={isSmallScreen} />
+          <Route path="/about/the-team" element={<TheTeam />} isSmallScreen={isSmallScreen} />
+          <Route path="/past-events" element={<PastEvents />} isSmallScreen={isSmallScreen} />
+          <Route path="/past-events/mt-olympus-may-2024" element={<MtOlympusMay2024 />} isSmallScreen={isSmallScreen} />
+          <Route path="/upcoming-events" element={<UpcomingEvents />} isSmallScreen={isSmallScreen} />
+          <Route path="/contact" element={<Contact />} isSmallScreen={isSmallScreen} />
         </Routes>
         <Footer
           modalState={modalState}
