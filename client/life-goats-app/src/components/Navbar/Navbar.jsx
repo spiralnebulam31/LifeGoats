@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { homeLinks, pastLinks } from "../../constants/navLinks";
+import { homeLinks, aboutLinks, eventsLinks } from "../../constants/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
 import MobileMenu from "./MobileMenu";
-import { HomeLinksDropdown, PastLinksDropdown } from "../LinksColumns";
+import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown } from "../LinksColumns";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -47,35 +47,21 @@ const Navbar = () => {
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
 
-            <Link
-              to="/the-history"
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-              onClick={() => {
-                setActive("The History");
-                window.scrollTo(0, 0);
-              }}
-            >
-              The History
-            </Link>
-
-            <PastLinksDropdown
+            <AboutLinksDropdown
               active={active}
               setActive={setActive}
               handleLinkClick={handleLinkClick}
-              pastLinks={pastLinks}
+              aboutLinks={aboutLinks}
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
 
-            <Link
-              to="/upcoming-events"
+            <EventsLinksDropdown
+              active={active}
+              setActive={setActive}
+              handleLinkClick={handleLinkClick}
+              eventsLinks={eventsLinks}
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-              onClick={() => {
-                setActive("Upcoming Events");
-                window.scrollTo(0, 0);
-              }}
-            >
-              Upcoming Events
-            </Link>
+            />
 
             <Link
               to="/contact"
@@ -107,7 +93,8 @@ const Navbar = () => {
                   mobile={mobile}
                   setMobile={setMobile}
                   homeLinks={homeLinks}
-                  pastLinks={pastLinks}
+                  aboutLinks={aboutLinks}
+                  eventsLinks={eventsLinks}
                   handleLinkClick={handleLinkClick}
                 />
               )}

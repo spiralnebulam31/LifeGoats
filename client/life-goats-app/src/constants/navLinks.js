@@ -24,12 +24,12 @@ export const homeLinks = [
 export const aboutLinks = [
   {
     id: "the-history",
-    link: "/about/the-history",
+    link: "/about/history",
     title: "The History",
   },
   {
     id: "the-team",
-    link: "/about/the-team",
+    link: "/about/team",
     title: "The Team",
   },
 ];
@@ -37,12 +37,12 @@ export const aboutLinks = [
 export const eventsLinks = [
   {
     id: "past-events",
-    link: "/events/past-events",
+    link: "/events/past",
     title: "Past Events",
   },
   {
     id: "upcoming-events",
-    link: "/events/upcoming-events",
+    link: "/events/upcoming",
     title: "Upcoming Events",
   },
 ];

@@ -4,7 +4,7 @@ import {
   floatFromDownMainTitle,
 } from "../motion/home-sections";
 import { teamData } from "../constants/team";
-import TeamCard from "../components/TeamCard";
+import TeamCard from "../components/About/team/TeamCard";
 
 const TheTeam = ({ isSmallScreen }) => {
   return (

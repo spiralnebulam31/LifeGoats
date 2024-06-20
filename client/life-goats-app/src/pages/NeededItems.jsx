@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../motion/motion";
 import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
 import { neededItemsBG } from "../assets";
-import NeededItemsText from "../components/TheHike/NeededItemsText";
+import NeededItemsText from "../components/PastEvents/MtOlympusMay2024/TheHike/NeededItemsText";
 
 const NeededItems = () => {
   return (

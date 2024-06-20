@@ -3,21 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../motion/motion";
 import { Link } from "react-router-dom";
 
-const MobileMenu = ({
-  active,
-  setActive,
-  mobile,
-  setMobile,
-  homeLinks,
-  pastLinks,
-}) => {
+const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLinks, eventsLinks }) => {
+
   const [isHomeOpen, setIsHomeOpen] = useState(false);
-  const [isPastEventsOpen, setIsPastEventsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isEventsOpen, setIsEventsOpen] = useState(false);
 
   return (
     <motion.div
-      className="flex lg:hidden absolute right-0 top-0 bottom-0 w-[70%] h-screen mx-0 my-0
-        z-10 flex-col items-end gap-60"
+      className="flex lg:hidden absolute right-0 top-0 bottom-0 w-[70%] h-screen mx-0 my-0 z-10 flex-col items-end gap-60"
       variants={mobileNav}
       initial="initial"
       animate="animate"
@@ -29,6 +23,7 @@ const MobileMenu = ({
         initial="initial"
         animate="animate"
       >
+        {/* Home Section */}
         <h2
           className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
           onClick={() => setIsHomeOpen(!isHomeOpen)}
@@ -49,20 +44,7 @@ const MobileMenu = ({
               className="flex flex-col gap-3 pb-4"
             >
               {homeLinks.map((link) => (
-                <motion.div
-                  key={link.id}
-                  variants={listItem}
-                  className={`${
-                    active === link.title
-                      ? "text-secondary underline"
-                      : "text-primary"
-                  } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
-                  onClick={() => {
-                    setMobile(!mobile);
-                    setActive(link.title);
-                    window.scrollTo(0, 0);
-                  }}
-                >
+                <motion.div key={link.id} variants={listItem} /* ... */ >
                   <a href={`/#${link.id}`}>{link.title}</a>
                 </motion.div>
               ))}
@@ -70,41 +52,19 @@ const MobileMenu = ({
           )}
         </AnimatePresence>
 
-        <motion.div
-          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
-          variants={linkReveal}
-          initial="initial"
-          animate="animate"
-        >
-          <Link
-            to="/the-history"
-            className={`${
-              active === "The History"
-                ? "text-secondary underline"
-                : "text-primary"
-            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
-            onClick={() => {
-              setMobile(!mobile);
-              setActive("The History");
-              window.scrollTo(0, 0);
-            }}
-          >
-            The History
-          </Link>
-        </motion.div>
-
+        {/* About Section */}
         <h2
           className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
-          onClick={() => setIsPastEventsOpen(!isPastEventsOpen)}
+          onClick={() => setIsAboutOpen(!isAboutOpen)}
         >
-          Past Events
+          About
         </h2>
         <AnimatePresence>
-          {isPastEventsOpen && (
+          {isAboutOpen && (
             <motion.div
               layout
               initial="closed"
-              animate={isPastEventsOpen ? "open" : "closed"}
+              animate={isAboutOpen ? "open" : "closed"}
               exit="closed"
               variants={{
                 open: { opacity: 1, height: "auto" },
@@ -112,53 +72,45 @@ const MobileMenu = ({
               }}
               className="flex flex-col gap-3 pb-4"
             >
-              {pastLinks.map((link) => (
-                <motion.div
-                  key={link.id}
-                  variants={listItem}
-                  className={`${
-                    active === link.title
-                      ? "text-secondary underline"
-                      : "text-primary"
-                  } hover:text-tertiary text-[20px] font-bold cursor-pointer w-[90px]`}
-                  onClick={() => {
-                    setMobile(!mobile);
-                    setActive(link.title);
-                    window.scrollTo(0, 0);
-                  }}
-                >
-                  <Link key={link.id} to={link.link}>
-                    {link.title}
-                  </Link>
+              {aboutLinks.map((link) => (
+                <motion.div key={link.id} variants={listItem} /* ... */ >
+                  <a href={`${link.link}`}>{link.title}</a>
                 </motion.div>
               ))}
             </motion.div>
           )}
         </AnimatePresence>
 
-        <motion.div
-          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
-          variants={linkReveal}
-          initial="initial"
-          animate="animate"
+        {/* Events Section */}
+        <h2
+          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
+          onClick={() => setIsEventsOpen(!isEventsOpen)}
         >
-          <Link
-            to="/upcoming-events"
-            className={`${
-              active === "Upcoming Events"
-                ? "text-secondary underline"
-                : "text-primary"
-            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
-            onClick={() => {
-              setMobile(!mobile);
-              setActive("Upcoming Events");
-              window.scrollTo(0, 0);
-            }}
-          >
-            Upcoming Events
-          </Link>
-        </motion.div>
+          Events
+        </h2>
+        <AnimatePresence>
+          {isEventsOpen && (
+            <motion.div
+              layout
+              initial="closed"
+              animate={isEventsOpen ? "open" : "closed"}
+              exit="closed"
+              variants={{
+                open: { opacity: 1, height: "auto" },
+                closed: { opacity: 0, height: 0 },
+              }}
+              className="flex flex-col gap-3 pb-4"
+            >
+              {eventsLinks.map((link) => (
+                <motion.div key={link.id} variants={listItem} /* ... */ >
+                  <a href={`${link.link}`}>{link.title}</a>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
 
+        {/* Contact Section */}
         <motion.div
           className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
           variants={linkReveal}

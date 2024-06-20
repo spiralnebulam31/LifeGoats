@@ -70,11 +70,11 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage preloader={preloader} isSmallScreen={isSmallScreen} />} isSmallScreen={isSmallScreen} />
-          <Route path="/about/the-history" element={<TheHistory />} isSmallScreen={isSmallScreen} />
-          <Route path="/about/the-team" element={<TheTeam />} isSmallScreen={isSmallScreen} />
-          <Route path="/past-events" element={<PastEvents />} isSmallScreen={isSmallScreen} />
-          <Route path="/past-events/mt-olympus-may-2024" element={<MtOlympusMay2024 />} isSmallScreen={isSmallScreen} />
-          <Route path="/upcoming-events" element={<UpcomingEvents />} isSmallScreen={isSmallScreen} />
+          <Route path="/about/history" element={<TheHistory />} isSmallScreen={isSmallScreen} />
+          <Route path="/about/team" element={<TheTeam />} isSmallScreen={isSmallScreen} />
+          <Route path="/events/past" element={<PastEvents />} isSmallScreen={isSmallScreen} />
+          <Route path="/events/past/mt-olympus-may-2024" element={<MtOlympusMay2024 />} isSmallScreen={isSmallScreen} />
+          <Route path="/events/upcoming" element={<UpcomingEvents />} isSmallScreen={isSmallScreen} />
           <Route path="/contact" element={<Contact />} isSmallScreen={isSmallScreen} />
         </Routes>
         <Footer
