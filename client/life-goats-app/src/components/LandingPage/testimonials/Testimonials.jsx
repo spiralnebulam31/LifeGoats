@@ -30,7 +30,7 @@ const Testimonials = ({ isSmallScreen }) => {
       </motion.div>
 
       <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 mb-2 md:mb-4">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-10 mb-2 md:mb-4">
           {testimonials.slice(0,6).map((testimonial, index) => (
             <motion.div
               key={index}
