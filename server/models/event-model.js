@@ -1,24 +1,15 @@
 import mongoose, { Schema, model } from 'mongoose';
-import { eventModel } from './models.js';
 
-const imageSchema = new Schema({
+const eventSchema = new Schema({
     name: {
         type: String,
         required: true,
-        trim: true
-    },
-    alt: {
-        type: String,
         trim: true
     },
     description: {
         type: String,
         trim: true
     },
-    tags: [{
-        type: String,
-        trim: true
-    }],
     date: {
         type: Date,
         default: Date.now
@@ -27,20 +18,24 @@ const imageSchema = new Schema({
         type: String,
         trim: true
     },
-    event: { // Reference to the Event model
-        type: Schema.Types.ObjectId,
-        ref: 'Event'
+    host: {
+        type: String,
+        trim: true
+    },
+    numberOfAttendees: {
+        type: Number,
+        default: 0
     },
 }, {
     timestamps: true // Automatically adds createdAt and updatedAt fields
 });
 
-// Adding an index to improve query performance on 'tags' field
-imageSchema.index({ tags: 1 });
+// Adding an index to improve query performance on 'name' field
+eventSchema.index({ name: 1 });
 
 // Example method to convert date to a readable format
-imageSchema.methods.formattedDate = function() {
+eventSchema.methods.formattedDate = function() {
     return this.date.toLocaleDateString();
 };
 
-export const imageModel = model('Image', imageSchema);
+export const eventModel = model('Event', eventSchema);
