@@ -8,6 +8,7 @@ import PastEvents from './PastEvents';
 import UpcomingEvents from './UpcomingEvents';
 import MtOlympusMay2024 from './PastEvents/MtOlympusMay2024';
 import Contact from './Contact';
+import TestimonialsPage from './TestimonialsPage';
 
 export { 
     LandingPage, 
@@ -19,4 +20,6 @@ export {
     PastEvents,
     UpcomingEvents,
     MtOlympusMay2024,
-    Contact };
+    Contact,
+    TestimonialsPage
+};

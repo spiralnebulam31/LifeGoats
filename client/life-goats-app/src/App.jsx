@@ -8,7 +8,8 @@ import {
   PastEvents, 
   UpcomingEvents, 
   MtOlympusMay2024, 
-  Contact 
+  Contact,
+  TestimonialsPage
 } from "./pages/index";
 import { lifeGoatsLogo } from "./assets/index.js";
 import MediaQuery from "react-responsive";
@@ -76,6 +77,7 @@ const App = () => {
           <Route path="/events/past/mt-olympus-may-2024" element={<MtOlympusMay2024 />} isSmallScreen={isSmallScreen} />
           <Route path="/events/upcoming" element={<UpcomingEvents />} isSmallScreen={isSmallScreen} />
           <Route path="/contact" element={<Contact />} isSmallScreen={isSmallScreen} />
+          <Route path="/testimonials" element={<TestimonialsPage />} isSmallScreen={isSmallScreen} />
         </Routes>
         <Footer
           modalState={modalState}

@@ -2,16 +2,15 @@ import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
-} from "../../../motion/home-sections";
-import { testimonials } from "../../../constants/testimonials";
-import TestimonialsCard from "./TestimonialsCard";
-import { Link } from "react-router-dom";
+} from "../motion/home-sections";
+import { testimonials } from "../constants/testimonials";
+import TestimonialsCard from "../components/LandingPage/testimonials/TestimonialsCard";
 
-const Testimonials = ({ isSmallScreen }) => {
+const TestimonialsPage = ({ isSmallScreen }) => {
   return (
     <section
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
+      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden mt-[70px] pt-2 pb-12 z-10"
     >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
@@ -31,7 +30,7 @@ const Testimonials = ({ isSmallScreen }) => {
 
       <motion.div className="flex flex-row justify-evenly items-center">
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-10 mb-2 md:mb-4">
-          {testimonials.slice(0,6).map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               className="relative z-10"
@@ -40,7 +39,7 @@ const Testimonials = ({ isSmallScreen }) => {
                 translateX: index % 2 === 0 ? -100 : 100,
                 translateY: -100,
               }}
-              whileInView={{
+              animate={{
                 opacity: 1,
                 translateX: 0,
                 translateY: 0,
@@ -55,22 +54,8 @@ const Testimonials = ({ isSmallScreen }) => {
           ))}
         </motion.div>
       </motion.div>
-
-          <Link to="/testimonials">
-      <motion.div className="flex justify-evenly items-center mx-auto"
-      variants={floatFromDownMainTitle}
-      initial="initial"
-      whileInView="animate"
-      >
-          <button className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 mt-8 px-4 rounded-lg shadow-lg
-          hover:bg-secondary hover:text-primary">
-            Read more from our community
-          </button>
-      </motion.div>
-          </Link>
-
     </section>
   );
 };
 
-export default Testimonials;
+export default TestimonialsPage;
