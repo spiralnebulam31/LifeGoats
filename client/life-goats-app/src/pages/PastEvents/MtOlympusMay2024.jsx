@@ -5,6 +5,7 @@ import {
     Details,
     Location,
     TheHikeComponent as TheHike,
+    Gallery,
     TheTeam
   } from "../../components/PastEvents/MtOlympusMay2024";
   import MediaQuery from "react-responsive";
@@ -20,6 +21,7 @@ import {
         <Details isSmallScreen={isSmallScreen} />
         <Location isSmallScreen={isSmallScreen} />
         <TheHike isSmallScreen={isSmallScreen} />
+        <Gallery isSmallScreen={isSmallScreen} />
         <TheTeam isSmallScreen={isSmallScreen} />
       </div>
     );
