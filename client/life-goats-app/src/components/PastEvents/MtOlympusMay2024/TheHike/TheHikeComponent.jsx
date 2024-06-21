@@ -1,6 +1,5 @@
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../../motion/home-sections';
-import { fadeIn } from '../../../../motion/motion';
 import RouteAltimeter from "./RouteAltimeter";
 import { ascentData, descentData, totalAscentData, totalDescentData } from "../../../../constants/theHike";
 
@@ -8,9 +7,8 @@ const TheHikeComponent = () => {
 
   return (
     <section
-      id="the-hike"
       className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
-      overflow-hidden pt-2 pb-2 z-10 mb-[130px] mx-auto"
+      overflow-hidden pt-2 pb-2 z-10 mx-auto"
     >
       <motion.div className="text-center w-[80%] lg:w-full mx-auto pt-14 mb-5 z-10 overflow-hidden">
         <motion.p 

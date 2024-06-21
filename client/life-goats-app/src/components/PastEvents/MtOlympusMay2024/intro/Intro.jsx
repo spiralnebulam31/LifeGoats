@@ -13,7 +13,7 @@ const Intro = ( { isSmallScreen } ) => {
   const textInView = useInView(textRef, { threshold: 0.5 });
   
   return (
-    <section id="intro" className="overflow-hidden bg-gradient-to-b from-background via-blue-100 to-blue-400 relative bg-cover
+    <section className="overflow-hidden bg-gradient-to-b from-background via-blue-100 to-blue-400 relative bg-cover
     w-full h-auto min-h-full left-0 right-0 top-0 pt-2 pb-12 z-10">
       
       <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto

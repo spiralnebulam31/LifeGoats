@@ -9,7 +9,6 @@ import OverviewCard from "./OverviewCard";
 const EventOverview = ({ isSmallScreen }) => {
   return (
     <section
-      id="overview"
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
     >

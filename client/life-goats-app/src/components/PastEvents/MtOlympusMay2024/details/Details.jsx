@@ -38,7 +38,6 @@ const Details = ( { isSmallScreen } ) => {
 
   return (
     <section
-      id="details"
       className="bg-background relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 overflow-hidden pt-2 pb-12 z-10">
 
 <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto

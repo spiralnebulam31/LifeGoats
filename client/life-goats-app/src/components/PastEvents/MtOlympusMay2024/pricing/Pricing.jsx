@@ -17,7 +17,6 @@ const Pricing = () => {
 
   return (
     <section
-      id="pricing"
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
       relative bg-cover w-screen h-auto inset-0 left-0 right-0 bottom-0 top-0
       overflow-hidden pt-2 pb-12 z-10"

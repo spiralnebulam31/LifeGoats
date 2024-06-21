@@ -26,7 +26,6 @@ const Program = ({
   
   return (
     <section
-      id="program"
       className="bg-gradient-to-b from-background via-blue-100 to-blue-400
       relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 bottom-0 top-0
       overflow-hidden pt-2 pb-2 z-10"

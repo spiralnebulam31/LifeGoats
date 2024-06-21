@@ -29,7 +29,7 @@ const Location = ( { isSmallScreen } ) => {
   const mountainEnipeasInView = useInView(mountainEnipeasRef, { threshold: 0.5 });
 
   return (
-    <section id="location" className="bg-background relative bg-cover w-full h-auto min-h-full left-0 right-0 bottom-0 top-0
+    <section className="bg-background relative bg-cover w-full h-auto min-h-full left-0 right-0 bottom-0 top-0
     pt-2 pb-12 overflow-hidden z-10">
         
           <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
