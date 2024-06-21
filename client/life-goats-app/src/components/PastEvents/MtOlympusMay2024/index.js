@@ -5,5 +5,6 @@ import Details from "./details/Details";
 import Location from "./location/Location";
 import Program from "./program/Program";
 import Pricing from "./pricing/Pricing";
+import TheHikeComponent from "./TheHike/TheHikeComponent";
 
-export { Hero, Intro, EventOverview, Details, Location, Program, Pricing };
+export { Hero, Intro, EventOverview, Details, Location, Program, Pricing, TheHikeComponent };

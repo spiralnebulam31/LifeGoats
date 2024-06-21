@@ -41,23 +41,35 @@ export const ascentData = [
         id: 3,
         location: "Christos Kakalos Refuge 🏠",
         altitude: 2650,
-        description: "The Kakalos Refuge is located at the Muses Plateau. We're going to spend the night here before ascending to Mytikas peak."
+        description: "The Kakalos Refuge is located at the Muses Plateau. We spent the night there!"
     },
+    // {
+    //     id: 4,
+    //     location: "Mytikas Peak ⛰️",
+    //     altitude: 2917,
+    //     description: "Mytikas is the highest peak of Mount Olympus. We will be ascending to the peak from the Apostolidis Refuge early in the morning."
+    // },
     {
         id: 4,
-        location: "Mytikas Peak ⛰️",
-        altitude: 2917,
-        description: "Mytikas is the highest peak of Mount Olympus. We will be ascending to the peak from the Apostolidis Refuge early in the morning."
+        location: "Profitis Ilias Peak ⛰️",
+        altitude: 2803,
+        description: "Profitis Ilias is located near the two refuges on the Muses Plateau. We ascended there early in the morning before heading down the mountain. A small chapel is located on the peak."
     }
 ];
 
 export const descentData = [
     {
         id: 1,
-        location: "Mytikas Peak ⛰️",
-        altitude: 2917,
-        description: "Our descent from Mytikas peak will take us back to the Apostolidis Refuge."
+        location: "Profitis Ilias Peak ⛰️",
+        altitude: 2803,
+        description: "Profitis Ilias is located near the two refuges on the Muses Plateau. We ascended there early in the morning before heading down the mountain. A small chapel is located on the peak."
     },
+    // {
+    //     id: 1,
+    //     location: "Mytikas Peak ⛰️",
+    //     altitude: 2917,
+    //     description: "Our descent from Mytikas peak will take us back to the Apostolidis Refuge."
+    // },
     // {
     //     id: 2,
     //     location: "Giosos Apostolidis Refuge 🏠",
@@ -68,7 +80,7 @@ export const descentData = [
         id: 2,
         location: "Christos Kakalos Refuge 🏠",
         altitude: 2650,
-        description: "After a short break at the refuge to gather our things, we will start following the trail down the mountain."
+        description: "After a short break at the refuge to gather our things, we started following the trail Kofto down the mountain."
     },
     {
         id: 3,
@@ -80,7 +92,7 @@ export const descentData = [
         id: 4,
         location: "Prionia 🚗",
         altitude: 1075,
-        description: "Our trail ends at the Prionia parking lot. From here you will be transported back to your accommodation."
+        description: "Our trail ended at the Prionia parking lot."
     }
 ];
 

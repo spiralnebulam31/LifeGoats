@@ -65,10 +65,10 @@ const RouteAltimeter = ({ routeTimelineData, totalAltitude, title, difference })
         title: {
             display: true,
             text: 'The ' + title,
-            color: '#4D3D11',
+            color: '#7BA862',
             font: {
-              size: 50,
-              family: 'Luckiest Guy',
+              size: 35,
+              family: 'Cinzel',
               weight: 'bold',
             }
           },
