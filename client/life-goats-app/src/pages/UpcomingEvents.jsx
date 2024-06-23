@@ -3,12 +3,11 @@ import { fadeIn } from "../motion/motion";
 import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
 // import { historyBG } from "../assets";
 import { upcomingEvents } from "../assets";
+import { Link } from "react-router-dom";
 
 const UpcomingEvents = () => {
   return (
-    <motion.div
-      className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto"
-    >
+    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto">
       {/* <img
         src={historyBG}
         alt="mountain background"
@@ -20,19 +19,56 @@ const UpcomingEvents = () => {
             Upcoming Events
           </motion.h1>
         </motion.div>
-        <motion.img src={upcomingEvents} alt="hikers on Muses Plateau" className="flex mx-auto rounded-2xl shadow-lg w-[90%] md:w-[70%] lg:w-[60%] xl:[40%] h-auto" />
-        <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate">
-        <motion.p className="font-bold mt-0 pb-4 text-center" variants={fadeIn} initial="initial" whileInView="animate">
-          More retreats and events coming soon. Stay tuned!
-        </motion.p>
-        <motion.div className="w-[90%] mx-auto" variants={fadeIn} initial="initial" whileInView="animate">
-          <GoatPrintsWalking />
+        <motion.img
+          src={upcomingEvents}
+          alt="hikers on Muses Plateau"
+          className="flex mx-auto rounded-2xl shadow-lg w-[90%] md:w-[70%] lg:w-[60%] xl:[40%] h-auto"
+        />
+        <motion.div
+          className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]"
+        >
+          <motion.p
+            className="font-bold mt-0 pb-4 text-center"
+            variants={fadeIn}
+            initial="initial"
+            whileInView="animate"
+          >
+            More retreats and events coming soon. Stay tuned!
+          </motion.p>
+          <motion.div
+            className="w-[90%] mx-auto"
+            variants={fadeIn}
+            initial="initial"
+            whileInView="animate"
+          >
+            <GoatPrintsWalking />
+          </motion.div>
+          <motion.p
+            className="font-bold mt-2 pb-4 text-center"
+            variants={fadeIn}
+            initial="initial"
+            whileInView="animate"
+          >
+            If you have any suggestions or ideas for future events, don't hesitate to send us a <span className="line-through font-links">goat</span> note!
+          </motion.p>
+          <motion.div
+            className="flex justify-center items-center"
+            variants={fadeIn}
+            initial="initial"
+            whileInView="animate"
+          >
+            <Link
+              to="/contact"
+              className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 mt-3 px-4 rounded-lg shadow-lg
+          hover:bg-tertiary hover:text-earth"
+            >
+              Contact Us
+            </Link>
+            </motion.div>
         </motion.div>
-                </motion.div>
       </motion.div>
     </motion.div>
   );
 };
-
 
 export default UpcomingEvents;

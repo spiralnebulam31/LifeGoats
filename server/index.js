@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import { imageRouter } from "./routes/routes.js";
+import { imageRouter, eventRouter } from "./routes/routes.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -28,3 +28,4 @@ app.listen(PORT, () => {
 });
 
 app.use("/", imageRouter);
+app.use("/", eventRouter);

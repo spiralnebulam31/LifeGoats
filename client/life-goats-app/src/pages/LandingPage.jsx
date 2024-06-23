@@ -2,7 +2,7 @@ import {
   Hero,
   Intro,
   Testimonials,
-  Overview,
+  CoreValues,
   Parallax,
   Contact,
 } from "../components/LandingPage";
@@ -34,7 +34,7 @@ const LandingPage = ( {isSmallScreen} ) => {
       <Hero isSmallScreen={isSmallScreen} />
       <Intro isSmallScreen={isSmallScreen} />
       <Testimonials isSmallScreen={isSmallScreen} />
-      <Overview isSmallScreen={isSmallScreen} />
+      <CoreValues isSmallScreen={isSmallScreen} />
       <Parallax />
       <Contact
         isSmallScreen={isSmallScreen}

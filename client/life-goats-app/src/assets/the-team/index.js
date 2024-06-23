@@ -1,11 +1,11 @@
 import directorsChairs from "./page/directors-chairs.jpg";
 import Anastasia2 from "./page/Anastasia.svg";
-import Maria2 from "./page/Maria.svg";
+import Maria2 from "./page/Maria.jpg";
 
 import George from "./events/mt-olympus-may-2024/George.svg";
 import Anastasia from "./events/mt-olympus-may-2024/Anastasia.svg";
 import Maria from "./events/mt-olympus-may-2024/Maria.svg";
-import Margaret from "./events/mt-olympus-may-2024/Margaret.svg";
+import Margret from "./events/mt-olympus-may-2024/Margret.svg";
 import Christos from "./events/mt-olympus-may-2024/Christos.svg";
 import Savvas from "./events/mt-olympus-may-2024/Savvas.svg";
 import Stratos from "./events/mt-olympus-may-2024/Stratos.svg";
@@ -20,7 +20,7 @@ export {
     George,
     Anastasia,
     Maria,
-    Margaret,
+    Margret,
     Christos,
     Savvas,
     Stratos,

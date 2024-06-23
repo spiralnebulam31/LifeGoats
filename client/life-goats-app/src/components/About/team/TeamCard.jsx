@@ -1,4 +1,17 @@
 import { motion } from 'framer-motion';
+import parse, { domToReact } from 'html-react-parser';
+
+const transform = (node) => {
+  if (node.type === 'tag' && node.name === 'a') {
+    return (
+      <a href={node.attribs.href} className="font-links cursor-pointer underline hover:text-secondary">
+        {domToReact(node.children)}
+      </a>
+    );
+  }
+  // Return null for all other nodes, which tells html-react-parser to use the default conversion
+  return null;
+};
 
 const TeamCard = ({ index, alt, image, title, text, url, yMoving }) => {
   return (
@@ -17,7 +30,7 @@ const TeamCard = ({ index, alt, image, title, text, url, yMoving }) => {
           </h2>
         </a>
           <p className="text-primary font-body text-center text-[16px] md:text-[18px] max-w-6xl pt-2 pb-1">
-            {text}
+          {parse(text, { replace: transform })}
           </p>
         </div>
       </motion.div>

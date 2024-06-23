@@ -69,7 +69,7 @@ const Gallery = () => {
           animate="animate"
           viewport={{ once: true }}
         >
-          Out Memories
+          Our Memories
         </motion.p>
         <motion.h2
           className="text-earth font-bold font-title uppercase md:text-[55px]

@@ -1,6 +1,6 @@
 import { imageModel } from "../models/image-model.js";
 
-//GET all images
+// GET all images
 export async function getAllImages(req, res) {
   try {
     const images = await imageModel.find();
@@ -18,5 +18,18 @@ export async function getImagesByEvent(req, res) {
     res.status(200).json(images);
   } catch (error) {
     res.status(404).json({ message: error.message });
+  }
+}
+
+// Add image to event
+export async function addImageToEvent(req, res) {
+  const { event } = req.params;
+  const image = req.body;
+  const newImage = new imageModel({ ...image, event });
+  try {
+    await newImage.save();
+    res.status(201).json(newImage);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
   }
 }
