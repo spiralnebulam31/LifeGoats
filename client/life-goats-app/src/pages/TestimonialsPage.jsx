@@ -5,19 +5,19 @@ import {
 } from "../motion/home-sections";
 import { testimonials } from "../constants/testimonials";
 import TestimonialsCard from "../components/LandingPage/testimonials/TestimonialsCard";
+import { Link } from "react-router-dom";
 
 const TestimonialsPage = ({ isSmallScreen }) => {
   return (
-    <section
-      className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden mt-[70px] pt-2 pb-12 z-10"
+    <motion.div
+      className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden p-2 z-10 mb-[130px] mt-[70px] flex flex-col justify-center text-center mx-auto"
     >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-8 mb-8 z-10 overflow-hidden"
       >
 <motion.p
-          className="md:text-[18px] text-[14px] text-background font-subtitle
+          className="md:text-[18px] text-[14px] text-secondary font-subtitle
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
@@ -41,7 +41,7 @@ const TestimonialsPage = ({ isSmallScreen }) => {
 
       <motion.div className="flex flex-row justify-evenly items-center">
         <motion.div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-10 mb-2 md:mb-4">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.slice(0, 6).map((testimonial, index) => (
             <motion.div
               key={index}
               className="relative z-10"
@@ -50,22 +50,38 @@ const TestimonialsPage = ({ isSmallScreen }) => {
                 translateX: index % 2 === 0 ? -100 : 100,
                 translateY: -100,
               }}
-              animate={{
+              whileInView={{
                 opacity: 1,
                 translateX: 0,
                 translateY: 0,
                 transition: {
                   duration: 0.8,
                   delay: index * 0.2,
-                }
+                },
               }}
-              >
+            >
               <TestimonialsCard key={index} {...testimonial} />
             </motion.div>
           ))}
         </motion.div>
       </motion.div>
-    </section>
+
+      <Link to="/contact" target="_blank" rel="noreferrer">
+        <motion.div
+          className="flex justify-evenly items-center mx-auto"
+          variants={floatFromDownMainTitle}
+          initial="initial"
+          whileInView="animate"
+        >
+          <button
+            className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 my-8 px-4 rounded-lg shadow-lg
+          hover:bg-tertiary hover:text-earth"
+          >
+            Have you been to one of our events? Share your experience with us!
+          </button>
+        </motion.div>
+      </Link>
+    </motion.div>
   );
 };
 

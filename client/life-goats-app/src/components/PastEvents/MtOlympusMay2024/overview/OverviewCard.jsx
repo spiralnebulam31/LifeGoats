@@ -14,7 +14,7 @@ const OverviewCard = ({ index, alt, image, title, text, yMoving }) => {
           <h2 className="text-tertiary font-subtitle text-center text-[14px] font-bold max-w-6xl pt-2 pb-1">
             {title}
           </h2>
-          <p className="text-primary font-body text-center text-[14px] md:text-[16px] max-w-6xl pt-2 pb-1">
+          <p className="text-primary font-body text-center text-[14px] lg:text-[16px] max-w-6xl pt-2 pb-1">
             {text}
           </p>
         </div>

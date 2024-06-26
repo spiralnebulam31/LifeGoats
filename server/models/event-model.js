@@ -8,23 +8,36 @@ const eventSchema = new Schema({
     },
     description: {
         type: String,
-        trim: true
+        trim: true,
+        required: true,
     },
-    date: {
+    url: {
+        type: String,
+        trim: true,
+        required: true,
+    },
+    startDate: {
         type: Date,
-        default: Date.now
+        required: true
+    },
+    endDate: {
+        type: Date,
+        required: true
     },
     location: {
         type: String,
-        trim: true
+        trim: true,
+        required: true
     },
     host: {
         type: String,
-        trim: true
+        trim: true,
+        required: true
     },
     numberOfAttendees: {
         type: Number,
-        default: 0
+        default: 0,
+        required: true
     },
 }, {
     timestamps: true // Automatically adds createdAt and updatedAt fields

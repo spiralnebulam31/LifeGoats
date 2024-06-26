@@ -15,6 +15,11 @@ const imageSchema = new Schema({
         type: String,
         trim: true
     },
+    url: {
+        type: String,
+        required: true,
+        trim: true
+    },
     tags: [{
         type: String,
         trim: true

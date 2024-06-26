@@ -25,7 +25,7 @@ const TeamCard = ({ index, alt, image, title, text, url, yMoving }) => {
         />
         <div className="px-6 pt-3 pb-1 flex flex-col mx-auto">
         <a href={url} target="_blank" rel="noreferrer">
-          <h2 className="text-tertiary font-subtitle underline cursor-pointer text-center text-[18px] font-bold max-w-6xl pt-2 pb-1">
+          <h2 className="text-tertiary hover:text-earth font-subtitle underline cursor-pointer text-center text-[18px] font-bold max-w-6xl pt-2 pb-1">
             {title}
           </h2>
         </a>
