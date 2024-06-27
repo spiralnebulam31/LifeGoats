@@ -180,6 +180,7 @@ const ContactInput = ({ type, placeholder, name }) => (
         name={name}
         placeholder={placeholder}
         className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-primary font-body"
+        required
       />
     ) : (
       <input
@@ -187,6 +188,7 @@ const ContactInput = ({ type, placeholder, name }) => (
         placeholder={placeholder}
         name={name}
         className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-primary font-body"
+        required
       />
     )}
   </div>

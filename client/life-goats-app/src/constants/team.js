@@ -27,7 +27,7 @@ export const teamData = [
       image: Anastasia2,
       title: "Anastasia Adamoudi",
       url: "https://linktr.ee/spiralnebula",
-      text: "Anastasia is a Greek <a href='https://anastasiaadamoudi.com/'>web developer</a> living in the UK, eager to keep using her creativity to help people and businesses establish their online presence.",
+      text: "Anastasia is a Greek <a href='https://anastasiaadamoudi.com/'>web developer</a> living in the UK, using her creativity to help people and businesses establish their online presence. Co-founder of our life goats community, she believes in social contribution, collaboration and sustainability. Enjoys time in nature, gardening, yoga, choir singing and exploring new places.",
     },
   ];
 
