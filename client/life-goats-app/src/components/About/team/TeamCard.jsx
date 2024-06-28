@@ -16,7 +16,7 @@ const transform = (node) => {
 const TeamCard = ({ index, alt, image, title, text, url, yMoving }) => {
   return (
     <motion.div
-      className="w-[280px] lg:w-[350px] h-[450px] lg:h-[550px] z-0 bg-background m-3 py-5 rounded-2xl shadow-lg opacity-80 overflow-hidden"
+      className="w-[280px] lg:w-[350px] h-[550px] z-0 bg-background m-3 py-5 rounded-2xl shadow-lg opacity-80 overflow-hidden"
       >
         <img
           src={image}

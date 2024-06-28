@@ -71,7 +71,7 @@ const TestimonialsPage = ({ isSmallScreen }) => {
           <LongTestimonialsCard key={0} {...longTestimonials[0]} />
       </motion.div>
 
-      <Link to="/contact" target="_blank" rel="noreferrer">
+      <Link to="/contact">
         <motion.div
           className="flex justify-evenly items-center mx-auto"
           variants={floatFromDownMainTitle}

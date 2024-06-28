@@ -5,7 +5,7 @@ const EventCard = ({ index, alt, image, link, title, text, yMoving }) => {
 
   return (
     <>
-    <Link to={link} alt={title}>
+    <Link to={link} alt={title} target="_blank" rel="noreferrer">
     <motion.div
       className="w-[310px] h-[200px] lg:h-[250px] lg:w-[450px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
       >

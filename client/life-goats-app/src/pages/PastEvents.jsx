@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 // import { historyBG } from "../assets";
 import {
-  floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../motion/home-sections";
 import { pastEventsData } from "../constants/past-events";
