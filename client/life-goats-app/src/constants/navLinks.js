@@ -12,10 +12,6 @@ export const homeLinks = [
     title: "Overview",
   },
   {
-    id: "the-team",
-    title: "The Team",
-  },
-  {
     id: "contact",
     title: "Contact",
   },

@@ -17,6 +17,13 @@ export const testimonials = [
     index: 3,
     alt: "no image",
     image: null,
+    name: "Hrva K.",
+    text: "Life Goats on Mount Olympus! The Mountain, the People, the Feeling. Climbing up the misty mountain, being part of something bigger than myself and having opportunity to be part and be held by group of amazing people with big hearts (even those head brainers ;-). It is experience I will cherish forever. Experience worth sharing."
+  },
+  {
+    index: 4,
+    alt: "no image",
+    image: null,
     name: "Anastasia A.",
     text: "No photos or words can truly capture the unique Mount Olympus experience! Being on the mountain, away from the chaos of the city, surrounded by nature and other like-minded people, filled me with energy and gave me the clarity to see what's important to me. Returning to my routine after the Life Goats retreat, I realized I could see things from a calmer perspective. That helped me organize my next steps towards my life and career goals.",
   },

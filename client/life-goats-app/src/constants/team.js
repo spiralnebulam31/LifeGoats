@@ -19,7 +19,7 @@ export const teamData = [
       image: Maria2,
       title: "Maria Telikiozoglou",
       url: "https://www.instagram.com/maleetsee/",
-      text: "Maria is an American-Greek <a href='https://www.linkedin.com/in/maria-telikiozoglou/'>team building and leadership coach</a> for small family businesses and founder of our life goats community.  Passionate about work/life integration, outdoor recreation, building and nurturing relationships, collaborations, self-leadership and cultivating peace, possibility and prosperity.",
+      text: "Maria is an American-Greek <a href='https://www.mariatelikiozoglou.com/'>team building and leadership coach</a> for small family businesses and founder of our life goats community.  Passionate about work/life integration, outdoor recreation, building and nurturing relationships, collaborations, self-leadership and cultivating peace, possibility and prosperity.",
     },
     {
       index: 2,

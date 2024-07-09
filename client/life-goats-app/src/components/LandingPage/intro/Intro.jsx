@@ -1,36 +1,78 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import {
-  fadeIn,
-} from "../../../motion/motion";
+import { motion } from 'framer-motion';
+import { fadeIn } from "../../../motion/motion";
+import { goal, comeTogether, connect, brainstorm, recharge, enjoy, underline } from "../../../motion/intro-section";
 
-const Intro = ({ isSmallScreen }) => {
-
-  const textRef = useRef();
+const Intro = () => {
 
   return (
-    <section id="intro" className="overflow-hidden bg-background relative bg-cover
-    w-full h-auto min-h-full left-0 right-0 top-0 py-16 z-10">
+    <section id="intro" className="overflow-hidden bg-background relative bg-cover w-full h-auto min-h-full left-0 right-0 top-0 z-10 lg:text-[34px] sm:text-[28px] text-[20px] text-primary 
+            font-body font-bold lg:leading-[60px] leading-[40px] p-10 md:p-16">
 
-      <div className="max-w-7xl mx-auto flex">
+      <motion.div 
+        variants={fadeIn}
+        initial="initial"
+        whileInView="animate"
+        className="flex flex-col items-center justify-center text-center mx-auto w-[90%] lg:w-[60%]">
 
-        {/* Intro text */}
-          <motion.div
-            variants={fadeIn}
-            ref={textRef}
+        <div className="pb-10 justify-normal">
+          Our <motion.span 
+          className="font-title text-tertiary"
+          variants={goal}
+          initial="initial"
+          whileInView="animate"
+          >
+          goal
+          </motion.span>{' '}
+          is to help each other press pause on the momentum of daily life,{' '}
+          <motion.span
+            variants={comeTogether}
             initial="initial"
             whileInView="animate"
-            className="flex flex-col justify-center items-center mx-auto lg:text-[34px] sm:text-[28px] text-[20px] text-primary 
-            font-body w-[90%] md:w-[80%] xl:w-[90%] max-w-md sm:max-w-6xl font-bold 
-            lg:leading-[60px] leading-[40px] my-auto z-40 text-center"
           >
-            <p className="pb-5">
-            Our goal is to help each other press pause on the momentum of daily life, come together, connect, brainstorm, recharge and enjoy reinventing ourselves.</p>
-            <p className="pb-5">As people-centered professionals, our performance depends on that.</p>
-            <p>Join us!</p>
-          </motion.div>
-       
-      </div>
+            come together
+          </motion.span>,{' '} 
+          <motion.span
+            variants={connect}
+            initial="initial"
+            whileInView="animate"
+          >
+          connect
+          </motion.span>,{' '}
+          <motion.span
+            variants={brainstorm}
+            initial="initial"
+            whileInView="animate"
+          >
+          brainstorm
+          </motion.span>,{' '}
+          <motion.span
+            variants={recharge}
+            initial="initial"
+            whileInView="animate"
+          >
+          recharge
+          </motion.span>
+          {' '}and{' '}
+           <motion.span
+            variants={enjoy}
+            initial="initial"
+            whileInView="animate"
+          >
+            enjoy reinventing ourselves
+          </motion.span>.
+        </div>
+        <div className="">
+          As people-centered professionals, we believe that when we are at our best,{' '}
+          <motion.span
+            variants={underline}
+            initial="initial"
+            whileInView="animate"
+          >
+          we can give our best
+          </motion.span>.
+          {/* , our performance depends on that. */}
+        </div>
+      </motion.div>
     </section>
   );
 };
