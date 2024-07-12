@@ -1,4 +1,4 @@
-import mtOlympusMay2024Day1_01 from './mt-olympus-may-2024-day1-01.jpg';
+import mtOlympusMay2024Day1_01 from './mt-olympus-may-2024-day1-01.JPG';
 import mtOlympusMay2024Day2_01 from './mt-olympus-may-2024-day2-01.jpg';
 import mtOlympusMay2024Day2_02 from './mt-olympus-may-2024-day2-02.jpg';
 import mtOlympusMay2024Day2_03 from './mt-olympus-may-2024-day2-03.jpg';
