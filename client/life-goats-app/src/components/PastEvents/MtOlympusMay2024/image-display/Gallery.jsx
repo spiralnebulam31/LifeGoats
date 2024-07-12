@@ -6,7 +6,7 @@ import {
     floatFromDownPreTitle,
     floatFromDownMainTitle,
   } from "../../../../motion/home-sections";
-import { mtOlympusMay2024Images } from '../../../../assets/photo-galleries/mt-olympus-may-2024';
+import { mtOlympusMay2024Images } from '../../../../assets/photo-galleries/mt-olympus-may-2024/index.js';
 import "./Gallery.css";
 
 const Gallery = () => {
