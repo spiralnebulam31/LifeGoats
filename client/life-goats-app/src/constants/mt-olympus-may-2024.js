@@ -41,7 +41,7 @@ import {
     mtOlympusMay2024Day4_11,
     mtOlympusMay2024Day4_12,
     mtOlympusMay2024Day4_13
-} from '../assets/photo-galleries/mt-olympus-may-2024';
+} from '../assets/photo-galleries/mt-olympus-may-2024/index.js';
 
 export const mtOlympusMay2024Images = [
     { 
