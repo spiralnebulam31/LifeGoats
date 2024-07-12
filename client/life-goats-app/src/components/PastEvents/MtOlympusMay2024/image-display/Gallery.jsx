@@ -6,11 +6,11 @@ import {
     floatFromDownPreTitle,
     floatFromDownMainTitle,
   } from "../../../../motion/home-sections";
-import { MtOlympusMay2024Images } from '../../../../assets/photo-galleries/Mt-Olympus-May-2024';
+import { mtOlympusMay2024Images } from '../../../../assets/photo-galleries/mt-olympus-may-2024';
 import "./Gallery.css";
 
 const Gallery = () => {
-    const [images] = useState(MtOlympusMay2024Images.map(img => ({
+    const [images] = useState(mtOlympusMay2024Images.map(img => ({
         itemImageSrc: img.src,
         thumbnailImageSrc: img.thumbnail,
         alt: img.alt,
