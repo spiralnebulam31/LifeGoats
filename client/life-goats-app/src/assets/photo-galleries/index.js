@@ -1,87 +1,85 @@
-import mtOlympusMay2024Day1_01 from './mt-olympus-may-2024-day1-01.JPG';
-import mtOlympusMay2024Day2_01 from './mt-olympus-may-2024-day2-01.jpg';
-import mtOlympusMay2024Day2_02 from './mt-olympus-may-2024-day2-02.jpg';
-import mtOlympusMay2024Day2_03 from './mt-olympus-may-2024-day2-03.jpg';
-import mtOlympusMay2024Day2_04 from './mt-olympus-may-2024-day2-04.jpg';
-import mtOlympusMay2024Day2_05 from './mt-olympus-may-2024-day2-05.jpg';
-import mtOlympusMay2024Day2_06 from './mt-olympus-may-2024-day2-06.jpg';
-import mtOlympusMay2024Day2_07 from './mt-olympus-may-2024-day2-07.jpg';
-import mtOlympusMay2024Day2_08 from './mt-olympus-may-2024-day2-08.jpg';
-import mtOlympusMay2024Day2_09 from './mt-olympus-may-2024-day2-09.jpg';
-import mtOlympusMay2024Day2_10 from './mt-olympus-may-2024-day2-10.jpg';
-import mtOlympusMay2024Day2_11 from './mt-olympus-may-2024-day2-11.jpg';
-import mtOlympusMay2024Day2_12 from './mt-olympus-may-2024-day2-12.jpg';
-import mtOlympusMay2024Day2_13 from './mt-olympus-may-2024-day2-13.jpg';
-import mtOlympusMay2024Day3_01 from './mt-olympus-may-2024-day3-01.jpg';
-import mtOlympusMay2024Day3_02 from './mt-olympus-may-2024-day3-02.jpg';
-import mtOlympusMay2024Day3_03 from './mt-olympus-may-2024-day3-03.jpg';
-import mtOlympusMay2024Day3_04 from './mt-olympus-may-2024-day3-04.jpg';
-import mtOlympusMay2024Day3_05 from './mt-olympus-may-2024-day3-05.jpg';
-import mtOlympusMay2024Day3_06 from './mt-olympus-may-2024-day3-06.jpg';
-import mtOlympusMay2024Day3_07 from './mt-olympus-may-2024-day3-07.jpg';
-import mtOlympusMay2024Day3_08 from './mt-olympus-may-2024-day3-08.jpg';
-import mtOlympusMay2024Day3_09 from './mt-olympus-may-2024-day3-09.jpg';
-import mtOlympusMay2024Day3_10 from './mt-olympus-may-2024-day3-10.jpg';
-import mtOlympusMay2024Day3_11 from './mt-olympus-may-2024-day3-11.jpg';
-import mtOlympusMay2024Day3_12 from './mt-olympus-may-2024-day3-12.jpg';
-import mtOlympusMay2024Day3_13 from './mt-olympus-may-2024-day3-13.jpg';
-import mtOlympusMay2024Day3_14 from './mt-olympus-may-2024-day3-14.jpg';
-import mtOlympusMay2024Day3_15 from './mt-olympus-may-2024-day3-15.jpg';
-import mtOlympusMay2024Day4_01 from './mt-olympus-may-2024-day4-01.jpg';
-import mtOlympusMay2024Day4_02 from './mt-olympus-may-2024-day4-02.jpg';
-import mtOlympusMay2024Day4_03 from './mt-olympus-may-2024-day4-03.jpg';
-import mtOlympusMay2024Day4_04 from './mt-olympus-may-2024-day4-04.jpg';
-import mtOlympusMay2024Day4_05 from './mt-olympus-may-2024-day4-05.jpg';
-import mtOlympusMay2024Day4_06 from './mt-olympus-may-2024-day4-06.jpg';
-import mtOlympusMay2024Day4_07 from './mt-olympus-may-2024-day4-07.jpg';
-import mtOlympusMay2024Day4_08 from './mt-olympus-may-2024-day4-08.jpg';
-import mtOlympusMay2024Day4_09 from './mt-olympus-may-2024-day4-09.jpg';
-import mtOlympusMay2024Day4_10 from './mt-olympus-may-2024-day4-10.jpg';
-import mtOlympusMay2024Day4_11 from './mt-olympus-may-2024-day4-11.jpg';
-import mtOlympusMay2024Day4_12 from './mt-olympus-may-2024-day4-12.jpg';
-import mtOlympusMay2024Day4_13 from './mt-olympus-may-2024-day4-13.jpg';
+import olympus24101 from '@/assets/photo-galleries/olympus24101.JPG';
+import olympus24201 from '@/assets/photo-galleries/olympus24201.JPG';
+import olympus24202 from '@/assets/photo-galleries/olympus24202.JPG';
+import olympus24203 from '@/assets/photo-galleries/olympus24203.JPG';
+import olympus24204 from '@/assets/photo-galleries/olympus24204.JPG';
+import olympus24205 from '@/assets/photo-galleries/olympus24205.JPG';
+import olympus24206 from '@/assets/photo-galleries/olympus24206.JPG';
+import olympus24207 from '@/assets/photo-galleries/olympus24207.JPG';
+import olympus24208 from '@/assets/photo-galleries/olympus24208.JPG';
+import olympus24209 from '@/assets/photo-galleries/olympus24209.JPG';
+import olympus24210 from '@/assets/photo-galleries/olympus24210.JPG';
+import olympus24211 from '@/assets/photo-galleries/olympus24211.JPG';
+import olympus24212 from '@/assets/photo-galleries/olympus24212.JPG';
+import olympus24213 from '@/assets/photo-galleries/olympus24213.JPG';
+import olympus24301 from '@/assets/photo-galleries/olympus24301.JPG';
+import olympus24302 from '@/assets/photo-galleries/olympus24302.JPG';
+import olympus24303 from '@/assets/photo-galleries/olympus24303.JPG';
+import olympus24304 from '@/assets/photo-galleries/olympus24304.JPG';
+import olympus24305 from '@/assets/photo-galleries/olympus24305.JPG';
+import olympus24306 from '@/assets/photo-galleries/olympus24306.JPG';
+import olympus24307 from '@/assets/photo-galleries/olympus24307.JPG';
+import olympus24308 from '@/assets/photo-galleries/olympus24308.JPG';
+import olympus24309 from '@/assets/photo-galleries/olympus24309.JPG';
+import olympus24310 from '@/assets/photo-galleries/olympus24310.JPG';
+import olympus24311 from '@/assets/photo-galleries/olympus24311.JPG';
+import olympus24312 from '@/assets/photo-galleries/olympus24312.JPG';
+import olympus24313 from '@/assets/photo-galleries/olympus24313.JPG';
+import olympus24314 from '@/assets/photo-galleries/olympus24314.JPG';
+import olympus24401 from '@/assets/photo-galleries/olympus24401.JPG';
+import olympus24402 from '@/assets/photo-galleries/olympus24402.JPG';
+import olympus24403 from '@/assets/photo-galleries/olympus24403.JPG';
+import olympus24404 from '@/assets/photo-galleries/olympus24404.JPG';
+import olympus24405 from '@/assets/photo-galleries/olympus24405.JPG';
+import olympus24406 from '@/assets/photo-galleries/olympus24406.JPG';
+import olympus24407 from '@/assets/photo-galleries/olympus24407.JPG';
+import olympus24408 from '@/assets/photo-galleries/olympus24408.JPG';
+import olympus24409 from '@/assets/photo-galleries/olympus24409.JPG';
+import olympus24410 from '@/assets/photo-galleries/olympus24410.JPG';
+import olympus24411 from '@/assets/photo-galleries/olympus24411.JPG';
+import olympus24412 from '@/assets/photo-galleries/olympus24412.JPG';
+import olympus24413 from '@/assets/photo-galleries/olympus24413.JPG';
 
 export {
-    mtOlympusMay2024Day1_01,
-    mtOlympusMay2024Day2_01,
-    mtOlympusMay2024Day2_02,
-    mtOlympusMay2024Day2_03,
-    mtOlympusMay2024Day2_04,
-    mtOlympusMay2024Day2_05,
-    mtOlympusMay2024Day2_06,
-    mtOlympusMay2024Day2_07,
-    mtOlympusMay2024Day2_08,
-    mtOlympusMay2024Day2_09,
-    mtOlympusMay2024Day2_10,
-    mtOlympusMay2024Day2_11,
-    mtOlympusMay2024Day2_12,
-    mtOlympusMay2024Day2_13,
-    mtOlympusMay2024Day3_01,
-    mtOlympusMay2024Day3_02,
-    mtOlympusMay2024Day3_03,
-    mtOlympusMay2024Day3_04,
-    mtOlympusMay2024Day3_05,
-    mtOlympusMay2024Day3_06,
-    mtOlympusMay2024Day3_07,
-    mtOlympusMay2024Day3_08,
-    mtOlympusMay2024Day3_09,
-    mtOlympusMay2024Day3_10,
-    mtOlympusMay2024Day3_11,
-    mtOlympusMay2024Day3_12,
-    mtOlympusMay2024Day3_13,
-    mtOlympusMay2024Day3_14,
-    mtOlympusMay2024Day3_15,
-    mtOlympusMay2024Day4_01,
-    mtOlympusMay2024Day4_02,
-    mtOlympusMay2024Day4_03,
-    mtOlympusMay2024Day4_04,
-    mtOlympusMay2024Day4_05,
-    mtOlympusMay2024Day4_06,
-    mtOlympusMay2024Day4_07,
-    mtOlympusMay2024Day4_08,
-    mtOlympusMay2024Day4_09,
-    mtOlympusMay2024Day4_10,
-    mtOlympusMay2024Day4_11,
-    mtOlympusMay2024Day4_12,
-    mtOlympusMay2024Day4_13
+    olympus24101,
+    olympus24201,
+    olympus24202,
+    olympus24203,
+    olympus24204,
+    olympus24205,
+    olympus24206,
+    olympus24207,
+    olympus24208,
+    olympus24209,
+    olympus24210,
+    olympus24211,
+    olympus24212,
+    olympus24213,
+    olympus24301,
+    olympus24302,
+    olympus24303,
+    olympus24304,
+    olympus24305,
+    olympus24306,
+    olympus24307,
+    olympus24308,
+    olympus24309,
+    olympus24310,
+    olympus24311,
+    olympus24312,
+    olympus24313,
+    olympus24314,
+    olympus24401,
+    olympus24402,
+    olympus24403,
+    olympus24404,
+    olympus24405,
+    olympus24406,
+    olympus24407,
+    olympus24408,
+    olympus24409,
+    olympus24410,
+    olympus24411,
+    olympus24412,
+    olympus24413
 }

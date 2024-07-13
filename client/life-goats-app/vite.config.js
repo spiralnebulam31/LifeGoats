@@ -1,8 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   assetsInclude: ['**/*.JPG', '**/*.jpg'],
   root: process.cwd(),
   publicDir: 'public',
@@ -10,5 +16,10 @@ export default defineConfig({
     outDir: './dist',
     assetsDir: './assets',
     base: '/',
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
   },
 })
