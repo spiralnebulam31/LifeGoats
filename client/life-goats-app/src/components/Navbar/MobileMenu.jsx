@@ -1,13 +1,34 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../motion/motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLinks, eventsLinks }) => {
-
   const [isHomeOpen, setIsHomeOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isEventsOpen, setIsEventsOpen] = useState(false);
+  
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleHomeLinkClick = (link) => {
+    setActive(link.title);
+    setMobile(false);
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(link.id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(link.id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <motion.div
@@ -44,8 +65,16 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
               className="flex flex-col gap-3 pb-4"
             >
               {homeLinks.map((link) => (
-                <motion.div key={link.id} variants={listItem} /* ... */ >
-                  <a href={`/#${link.id}`}>{link.title}</a>
+                <motion.div key={link.id} variants={listItem}>
+                  
+                    <a href={`/#${link.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleHomeLinkClick(link);
+                    }}
+                  >
+                    {link.title}
+                  </a>
                 </motion.div>
               ))}
             </motion.div>
