@@ -9,6 +9,7 @@ import CoreValuesCard from "./CoreValuesCard";
 const CoreValues = ({ isSmallScreen }) => {
   return (
     <section
+      id="core-values"
       className="bg-gradient-to-b from-background via-gray-500 to-tertiary
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
     >

@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 const Testimonials = ({ isSmallScreen }) => {
   return (
     <section
+    id="testimonials"
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
     >

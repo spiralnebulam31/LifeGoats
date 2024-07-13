@@ -8,8 +8,8 @@ export const homeLinks = [
     title: "Testimonials",
   },
   {
-    id: "overview",
-    title: "Overview",
+    id: "core-values",
+    title: "Core Values",
   },
   {
     id: "contact",

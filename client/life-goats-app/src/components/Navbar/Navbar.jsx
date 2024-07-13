@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { homeLinks, aboutLinks, eventsLinks } from "../../constants/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
 import MobileMenu from "./MobileMenu";
@@ -9,11 +9,27 @@ import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown } from "../L
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [mobile, setMobile] = useState(false);
+  const [targetSection, setTargetSection] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLinkClick = (link) => {
     setActive(link.title);
-    window.scrollTo(0, 0);
+    if (location.pathname !== "/") {
+      navigate("/");
+    }
+    setTargetSection(link.id);
   };
+
+  useEffect(() => {
+    if (targetSection && location.pathname === "/") {
+      const element = document.getElementById(targetSection);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setTargetSection(null);
+      }
+    }
+  }, [targetSection, location.pathname]);
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px]">
