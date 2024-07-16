@@ -1,37 +1,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lifegoats.com/</loc>
-    <lastmod>2024-06-27</lastmod>
+    <loc>https://www.lifegoats.com/</loc>
+    <lastmod>2024-07-16</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://lifegoats.com/about/history</loc>
-    <lastmod>2024-06-27</lastmod>
+    <loc>https://www.lifegoats.com/about/history</loc>
+    <lastmod>2024-07-16</lastmod>
     <priority>0.80</priority>
   </url>
-    <url>
-        <loc>https://lifegoats.com/about/team</loc>
-        <lastmod>2024-06-27</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>https://lifegoats.com/events/past</loc>
-        <lastmod>2024-06-27</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>    
-        <loc>https://lifegoats.com/events/past/mt-olympus-may-2024</loc>
-        <lastmod>2024-06-27</lastmod>
-        <priority>0.50</priority>
-    </url>
-    <url>
-        <loc>https://lifegoats.com/events/upcoming</loc>
-        <lastmod>2024-06-27</lastmod>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>https://lifegoats.com/contact</loc>
-        <lastmod>2024-06-27</lastmod>
-        <priority>0.50</priority>
-    </url>
+  <url>
+    <loc>https://www.lifegoats.com/about/team</loc>
+    <lastmod>2024-07-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lifegoats.com/events/past</loc>
+    <lastmod>2024-07-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lifegoats.com/events/past/mt-olympus-may-2024</loc>
+    <lastmod>2024-07-16</lastmod>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://www.lifegoats.com/events/upcoming</loc>
+    <lastmod>2024-07-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lifegoats.com/testimonials</loc>
+    <lastmod>2024-07-16</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.lifegoats.com/contact</loc>
+    <lastmod>2024-07-16</lastmod>
+    <priority>0.50</priority>
+  </url>
 </urlset>
