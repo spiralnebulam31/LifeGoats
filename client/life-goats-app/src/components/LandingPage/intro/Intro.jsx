@@ -62,15 +62,7 @@ const Intro = () => {
           </motion.span>.
         </div>
         <div className="">
-          As people-centered professionals, we believe that when we are at our best,{' '}
-          <motion.span
-            variants={underline}
-            initial="initial"
-            whileInView="animate"
-          >
-          we can give our best
-          </motion.span>.
-          {/* , our performance depends on that. */}
+          As people-centered professionals, our performance depends on that.
         </div>
       </motion.div>
     </section>
