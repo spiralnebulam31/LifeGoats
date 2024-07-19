@@ -53,6 +53,35 @@ const App = () => {
     });
   };
 
+  const [phoneIsHovered, setPhoneIsHovered] = useState(false);
+  const [emailIsHovered, setEmailIsHovered] = useState(false);
+  const [email2IsHovered, setEmail2IsHovered] = useState(false);
+
+  const handlePhoneMouseEnter = () => {
+    setPhoneIsHovered(true);
+  };
+
+  const handlePhoneMouseLeave = () => {
+    setPhoneIsHovered(false);
+  };
+
+  const handleEmailMouseEnter = () => {
+    setEmailIsHovered(true);
+  };
+
+  const handleEmailMouseLeave = () => {
+    setEmailIsHovered(false);
+  };
+
+  const handleEmail2MouseEnter = () => {
+    setEmail2IsHovered(true);
+  };
+
+  const handleEmail2MouseLeave = () => {
+    setEmail2IsHovered(false);
+  };
+
+
   return preloader ? (
     <div className="bg-cover bg-n-repeat bg-center bg-background flex flex-col justify-center items-center h-screen w-screen overflow-hidden">
       <img
@@ -70,13 +99,13 @@ const App = () => {
       >
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage preloader={preloader} isSmallScreen={isSmallScreen} />} isSmallScreen={isSmallScreen} />
+          <Route path="/" element={<LandingPage preloader={preloader} isSmallScreen={isSmallScreen} />} isSmallScreen={isSmallScreen} phoneIsHovered={phoneIsHovered} handlePhoneMouseEnter={handlePhoneMouseEnter} handlePhoneMouseLeave={handlePhoneMouseLeave} emailIsHovered={emailIsHovered} handleEmailMouseEnter={handleEmailMouseEnter} handleEmailMouseLeave={handleEmailMouseLeave} email2IsHovered={email2IsHovered} handleEmail2MouseEnter={handleEmail2MouseEnter} handleEmail2MouseLeave={handleEmail2MouseLeave} />
           <Route path="/about/history" element={<TheHistory />} isSmallScreen={isSmallScreen} />
           <Route path="/about/team" element={<TheTeam />} isSmallScreen={isSmallScreen} />
           <Route path="/events/past" element={<PastEvents />} isSmallScreen={isSmallScreen} />
           <Route path="/events/past/mt-olympus-may-2024" element={<MtOlympusMay2024 />} isSmallScreen={isSmallScreen} />
           <Route path="/events/upcoming" element={<UpcomingEvents />} isSmallScreen={isSmallScreen} />
-          <Route path="/contact" element={<Contact />} isSmallScreen={isSmallScreen} />
+          <Route path="/contact" element={<Contact />} isSmallScreen={isSmallScreen} phoneIsHovered={phoneIsHovered} handlePhoneMouseEnter={handlePhoneMouseEnter} handlePhoneMouseLeave={handlePhoneMouseLeave} emailIsHovered={emailIsHovered} handleEmailMouseEnter={handleEmailMouseEnter} handleEmailMouseLeave={handleEmailMouseLeave} email2IsHovered={email2IsHovered} handleEmail2MouseEnter={handleEmail2MouseEnter} handleEmail2MouseLeave={handleEmail2MouseLeave} />
           <Route path="/testimonials" element={<TestimonialsPage />} isSmallScreen={isSmallScreen} />
         </Routes>
         <Footer

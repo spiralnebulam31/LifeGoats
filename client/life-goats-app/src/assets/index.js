@@ -50,6 +50,8 @@ import priceIcon2 from './pricing/price2.svg';
 
 import email from './contact/email.svg';
 import emailHover from './contact/email-hover.svg';
+import email2 from './contact/email.svg';
+import email2Hover from './contact/email-hover.svg';
 import phone from './contact/phone.svg';
 import phoneHover from './contact/phone-hover.svg';
 import transparentMountainBG2 from './contact/transparent-mountain-bg-2.svg';
@@ -113,6 +115,8 @@ export {
     priceIcon2,
     email,
     emailHover,
+    email2,
+    email2Hover,
     phone,
     phoneHover,
     facebook,

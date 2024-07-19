@@ -6,29 +6,19 @@ import {
   Parallax,
   Contact,
 } from "../components/LandingPage";
-import { useState } from "react";
 
-const LandingPage = ( {isSmallScreen} ) => {
-
-  const [phoneIsHovered, setPhoneIsHovered] = useState(false);
-  const [emailIsHovered, setEmailIsHovered] = useState(false);
-
-  const handlePhoneMouseEnter = () => {
-    setPhoneIsHovered(true);
-  };
-
-  const handlePhoneMouseLeave = () => {
-    setPhoneIsHovered(false);
-  };
-
-  const handleEmailMouseEnter = () => {
-    setEmailIsHovered(true);
-  };
-
-  const handleEmailMouseLeave = () => {
-    setEmailIsHovered(false);
-  };
-
+const LandingPage = ({
+  phoneIsHovered,
+  handlePhoneMouseEnter,
+  handlePhoneMouseLeave,
+  emailIsHovered,
+  handleEmailMouseEnter,
+  handleEmailMouseLeave,
+  email2IsHovered,
+  handleEmail2MouseEnter,
+  handleEmail2MouseLeave,
+  isSmallScreen,
+}) => {
   return (
     <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
       <Hero isSmallScreen={isSmallScreen} />
@@ -44,6 +34,9 @@ const LandingPage = ( {isSmallScreen} ) => {
         phoneIsHovered={phoneIsHovered}
         handlePhoneMouseEnter={handlePhoneMouseEnter}
         handlePhoneMouseLeave={handlePhoneMouseLeave}
+        email2IsHovered={email2IsHovered}
+        handleEmail2MouseEnter={handleEmail2MouseEnter}
+        handleEmail2MouseLeave={handleEmail2MouseLeave}
       />
     </div>
   );

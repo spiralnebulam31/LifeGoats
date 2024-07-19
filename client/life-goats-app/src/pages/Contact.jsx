@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { floatFromLeftContact, floatFromRightContact } from "../motion/home-sections";
 import { floatFromDownPreTitle, floatFromDownMainTitle } from "../motion/home-sections";
 import emailjs from "@emailjs/browser";
-import { phone, phoneHover, email, emailHover, transparentMountainBG2 } from "../assets";
+import { phone, phoneHover, email, emailHover, email2, email2Hover, transparentMountainBG2 } from "../assets";
 
 const Contact = ({
   phoneIsHovered,
@@ -12,6 +12,9 @@ const Contact = ({
   emailIsHovered,
   handleEmailMouseEnter,
   handleEmailMouseLeave,
+  email2IsHovered,
+  handleEmail2MouseEnter,
+  handleEmail2MouseLeave,
   isSmallScreen,
 }) => {
 
@@ -55,8 +58,8 @@ const Contact = ({
   };
 
   return (
-    <section id="contact" className="overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background
-    relative bg-cover w-full h-full inset-0 pb-12 sm:pb-20 md:pb-36 lg:pb-20 xl:pb-36 pt-20 mb-[129px]">
+        <section id="contact" className="overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background
+    relative bg-cover w-full h-full inset-0 mx-auto pb-14 sm:pb-20 md:pb-36 lg:pb-20 xl:pb-36 pt-6 mb-[129px]">
         {/* Title */}
         <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden"
@@ -79,10 +82,10 @@ const Contact = ({
       </motion.div>
         {/* End of title */}
 
-        <motion.div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-10 mt-1 mb-20 sm:mb-44 lg:mb-[50vh]">
+        <motion.div className="flex flex-col lg:flex-row justify-center lg:justify-between text-center gap-2 mt-1 mb-20 sm:mb-44 lg:mb-[60vh]">
           {/* Contact Information */}
           <motion.div
-          className="text-center justify-start w-[80%] lg:w-[85%] mx-auto flex items-center flex-col lg:mx-24 xl:mx-36"
+          className="flex flex-col justify-center text-center w-[80%] lg:w-1/2 mx-auto items-center"
           variants={floatFromLeftContact} initial="initial" whileInView={isSmallScreen ? "initial" : "animate"} ref={leftSideRef}
           >
             <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-1 lg:pt-10 mb-5 leading-[30px]">
@@ -90,7 +93,7 @@ const Contact = ({
             </div>
 
             {/* Contact Info Container */}
-            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] md:w-[60%] lg:w-[80%] mx-auto lg:mx-16">
+            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] md:w-[60%] mx-auto lg:mx-16">
 
                 {/* Contact Links */}
                 <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
@@ -114,28 +117,50 @@ const Contact = ({
                 {/* End of Contact Links */}
 
               </div>
-              {/* End of Contact Info */}
             {/* End of Contact Info Container */}
+
+            <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-10 lg:pt-14 mb-5 leading-[30px]">
+              <p>For any tech inquires regarding the website, please contact Anastasia:</p>
+            </div>
+
+            {/* Contact Info Container 2 */}
+            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] md:w-[60%] mx-auto lg:mx-16">
+
+                {/* Contact Links 2 */}
+                <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
+                  <ContactLink
+                    href="mailto:anastasiaadamoudi@gmail.com"
+                    onMouseEnter={handleEmail2MouseEnter}
+                    onMouseLeave={handleEmail2MouseLeave}
+                    icon={email2IsHovered ? email2Hover : email2}
+                    text="anastasiaadamoudi@gmail.com"
+                  />
+                </div>
+                {/* End of Contact Links 2 */}
+
+              </div>
+            {/* End of Contact Info Container 2 */}
           </motion.div>
           {/* End of Contact Information */}
 
           {/* Contact Form */}
           <motion.div
-          className="text-center justify-start w-[80%] xl:w-[70%] mx-auto lg:mr-[28%]"
+          className="flex flex-col text-center justify-center w-[80%] lg:w-1/2 mx-auto mt-10 lg:mt-14"
           variants={floatFromRightContact} initial="initial" whileInView={isSmallScreen ? "initial" : "animate"} ref={rightSideRef}
           >
             <p className="text-primary font-body text-lg max-w-lg xl:max-w-6xl pb-5 mx-auto">
-              Or send a message below:
+              Or send us a message below:
             </p>
 
-            <form ref={form} onSubmit={sendEmail}>
+          <div className="flex justify-center text-center mx-auto w-full lg:w-[60%]">
+            <form ref={form} onSubmit={sendEmail} className="w-full">
               {/* Form Inputs */}
               <ContactInput type="text" placeholder="Your name" name="from_name" />
               <ContactInput type="email" placeholder="Your email address" name="user_email" />
               <ContactInput type="textarea" placeholder="Your message" name="message" />
 
               {/* Submit Button */}
-              <div className="mb-1 =">
+              <div className="mb-1">
                 <button
                   type="submit"
                   className="bg-primary hover:bg-tertiary mt-1 font-links font-bold uppercase text-md md:text-xl text-background hover:text-earth py-2 px-4 rounded-2xl items-center mx-auto drop-shadow-xl"
@@ -144,10 +169,10 @@ const Contact = ({
                 </button>
               </div>
             </form>
+          </div>
           </motion.div>
           {/* End of Contact Form */}
         </motion.div>
-
         <div className="absolute right-0 left-0 bottom-0 z-20 bg-no-repeat w-full pointer-events-none">
           <img src={transparentMountainBG2} alt="transparent mountain background" className="w-screen h-auto" />
     </div>
