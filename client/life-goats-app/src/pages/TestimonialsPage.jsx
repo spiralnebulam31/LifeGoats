@@ -3,8 +3,8 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../motion/home-sections";
-import { testimonials, longTestimonials } from "../constants/testimonials";
-import { TestimonialsCard, LongTestimonialsCard } from "../components/LandingPage/testimonials";
+import { testimonials } from "../constants/testimonials";
+import { TestimonialsPageCard } from "../components/LandingPage/testimonials";
 import { Link } from "react-router-dom";
 
 const TestimonialsPage = ({ isSmallScreen }) => {
@@ -41,7 +41,7 @@ const TestimonialsPage = ({ isSmallScreen }) => {
       </motion.div>
 
       <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-10 mb-2 md:mb-4">
+        <motion.div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-10 mb-2 md:mb-4">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -51,7 +51,7 @@ const TestimonialsPage = ({ isSmallScreen }) => {
                 translateX: index % 2 === 0 ? -100 : 100,
                 translateY: -100,
               }}
-              whileInView={{
+              animate={{
                 opacity: 1,
                 translateX: 0,
                 translateY: 0,
@@ -61,14 +61,10 @@ const TestimonialsPage = ({ isSmallScreen }) => {
                 },
               }}
             >
-              <TestimonialsCard key={index} {...testimonial} />
+              <TestimonialsPageCard key={index} {...testimonial} />
             </motion.div>
           ))}
         </motion.div>
-      </motion.div>
-
-      <motion.div className="flex flex-row justify-center items-center mt-4">
-          <LongTestimonialsCard key={0} {...longTestimonials[0]} />
       </motion.div>
 
       <Link to="/contact">
@@ -76,7 +72,7 @@ const TestimonialsPage = ({ isSmallScreen }) => {
           className="flex justify-evenly items-center mx-auto"
           variants={floatFromDownMainTitle}
           initial="initial"
-          whileInView="animate"
+          animate="animate"
         >
           <button
             className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 my-8 px-4 rounded-lg shadow-lg

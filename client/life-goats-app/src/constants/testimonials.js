@@ -4,34 +4,31 @@ export const testimonials = [
     alt: "no image",
     image: null,
     name: "Karen S.",
-    text: "The Life Goats’ retreat was an exhilarating moment in time full of unexpected treasures: visceral connection to nature, spiritual connection to others, and community building around a table of glorious food prepared with love. The light and shadow of Mount Olympus are a warm memory in my heart.",
+    text: ["The Life Goats’ retreat was an exhilarating moment in time full of unexpected treasures: visceral connection to nature, spiritual connection to others, and community building around a table of glorious food prepared with love. The light and shadow of Mount Olympus are a warm memory in my heart."],
   },
   {
     index: 2,
     alt: "no image",
     image: null,
     name: "Yasmin F.",
-    text: "We are all the leaves of one tree and the fruits of one branch. Grateful for this gathering and this inspiring space if connection & unity! So happy to have been a part of this enchanting experience.",
+    text: ["We are all the leaves of one tree and the fruits of one branch. Grateful for this gathering and this inspiring space if connection & unity! So happy to have been a part of this enchanting experience."],
   },
   {
     index: 3,
     alt: "no image",
     image: null,
     name: "Hrva K.",
-    text: "Life Goats on Mount Olympus! The Mountain, the People, the Feeling. Climbing up the misty mountain, being part of something bigger than myself and having opportunity to be part and be held by group of amazing people with big hearts (even those head brainers ;-). It is experience I will cherish forever. Experience worth sharing."
+    text: ["Life Goats on Mount Olympus! The Mountain, the People, the Feeling. Climbing up the misty mountain, being part of something bigger than myself and having opportunity to be part and be held by group of amazing people with big hearts (even those head brainers ;-). It is experience I will cherish forever. Experience worth sharing."]
   },
   {
     index: 4,
     alt: "no image",
     image: null,
     name: "Anastasia A.",
-    text: "No photos or words can truly capture the unique Mount Olympus experience! Being on the mountain, away from the chaos of the city, surrounded by nature and other like-minded people, filled me with energy and gave me the clarity to see what's important to me. Returning to my routine after the Life Goats retreat, I realized I could see things from a calmer perspective. That helped me organize my next steps towards my life and career goals.",
+    text: ["No photos or words can truly capture the unique Mount Olympus experience! Being on the mountain, away from the chaos of the city, surrounded by nature and other like-minded people, filled me with energy and gave me the clarity to see what's important to me. Returning to my routine after the Life Goats retreat, I realized I could see things from a calmer perspective. That helped me organize my next steps towards my life and career goals."],
   },
-];
-
-export const longTestimonials = [
   {
-    index: 1,
+    index: 5,
     alt: "no image",
     image: null,
     name: "Nick O.",
@@ -55,5 +52,11 @@ export const longTestimonials = [
       "And I say cheerfully and sorrowfully ‘Until we meet again!’"
     ],
   },
+  {
+    index: 6,
+    alt: "no image",
+    image: null,
+    name: "Stratos K.",
+    text: ["Maria and her family organised something really nice from the sea level to the top of the mountain. Interesting and nice people together around the table in a beautiful yard with great food and nice conversations from the heart. Then, the hike. For me as a beginner in hiking, the suggested equipment written in this site, helped me a lot to enjoy the hike, because you have to be as light as possible. Words cannot describe the awe you feel at the top of the mountain. Maria and Savvas made a team really responsible, patient and respectful to everybody. We enjoyed the paths, the nature and the company! I am really grateful that i lived this beautiful experience and hope to do it again soon!"],
+  },
 ];
-

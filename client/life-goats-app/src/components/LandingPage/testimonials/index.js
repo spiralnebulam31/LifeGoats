@@ -1,4 +1,4 @@
 import TestimonialsCard from "./TestimonialsCard";
-import LongTestimonialsCard from "./LongTestimonialsCard";
+import TestimonialsPageCard from "./TestimonialsPageCard";
 
-export { TestimonialsCard, LongTestimonialsCard };
+export { TestimonialsCard, TestimonialsPageCard };

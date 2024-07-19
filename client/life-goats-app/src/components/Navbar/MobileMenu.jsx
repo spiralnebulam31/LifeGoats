@@ -139,6 +139,28 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
           )}
         </AnimatePresence>
 
+        {/* Testimonials Section */}
+        <motion.div
+          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+          variants={linkReveal}
+          initial="initial"
+          animate="animate"
+        >
+          <Link
+            to="/testimonials"
+            className={`${
+              active === "Testimonials" ? "text-secondary underline" : "text-primary"
+            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+            onClick={() => {
+              setMobile(!mobile);
+              setActive("Contact");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Testimonials
+          </Link>
+        </motion.div>
+
         {/* Contact Section */}
         <motion.div
           className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"

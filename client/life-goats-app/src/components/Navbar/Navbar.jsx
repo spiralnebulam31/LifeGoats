@@ -80,6 +80,17 @@ const Navbar = () => {
             />
 
             <Link
+              to="/testimonials"
+              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              onClick={() => {
+                setActive("Testimonials");
+                window.scrollTo(0, 0);
+              }}
+            >
+              Testimonials
+            </Link>
+
+            <Link
               to="/contact"
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
               onClick={() => {
