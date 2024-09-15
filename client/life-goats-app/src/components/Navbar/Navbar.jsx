@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { homeLinks, aboutLinks, eventsLinks } from "../../constants/navLinks";
+import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../constants/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
 import MobileMenu from "./MobileMenu";
-import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown } from "../LinksColumns";
+import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown, HikeLinksDropdown } from "../LinksColumns";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -79,6 +79,14 @@ const Navbar = () => {
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
 
+            <HikeLinksDropdown
+              active={active}
+              setActive={setActive}
+              handleLinkClick={handleLinkClick}
+              hikeLinks={hikeLinks}
+              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+            />
+
             <Link
               to="/testimonials"
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
@@ -122,6 +130,7 @@ const Navbar = () => {
                   homeLinks={homeLinks}
                   aboutLinks={aboutLinks}
                   eventsLinks={eventsLinks}
+                  hikeLinks={hikeLinks}
                   handleLinkClick={handleLinkClick}
                 />
               )}

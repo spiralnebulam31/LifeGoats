@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../motion/motion";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
-const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLinks, eventsLinks }) => {
+const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLinks, eventsLinks, hikeLinks }) => {
   const [isHomeOpen, setIsHomeOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isEventsOpen, setIsEventsOpen] = useState(false);
+  const [isTheHikeOpen, setIsTheHikeOpen] = useState(false);
   
   const navigate = useNavigate();
   const location = useLocation();
@@ -131,6 +132,35 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
               className="flex flex-col gap-3 pb-4"
             >
               {eventsLinks.map((link) => (
+                <motion.div key={link.id} variants={listItem} /* ... */ >
+                  <a href={`${link.link}`}>{link.title}</a>
+                </motion.div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+{/* The Hike Section */}
+<h2
+          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
+          onClick={() => setIsTheHikeOpen(!isTheHikeOpen)}
+        >
+          The Hike
+        </h2>
+        <AnimatePresence>
+          {isTheHikeOpen && (
+            <motion.div
+              layout
+              initial="closed"
+              animate={isTheHikeOpen ? "open" : "closed"}
+              exit="closed"
+              variants={{
+                open: { opacity: 1, height: "auto" },
+                closed: { opacity: 0, height: 0 },
+              }}
+              className="flex flex-col gap-3 pb-4"
+            >
+              {hikeLinks.map((link) => (
                 <motion.div key={link.id} variants={listItem} /* ... */ >
                   <a href={`${link.link}`}>{link.title}</a>
                 </motion.div>

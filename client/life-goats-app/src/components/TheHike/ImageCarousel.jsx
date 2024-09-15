@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { arrowNext, arrowPrevious } from "../../../../assets/the-hike";
+import { arrowNext, arrowPrevious } from "../../assets/the-hike";
 
 const ImageCarousel = ({ imageSliderData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

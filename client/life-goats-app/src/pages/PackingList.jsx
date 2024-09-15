@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../motion/motion";
 import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
 import { neededItemsBG } from "../assets";
-import NeededItemsText from "../components/PastEvents/MtOlympusMay2024/TheHike/NeededItemsText";
+import NeededItemsText from "../components/TheHike/NeededItemsText";
 
-const NeededItems = () => {
+const PackingList = () => {
   return (
     <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto">
       <img
@@ -47,4 +47,4 @@ const NeededItems = () => {
   );
 };
 
-export default NeededItems;
+export default PackingList;

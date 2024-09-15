@@ -87,20 +87,20 @@ export const eventsLinks = [
 //       },
 //     ];
 
-// export const hikeLinks = [
-//       {
-//         id: "the-route",
-//         link: "/the-hike/the-route",
-//         title: "The Route",
-//       },
-//       {
-//         id: "needed-items",
-//         link: "/the-hike/needed-items",
-//         title: "Needed Items",
-//       },
-//       {
-//         id: "safety-considerations",
-//         link: "/the-hike/safety-considerations",
-//         title: "Safety Considerations",
-//       },
-//     ];
+export const hikeLinks = [
+      // {
+      //   id: "the-route",
+      //   link: "/the-hike/the-route",
+      //   title: "The Route",
+      // },
+      {
+        id: "packing-list",
+        link: "/the-hike/packing-list",
+        title: "Packing List",
+      },
+      {
+        id: "safety-considerations",
+        link: "/the-hike/safety-considerations",
+        title: "Safety Considerations",
+      },
+    ];

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../../motion/home-sections';
+import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../motion/home-sections';
 import RouteAltimeter from "./RouteAltimeter";
-import { ascentData, descentData, totalAscentData, totalDescentData } from "../../../../constants/theHike";
+import { ascentData, descentData, totalAscentData, totalDescentData } from "../../constants/theHike";
 
 const TheHikeComponent = () => {  
 

@@ -1,6 +1,6 @@
 import LandingPage from './LandingPage';
 import TheRoute from './TheRoute';
-import NeededItems from './NeededItems';
+import PackingList from './PackingList';
 import SafetyConsiderations from './SafetyConsiderations';
 import TheHistory from './TheHistory';
 import TheTeam from './TheTeam';
@@ -13,7 +13,7 @@ import TestimonialsPage from './TestimonialsPage';
 export { 
     LandingPage, 
     TheRoute, 
-    NeededItems, 
+    PackingList,
     SafetyConsiderations, 
     TheHistory, 
     TheTeam,

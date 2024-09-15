@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../motion/motion";
-import { RouteAltimeter, RouteInfoTextDisplay, RouteLinksDisplay, ImageCarousel } from "../components/PastEvents/MtOlympusMay2024/TheHike";
+import { RouteAltimeter, RouteInfoTextDisplay, RouteLinksDisplay, ImageCarousel } from "../components/TheHike";
 import { ascentData, descentData, totalAscentData, totalDescentData, routeText, routeLinks, imageSliderData } from "../constants/theHike";
 
 const TheRoute = () => {  
