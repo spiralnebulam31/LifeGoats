@@ -13,16 +13,16 @@ const NeededItemsText = () => {
       <br />
       <p>
         Based on our experience, we are recommending the following list of
-        needed items for our two-day hike with a night spent at Apostolidis
+        needed items for a 2-3 hike with 1-2 nights spent at a mountain
         refuge.
       </p>
       <br />
       <p>
-        Although late May is typically fair weathered, never underestimate the
-        mountain! It is not always sunny on Mount Olympus, even during the
+        Although October is typically fair weathered, never underestimate the
+        mountain! It is not always sunny on the mountain, even during the
         summer, and especially the upper parts of the mountain can disappear in
         thick clouds really quickly and temperatures do still drop below 0°C at
-        night towards the top.
+        night towards the top of high mountains like Mount Olympus.
       </p>
       <br />
       <div className="flex justify-center mx-auto bg-tertiaryLight">

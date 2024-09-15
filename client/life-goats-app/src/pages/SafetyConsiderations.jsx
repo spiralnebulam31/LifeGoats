@@ -34,7 +34,7 @@ const SafetyConsiderations = () => {
         </li>
         <li>
         <p className="pb-5 italic">{"\u279c"} Helmets for the last 40 minutes of the ascent to the highest point (Mytikas peak) are a MUST.</p>
-        <p className="pb-15">They can be rented for €8 at Kakalos refuge where we will be staying.</p>
+        <p className="pb-15">They can be rented for €8 at Kakalos refuge or Apostolidis refuge at the Plateau of the Muses (base camp).</p>
         </li>
         </motion.ul>
         <div className="w-[80%] mx-auto pb-10 font-bold">
