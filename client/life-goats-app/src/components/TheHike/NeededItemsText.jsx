@@ -170,7 +170,7 @@ const NeededItemsText = () => {
         Think LAYERS that you can easily put on or take off during the hike as
         needed.
       </div>
-      <br />
+      {/* <br />
       <br />
       <p>
         🐐 We will also be carrying with us adequate{" "}
@@ -178,7 +178,7 @@ const NeededItemsText = () => {
         <span className="font-bold">food supplies</span> that we will provide, so
         if you have <span className="font-bold">reusable bottles</span>, do
         bring them.{" "}
-      </p>
+      </p> */}
       <br />
       <br />
       <div className="flex flex-col justify-center mx-auto bg-tertiaryLight">
