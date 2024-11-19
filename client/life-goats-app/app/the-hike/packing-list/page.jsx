@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../motion/motion";
 import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
-import { neededItemsBG } from "../assets";
+import { neededItemsBG } from "../../_assets";
 import NeededItemsText from "../components/TheHike/NeededItemsText";
 
 const PackingList = () => {

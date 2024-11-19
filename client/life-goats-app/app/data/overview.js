@@ -5,7 +5,7 @@ import {
     food,
     hikers,
     goat,
-    } from "../assets/index.js";
+    } from "../_assets/index.js";
 
 export const overviewData = [
     {
