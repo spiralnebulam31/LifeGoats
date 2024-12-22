@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import MainPricingCard from './MainPricingCard';
 import AdditionalCostsCard from './AdditionalCostsCard';
-import { pricingData, additionalCosts } from "../../../../constants/pricing";
+import { pricingData, additionalCosts } from "../../../../data/pricing";
 import { motion } from 'framer-motion';
 import { fadeIn } from "../../../../motion/motion";
 import {

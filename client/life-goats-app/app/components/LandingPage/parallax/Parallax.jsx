@@ -1,4 +1,4 @@
-import { lifeGoatsWalkingMountain } from "../../../assets";
+import { lifeGoatsWalkingMountain } from "../../../../public/assets";
 
 const Parallax = () => {
   const sectionStyle = {

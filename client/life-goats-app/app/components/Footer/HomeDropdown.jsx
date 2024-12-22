@@ -1,6 +1,8 @@
+// 'use client';
+//
 // import { motion } from "framer-motion";
 // import HomeLinks from "../LinksColumns/HomeLinks";
-// import { homeLinks } from "../../constants/navLinks";
+// import { homeLinks } from "../../data/navLinks";
 
 // const HomeDropdown = ({ toggleDropdown, setToggleDropdown }) => (
 //   <motion.div

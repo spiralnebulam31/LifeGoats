@@ -1,16 +1,18 @@
+'use client';
+
 import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
-} from "../../../motion/home-sections";
-import { testimonials } from "../../../constants/testimonials";
+} from "../../../../motion/home-sections";
+import { testimonials } from "../../../data/testimonials";
 import TestimonialsCard from "./TestimonialsCard";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Testimonials = ({ isSmallScreen }) => {
   return (
     <section
-    id="testimonials"
+      id="testimonials"
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
       relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
     >
@@ -18,7 +20,7 @@ const Testimonials = ({ isSmallScreen }) => {
         className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-8 mb-8 z-10 overflow-hidden"
       >
-<motion.p
+        <motion.p
           className="md:text-[18px] text-[14px] text-background font-subtitle
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
@@ -68,7 +70,10 @@ const Testimonials = ({ isSmallScreen }) => {
         </motion.div>
       </motion.div>
 
-      <Link to="/testimonials" target="_blank" rel="noreferrer">
+      <Link 
+        href="/testimonials" 
+        className="block"  // Added to make the button clickable area more defined
+      >
         <motion.div
           className="flex justify-evenly items-center mx-auto"
           variants={floatFromDownMainTitle}
@@ -77,7 +82,7 @@ const Testimonials = ({ isSmallScreen }) => {
         >
           <button
             className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 mt-8 px-4 rounded-lg shadow-lg
-          hover:bg-tertiary hover:text-earth"
+            hover:bg-tertiary hover:text-earth"
           >
             Read more from our community
           </button>

@@ -1,6 +1,6 @@
 import {
   mountOlympus,
-} from "../assets/index.js";
+} from "../../assets/index.js";
 
 export const locationData = [
     {

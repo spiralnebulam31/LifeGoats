@@ -1,7 +1,9 @@
+'use client';
+
 import { useState } from "react";
 import ProgramTab from "./ProgramTab";
 import DateButton from "./DateButton";
-import { programData } from "../../../../constants/program";
+import { programData } from "../../../../data/program";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../../motion/motion";
 import {

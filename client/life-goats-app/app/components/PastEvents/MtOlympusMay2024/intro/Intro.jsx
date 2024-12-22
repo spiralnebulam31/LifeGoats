@@ -1,8 +1,10 @@
+'use client';
+
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../../motion/home-sections';
-import { introText } from '../../../../constants/intro';
-import { aboutPhoto } from '../../../../assets';
+import { introText } from '../../../../data/intro';
+import { aboutPhoto } from '../../../../../public/assets';
 
 const Intro = ( { isSmallScreen } ) => {
 

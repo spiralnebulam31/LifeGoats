@@ -1,3 +1,5 @@
+'use client';
+
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import { useState } from 'react';
 import { Galleria } from 'primereact/galleria';
@@ -6,7 +8,7 @@ import {
     floatFromDownPreTitle,
     floatFromDownMainTitle,
   } from "../../../../motion/home-sections";
-import { mtOlympusMay2024Images } from '../../../../constants/mt-olympus-may-2024';
+import { mtOlympusMay2024Images } from '../../../../data/mt-olympus-may-2024';
 import "./Gallery.css";
 
 const Gallery = () => {

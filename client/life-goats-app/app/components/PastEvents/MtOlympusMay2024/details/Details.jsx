@@ -1,3 +1,5 @@
+'use client';
+
 import DetailsCardLarge from "./DetailsCardLarge";
 import {
   photo1,
@@ -6,7 +8,7 @@ import {
   photo4,
   photo5,
   photo6,
-} from "../../../../assets/index.js";
+} from "../../../../../public/assets/index.js";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,

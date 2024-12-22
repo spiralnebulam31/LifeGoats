@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
@@ -6,8 +8,8 @@ import {
   floatFromRightContact,
 } from "../../../../motion/home-sections";
 import { fadeIn } from "../../../../motion/motion";
-import { mtOlympusMay2024TeamData } from "../../../../constants/team";
-import { theTeam } from "../../../../assets/the-team";
+import { mtOlympusMay2024TeamData } from "../../../../data/team";
+import { theTeam } from "../../../../../public/assets/the-team";
 import TeamBubble from "./TeamBubble";
 
 const TheTeam = ({ isSmallScreen }) => {

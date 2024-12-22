@@ -1,6 +1,6 @@
 import {
     mtOlympusMay2024,
-    } from "../assets/index.js";
+    } from "../../assets/index.js";
 
 export const pastEventsData = [
     {

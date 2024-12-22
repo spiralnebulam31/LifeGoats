@@ -1,5 +1,7 @@
+'use client';
+
 import { motion } from "framer-motion";
-import { downArrow, downArrowHover } from "../../assets";
+import { downArrow, downArrowHover } from "../../../public/assets";
 import { useState } from "react";
 
 const HomeLinksDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => {

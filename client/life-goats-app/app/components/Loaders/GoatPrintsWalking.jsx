@@ -1,5 +1,7 @@
+'use client';
+
 import { motion } from "framer-motion";
-import { goatPrintSingle } from "../../assets";
+import { goatPrintSingle } from "../../../public/assets";
 import {
   stepTopRight,
   stepBottomRight,

@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../motion/motion";
 import {
@@ -6,9 +8,9 @@ import {
   floatFromRightContact,
 } from "../motion/home-sections";
 import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
-// import { historyBG } from "../assets";
-import { upcomingEvents } from "../assets";
-import { Link } from "react-router-dom";
+// import { historyBG } from "../../assets";
+import { upcomingEvents } from "../../assets";
+import Link from "next/link";
 
 const UpcomingEvents = () => {
   return (

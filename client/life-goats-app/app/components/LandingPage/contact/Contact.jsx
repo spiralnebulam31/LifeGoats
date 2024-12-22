@@ -1,9 +1,11 @@
+'use client';
+
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { floatFromLeftContact, floatFromRightContact } from "../../../motion/home-sections";
-import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../../motion/home-sections";
+import { floatFromLeftContact, floatFromRightContact } from "../../../../motion/home-sections";
+import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../../../motion/home-sections";
 import emailjs from "@emailjs/browser";
-import { phone, phoneHover, email, email2, emailHover, email2Hover, transparentMountainBG2 } from "../../../assets";
+import { phone, phoneHover, email, email2, emailHover, email2Hover, transparentMountainBG2 } from "../../../../public/assets";
 
 const Contact = ({
   phoneIsHovered,
@@ -30,9 +32,9 @@ const Contact = ({
     alert("Email Sent! Maria will reply to you as soon as possible.");
   };
 
-  const templateCode = import.meta.env.VITE_EMAILJS_TEMPLATE_CODE;
-  const serviceCode = import.meta.env.VITE_EMAILJS_SERVICE_CODE;
-  const userID = import.meta.env.VITE_EMAILJS_USER_ID;
+  const templateCode = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CODE;
+  const serviceCode = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_CODE;
+  const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
   
 
   const sendEmail = (e) => {

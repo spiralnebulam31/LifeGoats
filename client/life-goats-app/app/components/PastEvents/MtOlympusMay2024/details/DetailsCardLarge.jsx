@@ -1,6 +1,6 @@
 import DetailCard from './DetailCard.jsx';
 import { motion } from 'framer-motion';
-import { details } from '../../../../constants/details';
+import { details } from '../../../../data/details';
 import { useMediaQuery } from "react-responsive";
 import { fadeIn } from '../../../../motion/motion';
 

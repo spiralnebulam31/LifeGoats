@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from "framer-motion";
 import {
   floatFromUpHeroTitle,
@@ -11,7 +13,7 @@ import {
   goatPrints,
   heroBackground2,
   calendar,
-} from "../../../../assets/index.js";
+} from "../../../../../public/assets/index.js";
 
 const Hero = ({ isSmallScreen }) => {
 

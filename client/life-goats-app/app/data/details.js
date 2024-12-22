@@ -4,7 +4,7 @@ import {
     durationIcon,
     elementsIcon,
     groupIcon,
-} from "../assets";
+} from "../../assets";
 
 export const details = [
     {

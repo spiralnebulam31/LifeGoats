@@ -1,11 +1,13 @@
+'use client';
+
 import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../motion/home-sections";
-import { testimonials } from "../constants/testimonials";
+import { testimonials } from "../data/testimonials";
 import { TestimonialsPageCard } from "../components/LandingPage/testimonials";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const TestimonialsPage = ({ isSmallScreen }) => {
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { mobileNav, linkReveal, listItem } from "../../motion/motion";
+import { mobileNav, linkReveal, listItem } from "../../../motion/motion";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLinks, eventsLinks, hikeLinks }) => {

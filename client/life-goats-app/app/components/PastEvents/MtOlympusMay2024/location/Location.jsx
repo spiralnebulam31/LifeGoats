@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import {
@@ -12,8 +14,8 @@ import {
   floatFromRightLocation2Mobile,
   floatFromDownLocationMobile
  } from '../../../../motion/home-sections';
-import { mountainStefani, mountainEnipeas } from "../../../../assets";
-import { locationDataInfo } from "../../../../constants/location";
+import { mountainStefani, mountainEnipeas } from "../../../../../public/assets";
+import { locationDataInfo } from "../../../../data/location";
 import MapDisplay from './MapDisplay';
 
 const Location = ( { isSmallScreen } ) => {

@@ -1,3 +1,5 @@
+'use client';
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { Navbar, Footer } from "./components/index";

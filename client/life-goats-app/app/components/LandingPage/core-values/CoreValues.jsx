@@ -1,9 +1,11 @@
+'use client';
+
 import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
-} from "../../../motion/home-sections";
-import { coreValues } from "../../../constants/core-values";
+} from "../../../../motion/home-sections";
+import { coreValues } from "../../../data/core-values";
 import CoreValuesCard from "./CoreValuesCard";
 
 const CoreValues = ({ isSmallScreen }) => {

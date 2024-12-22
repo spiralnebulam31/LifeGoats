@@ -1,8 +1,8 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { locationData } from "../../../../constants/location";
-import { mapPin, pinShadow } from "../../../../assets/index.js";
+import { locationData } from "../../../../data/location";
+import { mapPin, pinShadow } from "../../../../../public/assets/index.js";
 import { useMediaQuery } from "react-responsive";
 
 const MapDisplay = () => {

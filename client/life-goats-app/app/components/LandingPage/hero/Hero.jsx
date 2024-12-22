@@ -1,18 +1,15 @@
+'use client';
+
 import { motion } from "framer-motion";
 import {
   floatFromUpHomeHeroTitle,
   heroGoatPrintsVariant,
   goatPrintsSliderVariant,
-} from "../../../motion/hero";
+} from "../../../../motion/hero";
 import {
-  goatPrints,
   goatPrintsLight,
-  heroBackground2,
-  calendar,
-  olympus2024BG1,
-  olympus2024BG2,
   olympus2024BG3,
-} from "../../../assets/index.js";
+} from "../../../../public/assets/index.js";
 
 const Hero = ({ isSmallScreen }) => {
 

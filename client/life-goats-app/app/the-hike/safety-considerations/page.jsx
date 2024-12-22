@@ -1,7 +1,9 @@
+'use client';
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../motion/motion";
 import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
-import { safetyConsiderationsBG } from "../assets";
+import { safetyConsiderationsBG } from "../../assets";
 
 const SafetyConsiderations = () => {
   return (

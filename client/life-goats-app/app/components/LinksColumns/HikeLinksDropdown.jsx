@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { downArrow, downArrowHover } from "../../assets";
+import Link from "next/link";
+import { downArrow, downArrowHover } from "../../../public/assets";
 import { useState } from "react";
 
 const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) => {

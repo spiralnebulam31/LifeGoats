@@ -3,7 +3,7 @@ import {
     nature,
     lightheartedness,
     growth
-    } from "../assets/core-values";
+    } from "../../public/assets/core-values";
 
 export const coreValues = [
     {

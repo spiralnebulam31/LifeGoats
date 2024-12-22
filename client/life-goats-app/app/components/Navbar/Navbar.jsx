@@ -1,8 +1,11 @@
+'use client';
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../constants/navLinks";
-import { lifeGoatsLogo, menuMountain, menuClose } from "../../assets";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
+import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../data/navLinks";
+import { lifeGoatsLogo, menuMountain, menuClose } from "../../../public/assets";
 import MobileMenu from "./MobileMenu";
 import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown, HikeLinksDropdown } from "../LinksColumns";
 
@@ -10,34 +13,34 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [mobile, setMobile] = useState(false);
   const [targetSection, setTargetSection] = useState(null);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleLinkClick = (link) => {
     setActive(link.title);
-    if (location.pathname !== "/") {
-      navigate("/");
+    if (pathname !== "/") {
+      router.push("/");
     }
     setTargetSection(link.id);
   };
 
   useEffect(() => {
-    if (targetSection && location.pathname === "/") {
+    if (targetSection && pathname === "/") {
       const element = document.getElementById(targetSection);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
         setTargetSection(null);
       }
     }
-  }, [targetSection, location.pathname]);
+  }, [targetSection, pathname]);
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px]">
       <div className="flex w-full mx-auto justify-between gap-20">
         <div className="flex justify-start">
-          <Link
-            to="/"
-            className="flex flex-row items-center =justify-start gap-2"
+          <Link 
+            href="/"
+            className="flex flex-row items-center justify-start gap-2"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -62,7 +65,6 @@ const Navbar = () => {
               homeLinks={homeLinks}
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
-
             <AboutLinksDropdown
               active={active}
               setActive={setActive}
@@ -70,7 +72,6 @@ const Navbar = () => {
               aboutLinks={aboutLinks}
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
-
             <EventsLinksDropdown
               active={active}
               setActive={setActive}
@@ -78,7 +79,6 @@ const Navbar = () => {
               eventsLinks={eventsLinks}
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
-
             <HikeLinksDropdown
               active={active}
               setActive={setActive}
@@ -86,9 +86,8 @@ const Navbar = () => {
               hikeLinks={hikeLinks}
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
-
-            <Link
-              to="/testimonials"
+            <Link 
+              href="/testimonials"
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
               onClick={() => {
                 setActive("Testimonials");
@@ -97,9 +96,8 @@ const Navbar = () => {
             >
               Testimonials
             </Link>
-
-            <Link
-              to="/contact"
+            <Link 
+              href="/contact"
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
               onClick={() => {
                 setActive("Contact");
@@ -109,7 +107,6 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
-
           <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
             <img
               src={mobile ? menuClose : menuMountain}

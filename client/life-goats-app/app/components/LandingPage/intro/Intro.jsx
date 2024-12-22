@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
-import { fadeIn } from "../../../motion/motion";
-import { goal, comeTogether, connect, brainstorm, recharge, enjoy, underline } from "../../../motion/intro-section";
+import { fadeIn } from "../../../../motion/motion";
+import { goal, comeTogether, connect, brainstorm, recharge, enjoy, underline } from "../../../../motion/intro-section";
 
 const Intro = () => {
 

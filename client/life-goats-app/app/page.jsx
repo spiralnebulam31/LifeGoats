@@ -5,7 +5,7 @@ import {
   CoreValues,
   Parallax,
   Contact,
-} from "../components/LandingPage";
+} from "./components/LandingPage";
 
 const LandingPage = ({
   phoneIsHovered,
