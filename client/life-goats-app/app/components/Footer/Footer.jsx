@@ -1,16 +1,20 @@
 'use client';
 
-import { useState } from "react";
-// import { facebook, instagram, downArrow } from "../../public/assets";
-// import HomeDropdown from "./HomeDropdown";
+import { useContext } from "react";
+import { StateContext } from '../../../contexts/StateContext';
 import PrivacyModal from "./PrivacyModal";
 import AccessibilityModal from "./AccessibilityModal";
+// import { useState } from "react";
+// import { facebook, instagram, downArrow } from "../../public/assets";
+// import HomeDropdown from "./HomeDropdown";
 // import HomeLinks from "../LinksColumns/HomeLinks";
 // import { homeLinks } from "../../data/navLinks";
 
-const Footer = ({ modalState, setModalState }) => {
+const Footer = () => {
 
   // const [toggleDropdown, setToggleDropdown] = useState(false);
+
+  const { modalState, setModalState } = useContext(StateContext);
 
   const { privacyOpen, accessibilityOpen } = modalState;
 

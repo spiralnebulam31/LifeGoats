@@ -1,6 +1,7 @@
 import { Navbar, Footer } from './components/index';
 import PreloaderWrapper from './components/Loaders/PreloaderWrapper';
 import { StateProvider } from '../providers/StateProvider';
+import './globals.css';
 
 export default function RootLayout({ children }) {
   return (

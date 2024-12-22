@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { floatFromLeftContact, floatFromRightContact } from "../../motion/home-sections";
 import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../motion/home-sections";
 import emailjs from "@emailjs/browser";
-import { phone, phoneHover, email, emailHover, email2, email2Hover, transparentMountainBG2 } from "../../assets";
+import { phone, phoneHover, email, emailHover, email2, email2Hover, transparentMountainBG2 } from "../../public/assets";
 
 const Contact = ({
   phoneIsHovered,

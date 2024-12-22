@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
-} from "../motion/home-sections";
+} from "../../motion/home-sections";
 import { testimonials } from "../data/testimonials";
 import { TestimonialsPageCard } from "../components/LandingPage/testimonials";
 import Link from "next/link";

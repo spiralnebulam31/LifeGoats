@@ -40,7 +40,7 @@ import {
     olympus24411,
     olympus24412,
     olympus24413,
-} from '../../assets/photo-galleries/index.js';
+} from '../../public/assets/photo-galleries/index.js';
 
 export const mtOlympusMay2024Images = [
     { 

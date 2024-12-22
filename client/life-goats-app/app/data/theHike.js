@@ -16,7 +16,7 @@ import {
     kakalosDrawing,
     agapitosDrawing,
     prioniaDrawing
-} from '../../assets/the-hike';
+} from '../../public/assets/the-hike';
 
 export const ascentData = [
     {

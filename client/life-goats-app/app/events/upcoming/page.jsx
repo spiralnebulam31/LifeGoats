@@ -1,15 +1,15 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { fadeIn } from "../motion/motion";
+import { fadeIn } from "../../motion";
 import {
   floatFromDownMainTitle,
   floatFromLeftContact,
   floatFromRightContact,
-} from "../motion/home-sections";
+} from "../../motion/home-sections";
 import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
-// import { historyBG } from "../../assets";
-import { upcomingEvents } from "../../assets";
+// import { historyBG } from "../../public/assets";
+import { upcomingEvents } from "../../public/assets";
 import Link from "next/link";
 
 const UpcomingEvents = () => {

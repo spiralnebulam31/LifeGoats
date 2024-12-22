@@ -1,12 +1,7 @@
 'use client';
 
-import { createContext, useState, useContext } from 'react';
-
-const StateContext = createContext();
-
-export function useAppState() {
-  return useContext(StateContext);
-}
+import { useState } from 'react';
+import { StateContext } from '../contexts/StateContext';
 
 export function StateProvider({ children }) {
   const [modalState, setModalState] = useState({
