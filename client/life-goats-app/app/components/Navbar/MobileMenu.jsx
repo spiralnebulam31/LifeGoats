@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../../motion/motion";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";  // Changed this line
 
 const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLinks, eventsLinks, hikeLinks }) => {
   const [isHomeOpen, setIsHomeOpen] = useState(false);
@@ -11,20 +12,16 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
   const [isEventsOpen, setIsEventsOpen] = useState(false);
   const [isTheHikeOpen, setIsTheHikeOpen] = useState(false);
   
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = usePathname();  // Added this line
 
   const handleHomeLinkClick = (link) => {
     setActive(link.title);
     setMobile(false);
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(() => {
-        const element = document.getElementById(link.id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
+    if (pathname !== "/") {  // Changed this line
+      router.push("/");
+      // Remove the .then() chain since router.push() works differently in App Router
+      // We'll handle scroll after navigation in a useEffect in the parent component
     } else {
       const element = document.getElementById(link.id);
       if (element) {
@@ -35,7 +32,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
 
   return (
     <motion.div
-      className="flex lg:hidden absolute right-0 top-0 bottom-0 w-[70%] h-screen mx-0 my-0 z-10 flex-col items-end gap-60"
+      className="flex lg:hidden fixed right-0 top-0 bottom-0 w-[70%] h-screen mx-0 my-0 z-10 flex-col items-end gap-60 bg-background"
       variants={mobileNav}
       initial="initial"
       animate="animate"
@@ -69,8 +66,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
             >
               {homeLinks.map((link) => (
                 <motion.div key={link.id} variants={listItem}>
-                  
-                    <a href={`/#${link.id}`}
+                  <a href={`/#${link.id}`}
                     onClick={(e) => {
                       e.preventDefault();
                       handleHomeLinkClick(link);
@@ -84,6 +80,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
           )}
         </AnimatePresence>
 
+        {/* Rest of the sections remain the same */}
         {/* About Section */}
         <h2
           className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
@@ -105,8 +102,8 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
               className="flex flex-col gap-3 pb-4"
             >
               {aboutLinks.map((link) => (
-                <motion.div key={link.id} variants={listItem} /* ... */ >
-                  <a href={`${link.link}`}>{link.title}</a>
+                <motion.div key={link.id} variants={listItem}>
+                  <Link href={link.link} onClick={() => setMobile(false)}>{link.title}</Link>
                 </motion.div>
               ))}
             </motion.div>
@@ -134,16 +131,16 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
               className="flex flex-col gap-3 pb-4"
             >
               {eventsLinks.map((link) => (
-                <motion.div key={link.id} variants={listItem} /* ... */ >
-                  <a href={`${link.link}`}>{link.title}</a>
+                <motion.div key={link.id} variants={listItem}>
+                  <Link href={link.link} onClick={() => setMobile(false)}>{link.title}</Link>
                 </motion.div>
               ))}
             </motion.div>
           )}
         </AnimatePresence>
 
-{/* The Hike Section */}
-<h2
+        {/* The Hike Section */}
+        <h2
           className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
           onClick={() => setIsTheHikeOpen(!isTheHikeOpen)}
         >
@@ -163,8 +160,8 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
               className="flex flex-col gap-3 pb-4"
             >
               {hikeLinks.map((link) => (
-                <motion.div key={link.id} variants={listItem} /* ... */ >
-                  <a href={`${link.link}`}>{link.title}</a>
+                <motion.div key={link.id} variants={listItem}>
+                  <Link href={link.link} onClick={() => setMobile(false)}>{link.title}</Link>
                 </motion.div>
               ))}
             </motion.div>
@@ -184,8 +181,8 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
               active === "Testimonials" ? "text-secondary underline" : "text-primary"
             } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
             onClick={() => {
-              setMobile(!mobile);
-              setActive("Contact");
+              setMobile(false);
+              setActive("Testimonials");
               window.scrollTo(0, 0);
             }}
           >
@@ -206,7 +203,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
               active === "Contact" ? "text-secondary underline" : "text-primary"
             } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
             onClick={() => {
-              setMobile(!mobile);
+              setMobile(false);
               setActive("Contact");
               window.scrollTo(0, 0);
             }}

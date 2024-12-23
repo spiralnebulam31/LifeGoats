@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { lifeGoatsLogo } from '@/public/assets';
 import Image from 'next/image';
 
-export default function PreloaderWrapper({ children }) {
+export default function PreLoaderWrapper({ children }) {
   const [preloader, setPreloader] = useState(true);
   const [timer, setTimer] = useState(2);
   const id = useRef(null);
@@ -34,7 +34,7 @@ export default function PreloaderWrapper({ children }) {
             width={100}
             height={100}
             />
-          <h1>Loading...</h1>
+          <h1 className="mt-2">Loading...</h1>
         </div>
       ) : (
         children

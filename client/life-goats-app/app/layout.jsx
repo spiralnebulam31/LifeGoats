@@ -1,5 +1,5 @@
 import { Navbar, Footer } from './components/index';
-import PreloaderWrapper from './components/Loaders/PreloaderWrapper';
+import PreLoaderWrapper from './components/Loaders/PreLoaderWrapper';
 import { StateProvider } from '../providers/StateProvider';
 import './globals.css';
 
@@ -15,11 +15,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <StateProvider>
-          <PreloaderWrapper>
+          <PreLoaderWrapper>
             <Navbar />
             {children}
             <Footer />
-          </PreloaderWrapper>
+          </PreLoaderWrapper>
         </StateProvider>
       </body>
     </html>

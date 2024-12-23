@@ -12,7 +12,7 @@ import {
   stepsRepeatMobile,
 } from "../../../motion/loading-goat-prints";
 
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
 
 const GoatPrintsWalking = ({ isSmallScreen }) => {
 

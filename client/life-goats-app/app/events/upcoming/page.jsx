@@ -12,7 +12,7 @@ import { upcomingEvents } from "@/public/assets/index.js";
 import Link from "next/link";
 import Image from "next/image";
 
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
 
 const UpcomingEvents = () => {
   return (

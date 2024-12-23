@@ -23,7 +23,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
 
 const Details = ({ isSmallScreen }) => {
   const ref1 = useRef();

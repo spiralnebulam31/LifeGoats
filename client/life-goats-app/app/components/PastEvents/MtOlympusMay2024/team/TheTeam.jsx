@@ -13,7 +13,7 @@ import { theTeam } from "@/public/assets/the-team";
 import TeamBubble from "./TeamBubble";
 import Image from "next/image";
 
-const MotionImage = motion(Image);
+const MotionImage = motion.create(Image);
 
 const TheTeam = ({ isSmallScreen }) => {
   return (

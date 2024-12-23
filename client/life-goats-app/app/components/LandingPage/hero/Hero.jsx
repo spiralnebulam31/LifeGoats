@@ -57,6 +57,7 @@ const Hero = ({ isSmallScreen }) => {
                   className="w-[60px] h-[60px] object-contain z-50"
                   width={60}
                   height={60}
+                  style={{ width: "auto", height: "auto" }}
                 />
               </motion.div>
             </motion.div>
