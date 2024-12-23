@@ -1,5 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const DetailCard = ({ index, name, icon, alt, text, text2, initialNumber }) => {
     const [currentNumber, setCurrentNumber] = useState(initialNumber);
@@ -25,10 +28,12 @@ const DetailCard = ({ index, name, icon, alt, text, text2, initialNumber }) => {
     return (
         <motion.div className="bg-background rounded-2xl flex justify-center items-center flex-col">
             <motion.div className="bg-background rounded-2xl flex justify-evenly items-center flex-row p-1">
-                <img
+                <Image
                     src={icon}
                     alt={alt}
                     className="w-18 lg:w-20 object-contain rounded-2xl hue-rotate-180 lg:h-20 p-2 mb-1 shadow-md"
+                    width={100}
+                    height={100}                    
                 />
             </motion.div>
             <motion.div className="bg-background rounded-2xl flex justify-evenly items-center flex-col  px-4 lg:px-1 h-20">

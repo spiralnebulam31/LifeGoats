@@ -51,6 +51,8 @@ const Navbar = () => {
               src={lifeGoatsLogo}
               alt="logo"
               className="h-[65px] w-auto cursor-pointer object-contain pb-1"
+              width={85}
+              height={85}
             />
             <p className="text-primary text-[26px] font-title cursor-pointer lg:block hidden">
               Life Goats
@@ -109,11 +111,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
-            <img
+            <Image
               src={mobile ? menuClose : menuMountain}
               alt="menu"
               className="h-[60px] w-auto cursor-pointer object-contain z-30"
               onClick={() => setMobile(!mobile)}
+              width={85}
+              height={85}
             />
           </div>
           <motion.div>

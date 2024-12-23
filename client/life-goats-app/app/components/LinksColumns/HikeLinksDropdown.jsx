@@ -1,5 +1,8 @@
+'use client';
+
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { downArrow, downArrowHover } from "@/public/assets";
 import { useState } from "react";
 
@@ -27,10 +30,12 @@ const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) =>
         >
         <div className="flex flex-row items-center justify-center gap-2">
         <p className={`${isHovered ? 'hovered' : ''}`}>The Hike</p>
-            <img
+            <Image
               src={isHovered ? downArrowHover : downArrow}
               alt="down arrow"
               className={`h-[20px] w-auto ${isHovered ? 'hovered' : ''}`}
+              width={20}
+              height={20}
             />
             </div>
         </button>

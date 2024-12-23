@@ -27,8 +27,13 @@ export default function PreloaderWrapper({ children }) {
   return (
     <>
       {preloader ? (
-        <div className="preloader">
-          <Image src={lifeGoatsLogo} alt="logo" />
+        <div className="preloader flex flex-col items-center justify-center h-screen w-screen fixed top-0 left-0 bg-background z-50">
+          <Image 
+            src={lifeGoatsLogo} 
+            alt="logo"
+            width={100}
+            height={100}
+            />
           <h1>Loading...</h1>
         </div>
       ) : (

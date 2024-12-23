@@ -9,16 +9,19 @@ import {
 import {
   goatPrintsLight,
   olympus2024BG3,
-} from "@/public/assets/index.js";
+} from "@/public/assets/index";
+import Image from 'next/image';
 
 const Hero = ({ isSmallScreen }) => {
 
   return (
     <section className="bg-background sticky top-0 w-screen h-screen mx-auto overflow-hidden z-10">
-      <img
+      <Image
         src={olympus2024BG3}
         alt="hero background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10"
+        with={1920}
+        height={1080}
       />
       <div className="absolute inset-0 top-[100px] md:top-[30px] max-w-7xl mx-auto flex flex-row items-start gap-5">
         {/* Hero text */}
@@ -48,10 +51,12 @@ const Hero = ({ isSmallScreen }) => {
               className="w-[35px] h-[75px] rounded-3xl border-4 border-background flex justify-start items-start z-40"
             >
               <motion.div variants={goatPrintsSliderVariant} initial="initial" animate="animate">
-                <img
+                <Image
                   src={goatPrintsLight}
                   alt="goat hoof prints"
                   className="w-[60px] h-[60px] object-contain z-50"
+                  width={60}
+                  height={60}
                 />
               </motion.div>
             </motion.div>

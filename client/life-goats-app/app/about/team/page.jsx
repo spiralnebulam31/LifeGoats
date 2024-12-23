@@ -4,16 +4,19 @@ import { motion } from "framer-motion";
 import { directorsChairs } from "@/public/assets/the-team";
 import { teamData } from "../../../data/team";
 import TeamCard from "../../components/About/team/TeamCard";
+import Image from "next/image";
 
 const TheTeam = ({ isSmallScreen }) => {
   return (
     <section
       className="bg-background relative bg-cover w-screen h-full min-h-screen mt-[70px] inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto"
     >
- <img
+ <Image
         src={directorsChairs}
         alt="mountain background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 opacity-30"
+        width={1920}
+        height={1080}
       />
 
       <motion.div className="flex flex-row justify-evenly items-center">

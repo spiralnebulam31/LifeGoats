@@ -5,14 +5,17 @@ import { fadeIn } from "../../../motion/motion";
 import GoatPrintsWalking from "../../components/Loaders/GoatPrintsWalking";
 import { neededItemsBG } from "@/public/assets";
 import NeededItemsText from "../../components/TheHike/NeededItemsText";
+import Image from "next/image";
 
 const PackingList = () => {
   return (
     <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto">
-      <img
+      <Image
         src={neededItemsBG}
         alt="mountain background"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 opacity-30"
+        width={1920}
+        height={1080}
       />
       <motion.div className="bg-background rounded-2xl drop-shadow-xl opacity-90 relative top-[100px] mb-10 z-20 w-[80%] lg:w-[70%] text-center mx-auto">
         <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto pt-10 mb-3 overflow-hidden">

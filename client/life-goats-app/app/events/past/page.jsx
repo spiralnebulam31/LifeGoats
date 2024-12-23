@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from "framer-motion";
-// import { historyBG } from "@/public/assets";
 import {
   floatFromDownMainTitle,
 } from "../../../motion/home-sections";
@@ -14,11 +13,6 @@ const PastEvents = ({ isSmallScreen }) => {
     <motion.div
       className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden p-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto"
     >
-      {/* <img
-        src={historyBG}
-        alt="mountain background"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 opacity-30"
-      /> */}
       <motion.div
         className="py-auto text-center w-[80%] lg:w-[90%] mx-auto
         mt-2 mb-5 z-10 overflow-hidden"

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const EventCard = ({ index, alt, image, link, title, text, yMoving }) => {
+const EventCard = ({ index, alt, src, link, title, text, yMoving }) => {
 
   return (
     <>
@@ -11,7 +11,7 @@ const EventCard = ({ index, alt, image, link, title, text, yMoving }) => {
       className="w-[310px] h-[200px] lg:h-[250px] lg:w-[450px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
       >
         <Image
-          src={image}
+          src={src}
           alt={alt}
           className="w-full object-cover"
           width={450}

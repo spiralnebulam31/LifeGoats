@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
+import Image from 'next/image';
 import { goatPrintSingle } from "@/public/assets";
 import {
   stepTopRight,
@@ -10,6 +11,8 @@ import {
   stepsRepeat,
   stepsRepeatMobile,
 } from "../../../motion/loading-goat-prints";
+
+const MotionImage = motion(Image);
 
 const GoatPrintsWalking = ({ isSmallScreen }) => {
 
@@ -21,7 +24,7 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
           whileInView="animate"
         >
           <motion.div className="flex flex-row justify-center items-center mt-6 w-[90%]">
-            <motion.img
+            <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
               className="w-[20px] h-auto object-contain"
@@ -29,7 +32,7 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
               initial="initial"
               whileInView="animate"
             />
-            <motion.img
+            <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
               className="w-[20px] h-auto object-contain"
@@ -39,7 +42,7 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
             />
           </motion.div>
           <motion.div className="flex flex-row justify-center items-center mb-5 w-[90%]">
-            <motion.img
+            <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
               className="w-[20px] h-auto object-contain"
@@ -47,7 +50,7 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
               initial="initial"
               whileInView="animate"
             />
-            <motion.img
+            <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
               className="w-[20px] h-auto object-contain"

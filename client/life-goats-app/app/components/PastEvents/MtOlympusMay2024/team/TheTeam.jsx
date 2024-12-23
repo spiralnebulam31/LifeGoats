@@ -11,6 +11,9 @@ import { fadeIn } from "../../../../../motion/motion";
 import { mtOlympusMay2024TeamData } from "../../../../../data/team";
 import { theTeam } from "@/public/assets/the-team";
 import TeamBubble from "./TeamBubble";
+import Image from "next/image";
+
+const MotionImage = motion(Image);
 
 const TheTeam = ({ isSmallScreen }) => {
   return (
@@ -73,13 +76,15 @@ const TheTeam = ({ isSmallScreen }) => {
       </motion.div>
 
       <motion.div className="flex flex-row justify-center items-center mx-auto py-5">
-        <motion.img
+        <MotionImage
           src={theTeam}
           alt="The Team"
           className="w-[90%] md:w-[70%] lg:w-[50%] z-0 rounded-2xl shadow-lg"
           variants={fadeIn}
           initial="initial"
           whileInView="animate"
+          width={1500}
+          height={800}
         />
       </motion.div>
 
@@ -97,10 +102,12 @@ const TheTeam = ({ isSmallScreen }) => {
           </span>
         </motion.p>
 
-        <img
+        <Image
           src={mtOlympusMay2024TeamData[6].image}
           alt={mtOlympusMay2024TeamData[6].alt}
           className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          width={300}
+          height={300}
         />
       </motion.div>
 
@@ -111,10 +118,12 @@ const TheTeam = ({ isSmallScreen }) => {
         initial="initial"
         whileInView="animate"
       >
-        <img
+        <Image
           src={mtOlympusMay2024TeamData[7].image}
           alt={mtOlympusMay2024TeamData[7].alt}
           className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          width={300}
+          height={300}
         />
 
         <motion.p className="my-auto ml-4">
@@ -140,10 +149,12 @@ const TheTeam = ({ isSmallScreen }) => {
           as {mtOlympusMay2024TeamData[8].responsibilty}
         </motion.p>
 
-        <img
+        <Image
           src={mtOlympusMay2024TeamData[8].image}
           alt={mtOlympusMay2024TeamData[8].alt}
           className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          width={300}
+          height={300}
         />
       </motion.div>
     </section>
