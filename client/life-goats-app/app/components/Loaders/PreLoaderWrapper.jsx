@@ -33,6 +33,7 @@ export default function PreLoaderWrapper({ children }) {
             alt="logo"
             width={100}
             height={100}
+            priority
             />
           <h1 className="mt-2">Loading...</h1>
         </div>
