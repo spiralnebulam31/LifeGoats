@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { goatPrintSingle } from "../../../public/assets";
+import { goatPrintSingle } from "@/public/assets";
 import {
   stepTopRight,
   stepBottomRight,
@@ -9,7 +9,7 @@ import {
   stepBottomLeft,
   stepsRepeat,
   stepsRepeatMobile,
-} from "../../motion/loading-goat-prints";
+} from "../../../motion/loading-goat-prints";
 
 const GoatPrintsWalking = ({ isSmallScreen }) => {
 

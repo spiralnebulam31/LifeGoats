@@ -2,9 +2,9 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../../motion/home-sections';
-import { introText } from '../../../../data/intro';
-import { aboutPhoto } from '../../../../../public/assets';
+import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../../../motion/home-sections';
+import { introText } from '../../../../../data/intro';
+import { aboutPhoto } from '@/public/assets';
 
 const Intro = ( { isSmallScreen } ) => {
 

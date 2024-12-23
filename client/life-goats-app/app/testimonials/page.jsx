@@ -5,7 +5,7 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../../motion/home-sections";
-import { testimonials } from "../data/testimonials";
+import { testimonials } from "../../data/testimonials";
 import { TestimonialsPageCard } from "../components/LandingPage/testimonials";
 import Link from "next/link";
 
@@ -69,7 +69,7 @@ const TestimonialsPage = ({ isSmallScreen }) => {
         </motion.div>
       </motion.div>
 
-      <Link to="/contact">
+      <Link href="/contact">
         <motion.div
           className="flex justify-evenly items-center mx-auto"
           variants={floatFromDownMainTitle}

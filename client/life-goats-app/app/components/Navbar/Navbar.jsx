@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../data/navLinks";
-import { lifeGoatsLogo, menuMountain, menuClose } from "../../../public/assets";
+import Image from "next/image";
+import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../../data/navLinks";
+import { lifeGoatsLogo, menuMountain, menuClose } from "@/public/assets";
 import MobileMenu from "./MobileMenu";
 import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown, HikeLinksDropdown } from "../LinksColumns";
 
@@ -46,7 +47,7 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img
+            <Image
               src={lifeGoatsLogo}
               alt="logo"
               className="h-[65px] w-auto cursor-pointer object-contain pb-1"

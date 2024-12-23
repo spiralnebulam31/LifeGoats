@@ -5,7 +5,7 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../../../../motion/home-sections";
-import { testimonials } from "../../../data/testimonials";
+import { testimonials } from "../../../../data/testimonials";
 import TestimonialsCard from "./TestimonialsCard";
 import Link from "next/link";
 

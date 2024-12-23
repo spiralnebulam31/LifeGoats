@@ -1,18 +1,21 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const EventCard = ({ index, alt, image, link, title, text, yMoving }) => {
 
   return (
     <>
-    <Link to={link} alt={title} target="_blank" rel="noreferrer">
+    <Link href={link} alt={title} target="_blank" rel="noreferrer">
     <motion.div
       className="w-[310px] h-[200px] lg:h-[250px] lg:w-[450px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
       >
-        <img
+        <Image
           src={image}
           alt={alt}
           className="w-full object-cover"
+          width={450}
+          height={250}
         />
         </motion.div>        
       

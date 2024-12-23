@@ -5,7 +5,7 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../../../../motion/home-sections";
-import { coreValues } from "../../../data/core-values";
+import { coreValues } from "../../../../data/core-values";
 import CoreValuesCard from "./CoreValuesCard";
 
 const CoreValues = ({ isSmallScreen }) => {

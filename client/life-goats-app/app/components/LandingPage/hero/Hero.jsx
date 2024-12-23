@@ -9,7 +9,7 @@ import {
 import {
   goatPrintsLight,
   olympus2024BG3,
-} from "../../../../public/assets/index.js";
+} from "@/public/assets/index.js";
 
 const Hero = ({ isSmallScreen }) => {
 

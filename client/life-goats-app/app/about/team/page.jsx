@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { directorsChairs } from "../../public/assets/the-team";
-import { teamData } from "../data/team";
-import TeamCard from "../components/About/team/TeamCard";
+import { directorsChairs } from "@/public/assets/the-team";
+import { teamData } from "../../../data/team";
+import TeamCard from "../../components/About/team/TeamCard";
 
 const TheTeam = ({ isSmallScreen }) => {
   return (

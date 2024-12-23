@@ -1,21 +1,13 @@
-import {
-    accommodationIcon,
-    altitudeIcon,
-    durationIcon,
-    elementsIcon,
-    groupIcon,
-} from "../../public/assets";
-
 export const details = [
     {
-      name: "Accomodation",
-      icon: accommodationIcon,
+      name: "Accommodation",
+      icon: "/assets/details/accommodation-icon.svg",
       alt: "accommodation icon",
       text: "local hotels, free camping",
     },
     {
       name: "Altitude",
-      icon: altitudeIcon,
+      icon: "/assets/details/altitude-icon.svg",
       alt: "altitude icon",
       text: 2917,
       text2: " m",
@@ -23,7 +15,7 @@ export const details = [
     },
     {
       name: "Duration",
-      icon: durationIcon,
+      icon: "/assets/details/duration-icon.svg",
       alt: "duration icon",
       text: 4,
       text2: " days",
@@ -31,13 +23,13 @@ export const details = [
     },
     {
       name: "Elements",
-      icon: elementsIcon,
+      icon: "/assets/details/elements-icon.svg",
       alt: "elements icon",
       text: "sea, mountain",
     },
     {
       name: "Group",
-      icon: groupIcon,
+      icon: "/assets/details/group-icon.svg",
       alt: "group icon",
       text: 20,
       text2: " people",

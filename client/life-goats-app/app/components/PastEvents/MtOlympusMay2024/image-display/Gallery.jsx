@@ -7,9 +7,10 @@ import { motion } from "framer-motion";
 import {
     floatFromDownPreTitle,
     floatFromDownMainTitle,
-  } from "../../../../motion/home-sections";
-import { mtOlympusMay2024Images } from '../../../../data/mt-olympus-may-2024';
+  } from "../../../../../motion/home-sections";
+import { mtOlympusMay2024Images } from '../../../../../data/mt-olympus-may-2024';
 import "./Gallery.css";
+import Image from "next/image";
 
 const Gallery = () => {
     const [images] = useState(mtOlympusMay2024Images.map(img => ({
@@ -44,7 +45,7 @@ const Gallery = () => {
         return (
             <div style={{ height: '500px', display: 'flex', flexDirection: 'column' }}>
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }}>
-                    <img 
+                    <Image 
                         src={item.itemImageSrc} 
                         alt={item.alt} 
                         style={{ 
@@ -52,6 +53,8 @@ const Gallery = () => {
                             height: '100%', 
                             objectFit: 'contain'
                         }} 
+                        width={500}
+                        height={500}
                     />
                 </div>
                 <div className="text-center mt-2">
@@ -72,7 +75,7 @@ const Gallery = () => {
                 alignItems: 'center', 
                 overflow: 'hidden'
                 }}>
-                <img 
+                <Image 
                     src={item.thumbnailImageSrc} 
                     alt={item.alt} 
                     style={{ 
@@ -80,6 +83,8 @@ const Gallery = () => {
                         height: '100%', 
                         objectFit: 'cover'
                     }} 
+                    width={90}
+                    height={75}
                 />
             </div>
         );

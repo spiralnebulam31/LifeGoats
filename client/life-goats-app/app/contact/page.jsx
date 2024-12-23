@@ -5,7 +5,8 @@ import { motion, useInView } from "framer-motion";
 import { floatFromLeftContact, floatFromRightContact } from "../../motion/home-sections";
 import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../motion/home-sections";
 import emailjs from "@emailjs/browser";
-import { phone, phoneHover, email, emailHover, email2, email2Hover, transparentMountainBG2 } from "../../public/assets";
+import { phone, phoneHover, email, emailHover, email2, email2Hover, transparentMountainBG2 } from "@/public/assets";
+import Image from "next/image";
 
 const Contact = ({
   phoneIsHovered,
@@ -176,7 +177,7 @@ const Contact = ({
           {/* End of Contact Form */}
         </motion.div>
         <div className="absolute right-0 left-0 bottom-0 z-20 bg-no-repeat w-full pointer-events-none">
-          <img src={transparentMountainBG2} alt="transparent mountain background" className="w-screen h-auto" />
+          <Image src={transparentMountainBG2} alt="transparent mountain background" className="w-screen h-auto" />
     </div>
 
     </section>
@@ -194,7 +195,7 @@ const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
       rel="noreferrer"
       className="text-secondary hover:text-tertiary flex items-center whitespace-nowrap text-md lg:text-xl tracking-wide"
     >
-      <img src={icon} alt={`${text} icon`} className="w-[20px] h-[20px] object-contain" />
+      <Image src={icon} alt={`${text} icon`} className="w-[20px] h-[20px] object-contain" />
       <p className="ml-2">{text}</p>
     </a>
   </div>

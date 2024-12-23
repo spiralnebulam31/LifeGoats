@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
-} from "../../../../motion/home-sections";
-import { overviewData } from "../../../../data/overview";
+} from "../../../../../motion/home-sections";
+import { overviewData } from "../../../../../data/overview";
 import OverviewCard from "./OverviewCard";
 
 const EventOverview = ({ isSmallScreen }) => {

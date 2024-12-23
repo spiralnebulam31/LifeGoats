@@ -3,13 +3,13 @@
 import { useState } from "react";
 import ProgramTab from "./ProgramTab";
 import DateButton from "./DateButton";
-import { programData } from "../../../../data/program";
+import { programData } from "../../../../../data/program";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../../../motion/motion";
+import { fadeIn } from "../../../../../motion/motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
-} from "../../../../motion/home-sections";
+} from "../../../../../motion/home-sections";
 
 const Program = ({
   isSmallScreen,

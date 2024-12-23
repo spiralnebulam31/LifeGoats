@@ -8,7 +8,7 @@ import {
   photo4,
   photo5,
   photo6,
-} from "../../../../../public/assets/index.js";
+} from "@/public/assets/index.js";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
@@ -18,7 +18,7 @@ import {
   floatFromRightDetails2,
   floatFromDownDetails,
   floatFromUpDetails,
-} from "../../../../motion/home-sections";
+} from "../../../../../motion/home-sections";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 

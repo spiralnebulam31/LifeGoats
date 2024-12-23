@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { lifeGoatsLogo } from '../../../public/assets';
+import { lifeGoatsLogo } from '@/public/assets';
+import Image from 'next/image';
 
 export default function PreloaderWrapper({ children }) {
   const [preloader, setPreloader] = useState(true);
@@ -27,7 +28,7 @@ export default function PreloaderWrapper({ children }) {
     <>
       {preloader ? (
         <div className="preloader">
-          <img src={lifeGoatsLogo} alt="logo" />
+          <Image src={lifeGoatsLogo} alt="logo" />
           <h1>Loading...</h1>
         </div>
       ) : (

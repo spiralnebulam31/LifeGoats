@@ -4,8 +4,9 @@ import { useContext } from "react";
 import { StateContext } from '../../../contexts/StateContext';
 import PrivacyModal from "./PrivacyModal";
 import AccessibilityModal from "./AccessibilityModal";
+import Image from "next/image";
 // import { useState } from "react";
-// import { facebook, instagram, downArrow } from "../../public/assets";
+// import { facebook, instagram, downArrow } from "@/public/assets";
 // import HomeDropdown from "./HomeDropdown";
 // import HomeLinks from "../LinksColumns/HomeLinks";
 // import { homeLinks } from "../../data/navLinks";
@@ -43,10 +44,10 @@ const Footer = () => {
           <p className="text-background font-body font-bold text-lg mb-1">Follow us on</p>
           <div className="flex flex-row justify-center items-center">
             <a href="https://www.facebook.com/Life-Goats" target="_blank" rel="noreferrer">
-              <img src={facebook} alt="facebook" className="w-8 h-8 mx-2" />
+              <Image src={facebook} alt="facebook" className="w-8 h-8 mx-2" />
             </a>
             <a href="https://www.instagram.com/life_goats/" target="_blank" rel="noreferrer">
-              <img src={instagram} alt="instagram" className="w-8 h-8 mx-2" />
+              <Image src={instagram} alt="instagram" className="w-8 h-8 mx-2" />
             </a>
           </div>
         </div>
@@ -58,7 +59,7 @@ const Footer = () => {
             <HomeLinks links={homeLinks} onClick={() => setToggleDropdown(false)} />
           </div>
           <div className="md:hidden flex flex-1 justify-end items-center gap-">
-            <img
+            <Image
               src={downArrow}
               alt="menu"
               className="w-16 h-auto cursor-pointer object-contain z-30"

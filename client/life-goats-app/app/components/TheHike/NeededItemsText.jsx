@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { fadeIn } from "../../motion";
+import { fadeIn } from "../../../motion/motion";
 
 const NeededItemsText = () => {
   return (

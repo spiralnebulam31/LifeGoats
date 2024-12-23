@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { downArrow, downArrowHover } from "../../../public/assets";
+import { downArrow, downArrowHover } from "@/public/assets";
 import { useState } from "react";
 
 const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) => {
@@ -47,7 +47,7 @@ const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) =>
             {hikeLinks.map((link) => (
               <Link
                 key={link.id}
-                to={link.link}
+                href={link.link}
                 className="bg-background block px-4 py-2 text-lg font-links font-bold text-primary hover:bg-secondary hover:text-background"
                 onClick={() => {
                   handleLinkClick(link);

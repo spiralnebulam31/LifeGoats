@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive'; 
 import { StateContext } from '../contexts/StateContext';
 
 export function StateProvider({ children }) {
@@ -12,6 +13,8 @@ export function StateProvider({ children }) {
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
   const [emailIsHovered, setEmailIsHovered] = useState(false);
   const [email2IsHovered, setEmail2IsHovered] = useState(false);
+
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' }); 
 
   const closeModal = () => {
     setModalState({
@@ -40,6 +43,7 @@ export function StateProvider({ children }) {
     handleEmailMouseLeave,
     handleEmail2MouseEnter,
     handleEmail2MouseLeave,
+    isSmallScreen,
   };
 
   return (

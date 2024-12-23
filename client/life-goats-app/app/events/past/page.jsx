@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from "framer-motion";
-// import { historyBG } from "../../public/assets";
+// import { historyBG } from "@/public/assets";
 import {
   floatFromDownMainTitle,
-} from "../../motion/home-sections";
-import { pastEventsData } from "../data/past-events";
-import EventCard from "../components/PastEvents/EventCard";
+} from "../../../motion/home-sections";
+import { pastEventsData } from "../../../data/past-events";
+import EventCard from "../../components/PastEvents/EventCard";
 
 const PastEvents = ({ isSmallScreen }) => {
 

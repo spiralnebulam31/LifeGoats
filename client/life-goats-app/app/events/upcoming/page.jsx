@@ -1,15 +1,15 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { fadeIn } from "../../motion";
+import { fadeIn } from "../../../motion/motion";
 import {
   floatFromDownMainTitle,
   floatFromLeftContact,
   floatFromRightContact,
-} from "../../motion/home-sections";
-import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
-// import { historyBG } from "../../public/assets";
-import { upcomingEvents } from "../../public/assets";
+} from "../../../motion/home-sections";
+import GoatPrintsWalking from "../../components/Loaders/GoatPrintsWalking";
+// import { historyBG } from "/assets";
+import { upcomingEvents } from "@/public/assets/index.js";
 import Link from "next/link";
 
 const UpcomingEvents = () => {
@@ -66,7 +66,7 @@ const UpcomingEvents = () => {
             className="flex justify-center items-center"
           >
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 mt-3 px-4 rounded-lg shadow-lg
           hover:bg-tertiary hover:text-earth"
             >

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../../motion/motion";
@@ -177,7 +179,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
           animate="animate"
         >
           <Link
-            to="/testimonials"
+            href="/testimonials"
             className={`${
               active === "Testimonials" ? "text-secondary underline" : "text-primary"
             } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
@@ -199,7 +201,7 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
           animate="animate"
         >
           <Link
-            to="/contact"
+            href="/contact"
             className={`${
               active === "Contact" ? "text-secondary underline" : "text-primary"
             } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}

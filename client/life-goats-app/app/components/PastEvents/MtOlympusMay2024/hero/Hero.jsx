@@ -8,12 +8,12 @@ import {
   floatFromUpHeroText2,
   heroGoatPrintsVariant,
   goatPrintsSliderVariant,
-} from "../../../../motion/hero";
+} from "../../../../../motion/hero";
 import {
   goatPrints,
   heroBackground2,
   calendar,
-} from "../../../../../public/assets/index.js";
+} from "@/public/assets/index.js";
 
 const Hero = ({ isSmallScreen }) => {
 

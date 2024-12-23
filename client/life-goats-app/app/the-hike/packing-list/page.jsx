@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { fadeIn } from "../../motion";
-import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
-import { neededItemsBG } from "../../_assets";
-import NeededItemsText from "../components/TheHike/NeededItemsText";
+import { fadeIn } from "../../../motion/motion";
+import GoatPrintsWalking from "../../components/Loaders/GoatPrintsWalking";
+import { neededItemsBG } from "@/public/assets";
+import NeededItemsText from "../../components/TheHike/NeededItemsText";
 
 const PackingList = () => {
   return (

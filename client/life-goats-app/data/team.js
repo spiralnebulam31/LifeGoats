@@ -10,7 +10,7 @@ import {
     Stratos,
     Ruby,
     Goats
-    } from "../../public/assets/the-team";
+    } from "@/public/assets/the-team";
 
 export const teamData = [
     {

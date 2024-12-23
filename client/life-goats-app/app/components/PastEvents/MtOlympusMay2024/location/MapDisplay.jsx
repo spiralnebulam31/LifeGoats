@@ -1,9 +1,12 @@
+'use client';
+
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { locationData } from "../../../../data/location";
-import { mapPin, pinShadow } from "../../../../../public/assets/index.js";
+import { locationData } from "../../../../../data/location";
+import { mapPin, pinShadow } from "@/public/assets/index.js";
 import { useMediaQuery } from "react-responsive";
+import Image from "next/image";
 
 const MapDisplay = () => {
 
@@ -39,7 +42,7 @@ const MapDisplay = () => {
                   <Popup>
                     <h2 className="font-links font-bold text-lg">{location.name}</h2>
                     <p className="font-body">({location.lat}, {location.lng})</p>
-                    <img src={location.image} alt={location.alt} className="h-[200px] w-auto object-cover rounded-2xl" />
+                    <Image src={location.image} alt={location.alt} className="h-[200px] w-auto object-cover rounded-2xl" />
                     {!isSmallScreen && (
                       <p className="font-body">{location.description}</p>
                     )}

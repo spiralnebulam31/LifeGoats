@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { downArrow, downArrowHover } from "../../../public/assets";
+import { downArrow, downArrowHover } from "@/public/assets";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -49,7 +49,7 @@ const AboutLinksDropdown = ({ active, setActive, handleLinkClick, aboutLinks }) 
             {aboutLinks.map((link) => (
               <Link 
                 key={link.id}
-                to={link.link}
+                href={link.link}
                 className="bg-background block px-4 py-2 text-lg font-links font-bold text-primary hover:bg-secondary hover:text-background"
                 onClick={() => {
                   handleLinkClick(link);
