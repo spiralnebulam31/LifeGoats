@@ -6,11 +6,11 @@ import {
   floatFromUpHeroSubtitle,
   floatFromUpHeroText1,
   floatFromUpHeroText2,
-  heroGoatPrintsVariant,
-  goatPrintsSliderVariant,
+  // heroGoatPrintsVariant,
+  // goatPrintsSliderVariant,
 } from "../../../../../motion/hero";
 import {
-  goatPrints,
+  // goatPrints,
   heroBackground2a,
   calendar,
 } from "@/public/assets/index.js";

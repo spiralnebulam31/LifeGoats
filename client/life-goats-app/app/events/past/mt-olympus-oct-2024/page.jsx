@@ -2,16 +2,16 @@
 
 // import {
 //     Hero,
-    // Intro,
-    // EventOverview,
-    // Details,
-    // Location,
-    // Gallery,
-    // TheTeam
-  // } from "../../../components/PastEvents/MtOlympusOct2024";
+//     // Intro,
+//     // EventOverview,
+//     // Details,
+//     // Location,
+//     // Gallery,
+//     // TheTeam
+//   } from "../../../components/PastEvents/MtOlympusOct2024";
   // import { TheHikeComponent } from "../../../components/TheHike";
-  import Hero from "../../../components/PastEvents/MtOlympusOct2024/hero/Hero";
   import { useMediaQuery } from 'react-responsive';
+  import Hero from "../../../components/PastEvents/MtOlympusOct2024/hero/Hero";
   
   const LandingPage = () => {
     const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
