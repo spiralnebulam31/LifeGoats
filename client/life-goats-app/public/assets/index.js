@@ -68,6 +68,7 @@ import downArrowHover from './navigation/down-arrow-hover.svg';
 import neededItemsBG from './needed-items-bg.webp';
 import historyBG from './history-bg.webp';
 import safetyConsiderationsBG from './safety-considerations-bg.webp';
+import subscribeBG from './subscribe-bg.jpg';
 
 import mtOlympusMay2024 from './events/mt-olympus-may-2024.webp';
 import upcomingEvents from './events/upcoming-events.webp';
@@ -130,6 +131,7 @@ export {
     neededItemsBG,
     historyBG,
     safetyConsiderationsBG,
+    subscribeBG,
     mtOlympusMay2024,
     upcomingEvents
 }
