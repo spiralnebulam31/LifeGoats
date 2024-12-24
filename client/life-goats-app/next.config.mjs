@@ -6,7 +6,6 @@ const __dirname = path.dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: './dist', // Changes the build output directory to `./dist/`.
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
