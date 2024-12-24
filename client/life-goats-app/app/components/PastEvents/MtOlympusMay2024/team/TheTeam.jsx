@@ -15,7 +15,7 @@ import Image from "next/image";
 
 const MotionImage = motion.create(Image);
 
-const TheTeam = ({ isSmallScreen }) => {
+const TheTeam = () => {
   return (
     <section
       className="bg-background

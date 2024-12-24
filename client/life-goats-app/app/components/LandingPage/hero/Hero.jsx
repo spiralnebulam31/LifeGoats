@@ -12,7 +12,7 @@ import {
 } from "@/public/assets/index";
 import Image from 'next/image';
 
-const Hero = ({ isSmallScreen }) => {
+const Hero = () => {
 
   return (
     <section className="bg-background sticky top-0 w-screen h-screen mx-auto overflow-hidden z-10">

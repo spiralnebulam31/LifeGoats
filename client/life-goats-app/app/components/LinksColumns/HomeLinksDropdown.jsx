@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { downArrow, downArrowHover } from "@/public/assets";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 import Image from "next/image";
 
 const HomeLinksDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => {
@@ -65,6 +66,16 @@ const HomeLinksDropdown = ({ active, setActive, handleLinkClick, homeLinks }) =>
       )}
     </div>
   );
+};
+
+HomeLinksDropdown.propTypes = {
+  active: PropTypes.string,
+  setActive: PropTypes.func.isRequired,
+  handleLinkClick: PropTypes.func.isRequired,
+  homeLinks: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default HomeLinksDropdown;

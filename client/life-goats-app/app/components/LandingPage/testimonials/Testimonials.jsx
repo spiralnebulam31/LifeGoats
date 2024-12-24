@@ -9,7 +9,7 @@ import { testimonials } from "../../../../data/testimonials";
 import TestimonialsCard from "./TestimonialsCard";
 import Link from "next/link";
 
-const Testimonials = ({ isSmallScreen }) => {
+const Testimonials = () => {
   return (
     <section
       id="testimonials"

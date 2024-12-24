@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { fadeIn } from "../../../../motion/motion";
-import { goal, comeTogether, connect, brainstorm, recharge, enjoy, underline } from "../../../../motion/intro-section";
+import { goal, comeTogether, connect, brainstorm, recharge, enjoy } from "../../../../motion/intro-section";
 
 const Intro = () => {
 

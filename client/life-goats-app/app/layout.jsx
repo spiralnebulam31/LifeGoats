@@ -3,6 +3,7 @@ import PreLoaderWrapper from './components/Loaders/PreLoaderWrapper';
 import { StateProvider } from '../providers/StateProvider';
 import './globals.css';
 import { Catamaran, Cinzel, Open_Sans, Rubik } from 'next/font/google';
+import PropTypes from 'prop-types';
 
 // Configure fonts
 const catamaran = Catamaran({ 
@@ -111,3 +112,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};

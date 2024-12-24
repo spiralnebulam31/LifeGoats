@@ -8,7 +8,7 @@ import {
 import { coreValues } from "../../../../data/core-values";
 import CoreValuesCard from "./CoreValuesCard";
 
-const CoreValues = ({ isSmallScreen }) => {
+const CoreValues = () => {
   return (
     <section
       id="core-values"
@@ -27,7 +27,7 @@ const CoreValues = ({ isSmallScreen }) => {
           animate="animate"
           viewport={{ once: true }}
         >
-          The herd's
+          The herd&apos;s
         </motion.p>
         <motion.h2
           className="text-earth font-bold font-title uppercase md:text-[55px]

@@ -7,7 +7,7 @@ import {
 import { pastEventsData } from "../../../data/past-events";
 import EventCard from "../../components/PastEvents/EventCard";
 
-const PastEvents = ({ isSmallScreen }) => {
+const PastEvents = () => {
 
   return (
     <motion.div

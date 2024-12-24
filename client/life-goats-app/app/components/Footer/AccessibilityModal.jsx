@@ -1,5 +1,6 @@
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import PropTypes from 'prop-types';
 
 const AccessibilityModal = ({ isOpen, onClose }) => {
 
@@ -35,6 +36,11 @@ const AccessibilityModal = ({ isOpen, onClose }) => {
       </div>
     </Modal>
   );
+};
+
+AccessibilityModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default AccessibilityModal;

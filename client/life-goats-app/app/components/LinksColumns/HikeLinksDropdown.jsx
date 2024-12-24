@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { downArrow, downArrowHover } from "@/public/assets";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
 const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) => {
 
@@ -66,6 +67,17 @@ const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) =>
       )}
     </div>
   );
+};
+
+HikeLinksDropdown.propTypes = {
+  active: PropTypes.string,
+  setActive: PropTypes.func.isRequired,
+  handleLinkClick: PropTypes.func.isRequired,
+  hikeLinks: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default HikeLinksDropdown;

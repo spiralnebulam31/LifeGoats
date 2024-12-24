@@ -17,6 +17,7 @@ import {
 import { mountainStefani, mountainEnipeas } from "@/public/assets";
 import { locationDataInfo } from "../../../../../data/location";
 import MapDisplay from './MapDisplay';
+import PropTypes from 'prop-types';
 
 const Location = ( { isSmallScreen } ) => {
 
@@ -115,6 +116,9 @@ const Location = ( { isSmallScreen } ) => {
 
     </section>
   );
+};
+Location.propTypes = {
+  isSmallScreen: PropTypes.bool.isRequired,
 };
 
 export default Location;

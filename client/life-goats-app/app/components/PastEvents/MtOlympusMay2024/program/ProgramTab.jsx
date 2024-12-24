@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ProgramTab = ({ index, title, description, activeTab }) => {
   return (
     <div>
@@ -21,6 +23,16 @@ const ProgramTab = ({ index, title, description, activeTab }) => {
       )}
     </div>
   );
+}
+
+ProgramTab.propTypes = {
+  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]).isRequired,
+  activeTab: PropTypes.number
 };
 
 export default ProgramTab;

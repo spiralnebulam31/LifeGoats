@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { locationIcon, priceIcon2 } from "@/public/assets";
 import { fadeIn } from "../../../../../motion/motion";
+import PropTypes from 'prop-types';
 
 const MainPricingCard = ({
   index,
@@ -128,6 +129,20 @@ const MainPricingCard = ({
       </AnimatePresence>
     </motion.div>
   );
+};
+
+MainPricingCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  accommodation: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  alt: PropTypes.string,
+  location: PropTypes.string.isRequired,
+  pricePerNight: PropTypes.string.isRequired,
+  priceForFiveNights: PropTypes.string.isRequired,
+  notes: PropTypes.arrayOf(PropTypes.string),
+  isOpen: PropTypes.bool.isRequired,
+  toggleOpen: PropTypes.func.isRequired,
 };
 
 export default MainPricingCard;

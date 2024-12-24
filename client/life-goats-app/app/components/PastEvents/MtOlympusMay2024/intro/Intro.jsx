@@ -5,8 +5,11 @@ import { motion, useInView } from 'framer-motion';
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../../../motion/home-sections';
 import { introText } from '../../../../../data/intro';
 import { aboutPhoto } from '@/public/assets';
+import Image from 'next/image';
 
-const Intro = ( { isSmallScreen } ) => {
+const MotionImage = motion.create(Image);
+
+const Intro = () => {
 
   const photoRef = useRef();
   const textRef = useRef();
@@ -24,7 +27,7 @@ const Intro = ( { isSmallScreen } ) => {
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle} initial="initial" whileInView="animate" viewport={{once: true}}
           >
-            The host's reflections
+            The host&apos;s reflections
           </motion.p>
           <motion.h2 className="text-earth font-bold font-title uppercase md:text-[55px]
           sm:text-[45px] text-[40px] outline-background-2 pb-2 mt-0"
@@ -36,7 +39,7 @@ const Intro = ( { isSmallScreen } ) => {
         </motion.div>
 
         <motion.div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-2 lg:mt-6 mb-8">
-  <motion.img src={aboutPhoto} alt="host Maria with dog Ruby on Mount Olympus" className="w-[75%] md:w-[80%] lg:w-[55%] h-auto rounded-2xl drop-shadow-xl"
+  <MotionImage src={aboutPhoto} alt="host Maria with dog Ruby on Mount Olympus" className="w-[75%] md:w-[80%] lg:w-[55%] h-auto rounded-2xl drop-shadow-xl"
   variants={floatFromLeftAbout} initial="initial" ref={photoRef} animate={photoInView ? "animate" : "initial"}
   />
   <motion.div className="w-[85%] md:w-[80%] lg:w-[35%] py-4 mt-5 lg:mt-0 bg-background rounded-2xl drop-shadow-xl opacity-85 lg:-ml-20 opacity-80"
@@ -51,11 +54,6 @@ const Intro = ( { isSmallScreen } ) => {
     ))}
   </motion.div>
 </motion.div>
-
-
-
-
-
     </section>
   )
 }

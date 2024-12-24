@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-const CoreValuesCard = ({ index, alt, image, title, text, yMoving }) => {
+const CoreValuesCard = ({ alt, image, title, text }) => {
   return (
     <motion.div
       className="w-[280px] h-[410px] lg:h-[480px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
@@ -20,6 +21,13 @@ const CoreValuesCard = ({ index, alt, image, title, text, yMoving }) => {
         </div>
       </motion.div>
   );
+};
+
+CoreValuesCard.propTypes = {
+  alt: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 export default CoreValuesCard;

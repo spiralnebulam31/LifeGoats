@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 
-const AdditionalCostsCard = ( { index, description, details }) => {
+import PropTypes from 'prop-types';
+
+const AdditionalCostsCard = ({ index, description, details }) => {
   return (
             <motion.div
             key={index}
@@ -19,6 +21,12 @@ const AdditionalCostsCard = ( { index, description, details }) => {
             </ul>}
             </motion.div>
   )
-}
+};
+
+AdditionalCostsCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+  details: PropTypes.arrayOf(PropTypes.string)
+};
 
 export default AdditionalCostsCard;

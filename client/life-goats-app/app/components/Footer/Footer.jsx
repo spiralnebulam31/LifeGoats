@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { StateContext } from '../../../contexts/StateContext';
 import PrivacyModal from "./PrivacyModal";
 import AccessibilityModal from "./AccessibilityModal";
-import Image from "next/image";
 // import { useState } from "react";
 // import { facebook, instagram, downArrow } from "@/public/assets";
 // import HomeDropdown from "./HomeDropdown";

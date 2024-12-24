@@ -14,6 +14,8 @@ import {
 
 const MotionImage = motion.create(Image);
 
+import PropTypes from 'prop-types';
+
 const GoatPrintsWalking = ({ isSmallScreen }) => {
 
     return (
@@ -62,6 +64,11 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
         </motion.div>
 
     );
-}
+
+};
+
+GoatPrintsWalking.propTypes = {
+  isSmallScreen: PropTypes.bool.isRequired,
+};
 
 export default GoatPrintsWalking;

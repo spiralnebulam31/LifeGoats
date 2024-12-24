@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
-const EventCard = ({ index, alt, src, link, title, text, yMoving }) => {
+const EventCard = ({ alt, src, link, title }) => {
 
   return (
     <>
@@ -30,6 +31,13 @@ const EventCard = ({ index, alt, src, link, title, text, yMoving }) => {
         </Link>
         </>
   );
+};
+
+EventCard.propTypes = {
+  alt: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default EventCard;

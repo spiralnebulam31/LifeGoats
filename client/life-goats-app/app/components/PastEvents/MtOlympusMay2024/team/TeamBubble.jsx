@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const TeamBubble = ({ index, alt, image, title, responsibilty, yMoving }) => {
+import PropTypes from 'prop-types';
+
+const TeamBubble = ({ alt, image, title, responsibilty }) => {
   return (
     <motion.div
       className="z-0 m-3 overflow-hidden"
@@ -23,6 +25,13 @@ const TeamBubble = ({ index, alt, image, title, responsibilty, yMoving }) => {
         </div>
       </motion.div>
   );
+}
+
+TeamBubble.propTypes = {
+  alt: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  responsibilty: PropTypes.string.isRequired,
 };
 
 export default TeamBubble;

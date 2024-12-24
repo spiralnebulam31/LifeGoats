@@ -1,7 +1,8 @@
 'use client';
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import PropTypes from 'prop-types';
+import { motion } from "framer-motion";
 import { floatFromLeftContact, floatFromRightContact } from "../../../../motion/home-sections";
 import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../../../motion/home-sections";
 import emailjs from "@emailjs/browser";
@@ -23,9 +24,6 @@ const Contact = ({
 
   const leftSideRef = useRef();
   const rightSideRef = useRef();
-
-  const leftSideView = useInView({ threshold: 0.5 });
-  const rightSideView = useInView({ threshold: 0.5 });
   
   const form = useRef();
 
@@ -222,6 +220,35 @@ const ContactInput = ({ type, placeholder, name }) => (
     )}
   </div>
 );
+
+// PropTypes
+
+ContactLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  onMouseEnter: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
+  icon: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
+
+ContactInput.propTypes = {
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
+Contact.propTypes = {
+  phoneIsHovered: PropTypes.bool.isRequired,
+  handlePhoneMouseEnter: PropTypes.func.isRequired,
+  handlePhoneMouseLeave: PropTypes.func.isRequired,
+  emailIsHovered: PropTypes.bool.isRequired,
+  handleEmailMouseEnter: PropTypes.func.isRequired,
+  handleEmailMouseLeave: PropTypes.func.isRequired,
+  email2IsHovered: PropTypes.bool.isRequired,
+  handleEmail2MouseEnter: PropTypes.func.isRequired,
+  handleEmail2MouseLeave: PropTypes.func.isRequired,
+  isSmallScreen: PropTypes.bool.isRequired,
+};
 
 export default Contact;
 

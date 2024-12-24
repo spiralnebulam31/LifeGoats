@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { downArrow, downArrowHover } from "@/public/assets";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 import Link from "next/link";
 import Image from "next/image";
 
@@ -66,6 +67,17 @@ const PastLinksDropdown = ({ active, setActive, handleLinkClick, pastLinks }) =>
       )}
     </div>
   );
+};
+
+PastLinksDropdown.propTypes = {
+  active: PropTypes.string,
+  setActive: PropTypes.func.isRequired,
+  handleLinkClick: PropTypes.func.isRequired,
+  pastLinks: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    link: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default PastLinksDropdown;

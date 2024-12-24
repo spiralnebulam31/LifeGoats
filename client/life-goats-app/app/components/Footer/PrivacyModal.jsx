@@ -1,6 +1,7 @@
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import "./Modals.css"
+import PropTypes from 'prop-types';
 
 const PrivacyModal = ({ isOpen, onClose }) => {
 
@@ -36,6 +37,11 @@ const PrivacyModal = ({ isOpen, onClose }) => {
       </div>
     </Modal>
   );
+};
+
+PrivacyModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default PrivacyModal;

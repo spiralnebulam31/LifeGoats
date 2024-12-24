@@ -8,7 +8,7 @@ import {
 import { overviewData } from "../../../../../data/overview";
 import OverviewCard from "./OverviewCard";
 
-const EventOverview = ({ isSmallScreen }) => {
+const EventOverview = () => {
   return (
     <section
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background

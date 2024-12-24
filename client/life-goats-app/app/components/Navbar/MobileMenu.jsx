@@ -4,24 +4,24 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../../motion/motion";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";  // Changed this line
+import { useRouter, usePathname } from "next/navigation";  
 
-const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLinks, eventsLinks, hikeLinks }) => {
+import PropTypes from 'prop-types';
+
+const MobileMenu = ({ active, setActive, setMobile, homeLinks, aboutLinks, eventsLinks, hikeLinks }) => {
   const [isHomeOpen, setIsHomeOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isEventsOpen, setIsEventsOpen] = useState(false);
   const [isTheHikeOpen, setIsTheHikeOpen] = useState(false);
   
   const router = useRouter();
-  const pathname = usePathname();  // Added this line
+  const pathname = usePathname();
 
   const handleHomeLinkClick = (link) => {
     setActive(link.title);
     setMobile(false);
-    if (pathname !== "/") {  // Changed this line
+    if (pathname !== "/") { 
       router.push("/");
-      // Remove the .then() chain since router.push() works differently in App Router
-      // We'll handle scroll after navigation in a useEffect in the parent component
     } else {
       const element = document.getElementById(link.id);
       if (element) {
@@ -214,6 +214,16 @@ const MobileMenu = ({ active, setActive, mobile, setMobile, homeLinks, aboutLink
       </motion.div>
     </motion.div>
   );
+};
+
+MobileMenu.propTypes = {
+  active: PropTypes.string.isRequired,
+  setActive: PropTypes.func.isRequired,
+  setMobile: PropTypes.func.isRequired,
+  homeLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  aboutLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  eventsLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  hikeLinks: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default MobileMenu;

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const DateButton = ({ date, isActive, onClick }) => {
   return (
     <div>
@@ -21,5 +23,11 @@ const DateButton = ({ date, isActive, onClick }) => {
     </div>
   )
 }
+
+DateButton.propTypes = {
+  date: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default DateButton

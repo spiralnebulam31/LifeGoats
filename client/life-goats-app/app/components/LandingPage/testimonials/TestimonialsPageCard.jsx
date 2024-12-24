@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-const TestimonialsPageCard = ({ index, alt, image, name, text, yMoving }) => {
+const TestimonialsPageCard = ({ name, text }) => {
   return (
     <motion.div
       className="flex flex-row mx-auto gap-1 justify-center text-center my-auto w-[340px] h-auto px-2 z-0 bg-background m-2 rounded-2xl shadow-lg overflow-hidden"
@@ -24,6 +25,14 @@ const TestimonialsPageCard = ({ index, alt, image, name, text, yMoving }) => {
       </div>
     </motion.div>
   );
+};
+
+TestimonialsPageCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]).isRequired,
 };
 
 export default TestimonialsPageCard;

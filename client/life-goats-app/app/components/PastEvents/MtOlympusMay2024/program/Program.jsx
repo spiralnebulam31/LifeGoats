@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import PropTypes from 'prop-types';
 import ProgramTab from "./ProgramTab";
 import DateButton from "./DateButton";
 import { programData } from "../../../../../data/program";
@@ -134,6 +135,10 @@ const Program = ({
       </motion.div>
     </section>
   );
+};
+
+Program.propTypes = {
+  isSmallScreen: PropTypes.bool.isRequired,
 };
 
 export default Program;

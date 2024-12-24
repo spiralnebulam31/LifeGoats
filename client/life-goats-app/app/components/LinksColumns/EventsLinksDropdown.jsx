@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
+import PropTypes from 'prop-types';
 import { downArrow, downArrowHover } from "@/public/assets";
 import { useState } from "react";
 import Link from "next/link";
@@ -66,6 +67,19 @@ const EventsLinksDropdown = ({ active, setActive, handleLinkClick, eventsLinks }
       )}
     </div>
   );
+};
+
+EventsLinksDropdown.propTypes = {
+  active: PropTypes.string,
+  setActive: PropTypes.func.isRequired,
+  handleLinkClick: PropTypes.func.isRequired,
+  eventsLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      link: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default EventsLinksDropdown;

@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-const DetailCard = ({ index, name, icon, alt, text, text2, initialNumber }) => {
+import PropTypes from 'prop-types';
+
+const DetailCard = ({ name, icon, alt, text, text2, initialNumber }) => {
     const [currentNumber, setCurrentNumber] = useState(initialNumber);
     const targetNumber = parseInt(text);
 
@@ -46,6 +48,15 @@ const DetailCard = ({ index, name, icon, alt, text, text2, initialNumber }) => {
             </motion.div>
         </motion.div>
     );
+}
+
+DetailCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+    text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    text2: PropTypes.string,
+    initialNumber: PropTypes.number.isRequired,
 };
 
 export default DetailCard;

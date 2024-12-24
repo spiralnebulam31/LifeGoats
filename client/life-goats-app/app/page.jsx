@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   Hero,
   Intro,
@@ -40,6 +41,19 @@ const LandingPage = ({
       />
     </div>
   );
+};
+
+LandingPage.propTypes = {
+  phoneIsHovered: PropTypes.bool.isRequired,
+  handlePhoneMouseEnter: PropTypes.func.isRequired,
+  handlePhoneMouseLeave: PropTypes.func.isRequired,
+  emailIsHovered: PropTypes.bool.isRequired,
+  handleEmailMouseEnter: PropTypes.func.isRequired,
+  handleEmailMouseLeave: PropTypes.func.isRequired,
+  email2IsHovered: PropTypes.bool.isRequired,
+  handleEmail2MouseEnter: PropTypes.func.isRequired,
+  handleEmail2MouseLeave: PropTypes.func.isRequired,
+  isSmallScreen: PropTypes.bool.isRequired,
 };
 
 export default LandingPage;
