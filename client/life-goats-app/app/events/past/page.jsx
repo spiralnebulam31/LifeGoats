@@ -31,8 +31,7 @@ const PastEvents = () => {
       </motion.div>
 
       <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 gap-8 mb-2 md:mb-4">
-        {/* <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 mb-2 md:mb-4"> - keep this line instead of the above if there are more than one events */}
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-2 md:mb-4">
           {pastEventsData.map((event, index) => (
             <motion.div
               key={index}

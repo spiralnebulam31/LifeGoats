@@ -1,4 +1,4 @@
-import Hero from "./hero/Hero";
+import Hero from "./MtOlympusMay2024/hero/Hero";
 import Intro from "./intro/Intro";
 import EventOverview from "./overview/EventOverview";
 import Details from "./details/Details";

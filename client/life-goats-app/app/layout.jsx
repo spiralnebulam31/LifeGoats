@@ -1,5 +1,5 @@
 import { Navbar, Footer } from './components/index';
-import PreLoaderWrapper from './components/Loaders/PreLoaderWrapper';
+// import PreLoaderWrapper from './components/Loaders/PreLoaderWrapper';
 import { StateProvider } from '../providers/StateProvider';
 import './globals.css';
 import { Catamaran, Cinzel, Open_Sans, Rubik } from 'next/font/google';
@@ -102,11 +102,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <StateProvider>
-          <PreLoaderWrapper>
+          {/* <PreLoaderWrapper> */}
             <Navbar />
             {children}
             <Footer />
-          </PreLoaderWrapper>
+          {/* </PreLoaderWrapper> */}
         </StateProvider>
       </body>
     </html>

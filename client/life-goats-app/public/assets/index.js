@@ -9,6 +9,7 @@ import menuMountain from './navbar/menu-mountain.svg';
 import menuClose from './navbar/menu-close.svg';
 
 import heroBackground2 from './hero/hero-bg-2.webp';
+import heroBackground2a from './hero/hero-bg-2a.jpg';
 import goatPrints from './hero/goat-prints.svg';
 import goatPrintsLight from './hero/goat-prints-light.svg';
 import calendar from './hero/calendar.svg';
@@ -80,6 +81,7 @@ export {
     menuMountain,
     menuClose,
     heroBackground2,
+    heroBackground2a,
     goatPrints,
     goatPrintsLight,
     calendar,
