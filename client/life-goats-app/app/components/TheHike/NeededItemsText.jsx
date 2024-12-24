@@ -116,7 +116,7 @@ const NeededItemsText = () => {
           and legs)
           <p>
             <span className="italic">Note:</span> You will likely not use this
-            at all given the time of year, but it's always good to come prepared and
+            at all given the time of year, but it&apos;s always good to come prepared and
             these double up in use as sleepwear at the refuge.
           </p>
         </li>

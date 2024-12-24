@@ -30,7 +30,7 @@ const TheHistory = () => {
         <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate">
           <p>Mount Olympus has always had a special place in my heart.</p>
           <br />
-          <p>Let's rewind…</p>
+          <p>Let&apos;s rewind…</p>
           <br />
           <p>Four years old: The indoctrination begins…</p>
           <br />

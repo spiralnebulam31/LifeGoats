@@ -8,6 +8,10 @@ import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../motion/home
 import emailjs from "@emailjs/browser";
 import { phone, phoneHover, email, emailHover, email2, email2Hover, transparentMountainBG2 } from "@/public/assets";
 import Image from "next/image";
+import dotenv from 'dotenv';
+import process from 'process';
+
+dotenv.config();
 
 const Contact = ({
   phoneIsHovered,

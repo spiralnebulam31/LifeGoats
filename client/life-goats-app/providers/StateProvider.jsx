@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive'; 
 import { StateContext } from '../contexts/StateContext';
 
@@ -52,3 +53,7 @@ export function StateProvider({ children }) {
     </StateContext.Provider>
   );
 }
+
+StateProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

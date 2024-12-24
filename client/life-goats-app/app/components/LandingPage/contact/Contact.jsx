@@ -8,6 +8,10 @@ import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../../../motio
 import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import { phone, phoneHover, email, email2, emailHover, email2Hover, transparentMountainBG2 } from "@/public/assets";
+import dotenv from 'dotenv';
+import process from 'process';
+
+dotenv.config();
 
 const Contact = ({
   phoneIsHovered,
