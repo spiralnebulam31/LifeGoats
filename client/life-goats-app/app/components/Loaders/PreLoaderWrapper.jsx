@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { lifeGoatsLogo } from '@/public/assets';
 import Image from 'next/image';
+import propTypes from 'prop-types';
 
 export default function PreLoaderWrapper({ children }) {
   const [preloader, setPreloader] = useState(true);
@@ -43,3 +44,7 @@ export default function PreLoaderWrapper({ children }) {
     </>
   );
 }
+
+PreLoaderWrapper.propTypes = {
+  children: propTypes.node.isRequired,
+};

@@ -57,7 +57,7 @@ const UpcomingEvents = () => {
           <motion.p
             className="font-bold mt-2 pb-4 text-center"
           >
-            If you have any suggestions or ideas for future events, don't hesitate to send us a <span className="line-through font-links">goat</span> note!
+            If you have any suggestions or ideas for future events, don&apos;t hesitate to send us a <span className="line-through font-links">goat</span> note!
           </motion.p>
           <motion.div
             className="flex justify-center items-center"
