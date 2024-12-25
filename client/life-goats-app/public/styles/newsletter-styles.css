@@ -1,0 +1,361 @@
+body {
+    font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;;
+    background-color: #c8f2b1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  @media screen and (min-width: 768px) {
+    body {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    body {
+      font-size: 1.2em;
+    }
+  }
+  
+  .view-in-browser-link {
+    margin: 1em auto 0 auto;
+  }
+  
+  .rounded-corners {
+    border-radius: 10px;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    height: 200px !important;
+    width: 200px !important;
+  }
+  
+  .shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    margin-top: 1em;
+  }
+  
+  header img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    color: #303848;
+    font-family: 'Arial Black', 'Arial', 'Helvetica', sans-serif;;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
+  }
+  
+  @media screen and (min-width: 768px) {
+    header h1 {
+      font-size: 2.1em;
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    header h1 {
+      font-size: 2.2em;
+    }
+  }
+  
+  .main-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: #e6ecf0;
+    margin: 1em auto;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .main-content {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    .main-content {
+      width: 60%;
+    }
+  }
+  
+  hr {
+    width: 90%;
+    margin: 1em auto;
+    border: 0.5px solid #2c5f11;
+  }
+  
+  .intro,
+  .outro,
+  .newsletter-content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5em;
+    text-align: left;
+    font-size: 1em;
+    color: #2c5f11;
+    line-height: 1.5em;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .intro,
+    .outro,
+    .newsletter-content {
+      width: 90%;
+    }
+  }
+  
+  .quote {
+    margin: 2.5em auto;
+  }
+  
+  .quote p {
+    font-style: italic;
+    color: #607dfa;
+    font-weight: 400;
+    line-height: 0.8em;
+  }
+  
+  a {
+    cursor: pointer;
+    font-family: 'Bookman', 'Times New Roman', 'serif';
+    font-weight: 400;
+  }
+  
+  a:hover,
+  a:visited:hover,
+  a:focus {
+    color: #4d3d11;
+  }
+  
+  a:visited {
+    color: #19329e;
+  }
+  
+  .full-width-img {
+    width: 100%;
+    height: auto;
+    margin: 1em 0 0 0;
+  }
+  
+  .newsletter-content h1 {
+    font-size: 1.5em;
+    color: #303848;
+    font-family: 'Bookman', 'Times New Roman', 'serif';
+    font-weight: 600;
+    margin: 0 0 1.5em 0;
+    padding: 0;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 1.2em;
+    color: #607dfa;
+    font-family: 'Bookman', 'Times New Roman', 'serif';
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 1.5em 0 1em 0;
+    padding: 0;
+  }
+  
+  .italic-p {
+    font-style: italic;
+  }
+  
+  .normal-p {
+    font-style: normal;
+  }
+  
+  .italic-p p,
+  .normal-p p {
+    margin: 1.5em 0 0 0;
+  }
+  
+  .circle-images-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1em 0;
+  }
+  
+  @media screen and (min-width: 450px) {
+    .circle-images-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 1204px) {
+    .circle-images-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .circle-images-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .two-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em auto 0 auto;
+    max-width: 100%;
+  }
+  
+  .two-columns .column {
+    flex: 1;
+    max-width: 100%;
+  }
+  
+  .img-caption {
+    margin-top: 0.5em;
+    font-style: italic;
+  }
+  
+  .column img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  @media screen and (min-width: 900px) {
+    .two-columns {
+      flex-direction: row;
+    }
+  
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+  
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+    }
+  }
+  
+  li {
+    margin-bottom: 1em;
+  }
+  
+  .epilogue {
+    background: linear-gradient(
+      0deg,
+      #2c5f11 0%,
+      #607dfa 100%
+    );
+    color: #e6ecf0;
+    width: 100%;
+  }
+  
+  .epilogue p {
+    margin: 2em 1em 1em 1em;
+  }
+  
+  .epilogue ul {
+    list-style-type: none;
+  }
+  
+  .epilogue img {
+    width: auto;
+    height: 180px;
+    margin: 1em 0;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .epilogue img {
+      height: 300px;
+    }
+  }
+  
+  .our-project {
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  #core-values-img {
+    width: 90%;
+    height: auto;
+    margin: 2em 0 1em 0;
+  }
+  
+  .subscribe-btn {
+    background-color: #303848;
+    color: white;
+    cursor: pointer;
+    font-family: 'Bookman', 'Times New Roman', 'serif';
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border: none;
+    margin: 1em 0;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: #7ba862;
+    color: #4d3d11;
+  }
+  
+  .signatures {
+    margin: 2em 0 0 0;
+  }
+  
+  .signatures p {
+    line-height: 0.8em;
+  }
+  
+  .signature-names {
+    margin: 0 0 0.5em 0;
+  }
+  
+  .signatures img {
+    margin: 0 0 1.5em 0;
+    width: 90px;
+    height: auto;
+  }
+  
+  footer a {
+    color: #303848;
+    font-family: 'Bookman', 'Times New Roman', 'serif';
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  footer a:hover,
+  .footer a:focus,
+  .footer a:visited:hover {
+    color: #4d3d11;
+    text-decoration: none;
+  }
+  
+  footer a:visited {
+    color: #19329e;
+    text-decoration: none;
+  }
