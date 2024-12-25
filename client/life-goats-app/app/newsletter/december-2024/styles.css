@@ -1,0 +1,338 @@
+:root {
+    --color-background: #e6ecf0;
+    --color-primary: #303848;
+    --color-secondary: #607dfa;
+    --color-secondaryDark: #19329e;
+    --color-tertiary: #7ba862;
+    --color-tertiaryLight: #c8f2b1;
+    --color-tertiaryDark: #2c5f11;
+    --color-tertiaryDarker: #084132;
+    --color-earth: #4d3d11;
+  
+    --font-title: "Luckiest Guy", cursive;
+    --font-subtitle: "Cinzel", serif;
+    --font-body: "Catamaran", sans-serif;
+    --font-links: "Neucha", cursive;
+  }
+  
+  .content {
+    font-family: var(--font-body);
+    background-color: var(--color-tertiaryLight);
+    margin: 0;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .content {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    .content {
+      font-size: 1.2em;
+    }
+  }
+  
+  .rounded-corners {
+    border-radius: 10px;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    height: 200px !important;
+    width: 200px !important;
+  }
+  
+  .shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--color-background);
+    margin: 1em auto;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .main-content {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (min-width: 1400px) {
+    .main-content {
+      width: 60%;
+    }
+  }
+  
+  hr {
+    width: 90%;
+    margin: 1em auto;
+    border: 0.5px solid var(--color-tertiaryDark);
+  }
+  
+  .intro,
+  .outro,
+  .newsletter-content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5em;
+    text-align: left;
+    font-size: 1em;
+    color: var(--color-tertiaryDark);
+    line-height: 1.5em;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .intro,
+    .outro,
+    .newsletter-content {
+      width: 90%;
+    }
+  }
+  .quote {
+    margin: 2.5em auto;
+  }
+  
+  .quote p {
+    font-style: italic;
+    color: var(--color-secondary);
+    font-weight: 400;
+    line-height: 0.8em;
+  }
+  
+  a {
+    cursor: pointer;
+    font-family: var(--font-links);
+    font-weight: 400;
+  }
+  
+  a:hover,
+  a:visited:hover,
+  a:focus {
+    color: var(--color-earth);
+  }
+  
+  a:visited {
+    color: var(--color-secondaryDark);
+  }
+  
+  .full-width-img {
+    width: 100%;
+    height: auto;
+    margin: 1em 0 0 0;
+  }
+  
+  .newsletter-content h1 {
+    font-size: 1.5em;
+    color: var(--color-primary);
+    font-family: var(--font-links);
+    font-weight: 600;
+    margin: 0 0 1.5em 0;
+    padding: 0;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 1.2em;
+    color: var(--color-secondary);
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 1.5em 0 1em 0;
+    padding: 0;
+  }
+  
+  .italic-p {
+    font-style: italic;
+  }
+  
+  .normal-p {
+    font-style: normal;
+  }
+  
+  .italic-p p,
+  .normal-p p {
+    margin: 1.5em 0 0 0;
+  }
+  
+  .circle-images-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1em 0;
+  }
+  
+  @media screen and (min-width: 450px) {
+    .circle-images-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 1204px) {
+    .circle-images-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .circle-images-container-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .two-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5em auto 0 auto;
+    max-width: 100%;
+  }
+  
+  .two-columns .column {
+    flex: 1;
+    max-width: 100%;
+  }
+  
+  .img-caption {
+    font-style: italic !important;
+    margin: 0.5em 0 2em 0;
+  }
+  
+  .column img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  @media screen and (min-width: 900px) {
+    .two-columns {
+      flex-direction: row;
+    }
+  
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+  
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+    }
+  }
+  
+  li {
+    margin-bottom: 1em;
+  }
+  
+  .epilogue {
+    background: linear-gradient(
+      0deg,
+      var(--color-tertiaryDark) 0%,
+      var(--color-secondary) 100%
+    );
+    color: var(--color-background);
+    width: 100%;
+  }
+  
+  .epilogue p {
+    margin: 2em 1em 1em 1em;
+  }
+  
+  .epilogue ul {
+    list-style-type: none;
+  }
+  
+  .epilogue img {
+    width: auto;
+    height: 180px;
+    margin: 1em 0;
+    display: inline;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .epilogue img {
+      height: 300px;
+    }
+  }
+  
+  .our-project {
+    font-style: normal;
+    font-weight: 600;
+  }
+  
+  #core-values-img {
+    width: 90%;
+    height: auto;
+    margin: 2em 0 1em 0;
+  }
+  
+  .subscribe-btn {
+    background-color: var(--color-primary);
+    color: white;
+    cursor: pointer;
+    font-family: var(--font-links);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border: none;
+    margin: 1em 0;
+  }
+  
+  .subscribe-btn:hover {
+    background-color: var(--color-tertiary);
+    color: var(--color-earth);
+  }
+  
+  .signatures {
+    margin: 2em 0 0 0;
+  }
+  
+  .signatures p {
+    line-height: 1.5em;
+  }
+  
+  .signature-names {
+    margin: 0 0 0.5em 0;
+  }
+  
+  .signatures img {
+    margin: 0 0 1.5em 0;
+    width: 90px;
+    height: auto;
+  }
+  
+  footer a {
+    color: var(--color-primary);
+    font-family: var(--font-links);
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  footer a:hover,
+  .footer a:focus,
+  .footer a:visited:hover {
+    color: var(--color-earth);
+    text-decoration: none;
+  }
+  
+  footer a:visited {
+    color: var(--color-secondaryDark);
+    text-decoration: none;
+  }
+  

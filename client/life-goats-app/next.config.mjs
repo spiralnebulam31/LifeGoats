@@ -14,8 +14,7 @@ const nextConfig = {
     return config;
   },
   images: {
-    // Add your image domains here if needed
-    // domains: ['example.com'],
+    domains: ['i.ibb.co'],
   },
 };
 
