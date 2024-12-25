@@ -63,7 +63,7 @@ const NewsletterDecember2024 = () => {
                         </a>
                     </div>
                 </div>
-                <p>Pulling - not too forcibly ;&rpar; - the right people around us </p>
+                <p>Pulling - not too forcibly ;) - the right people around us </p>
                 <p><strong>People who in one way or another are already going in the same direction spirit-wise was
                         instrumental.</strong></p>
             </div>
@@ -83,7 +83,7 @@ const NewsletterDecember2024 = () => {
                 <p><strong>Life Goats! That’s it!</strong></p>
                 <p>We named it and then it really started to roll…</p>
                 <p><strong>It was no longer just a nice idea… Invitations were sent, accommodations and logistics
-                        organised, and team members ‘recruited’ ;&rpar; Natasa even put together a website to keep us on
+                        organised, and team members ‘recruited’ ;) Natasa even put together a website to keep us on
                         point!
                         → <a href="https://www.lifegoats.com">www.lifegoats.com</a></strong></p>
                 <p>Which with a ‘little’ help from our friends, all led up to our first happy gathering in May.</p>
@@ -272,7 +272,7 @@ const NewsletterDecember2024 = () => {
                 </ul>
                 <p>We have no idea where all of this will lead but <strong>we are very clear about what it is we care
                         about</strong>.</p>
-                <p><strong>And we care enough to ask all of you to care with us :&rpar;</strong></p>
+                <p><strong>And we care enough to ask all of you to care with us :)</strong></p>
                 <p>What we care about?</p>
                 <p><strong>Expanding the meaning of family…</strong></p>
                 <p><strong>Sharing and encouraging each other along in both our group and personal endeavors.</strong>
@@ -288,8 +288,8 @@ const NewsletterDecember2024 = () => {
                 <p>Although staying connected on WhatsApp chat is great, we thought a newsletter would be the best way
                     to keep everyone that wants to be in the loop updated and connected.</p>
                 <p>Also, we are open to lending this space to any of you that may feel inspired to share something with
-                    the group in the future. We love hearing from you :&rpar;</p>
-                <p><em>We aren’t trying to be a cult... Although we would make a pretty darn good one ;&rpar;</em></p>
+                    the group in the future. We love hearing from you :)</p>
+                <p><em>We aren’t trying to be a cult... Although we would make a pretty darn good one ;)</em></p>
                 <p>Go ahead and subscribe.</p>
                 <a href="https://www.lifegoats.com/subscribe" target="_blank">
                     <button className="subscribe-btn rounded-corners">Subscribe</button>
