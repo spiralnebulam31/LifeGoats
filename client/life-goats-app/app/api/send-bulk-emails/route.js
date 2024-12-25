@@ -28,10 +28,7 @@ export async function GET() {
     const newsletterTemplate = fs.readFileSync(newsletterTemplatePath, 'utf-8');
 
     // External CSS file URL
-    const cssFileUrl = 'https://www.lifagoats.com/styles/newsletter-styles.css';
-
-    // Fetch and inject the external CSS into the HTML
-    const cssContent = await fetchExternalCSS(cssFileUrl);
+    const cssFileUrl = 'https://www.lifegoats.com/styles/newsletter-styles.css';
 
     // Send an email to each recipient without Zoom link
     for (const recipient of recipientsWithoutZoom) {
@@ -42,24 +39,14 @@ export async function GET() {
         .replace('{{signOff}}', recipient.signOff)
         .replace('{{signature}}', recipient.signature);
 
-      // Combine the personalized message with the newsletter template
       let finalHtml = personalizedHtml + newsletterTemplate;
-
-      // Inject the CSS content into the HTML
-      finalHtml = `<style>${cssContent}</style>` + finalHtml;
-
-      // Inline CSS for the newsletter template using juice
-      const inlinedHtml = juice(finalHtml); // Use juice to inline the CSS
-
-      // Log the final inlined HTML for debugging
-      console.log('Final inlined HTML for', recipient.name, ':', inlinedHtml);
 
       // Send the email with the combined inlined HTML
       const message = {
         to: recipient.email,
         from: 'info@lifegoats.com', // Verified sender in SendGrid
         subject: 'Life Goats - December 2024 Newsletter',
-        html: inlinedHtml,  // Send the final combined inlined HTML
+        html: finalHtml,  // Send the final combined inlined HTML
       };
 
       await sendgrid.send(message);
@@ -77,14 +64,8 @@ export async function GET() {
       // Combine the personalized message with the newsletter template
       let finalHtml = personalizedHtml + newsletterTemplate;
 
-      // Inject the CSS content into the HTML
-      finalHtml = `<style>${cssContent}</style>` + finalHtml;
-
       // Inline CSS for the newsletter template using juice
       const inlinedHtml = juice(finalHtml); // Use juice to inline the CSS
-
-      // Log the final inlined HTML for debugging
-      console.log('Final inlined HTML for', recipient.name, ':', inlinedHtml);
 
       // Send the email with the combined inlined HTML
       const message = {
