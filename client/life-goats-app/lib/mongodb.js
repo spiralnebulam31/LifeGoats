@@ -1,3 +1,6 @@
+/**
+ * This file is used to connect to the MongoDB database.
+ */
 import { MongoClient } from 'mongodb';
 
 const uri = process.env.MONGODB_URI;
@@ -12,10 +15,6 @@ if (!process.env.MONGODB_URI) {
   } else {
     console.log("MONGODB_URI:", process.env.MONGODB_URI);
   }
-
-// if (!process.env.MONGODB_URI) {
-//   throw new Error("Please add your MongoDB URI to .env.local");
-// }
 
 if (process.env.NODE_ENV === "development") {
   if (!global._mongoClientPromise) {
