@@ -4,25 +4,71 @@
  * validates the input, and inserts the user into the subscriptions collection in the database.
  */
 import clientPromise from "@/lib/mongodb";
+import transporter from "@/lib/nodemailer";
 
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { name, email } = body;
+    const { name, email, heardAboutUs } = body;
 
-    if (!name || !email) {
-      return new Response(JSON.stringify({ message: "Name and email are required." }), { status: 400 });
+    if (!name || !email || !heardAboutUs) {
+      return new Response(
+        JSON.stringify({ message: "All fields are required." }),
+        { status: 400 }
+      );
     }
 
     const client = await clientPromise;
     const db = client.db("life-goats");
     const collection = db.collection("subscriptions");
 
-    await collection.insertOne({ name, email, subscribedAt: new Date() });
+    // Check if the user already exists
+    const existingUser = await collection.findOne({ email });
 
-    return new Response(JSON.stringify({ message: "Successfully subscribed! From now on you will be receiving the Life Goats newsletter ;)" }), { status: 200 });
+    if (existingUser) {
+      // If the user already exists and unsubscribed, remove unsubscribedAt and update subscribedAt
+      if (existingUser.unsubscribedAt) {
+        await collection.updateOne(
+          { email },
+          {
+            $set: { 
+              name,
+              heardAboutUs,
+              subscribedAt: new Date(),
+            },
+            $unset: { unsubscribedAt: "" }, // Remove unsubscribedAt field
+          }
+        );
+      }
+    } else {
+      // If the user doesn't exist, insert a new subscription
+      await collection.insertOne({
+        name,
+        email,
+        heardAboutUs,
+        subscribedAt: new Date(),
+      });
+    }
+
+    // Send an email notification to the admin (or you) about the new subscription
+    const mailOptions = {
+      from: process.env.EMAIL_USER, // sender address
+      to: process.env.EMAIL_USER, // recipient address
+      subject: "New Subscriber", // email subject
+      text: `New subscription from ${name} (${email}).`, // email content
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    return new Response(
+      JSON.stringify({ message: "Successfully subscribed! From now on you will be receiving the Life Goats newsletter ;)" }),
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Error subscribing user:", error);
-    return new Response(JSON.stringify({ message: "Internal server error" }), { status: 500 });
+    return new Response(
+      JSON.stringify({ message: "Internal server error" }),
+      { status: 500 }
+    );
   }
 }

@@ -48,3 +48,95 @@ const Subscribe = () => {
 };
 
 export default Subscribe;
+
+
+
+
+
+// 'use client';
+
+// import { useState, useEffect } from "react";
+// import { useRouter } from "next/router";
+
+// export default function Subscribe() {
+//   const [email, setEmail] = useState("");
+//   const [name, setName] = useState("");
+//   const [message, setMessage] = useState("");
+//   const [actionType, setActionType] = useState("subscribe"); // Default to subscribe
+
+//   const router = useRouter();
+
+//   useEffect(() => {
+//     if (router.isReady) {
+//       const action = router.query.action;
+//       if (action === "unsubscribe") {
+//         setActionType("unsubscribe");
+//       } else {
+//         setActionType("subscribe");
+//       }
+//     }
+//   }, [router.isReady, router.query]);
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     const endpoint = `/api/${actionType}`;
+//     const data = actionType === "subscribe" ? { name, email } : { email };
+
+//     try {
+//       const response = await fetch(endpoint, {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       });
+
+//       const result = await response.json();
+//       setMessage(result.message);
+//     } catch (error) {
+//       console.error("Error:", error);
+//       setMessage("An error occurred. Please try again.");
+//     }
+//   };
+
+//   return (
+//     <div style={{ padding: "2rem", maxWidth: "600px", margin: "0 auto" }}>
+//       <h1>
+//         Life Goats: {actionType === "subscribe" ? "Subscribe" : "Unsubscribe"}
+//       </h1>
+//       <form onSubmit={handleSubmit}>
+//         {actionType === "subscribe" && (
+//           <div>
+//             <label>
+//               Name:
+//               <input
+//                 type="text"
+//                 value={name}
+//                 onChange={(e) => setName(e.target.value)}
+//                 required
+//               />
+//             </label>
+//           </div>
+//         )}
+//         <div>
+//           <label>
+//             Email:
+//             <input
+//               type="email"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//               required
+//             />
+//           </label>
+//         </div>
+//         <div>
+//           <button type="submit">
+//             {actionType === "subscribe" ? "Subscribe" : "Unsubscribe"}
+//           </button>
+//         </div>
+//       </form>
+//       {message && <p>{message}</p>}
+//     </div>
+//   );
+// }

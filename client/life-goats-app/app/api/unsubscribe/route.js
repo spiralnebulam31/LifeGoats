@@ -4,6 +4,7 @@
  * validates the input, and updates the user in the subscriptions collection in the database to mark them as unsubscribed.
  */
 import clientPromise from "@/lib/mongodb";
+import transporter from "@/lib/nodemailer"; // Import Nodemailer transporter
 
 export async function POST(req) {
   try {
@@ -21,7 +22,7 @@ export async function POST(req) {
     const db = client.db("life-goats");
     const collection = db.collection("subscriptions");
 
-    // Use an update instead of delete to mark the user as unsubscribed
+    // Mark user as unsubscribed
     const result = await collection.updateOne(
       { email },
       { $set: { unsubscribedAt: new Date() } }
@@ -29,10 +30,20 @@ export async function POST(req) {
 
     if (result.matchedCount === 0) {
       return new Response(
-        JSON.stringify({ message: "This email was not found in our subscriptions list." }),
+        JSON.stringify({ message: "Email not found." }),
         { status: 404 }
       );
     }
+
+    // Send an email notification to the admin (or you) about the unsubscription
+    const mailOptions = {
+      from: process.env.EMAIL_USER, // sender address
+      to: process.env.EMAIL_USER, // recipient address
+      subject: "User Unsubscribed", // email subject
+      text: `User with email ${email} has unsubscribed.`, // email content
+    };
+
+    await transporter.sendMail(mailOptions);
 
     return new Response(
       JSON.stringify({ message: "We're sad to see you go, but we respect your request. You have successfully unsubscribed!" }),
