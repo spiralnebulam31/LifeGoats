@@ -62,10 +62,10 @@ async function initializeDatabase() {
                 bsonType: "date",
                 description: "SubscribedAt must be a date and is required.",
               },
-              unsubscribedAt: {
-                bsonType: ["date", "null"], // Optional
-                description: "UnsubscribedAt must be a date or null.",
-              },
+              privacyPolicyAgreed: {
+                bsonType: "bool",
+                description: "PrivacyPolicyAgreed must be a boolean.",
+              }
             },
           },
         },
