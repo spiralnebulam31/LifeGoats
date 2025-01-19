@@ -9,7 +9,7 @@ import Image from "next/image";
 const TheTeam = () => {
   return (
     <section
-      className="bg-background relative bg-cover w-screen h-full min-h-screen mt-[70px] inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto"
+      className="bg-background relative bg-cover w-screen h-full min-h-screen mt-[70px] inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto"
     >
  <Image
         src={directorsChairs}

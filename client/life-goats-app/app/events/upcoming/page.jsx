@@ -16,7 +16,7 @@ const MotionImage = motion.create(Image);
 
 const UpcomingEvents = () => {
   return (
-    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto">
+    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto">
       <motion.div className="bg-background relative top-[50px] mb-10 z-20 w-[80%] lg:w-[70%] text-center mx-auto">
         <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto my-10 overflow-hidden">
           <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold"
@@ -64,7 +64,7 @@ const UpcomingEvents = () => {
           >
             <Link
               href="/contact"
-              className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 mt-3 px-4 rounded-lg shadow-lg
+              className="bg-primary text-background font-links font-bold uppercase tracking-wider py-2 mt-3 px-4 rounded-lg shadow-lg
           hover:bg-tertiary hover:text-earth"
             >
               Contact Us

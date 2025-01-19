@@ -10,7 +10,7 @@ const TheRoute = () => {
   return (
     <motion.div
       className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
-      overflow-hidden pt-2 pb-2 z-10 mb-[130px]"
+      overflow-hidden pt-2 pb-2 z-10 mb-[180px]"
     >
       <motion.div
         className="flex flex-col lg:flex-row gap-4 lg:gap-20 justify-center items-center mx-auto pt-28 pb-3 text-primary

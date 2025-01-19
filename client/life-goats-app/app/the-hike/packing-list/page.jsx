@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const PackingList = () => {
   return (
-    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto">
+    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto">
       <Image
         src={neededItemsBG}
         alt="mountain background"
@@ -37,7 +37,7 @@ const PackingList = () => {
           initial="initial"
           whileInView="animate"
         >
-          Let&apo;s get ready and pack our bags!
+          Let's get ready and pack our bags!
         </motion.p>
         <motion.div
           className="w-[90%] mx-auto"

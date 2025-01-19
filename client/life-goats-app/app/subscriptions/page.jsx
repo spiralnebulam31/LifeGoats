@@ -1,12 +1,9 @@
-// 
-
-
 "use client";
 
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function SubscribePage() {
+export default function SubscriptionsPage() {
   const searchParams = useSearchParams();
   const action = searchParams.get("action"); // Get the query parameter (subscribe or unsubscribe)
 
