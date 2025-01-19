@@ -1,142 +1,118 @@
-'use client';
+// 
 
-import { motion } from "framer-motion";
-import { fadeIn } from "../../motion/motion";
-import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
-import { subscribeBG } from "@/public/assets";
-import Image from "next/image";
 
-const Subscribe = () => {
+"use client";
+
+import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+
+export default function SubscribePage() {
+  const searchParams = useSearchParams();
+  const action = searchParams.get("action"); // Get the query parameter (subscribe or unsubscribe)
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    heardAboutUs: "",
+    privacyPolicyAgreed: false,
+  });
+
+  const [message, setMessage] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const url =
+      action === "unsubscribe"
+        ? "/api/unsubscribe"
+        : "/api/subscribe";
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      setMessage(data.message);
+    } catch (error) {
+      console.error("Error:", error);
+      setMessage("Something went wrong. Please try again later.");
+    }
+  };
+
   return (
-    <motion.div
-      className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[130px] flex flex-col justify-center text-center mx-auto"
-    >
-      <Image
-        src={subscribeBG}
-        alt="mountain background"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 opacity-30"
-        width={1920}
-        height={1080}
-      />
-      <motion.div className="bg-background rounded-2xl drop-shadow-xl opacity-80 relative top-[100px] mb-[150px] lg:mb-[197px] z-20 w-[80%] lg:w-[70%] text-center mx-auto">
-        <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto pt-10 mb-3 overflow-hidden">
-          <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold">
-            Subscribe
-          </motion.h1>
-          <motion.h2 className="text-primary font-subtitle text-xl lg:text-3xl font-bold">
-            to our newsletter
-          </motion.h2>
-        </motion.div>
-        <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate">
-          <p>If you have received the first Life Goats newsletter, it means you've automatically subscribed by having attended one of our events, physically or mentally!</p>
-          <br />
-          <p>If you wish to unsubscribe, all you have to do is send a message with your name and email to 
-            <a href="mailto:anastasiaadamoudi@gmail.com" className="cursor-pointer text-secondary hover:text-tertiary"> anastasiaadamoudi@gmail.com</a>
-          </p>
-          <br />
-          <p>Automatic subscribe/unsubscribe button functionality is being plotted by our goat Anastasia and it will be available soon!</p>
-          <br />
-          <div className="relative z-20 w-[80%] lg:w-[70%] mx-auto pt-10 pb-8 font-body lg:text-lg text-md">
-            <motion.div className="w-[90%] mx-auto" variants={fadeIn} initial="initial" whileInView="animate">
-              <GoatPrintsWalking />
-            </motion.div>
-          </div>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+    <div style={{ padding: "20px", maxWidth: "500px", marginTop: "200px" }}>
+      <h1>
+        {action === "unsubscribe" ? "Unsubscribe from Newsletter" : "Subscribe to Newsletter"}
+      </h1>
+
+      {message && <p>{message}</p>}
+
+      <form onSubmit={handleSubmit}>
+        {action === "subscribe" && (
+          <>
+            <div>
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="heardAboutUs">How did you hear about us?</label>
+              <input
+                type="text"
+                id="heardAboutUs"
+                name="heardAboutUs"
+                value={formData.heardAboutUs}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  name="privacyPolicyAgreed"
+                  checked={formData.privacyPolicyAgreed}
+                  onChange={handleInputChange}
+                  required
+                />
+                I agree to the privacy policy.
+              </label>
+            </div>
+          </>
+        )}
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+          />
+        </div>
+
+        <button type="submit">
+          {action === "unsubscribe" ? "Unsubscribe" : "Subscribe"}
+        </button>
+      </form>
+    </div>
   );
-};
-
-export default Subscribe;
-
-
-
-
-
-// 'use client';
-
-// import { useState, useEffect } from "react";
-// import { useRouter } from "next/router";
-
-// export default function Subscribe() {
-//   const [email, setEmail] = useState("");
-//   const [name, setName] = useState("");
-//   const [message, setMessage] = useState("");
-//   const [actionType, setActionType] = useState("subscribe"); // Default to subscribe
-
-//   const router = useRouter();
-
-//   useEffect(() => {
-//     if (router.isReady) {
-//       const action = router.query.action;
-//       if (action === "unsubscribe") {
-//         setActionType("unsubscribe");
-//       } else {
-//         setActionType("subscribe");
-//       }
-//     }
-//   }, [router.isReady, router.query]);
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     const endpoint = `/api/${actionType}`;
-//     const data = actionType === "subscribe" ? { name, email } : { email };
-
-//     try {
-//       const response = await fetch(endpoint, {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(data),
-//       });
-
-//       const result = await response.json();
-//       setMessage(result.message);
-//     } catch (error) {
-//       console.error("Error:", error);
-//       setMessage("An error occurred. Please try again.");
-//     }
-//   };
-
-//   return (
-//     <div style={{ padding: "2rem", maxWidth: "600px", margin: "0 auto" }}>
-//       <h1>
-//         Life Goats: {actionType === "subscribe" ? "Subscribe" : "Unsubscribe"}
-//       </h1>
-//       <form onSubmit={handleSubmit}>
-//         {actionType === "subscribe" && (
-//           <div>
-//             <label>
-//               Name:
-//               <input
-//                 type="text"
-//                 value={name}
-//                 onChange={(e) => setName(e.target.value)}
-//                 required
-//               />
-//             </label>
-//           </div>
-//         )}
-//         <div>
-//           <label>
-//             Email:
-//             <input
-//               type="email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//               required
-//             />
-//           </label>
-//         </div>
-//         <div>
-//           <button type="submit">
-//             {actionType === "subscribe" ? "Subscribe" : "Unsubscribe"}
-//           </button>
-//         </div>
-//       </form>
-//       {message && <p>{message}</p>}
-//     </div>
-//   );
-// }
+}
