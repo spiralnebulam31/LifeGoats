@@ -4,18 +4,27 @@ import { useContext } from "react";
 import Link from "next/link";
 import { StateContext } from "../../../contexts/StateContext";
 import AccessibilityModal from "./AccessibilityModal";
+import LocationModal from "./LocationModal";
 
 const Footer = () => {
 
   const { modalState, setModalState } = useContext(StateContext);
 
-  const { accessibilityOpen } = modalState;
+  const { locationOpen, accessibilityOpen } = modalState;
+
+  const toggleLocationModal = () => {
+    setModalState({
+      locationOpen: !locationOpen,
+      accessibilityOpen,
+    });
+  };
 
   const toggleAccessibilityModal = () => {
     setModalState({
+      locationOpen,
       accessibilityOpen: !accessibilityOpen,
     });
-  };
+  }
 
   return (
     <footer className="bg-primary bg-contain bg-center bg-no-repeat fixed z-1 bottom-0 left-0 right-0 w-full h-[180px] flex flex-col items-center justify-center overflow-hidden">
@@ -49,7 +58,7 @@ const Footer = () => {
         {/*Page links*/}
         <div className="flex flex-row gap-2">
           <Link
-            href="/about/the-team"
+            href="/about/team"
             className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
           >
             Team
@@ -57,12 +66,18 @@ const Footer = () => {
 
           <span className="text-secondary font-links font-bold mx-2">|</span>
 
-          <Link
-            href="/location"
+          <button
+            type="button"
+            onClick={toggleLocationModal}
             className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
           >
             Location
-          </Link>
+          </button>
+
+          <LocationModal
+            isOpen={locationOpen}
+            onClose={toggleLocationModal}
+          />
 
           <span className="text-secondary font-links font-bold mx-2">|</span>
 

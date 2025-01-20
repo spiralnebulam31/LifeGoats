@@ -3,7 +3,7 @@ import { Modal } from 'react-responsive-modal';
 import "./Modals.css"
 import PropTypes from 'prop-types';
 
-const PrivacyModal = ({ isOpen, onClose }) => {
+const LocationModal = ({ isOpen, onClose }) => {
 
   const closeIcon = (
     <svg fill="#7BA862" viewBox="0 0 20 20" width={28} height={28}>
@@ -25,7 +25,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
       overlay: 'customOverlay',
       modal: 'customModal',
     }}
-    aria-labelledby="privacy-policy-modal"
+    aria-labelledby="location-modal"
     >
       <div className="flex flex-col items-center justify-center mx-auto p-4">
         <h2 className="text-earth text-2xl font-bold mb-4 font-subtitle">Privacy Policy</h2>
@@ -39,9 +39,9 @@ const PrivacyModal = ({ isOpen, onClose }) => {
   );
 };
 
-PrivacyModal.propTypes = {
+LocationModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 
-export default PrivacyModal;
+export default LocationModal;
