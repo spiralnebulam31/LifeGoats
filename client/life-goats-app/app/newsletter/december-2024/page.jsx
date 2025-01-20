@@ -291,7 +291,7 @@ const NewsletterDecember2024 = () => {
                     the group in the future. We love hearing from you :)</p>
                 <p><em>We aren’t trying to be a cult... Although we would make a pretty darn good one ;)</em></p>
                 <p>Go ahead and subscribe.</p>
-                <a href="https://www.lifegoats.com/subscribe" target="_blank">
+                <a href="https://www.lifegoats.com/subscriptions?action=subscribe" target="_blank">
                     <button className="subscribe-btn rounded-corners">Subscribe</button>
                 </a>
             </div>
@@ -304,13 +304,16 @@ const NewsletterDecember2024 = () => {
             </div>
         </section>
     </div>
-    </div>
-    <footer>
+    <footer className="newsletter-footer">
         <p><a href="https://www.lifegoats.com" target="_blank"><strong>Life Goats</strong></a> Newsletter - December
             2024</p>
-        <p><a href="https://www.lifegoats.com/subscribe" target="_blank">Subscribe</a> | <a
-                href="https://www.lifegoats.com/subscribe" target="_blank">Unsubscribe</a></p>
+            <p>Your privacy matters to us. Read our{' '}
+            <a href="https://www.lifegoats.com/privacy-policy" target="_blank">privacy policy</a>{' '}
+            to see how we protect your info.</p>
+        <p>If you don't wish to receive our newsletters, you can{' '}
+        <a href="https://www.lifegoats.com/subscriptions?action=unsubscribe" target="_blank">unsubscribe</a>.</p>
     </footer>
+    </div>
     </>
   )
 }

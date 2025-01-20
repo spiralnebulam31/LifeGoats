@@ -23,7 +23,7 @@ export const mtOlympusMay2024TeamData = [
       index: 1,
       alt: "George",
       image: "/assets/the-team/events/mt-olympus-may-2024/George.svg",
-      title: "George Telikiozoglou",
+      title: "George",
       responsibilty: "Generous host & seasoned chef",
     },
     {
