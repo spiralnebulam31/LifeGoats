@@ -30,8 +30,8 @@ const PrivacyModal = ({ isOpen, onClose }) => {
       <div className="flex flex-col items-center justify-center mx-auto p-4">
         <h2 className="text-earth text-2xl font-bold mb-4 font-subtitle">Privacy Policy</h2>
         <p className="text-primary text-lg mb-4 font-body">
-        If you contact Maria via phone, email or the contact form, she will only use
-                    your phone number or email address to reply to your message. She will not
+        If you contact us via phone, email or the contact form, we will only use
+                    your phone number or email address to reply to your message. We will not
                     share your name, phone number or email address with any third parties.
         </p>
       </div>

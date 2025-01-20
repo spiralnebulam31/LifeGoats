@@ -170,7 +170,12 @@ export default function SubscriptionsPage() {
                       required
                       className="mr-2"
                     />
-                    I agree to the privacy policy.
+                    By submitting this form, I consent to the Life Goats team storing my personal data for the purposes of sending me a newsletter and keeping me updated. More information about how we protect your data can be found in our{" "}
+                    <Link href="/privacy-policy">
+                      <span className="font-links underline text-secondary hover:text-tertiary">
+                        Privacy Policy
+                      </span>
+                    </Link>.
                   </label>
                 </div>
               </>

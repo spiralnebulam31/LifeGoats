@@ -3,25 +3,16 @@
 import { useContext } from "react";
 import Link from "next/link";
 import { StateContext } from "../../../contexts/StateContext";
-import PrivacyModal from "./PrivacyModal";
 import AccessibilityModal from "./AccessibilityModal";
 
 const Footer = () => {
 
   const { modalState, setModalState } = useContext(StateContext);
 
-  const { privacyOpen, accessibilityOpen } = modalState;
-
-  const togglePrivacyModal = () => {
-    setModalState({
-      privacyOpen: !privacyOpen,
-      accessibilityOpen,
-    });
-  };
+  const { accessibilityOpen } = modalState;
 
   const toggleAccessibilityModal = () => {
     setModalState({
-      privacyOpen,
       accessibilityOpen: !accessibilityOpen,
     });
   };
@@ -41,9 +32,9 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex flex-row justify-center items-center">
+        {/* <div className="flex flex-row justify-center items-center">
           <p className="text-background font-body font-bold text-md">
-            Designed & developed by
+            Website designed & developed by
             <a
               href="https://anastasiaadamoudi.com/"
               target="_blank"
@@ -53,6 +44,34 @@ const Footer = () => {
               Anastasia Adamoudi
             </a>
           </p>
+        </div> */}
+
+        {/*Page links*/}
+        <div className="flex flex-row gap-2">
+          <Link
+            href="/about/the-team"
+            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+          >
+            Team
+          </Link>
+
+          <span className="text-secondary font-links font-bold mx-2">|</span>
+
+          <Link
+            href="/location"
+            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+          >
+            Location
+          </Link>
+
+          <span className="text-secondary font-links font-bold mx-2">|</span>
+
+          <Link
+            href="/contact"
+            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+          >
+            Contact
+          </Link>
         </div>
 
         {/*Subscribe to our newsletter*/}
@@ -67,15 +86,12 @@ const Footer = () => {
 
         {/*Privacy & Accessibility Modals*/}
         <div className="flex flex-row gap-2">
-          <button
-            type="button"
-            onClick={togglePrivacyModal}
+          <Link
+            href="/privacy-policy"
             className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
           >
             Privacy Policy
-          </button>
-
-          <PrivacyModal isOpen={privacyOpen} onClose={togglePrivacyModal} />
+          </Link>
 
           <span className="text-secondary font-links font-bold mx-2">|</span>
 

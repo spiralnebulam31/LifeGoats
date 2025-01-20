@@ -102,12 +102,12 @@ const Contact = ({
 
                 {/* Contact Links */}
                 <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
-                  <ContactLink
-                    href="mailto:maria.telikiozoglou@gmail.com"
+                <ContactLink
+                    href="mailto:info@lifegoats.com"
                     onMouseEnter={handleEmailMouseEnter}
                     onMouseLeave={handleEmailMouseLeave}
                     icon={emailIsHovered ? emailHover : email}
-                    text="maria.telikiozoglou@gmail.com"
+                    text="info@lifegoats.com"
                   />
                   <ContactLink
                     href="tel:+306980489843"
@@ -116,7 +116,7 @@ const Contact = ({
                     onMouseEnter={handlePhoneMouseEnter}
                     onMouseLeave={handlePhoneMouseLeave}
                     icon={phoneIsHovered ? phoneHover : phone}
-                    text="+306980489843 (WhatsApp)"
+                    text="+306980489843 (Maria WhatsApp)"
                   />
                 </div>
                 {/* End of Contact Links */}
@@ -124,27 +124,6 @@ const Contact = ({
               </div>
             {/* End of Contact Info Container */}
 
-            <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-10 lg:pt-14 mb-5 leading-[30px]">
-              <p>For any tech inquires regarding the website, please contact Anastasia:</p>
-            </div>
-
-            {/* Contact Info Container 2 */}
-            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] md:w-[60%] mx-auto lg:mx-16">
-
-                {/* Contact Links 2 */}
-                <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
-                  <ContactLink
-                    href="mailto:anastasiaadamoudi@gmail.com"
-                    onMouseEnter={handleEmail2MouseEnter}
-                    onMouseLeave={handleEmail2MouseLeave}
-                    icon={email2IsHovered ? email2Hover : email2}
-                    text="anastasiaadamoudi@gmail.com"
-                  />
-                </div>
-                {/* End of Contact Links 2 */}
-
-              </div>
-            {/* End of Contact Info Container 2 */}
           </motion.div>
           {/* End of Contact Information */}
 
