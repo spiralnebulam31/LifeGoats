@@ -1,10 +1,26 @@
 .customOverlay {
-    background: rgb(48, 56, 72, 0.7);
-    }
+  background: rgb(48, 56, 72, 0.7);
+}
   
+.customModal {
+  background: #e6ecf0;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 280px;
+  height: 400px;
+}
+
+@media screen and (min-width: 768px) {
   .customModal {
-      background: #e6ecf0;
-      border-radius: 15px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
+    width: 400px;
+    height: 450px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .customModal {
+    width: 500px;
+    height: 350px;
+  }
+}

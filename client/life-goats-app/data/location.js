@@ -30,6 +30,17 @@ export const locationData = [
       lng: 22.5628,
     }
   ];
+
+  export const footerLocation = [
+    {
+      id: 0,
+      name: "Litochoro",
+      alt: "Litochoro town",
+      description: "A small town at the foot of Mount Olympus",
+      lat: 40.1029,
+      lng: 22.5026,
+    }
+  ];
   
   export const locationDataInfo = [
     {
