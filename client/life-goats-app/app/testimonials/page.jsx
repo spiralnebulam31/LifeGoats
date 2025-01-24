@@ -12,7 +12,7 @@ import Link from "next/link";
 const TestimonialsPage = () => {
   return (
     <motion.div
-      className="bg-gradient-to-b from-secondary to-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden p-2 z-10 mb-[129px] mt-[60px] flex flex-col justify-center text-center mx-auto"
+      className="bg-gradient-to-b from-secondary to-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden p-2 z-10 mb-[180px] mt-[60px] flex flex-col justify-center text-center mx-auto"
     >
 
       <motion.div

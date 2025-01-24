@@ -25,6 +25,7 @@ dist-ssr
 *.sw?
 
 .env
+.env.local
 
 app/api/send-bulk-emails/recipients.js
 app/api/send-bulk-emails/zoom-message-template.html

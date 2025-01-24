@@ -5,11 +5,10 @@ import {
     Intro,
     EventOverview,
     Details,
-    // Location,
+    Location,
     Gallery,
     TheTeam
   } from "../../../components/PastEvents/MtOlympusMay2024";
-  // import { TheHikeComponent } from "../../../components/TheHike";
   import { useMediaQuery } from 'react-responsive';
   
   const LandingPage = () => {
@@ -21,8 +20,7 @@ import {
         <Intro isSmallScreen={isSmallScreen} />
         <EventOverview isSmallScreen={isSmallScreen} />
         <Details isSmallScreen={isSmallScreen} />
-        {/* <Location isSmallScreen={isSmallScreen} /> */}
-        {/* <TheHikeComponent isSmallScreen={isSmallScreen} /> */}
+        <Location isSmallScreen={isSmallScreen} />
         <Gallery isSmallScreen={isSmallScreen} />
         <TheTeam isSmallScreen={isSmallScreen} />
       </div>

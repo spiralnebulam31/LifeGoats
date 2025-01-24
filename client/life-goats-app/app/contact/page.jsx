@@ -64,7 +64,7 @@ const Contact = ({
 
   return (
         <section id="contact" className="overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background
-    relative bg-cover w-full h-full inset-0 mx-auto pb-14 sm:pb-20 md:pb-36 lg:pb-20 xl:pb-36 mb-[129px] mt-[60px]">
+    relative bg-cover w-full h-full inset-0 mx-auto pb-14 sm:pb-20 md:pb-36 lg:pb-20 xl:pb-36 mb-[180px] mt-[60px]">
         {/* Title */}
         <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden"
@@ -94,7 +94,7 @@ const Contact = ({
           variants={floatFromLeftContact} initial="initial" whileInView={isSmallScreen ? "initial" : "animate"} ref={leftSideRef}
           >
             <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-1 lg:pt-10 mb-5 leading-[30px]">
-              <p>For any questions or suggestions, feel free to reach out to Maria:</p>
+              <p>For any questions or suggestions, feel free to reach out to us:</p>
             </div>
 
             {/* Contact Info Container */}
@@ -103,11 +103,11 @@ const Contact = ({
                 {/* Contact Links */}
                 <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
                   <ContactLink
-                    href="mailto:maria.telikiozoglou@gmail.com"
+                    href="mailto:info@lifegoats.com"
                     onMouseEnter={handleEmailMouseEnter}
                     onMouseLeave={handleEmailMouseLeave}
                     icon={emailIsHovered ? emailHover : email}
-                    text="maria.telikiozoglou@gmail.com"
+                    text="info@lifegoats.com"
                   />
                   <ContactLink
                     href="tel:+306980489843"
@@ -116,7 +116,7 @@ const Contact = ({
                     onMouseEnter={handlePhoneMouseEnter}
                     onMouseLeave={handlePhoneMouseLeave}
                     icon={phoneIsHovered ? phoneHover : phone}
-                    text="+306980489843 (WhatsApp)"
+                    text="+306980489843 (Maria WhatsApp)"
                   />
                 </div>
                 {/* End of Contact Links */}
@@ -124,27 +124,6 @@ const Contact = ({
               </div>
             {/* End of Contact Info Container */}
 
-            <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-10 lg:pt-14 mb-5 leading-[30px]">
-              <p>For any tech inquires regarding the website, please contact Anastasia:</p>
-            </div>
-
-            {/* Contact Info Container 2 */}
-            <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] md:w-[60%] mx-auto lg:mx-16">
-
-                {/* Contact Links 2 */}
-                <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
-                  <ContactLink
-                    href="mailto:anastasiaadamoudi@gmail.com"
-                    onMouseEnter={handleEmail2MouseEnter}
-                    onMouseLeave={handleEmail2MouseLeave}
-                    icon={email2IsHovered ? email2Hover : email2}
-                    text="anastasiaadamoudi@gmail.com"
-                  />
-                </div>
-                {/* End of Contact Links 2 */}
-
-              </div>
-            {/* End of Contact Info Container 2 */}
           </motion.div>
           {/* End of Contact Information */}
 

@@ -14,6 +14,9 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [mobile, setMobile] = useState(false);
   const [targetSection, setTargetSection] = useState(null);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const router = useRouter();
   const pathname = usePathname();
 
@@ -35,8 +38,24 @@ const Navbar = () => {
     }
   }, [targetSection, pathname]);
 
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    setShowNavbar(currentScrollY <= lastScrollY || currentScrollY < 500); // Show navbar when scrolling up or near the top
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <nav className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px]">
+    <motion.nav
+      initial={{ y: 0 }}
+      animate={{ y: showNavbar ? 0 : "-100%" }}
+      transition={{ duration: 0.3 }}
+      className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px]"
+    >
       <div className="flex w-full mx-auto justify-between gap-20">
         <div className="flex justify-start">
           <Link 
@@ -139,8 +158,8 @@ const Navbar = () => {
             </AnimatePresence>
           </motion.div>
         </div>
-      </div>
-    </nav>
+        </div>
+    </motion.nav>
   );
 };
 
