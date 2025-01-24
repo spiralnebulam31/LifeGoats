@@ -37,9 +37,9 @@ const LocationModal = ({ isOpen, onClose }) => {
       aria-labelledby="location-modal"
     >
       <div className="flex flex-col items-center justify-center mx-auto p-4">
-        <h2 className="text-earth text-2xl font-bold mb-4 font-subtitle">
+        <h1 className="text-earth text-2xl font-bold mb-4 font-subtitle">
           Location
-        </h2>
+        </h1>
         <MapDisplay
           locationData={locationData}
           zoom={6}

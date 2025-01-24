@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../motion/motion";
@@ -9,7 +9,7 @@ import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function SubscriptionsPage() {
+function SubscriptionsPage() {
   const searchParams = useSearchParams();
   const action = searchParams.get("action"); // Get the query parameter (subscribe or unsubscribe)
 
@@ -170,12 +170,12 @@ export default function SubscriptionsPage() {
                       required
                       className="mr-2"
                     />
+                    <span className="text-left font-bold">
                     By submitting this form, I consent to the Life Goats team storing my personal data for the purposes of sending me a newsletter and keeping me updated. More information about how we protect your data can be found in our{" "}
-                    <Link href="/privacy-policy">
-                      <span className="font-links underline text-secondary hover:text-tertiary">
-                        Privacy Policy
-                      </span>
+                    <Link href="/privacy-policy" className="font-links underline text-secondary hover:text-tertiary">
+                        Privacy Policy                      
                     </Link>.
+                    </span>
                   </label>
                 </div>
               </>
@@ -227,5 +227,13 @@ export default function SubscriptionsPage() {
         )}
       </motion.div>
     </motion.div>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SubscriptionsPage />
+    </Suspense>
   );
 }
