@@ -49,8 +49,8 @@ const LocationModal = ({ isOpen, onClose }) => {
           widthXl="400px"
           height="200px"
           heightMd="250px"
-          heightLg="150px"
-          heightXl="150px"
+          heightLg="180px"
+          heightXl="180px"
         />
         <p className="font-links font-bold mt-5">
           <Link

@@ -16,6 +16,7 @@ const nextConfig = {
   images: {
     domains: ['i.ibb.co'],
   },
+  transpilePackages: ['react-leaflet', 'leaflet'],
 };
 
 export default nextConfig;
