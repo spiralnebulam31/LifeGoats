@@ -172,7 +172,7 @@ function SubscriptionsPage() {
                     />
                     <span className="text-left font-bold">
                     By submitting this form, I consent to the Life Goats team storing my personal data for the purposes of sending me a newsletter and keeping me updated. More information about how we protect your data can be found in our{" "}
-                    <Link href="/privacy-policy" className="font-links underline text-secondary hover:text-tertiary">
+                    <Link href="/privacy-policy" className="font-links underline text-secondary hover:text-tertiary" target="_blank" rel="noopener noreferrer">
                         Privacy Policy                      
                     </Link>.
                     </span>
