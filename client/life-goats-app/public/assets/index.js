@@ -8,13 +8,14 @@ import lifeGoatsLogo from './navbar/life-goats-logo.svg';
 import menuMountain from './navbar/menu-mountain.svg';
 import menuClose from './navbar/menu-close.svg';
 
-import heroBackground2 from './hero/hero-bg-2.webp';
-import heroBackground2a from './hero/hero-bg-2a.jpg';
+import heroBackgroundMay24 from './hero/hero-bg-2.webp';
+import heroBackgroundOct24 from './hero/hero-bg-2a.jpg';
 import goatPrints from './hero/goat-prints.svg';
 import goatPrintsLight from './hero/goat-prints-light.svg';
 import calendar from './hero/calendar.svg';
 
-import aboutPhoto from './about/photo1.svg';
+import aboutPhotoMay24 from './about/about-photo-may24.svg';
+import aboutPhotoOct24 from './about/about-photo-oct24.webp';
 
 import goat from './overview/goat.webp';
 import nature from './overview/nature.webp';
@@ -26,8 +27,10 @@ import mountOlympus from './location/mount-olympus.webp';
 import cloud1 from './overview/cloud1.svg';
 import cloud2 from './overview/cloud2.svg';
 
-import mountainStefani from './location/mountain-stefani.webp';
-import mountainEnipeas from './location/mountain-enipeas.webp';
+import mountainStefani from './location/may24/mountain-stefani.webp';
+import mountainEnipeas from './location/may24/mountain-enipeas.webp';
+import mountainLemos from './location/oct24/mountain-lemos.jpg';
+import mountainView from './location/oct24/mountain-view.jpg';
 import mapPin from './location/map-pin.svg';
 import pinShadow from './location/pin-shadow.svg';
 
@@ -69,12 +72,13 @@ export {
     lifeGoatsLogo,
     menuMountain,
     menuClose,
-    heroBackground2,
-    heroBackground2a,
+    heroBackgroundMay24,
+    heroBackgroundOct24,
     goatPrints,
     goatPrintsLight,
     calendar,
-    aboutPhoto,
+    aboutPhotoMay24,
+    aboutPhotoOct24,
     goat,
     nature,
     peace,
@@ -87,6 +91,8 @@ export {
     cloud2,
     mountainStefani,
     mountainEnipeas,
+    mountainLemos,
+    mountainView,
     mapPin,
     pinShadow,
     lifeGoatsWalkingMountain,

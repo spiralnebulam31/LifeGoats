@@ -1,10 +1,9 @@
 import DetailCard from './DetailCard.jsx';
 import { motion } from 'framer-motion';
-import { details } from '../../../../data/details.js';
 import { useMediaQuery } from "react-responsive";
 import { fadeIn } from '../../../../motion/motion.js';
 
-const DetailsCardLarge = () => {
+const DetailsCardLarge = ( { details } ) => {
 
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 

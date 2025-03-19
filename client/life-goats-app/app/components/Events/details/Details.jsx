@@ -15,7 +15,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
-const Details = ( { title, mainTitle, images } ) => {
+const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
@@ -31,18 +31,28 @@ const Details = ( { title, mainTitle, images } ) => {
   const sixInView = useInView(ref6, { threshold: 0.5 });
 
   return (
-    <section className="bg-background relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 overflow-hidden pt-2 pb-12 z-10">
+    <section
+      className={`${
+        bgColor === "gradient"
+        ? "bg-gradient-to-b from-blue-400 via-blue-100 to-background"
+        : "bg-background"
+        } relative bg-cover w-full h-full top-0 left-0 right-0 bottom-0 overflow-hidden pt-2 pb-12 z-10`}
+    >
       <motion.div
         className="text-center w-[80%] lg:w-[90%] mx-auto
         pt-8 mb-1 z-10 overflow-hidden"
       >
         <motion.p
-          className="md:text-[18px] text-[14px] text-secondary font-subtitle
+           className={`${
+          titleColor === "white"
+          ? "text-background"
+          : "text-secondary"
+          } md:text-[18px] text-[14px] font-subtitle
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true }}
+          viewport={{ once: true }}`}
         >
           {title}
         </motion.p>
@@ -113,7 +123,7 @@ const Details = ( { title, mainTitle, images } ) => {
           />
         </motion.div>
         <motion.div className="order-3 lg:order-5 row-span-4 col-span-6 lg:row-span-1 lg:col-span-2">
-          <DetailsCardLarge />
+          <DetailsCardLarge details={details} />
         </motion.div>
         <motion.div className="order-6 row-span-1 col-span-3 lg:row-span-1 lg:col-span-1">
           <Image
