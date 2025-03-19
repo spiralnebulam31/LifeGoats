@@ -7,13 +7,12 @@ import { motion } from "framer-motion";
 import {
     floatFromDownPreTitle,
     floatFromDownMainTitle,
-  } from "../../../../../motion/home-sections";
-import { mtOlympusMay2024Images } from '../../../../../data/mt-olympus-may-2024';
+  } from "../../../../motion/home-sections";
 import "./Gallery.css";
 import Image from "next/image";
 
-const Gallery = () => {
-    const [images] = useState(mtOlympusMay2024Images.map(img => ({
+const Gallery = ( { title, mainTitle, imagesArray } ) => {
+    const [images] = useState(imagesArray.map(img => ({
         itemImageSrc: img.src,
         thumbnailImageSrc: img.thumbnail,
         alt: img.alt,
@@ -100,7 +99,7 @@ const Gallery = () => {
                     animate="animate"
                     viewport={{ once: true }}
                 >
-                    Our Memories
+                    {title}
                 </motion.p>
                 <motion.h2
                     className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-0"
@@ -110,7 +109,7 @@ const Gallery = () => {
                     animate="animate"
                     viewport={{ once: true }}
                 >
-                    Gallery
+                 {mainTitle}   
                 </motion.h2>
             </motion.div>
 

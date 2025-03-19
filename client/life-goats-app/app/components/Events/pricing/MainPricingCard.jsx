@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { locationIcon, priceIcon2 } from "@/public/assets";
-import { fadeIn } from "../../../../../motion/motion";
+import { fadeIn } from "../../../../motion/motion";
 import PropTypes from 'prop-types';
 
 const MainPricingCard = ({

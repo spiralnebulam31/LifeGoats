@@ -13,15 +13,13 @@ import {
   floatFromRightLocation1Mobile,
   floatFromRightLocation2Mobile,
   floatFromDownLocationMobile,
-} from "../../../../../motion/home-sections";
-import { mountainStefani, mountainEnipeas } from "@/public/assets/index.js";
-import { locationData, locationDataInfo } from "../../../../../data/location";
-import MapDisplay from "../../../Location/MapDisplay";
+} from "../../../../motion/home-sections";
+import MapDisplay from "../../Location/MapDisplay";
 import PropTypes from "prop-types";
 import Image from "next/image";
 import Link from "next/link";
 
-const Location = ({ isSmallScreen }) => {
+const Location = ({ isSmallScreen, title, mainTitle, locationData, locationDataInfo, image1, image2, imageAlt1, imageAlt2, googleMapsLink }) => {
   const mapDisplayRef = useRef();
   const locationInfoRef = useRef();
   const mountainStefaniRef = useRef();
@@ -49,7 +47,7 @@ const Location = ({ isSmallScreen }) => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          discover
+          {title}
         </motion.p>
         <motion.h2
           className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] pb-1 mt-0"
@@ -59,7 +57,7 @@ const Location = ({ isSmallScreen }) => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          The Location
+          {mainTitle}
         </motion.h2>
       </motion.div>
 
@@ -108,7 +106,7 @@ const Location = ({ isSmallScreen }) => {
               {data.googleMapsLink && (
                 <p className="font-links font-bold">
                   <Link
-                    href="https://maps.app.goo.gl/RMdWS12Tge9Jnxot5"
+                    href={googleMapsLink}
                     alt="Google Maps link"
                     target="_blank"
                     rel="noreferrer"
@@ -136,8 +134,8 @@ const Location = ({ isSmallScreen }) => {
             viewport={isSmallScreen ? { once: true } : { once: false }}
           >
             <Image
-              src={mountainStefani}
-              alt="Stefani on Mount Olympus"
+              src={image1}
+              alt={imageAlt1}
               className="rounded-2xl drop-shadow-xl"
               layout="responsive"
               width={500}
@@ -158,8 +156,8 @@ const Location = ({ isSmallScreen }) => {
             viewport={isSmallScreen ? { once: true } : { once: false }}
           >
             <Image
-              src={mountainEnipeas}
-              alt="Enipeas on Mount Olympus"
+              src={image2}
+              alt={imageAlt2}
               className="rounded-2xl drop-shadow-xl"
               layout="responsive"
               width={500}

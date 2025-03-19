@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
-} from "../../../../../motion/home-sections";
-import { overviewData } from "../../../../../data/overview";
+} from "../../../../motion/home-sections";
 import OverviewCard from "./OverviewCard";
 
-const EventOverview = () => {
+const EventOverview = ( { title, mainTitle, overviewData } ) => {
   return (
     <section
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
@@ -26,7 +25,7 @@ const EventOverview = () => {
           animate="animate"
           viewport={{ once: true }}
         >
-          A retreat from us, for us.
+          {title}
         </motion.p>
         <motion.h2
           className="text-earth font-bold font-title uppercase md:text-[55px]
@@ -37,7 +36,7 @@ const EventOverview = () => {
           animate="animate"
           viewport={{ once: true }}
         >
-          What to expect
+          {mainTitle}
         </motion.h2>
       </motion.div>
 

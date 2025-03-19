@@ -36,3 +36,30 @@ export const details = [
       initialNumber: 0,
     },
   ];
+
+  export const detailsImagesMay24 = [
+    {
+      image: "/assets/details/may2024/photo-1.png",
+      alt: "Maria and Natasa in a stream on the mountain",
+    },
+    {
+      image: "/assets/details/may2024/photo-2.svg",
+      alt: "donkeys near the top of the mountain",
+    },
+    {
+      image: "/assets/details/may2024/photo-3.svg",
+      alt: "king of the mountain",
+    },
+    {
+      image: "/assets/details/may2024/photo-4.png",
+      alt: "trees on the mountain",
+    },
+    {
+      image: "/assets/details/may2024/photo-5.svg",
+      alt: "Elizabeth on the mountain",
+    },
+    {
+      image: "/assets/details/may2024/photo-6.svg",
+      alt: "Ruby on the mountain",
+    },
+  ];

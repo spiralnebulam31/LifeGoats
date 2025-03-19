@@ -6,9 +6,9 @@ import {
   floatFromDownMainTitle,
   floatFromLeftContact,
   floatFromRightContact,
-} from "../../../../../motion/home-sections";
-import { fadeIn } from "../../../../../motion/motion";
-import { mtOlympusMay2024TeamData } from "../../../../../data/team";
+} from "../../../../motion/home-sections";
+import { fadeIn } from "../../../../motion/motion";
+import { mtOlympusMay2024TeamData } from "../../../../data/team";
 import { theTeam } from "@/public/assets/the-team";
 import TeamBubble from "./TeamBubble";
 import Image from "next/image";

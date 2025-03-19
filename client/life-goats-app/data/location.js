@@ -2,7 +2,7 @@ import {
   mountOlympus,
 } from "@/public/assets/index.js";
 
-export const locationData = [
+export const locationDataMay24 = [
     {
       id: 0,
       name: "Mount Olympus",
@@ -42,7 +42,7 @@ export const locationData = [
     }
   ];
   
-  export const locationDataInfo = [
+  export const locationDataInfoMay24 = [
     {
       paragraph:
         "Located in the northern part of mainland Greece, Mount Olympus is the mythical residence of the Greek Gods and currently a nature reserve and treasured hiking destination. Thanks to its high altitude, you can experience a variety of landscapes, from lush green forests and clear water streams to rocky terrains that resemble alpine scenery.",

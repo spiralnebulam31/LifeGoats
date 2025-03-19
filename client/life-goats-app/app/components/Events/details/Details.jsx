@@ -2,14 +2,6 @@
 
 import DetailsCardLarge from "./DetailsCardLarge";
 import {
-  photo1,
-  photo2,
-  photo3,
-  photo4,
-  photo5,
-  photo6,
-} from "@/public/assets/index.js";
-import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
   floatFromLeftDetails1,
@@ -18,12 +10,12 @@ import {
   floatFromRightDetails2,
   floatFromDownDetails,
   floatFromUpDetails,
-} from "../../../../../motion/home-sections";
+} from "../../../../motion/home-sections";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
-const Details = () => {
+const Details = ( { title, mainTitle, images } ) => {
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
@@ -52,7 +44,7 @@ const Details = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          The retreat in brief
+          {title}
         </motion.p>
         <motion.h2
           className="text-earth font-bold font-title uppercase md:text-[55px]
@@ -63,15 +55,15 @@ const Details = () => {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          Details
+          {mainTitle}
         </motion.h2>
       </motion.div>
 
       <motion.div className="grid grid-cols-6 lg:grid-cols-4 gap-3 w-full h-full p-4 relative">
         <motion.div className="order-4 lg:order-1 row-span-4 col-span-3 lg:row-span-3 lg:col-span-1">
           <Image
-            src={photo1}
-            alt="Maria and Natasa in a stream on the mountain"
+            src={images[0].image}
+            alt={images[0].alt}
             className="rounded-2xl"
             variants={floatFromDownDetails}
             initial="initial"
@@ -83,8 +75,8 @@ const Details = () => {
         </motion.div>
         <motion.div className="order-1 lg:order-2 row-span-1 col-span-3 lg:row-span-1 lg:col-span-1">
           <Image
-            src={photo2}
-            alt="donkeys near the top of the mountain"
+            src={images[1].image}
+            alt={images[1].alt}
             className="rounded-2xl"
             variants={floatFromLeftDetails2}
             initial="initial"
@@ -96,8 +88,8 @@ const Details = () => {
         </motion.div>
         <motion.div className="order-2 lg:order-3 row-span-1 col-span-3 lg:row-span-1 lg:col-span-1">
           <Image
-            src={photo3}
-            alt="king of the mountain"
+            src={images[2].image}
+            alt={images[2].alt}
             className="rounded-2xl"
             variants={floatFromLeftDetails1}
             initial="initial"
@@ -109,8 +101,8 @@ const Details = () => {
         </motion.div>
         <motion.div className="order-5 lg:order-4 row-span-4 col-span-3 lg:row-span-3 lg:col-span-1">
           <Image
-            src={photo4}
-            alt="trees on the mountain"
+            src={images[3].image}
+            alt={images[3].alt}
             className="rounded-2xl"
             variants={floatFromUpDetails}
             initial="initial"
@@ -125,8 +117,8 @@ const Details = () => {
         </motion.div>
         <motion.div className="order-6 row-span-1 col-span-3 lg:row-span-1 lg:col-span-1">
           <Image
-            src={photo5}
-            alt="Elizabeth on the mountain"
+            src={images[4].image}
+            alt={images[4].alt}
             className="rounded-2xl"
             variants={floatFromRightDetails2}
             initial="initial"
@@ -138,8 +130,8 @@ const Details = () => {
         </motion.div>
         <motion.div className="order-7 row-span-1 col-span-3 lg:row-span-1 lg:col-span-1">
           <Image
-            src={photo6}
-            alt="Ruby on the mountain"
+            src={images[5].image}
+            alt={images[5].alt}
             className="rounded-2xl"
             variants={floatFromRightDetails1}
             initial="initial"

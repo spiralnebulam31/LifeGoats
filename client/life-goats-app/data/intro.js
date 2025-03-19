@@ -1,4 +1,4 @@
-export const introText = [
+export const introTextMay24 = [
     {
       paragraph:
         "As professionals in people centered services, we are always learning & evolving.",

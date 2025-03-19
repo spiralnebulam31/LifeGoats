@@ -5,7 +5,7 @@ import {
   floatFromDownMainTitle,
 } from "../../../motion/home-sections";
 import { pastEventsData } from "../../../data/past-events";
-import EventCard from "../../components/PastEvents/EventCard";
+import EventCard from "../../components/Events/EventCard";
 
 const PastEvents = () => {
 
