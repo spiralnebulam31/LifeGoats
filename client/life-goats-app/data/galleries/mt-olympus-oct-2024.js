@@ -250,5 +250,26 @@ export const mtOlympusOct2024Images = [
         thumbnail: "/assets/photo-galleries/oct24/olympus24236.jpeg",
         date: 'October 2024',
         location: 'Life Goats retreat - Mount Olympus & Litochoro',
+    },
+    { 
+        src: "/assets/photo-galleries/oct24/olympus24237.jpg",
+        alt: 'Mt Olympus October 2024 - Image 37', 
+        thumbnail: "/assets/photo-galleries/oct24/olympus24237.jpg",
+        date: 'October 2024',
+        location: 'Life Goats retreat - Mount Olympus & Litochoro',
+    },
+    { 
+        src: "/assets/photo-galleries/oct24/olympus24238.jpg",
+        alt: 'Mt Olympus October 2024 - Image 38', 
+        thumbnail: "/assets/photo-galleries/oct24/olympus24238.jpg",
+        date: 'October 2024',
+        location: 'Life Goats retreat - Mount Olympus & Litochoro',
+    },
+    { 
+        src: "/assets/photo-galleries/oct24/olympus24239.jpg",
+        alt: 'Mt Olympus October 2024 - Image 39', 
+        thumbnail: "/assets/photo-galleries/oct24/olympus24239.jpg",
+        date: 'October 2024',
+        location: 'Life Goats retreat - Mount Olympus & Litochoro',
     }
 ];

@@ -34,6 +34,9 @@ import olympus24233 from './olympus24233.jpeg';
 import olympus24234 from './olympus24234.jpeg';
 import olympus24235 from './olympus24235.jpeg';
 import olympus24236 from './olympus24236.jpeg';
+import olympus24237 from './olympus24237.jpg';
+import olympus24238 from './olympus24238.jpg';
+import olympus24239 from './olympus24239.jpg';
 
 export {
     olympus24201,
@@ -71,5 +74,8 @@ export {
     olympus24233,
     olympus24234,
     olympus24235,
-    olympus24236
+    olympus24236,
+    olympus24237,
+    olympus24238,
+    olympus24239
 };

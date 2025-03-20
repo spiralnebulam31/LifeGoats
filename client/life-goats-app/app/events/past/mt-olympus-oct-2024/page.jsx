@@ -66,9 +66,9 @@ import {
           mainTitle="Gallery"
           imagesArray={mtOlympusOct2024Images}
         />
-        {/* <TheTeamOct2024
+        <TheTeamOct2024
           isSmallScreen={isSmallScreen} 
-        /> */}
+        />
       </div>
     );
   };

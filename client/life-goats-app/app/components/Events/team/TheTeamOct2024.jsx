@@ -8,7 +8,7 @@ import {
   floatFromRightContact,
 } from "../../../../motion/home-sections";
 import { fadeIn } from "../../../../motion/motion";
-// import { mtOlympusOct2024TeamData } from "../../../../data/team";
+import { mtOlympusOct2024TeamData } from "../../../../data/team";
 import { theTeam } from "@/public/assets/the-team";
 import TeamBubble from "./TeamBubble";
 import Image from "next/image";
@@ -49,8 +49,8 @@ const TheTeamOct2024 = () => {
       </motion.div>
 
       <motion.div className="flex flex-row justify-evenly items-center mx-auto">
-        <motion.div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-1 md:gap-4 mb-1 md:mb-3">
-          {mtOlympusMay2024TeamData.slice(0, 6).map((member, index) => (
+        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-1 md:gap-4 mb-1 md:mb-3">
+          {mtOlympusOct2024TeamData.slice(0, 3).map((member, index) => (
             <motion.div
               key={index}
               className="relative z-10"
@@ -75,19 +75,6 @@ const TheTeamOct2024 = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-center items-center mx-auto py-5">
-        <MotionImage
-          src={theTeam}
-          alt="The Team"
-          className="w-[90%] md:w-[70%] lg:w-[50%] z-0 rounded-2xl shadow-lg"
-          variants={fadeIn}
-          initial="initial"
-          whileInView="animate"
-          width={1500}
-          height={800}
-        />
-      </motion.div>
-
       <motion.div
         className="flex flex-row justify-center text-center mx-auto
           text-primary font-body text-[16px] py-5 md:mt-2 w-[90%] md:w-[70%] lg:w-[50%]"
@@ -96,62 +83,15 @@ const TheTeamOct2024 = () => {
         whileInView="animate"
       >
         <motion.p className="my-auto mr-4">
-          Special thanks to our photographer{" "}
+          And special thanks to our photographer{" "}
           <span className="text-tertiary font-subtitle text-center text-[18px] font-bold">
-            {mtOlympusMay2024TeamData[6].title}{" "}
+            {mtOlympusOct2024TeamData[3].title}{" "}
           </span>
         </motion.p>
 
         <Image
-          src={mtOlympusMay2024TeamData[6].image}
-          alt={mtOlympusMay2024TeamData[6].alt}
-          className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
-          width={300}
-          height={300}
-        />
-      </motion.div>
-
-      <motion.div
-        className="flex flex-row justify-center text-center mx-auto
-          text-primary font-body text-[16px] py-5 w-[90%] md:w-[70%] lg:w-[50%]"
-        variants={floatFromRightContact}
-        initial="initial"
-        whileInView="animate"
-      >
-        <Image
-          src={mtOlympusMay2024TeamData[7].image}
-          alt={mtOlympusMay2024TeamData[7].alt}
-          className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
-          width={300}
-          height={300}
-        />
-
-        <motion.p className="my-auto ml-4">
-          Special appearance by{" "}
-          <span className="text-tertiary font-subtitle text-center text-[18px] font-bold">
-            {mtOlympusMay2024TeamData[7].title}
-          </span>
-        </motion.p>
-      </motion.div>
-
-      <motion.div
-        className="flex flex-row justify-center text-center mx-auto
-          text-primary font-body text-[16px] py-5 w-[90%] md:w-[650%] lg:w-[50%]"
-        variants={floatFromLeftContact}
-        initial="initial"
-        whileInView="animate"
-      >
-        <motion.p className="my-auto mr-4">
-          And the{" "}
-          <span className="text-tertiary font-subtitle text-center text-[18px] font-bold">
-            {mtOlympusMay2024TeamData[8].title}
-          </span>{" "}
-          as {mtOlympusMay2024TeamData[8].responsibilty}
-        </motion.p>
-
-        <Image
-          src={mtOlympusMay2024TeamData[8].image}
-          alt={mtOlympusMay2024TeamData[8].alt}
+          src={mtOlympusOct2024TeamData[3].image}
+          alt={mtOlympusOct2024TeamData[3].alt}
           className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
           width={300}
           height={300}
