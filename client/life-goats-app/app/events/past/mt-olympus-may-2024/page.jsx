@@ -52,7 +52,7 @@ import {
           isSmallScreen={isSmallScreen} 
           title="The retreat in brief"
           mainTitle="Details"
-          details={detailsMay2024}
+          details={detailsMay24}
           images={detailsImagesMay24}
           bgColor="plain"
           titleColor="blue"
