@@ -83,3 +83,35 @@ export const mtOlympusMay2024TeamData = [
       responsibilty: "Guest Stars",
     },
   ];
+
+
+  export const mtOlympusOct2024TeamData = [
+    {
+      index: 1,
+      alt: "Hrva",
+      image: "/assets/the-team/events/mt-olympus-oct-2024/Hrva.svg",
+      title: "Hrva",
+      responsibilty: "Workshop Leader",
+    },
+    {
+      index: 2,
+      alt: "Savvas",
+      image: "/assets/the-team/events/mt-olympus-oct-2024/Savvas.svg",
+      title: "Savvas",
+      responsibilty: "Mountain Guide & Protector",
+    },
+    {
+      index: 3,
+      alt: "Maria",
+      image: "/assets/the-team/events/mt-olympus-oct-2024/Maria.svg",
+      title: "Maria",
+      responsibilty: "Host & Organiser",
+    },
+    {
+      index: 4,
+      alt: "Yan",
+      image: "/assets/the-team/events/mt-olympus-oct-2024/Yan.svg",
+      title: "Yan",
+      responsibilty: "Photographer",
+    }
+  ];
