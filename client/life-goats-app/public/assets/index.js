@@ -8,8 +8,9 @@ import lifeGoatsLogo from './navbar/life-goats-logo.svg';
 import menuMountain from './navbar/menu-mountain.svg';
 import menuClose from './navbar/menu-close.svg';
 
-import heroBackgroundMay24 from './hero/hero-bg-2.webp';
-import heroBackgroundOct24 from './hero/hero-bg-2a.jpg';
+import heroBackgroundMay24 from './hero/hero-bg-may24.webp';
+import heroBackgroundOct24 from './hero/hero-bg-oct24.jpg';
+import heroBackgroundJun25 from './hero/hero-bg-jun25.jpg';
 import goatPrints from './hero/goat-prints.svg';
 import goatPrintsLight from './hero/goat-prints-light.svg';
 import calendar from './hero/calendar.svg';
@@ -74,6 +75,7 @@ export {
     menuClose,
     heroBackgroundMay24,
     heroBackgroundOct24,
+    heroBackgroundJun25,
     goatPrints,
     goatPrintsLight,
     calendar,

@@ -15,7 +15,7 @@ import {
 } from "@/public/assets/index.js";
 import Image from "next/image";
 
-const Hero = ( { image, locationTitle, date, p1, p2 } ) => {
+const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
 
   return (
     <section className="bg-background sticky top-0 w-screen h-screen mx-auto overflow-hidden z-10">
@@ -71,6 +71,7 @@ const Hero = ( { image, locationTitle, date, p1, p2 } ) => {
         </motion.div>
 
         {/* Goat print slider */}
+        {slider && (
         <motion.div
           variants={heroGoatPrintsVariant}
           initial="initial"
@@ -93,7 +94,7 @@ const Hero = ( { image, locationTitle, date, p1, p2 } ) => {
               </motion.div>
             </motion.div>
           </a>
-        </motion.div>
+        </motion.div>)}
       </div>
     </section>
   );
