@@ -34,6 +34,7 @@ import {
           p1="A collaborative retreat for coaches, therapists, carers, educators and other
               people centered professionals."
           p2="A retreat from us, for us."
+          slider={true}
         />
         <Intro
           isSmallScreen={isSmallScreen} 

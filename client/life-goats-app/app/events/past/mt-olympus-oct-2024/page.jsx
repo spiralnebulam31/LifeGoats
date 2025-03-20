@@ -31,6 +31,7 @@ import {
           date="Wed 2nd - Sat 5th October 2024"
           p1="A happy surprise!"
           p2="An unexpected opportunity to come together and spend some more time at the Plateau of the Muses once again."
+          slider={true}
         />
         <Intro
           isSmallScreen={isSmallScreen} 
