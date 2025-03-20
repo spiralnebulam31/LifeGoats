@@ -10,7 +10,7 @@ export const upcomingEventsData = [
     {
       index: 1,
       alt: "October 2025 - Location to be decided",
-      src: "/assets/events/question-mark.svg",
+      src: "/assets/events/to-be-decided-oct-2025.jpg",
       link: "/events/upcoming/to-be-decided-oct-2025",
       title: "October 2025 - Location to be decided",
       text: ""

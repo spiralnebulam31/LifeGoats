@@ -9,7 +9,7 @@ import {
     // TheTeamOct2024
   } from "../../../components/Events";
   import {
-    // heroBackgroundJun25,
+    heroBackgroundOct25,
     // aboutPhotoOct24
   } from "@/public/assets/index.js";
 //   import { introTextOct24 } from '../../../../data/intro';
@@ -26,7 +26,7 @@ import {
       <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
         <Hero 
           isSmallScreen={isSmallScreen} 
-          image={null} 
+          image={heroBackgroundOct25}
           locationTitle="Location to be decided" 
           date="Sat 25th - Tue 28th October 2025"
           p1="More info coming soon..."

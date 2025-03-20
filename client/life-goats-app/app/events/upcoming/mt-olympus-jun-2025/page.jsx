@@ -29,7 +29,7 @@ import {
           image={heroBackgroundJun25} 
           locationTitle="Mount Olympus" 
           date="Fri 6th - Mon 9th June 2025"
-          p1="Join us once again at the Land at the foot of Mount Olympus!"
+          p1="Join us once again at the Land on the foot of Mount Olympus!"
           p2="More details about this retreat coming soon..."
           slider={false}
         />
