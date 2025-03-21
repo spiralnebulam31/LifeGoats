@@ -97,7 +97,7 @@ function SubscriptionsPage() {
         </div>
 
         {/* Form or Message */}
-        {!message ? (
+        {/* {!message ? (
           <form
             onSubmit={handleSubmit}
             className="w-full sm:w-[90%] md:w-[70%] lg:w-[50%]"
@@ -224,7 +224,15 @@ function SubscriptionsPage() {
               </>
             )}
           </div>
-        )}
+        )} */}
+
+        <div className="w-full sm:w-[90%] md:w-[70%] lg:w-[40%] text-center">
+          The subscription feature is currently unavailable. Our developer is working on getting the feature up again as soon as possible. We apologize for the inconvenience. In the meantime, you can still subscribe or unsubscribe by sending us a&nbsp; 
+          <Link href="/contact" className="font-links underline text-secondary hover:text-tertiary" target="_blank" rel="noopener noreferrer">
+          message
+          </Link>
+          .
+        </div>
       </motion.div>
     </motion.div>
   );
