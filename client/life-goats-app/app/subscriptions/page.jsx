@@ -10,59 +10,59 @@ import Image from "next/image";
 import Link from "next/link";
 
 function SubscriptionsPage() {
-  const searchParams = useSearchParams();
-  const action = searchParams.get("action"); // Get the query parameter (subscribe or unsubscribe)
+  // const searchParams = useSearchParams();
+  // const action = searchParams.get("action"); // Get the query parameter (subscribe or unsubscribe)
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    heardAboutUs: "",
-    privacyPolicyAgreed: false,
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   heardAboutUs: "",
+  //   privacyPolicyAgreed: false,
+  // });
 
-  const [message, setMessage] = useState(null);
+  // const [message, setMessage] = useState(null);
 
-  // Reset the form data when the action is subscribe or unsubscribe
-  useEffect(() => {
-    if (action === "subscribe") {
-      setFormData({
-        name: "",
-        email: "",
-        heardAboutUs: "",
-        privacyPolicyAgreed: false,
-      });
-    }
-    setMessage(null); // Reset message state when action changes
-  }, [action]);
+  // // Reset the form data when the action is subscribe or unsubscribe
+  // useEffect(() => {
+  //   if (action === "subscribe") {
+  //     setFormData({
+  //       name: "",
+  //       email: "",
+  //       heardAboutUs: "",
+  //       privacyPolicyAgreed: false,
+  //     });
+  //   }
+  //   setMessage(null); // Reset message state when action changes
+  // }, [action]);
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
+  // const handleInputChange = (e) => {
+  //   const { name, value, type, checked } = e.target;
+  //   setFormData((prev) => ({
+  //     ...prev,
+  //     [name]: type === "checkbox" ? checked : value,
+  //   }));
+  // };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    const url =
-      action === "unsubscribe" ? "/api/unsubscribe" : "/api/subscribe";
+  //   const url =
+  //     action === "unsubscribe" ? "/api/unsubscribe" : "/api/subscribe";
 
-    try {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  //   try {
+  //     const response = await fetch(url, {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(formData),
+  //     });
 
-      const data = await response.json();
-      setMessage(data.message);
-    } catch (error) {
-      console.error("Error:", error);
-      setMessage("Something went wrong. Please try again later.");
-    }
-  };
+  //     const data = await response.json();
+  //     setMessage(data.message);
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //     setMessage("Something went wrong. Please try again later.");
+  //   }
+  // };
 
   return (
     <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mt-[60px] mb-[180px] flex flex-col justify-center text-center mx-auto">
@@ -97,6 +97,7 @@ function SubscriptionsPage() {
         </div>
 
         {/* Form or Message */}
+        {/* Uncomment the bellow when it's working again */}
         {/* {!message ? (
           <form
             onSubmit={handleSubmit}
