@@ -9,6 +9,7 @@ import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../../data/nav
 import { lifeGoatsLogo, menuMountain, menuClose } from "@/public/assets";
 import MobileMenu from "./MobileMenu";
 import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown, HikeLinksDropdown } from "../LinksColumns";
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -128,6 +129,9 @@ const Navbar = () => {
             >
               Contact
             </Link>
+          </div>
+          <div className="hidden lg:flex flex-1 justify-end items-center">
+            <LanguageSwitcher />
           </div>
           <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
             <Image

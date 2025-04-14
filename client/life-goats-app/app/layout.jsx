@@ -1,6 +1,7 @@
 import { Navbar, Footer } from './components/index';
 // import PreLoaderWrapper from './components/Loaders/PreLoaderWrapper';
 import { StateProvider } from '../providers/StateProvider';
+import { LanguageProvider } from '../contexts/LanguageContext';
 import './globals.css';
 import { Catamaran, Cinzel, Open_Sans, Rubik } from 'next/font/google';
 import PropTypes from 'prop-types';
@@ -101,6 +102,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+      <LanguageProvider>
         <StateProvider>
           {/* <PreLoaderWrapper> */}
             <Navbar />
@@ -108,6 +110,7 @@ export default function RootLayout({ children }) {
             <Footer />
           {/* </PreLoaderWrapper> */}
         </StateProvider>
+      </LanguageProvider>
       </body>
     </html>
   );
