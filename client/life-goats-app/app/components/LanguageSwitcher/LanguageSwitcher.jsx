@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
   }, [loadNamespace]);
 
   return (
-    <div className="language-switcher inline-flex rounded-xl overflow-hidden border-primary border-2 ml-10 my-auto">
+    <div className="language-switcher inline-flex rounded-xl overflow-hidden border-primary border-2 mx-auto lg:ml-10 my-auto justify-center w-full">
       <button
         onClick={() => changeLanguage('en')}
         className={`

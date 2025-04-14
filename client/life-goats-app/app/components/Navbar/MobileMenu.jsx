@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../../motion/motion";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";  
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 import PropTypes from 'prop-types';
 
@@ -32,14 +33,14 @@ const MobileMenu = ({ active, setActive, setMobile, homeLinks, aboutLinks, event
 
   return (
     <motion.div
-      className="flex lg:hidden fixed right-0 top-0 bottom-0 w-[70%] h-screen mx-0 my-0 z-10 flex-col items-end gap-60 bg-background"
+      className="flex lg:hidden fixed right-0 top-0 bottom-0 w-[100%] h-screen mx-auto my-0 z-10 flex-col items-end gap-60 bg-background"
       variants={mobileNav}
       initial="initial"
       animate="animate"
       exit="initial"
     >
       <motion.div
-        className="list-none font-links font-bold flex flex-col justify-center text-center items-center gap-4 bg-background px-16 w-[90%] h-screen"
+        className="list-none font-links font-bold flex flex-col justify-center text-center items-center gap-4 bg-background px-16 w-[100%] h-screen"
         variants={linkReveal}
         initial="initial"
         animate="animate"
@@ -210,6 +211,16 @@ const MobileMenu = ({ active, setActive, setMobile, homeLinks, aboutLinks, event
           >
             Contact
           </Link>
+        </motion.div>
+
+        {/* Language Switcher */}
+        <motion.div
+          className="flex flex-col justify-center items-center gap-5 px-16 mx-auto"
+          variants={linkReveal}
+          initial="initial"
+          animate="animate"
+        >
+          <LanguageSwitcher />
         </motion.div>
       </motion.div>
     </motion.div>

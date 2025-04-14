@@ -13,9 +13,18 @@ export function LanguageProvider({ children }) {
   const [translations, setTranslations] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [loadedNamespaces, setLoadedNamespaces] = useState([]);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Set isMounted to true once the component mounts
+  useEffect(() => {
+    setIsMounted(true);
+    return () => setIsMounted(false);
+  }, []);
 
   // Define loadNamespace as a memoized function to prevent recreating it on each render
   const loadNamespace = useCallback(async (namespace) => {
+    if (!isMounted) return {}; // Don't try to load if not mounted
+    
     try {
       if (!AVAILABLE_NAMESPACES.includes(namespace)) {
         console.warn(`Namespace "${namespace}" is not in the allowed list. Please add it to AVAILABLE_NAMESPACES.`);
@@ -42,17 +51,21 @@ export function LanguageProvider({ children }) {
       console.error(`Failed to load translations for ${language}/${namespace}:`, error);
       return {};
     }
-  }, [language]);
+  }, [language, isMounted]);
 
-  // Initialize translations on first load (runs once)
+  // Initialize translations on first load (runs after mount)
   useEffect(() => {
+    if (!isMounted) return; // Skip if not mounted yet
+    
     const initialize = async () => {
       try {
-        // Check for saved language preference
-        const savedLanguage = localStorage.getItem('preferredLanguage');
-        if (savedLanguage) {
-          setLanguage(savedLanguage);
-          return; // Let the language change trigger the loading
+        // Check for saved language preference (only if client-side)
+        if (typeof window !== 'undefined') {
+          const savedLanguage = localStorage.getItem('preferredLanguage');
+          if (savedLanguage) {
+            setLanguage(savedLanguage);
+            return; // Let the language change trigger the loading
+          }
         }
         
         // Initial load of essential namespaces
@@ -61,22 +74,21 @@ export function LanguageProvider({ children }) {
           loadNamespace('navbar'),
           loadNamespace('footer')
         ]);
-        setIsLoading(false);
       } catch (err) {
         console.error("Failed to initialize translations:", err);
+      } finally {
         setIsLoading(false);
       }
     };
     
     initialize();
-    // Empty dependency array ensures this runs only once
-  }, []); 
+  }, [isMounted, loadNamespace]); 
 
   // Reload translations when language changes
   useEffect(() => {
+    if (!isMounted || loadedNamespaces.length === 0) return;
+    
     const reloadTranslations = async () => {
-      if (loadedNamespaces.length === 0) return;
-      
       try {
         setIsLoading(true);
         
@@ -92,15 +104,17 @@ export function LanguageProvider({ children }) {
     };
     
     reloadTranslations();
-  }, [language, loadNamespace, loadedNamespaces]);
+  }, [language, loadNamespace, loadedNamespaces, isMounted]);
 
   const changeLanguage = useCallback((lang) => {
-    if (lang !== language) {
-      setLanguage(lang);
-      // Save to localStorage for persistence
+    if (!isMounted || lang === language) return;
+    
+    setLanguage(lang);
+    // Save to localStorage for persistence (only if client-side)
+    if (typeof window !== 'undefined') {
       localStorage.setItem('preferredLanguage', lang);
     }
-  }, [language]);
+  }, [language, isMounted]);
 
   // Function to get a translation by namespace and key (async)
   const translate = useCallback(async (namespace, key) => {
@@ -117,11 +131,14 @@ export function LanguageProvider({ children }) {
   const t = useCallback((namespace, key) => {
     // If namespace isn't loaded yet, trigger loading but return key as fallback
     if (!translations[namespace] || !translations[namespace][language]) {
-      loadNamespace(namespace); // Non-awaited call to start loading
+      // Only try to load if mounted
+      if (isMounted) {
+        loadNamespace(namespace); // Non-awaited call to start loading
+      }
       return key;
     }
     return translations[namespace]?.[language]?.[key] || key;
-  }, [language, loadNamespace, translations]);
+  }, [language, loadNamespace, translations, isMounted]);
 
   return (
     <LanguageContext.Provider value={{ 
