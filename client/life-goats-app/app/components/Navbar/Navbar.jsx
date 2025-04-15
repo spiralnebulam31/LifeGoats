@@ -8,7 +8,7 @@ import Image from "next/image";
 import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../../data/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "@/public/assets";
 import MobileMenu from "./MobileMenu";
-import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown, HikeLinksDropdown } from "../LinksColumns";
+import { HomeLinksDropdown, GeneralLinksDropdown } from "../LinksColumns";
 import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 const Navbar = () => {
@@ -50,6 +50,9 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Common class for all dropdown links
+  const linkClassName = "text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7";
+
   return (
     <motion.nav
       initial={{ y: 0 }}
@@ -82,36 +85,40 @@ const Navbar = () => {
         <div className="flex items-center justify-end">
           <div className="hidden lg:flex flex-row items-center justify-end gap-10">
             <HomeLinksDropdown
+              title="Home"
               active={active}
               setActive={setActive}
               handleLinkClick={handleLinkClick}
-              homeLinks={homeLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              links={homeLinks}
+              className={linkClassName}
             />
-            <AboutLinksDropdown
+            <GeneralLinksDropdown
+              title="About"
               active={active}
               setActive={setActive}
               handleLinkClick={handleLinkClick}
-              aboutLinks={aboutLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              links={aboutLinks}
+              className={linkClassName}
             />
-            <EventsLinksDropdown
+            <GeneralLinksDropdown
+              title="Events"
               active={active}
               setActive={setActive}
               handleLinkClick={handleLinkClick}
-              eventsLinks={eventsLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              links={eventsLinks}
+              className={linkClassName}
             />
-            <HikeLinksDropdown
+            <GeneralLinksDropdown
+              title="Hike"
               active={active}
               setActive={setActive}
               handleLinkClick={handleLinkClick}
-              hikeLinks={hikeLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              links={hikeLinks}
+              className={linkClassName}
             />
             <Link 
               href="/testimonials"
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              className={linkClassName}
               onClick={() => {
                 setActive("Testimonials");
                 window.scrollTo(0, 0);
@@ -121,7 +128,7 @@ const Navbar = () => {
             </Link>
             <Link 
               href="/contact"
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              className={linkClassName}
               onClick={() => {
                 setActive("Contact");
                 window.scrollTo(0, 0);
@@ -162,7 +169,7 @@ const Navbar = () => {
             </AnimatePresence>
           </motion.div>
         </div>
-        </div>
+      </div>
     </motion.nav>
   );
 };

@@ -6,7 +6,7 @@ import { useState } from "react";
 import PropTypes from 'prop-types';
 import Image from "next/image";
 
-const HomeLinksDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => {
+const HomeLinksDropdown = ({ active, setActive, handleLinkClick, links }) => {
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -49,7 +49,7 @@ const HomeLinksDropdown = ({ active, setActive, handleLinkClick, homeLinks }) =>
           className="origin-top-right absolute right-0 mt-2 w-56 rounded-md drop-shadow-lg bg-background ring-1 ring-primary ring-opacity-10 focus:outline-none"
         >
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-            {homeLinks.map((link) => (
+            {links.map((link) => (
               <a
                 href={`/#${link.id}`}
                 key={link.id}
