@@ -2,7 +2,6 @@
 
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
-import "./Modals.css";
 import MapDisplay from "../Location/MapDisplay";
 import { footerLocation } from "../../../data/location";
 import Link from "next/link";
