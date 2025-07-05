@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { homeLinks, aboutLinks, eventsLinks, hikeLinks } from "../../../data/navLinks";
+import { aboutLinks, eventsLinks } from "../../../data/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "@/public/assets";
 import MobileMenu from "./MobileMenu";
-import { HomeLinksDropdown, AboutLinksDropdown, EventsLinksDropdown, HikeLinksDropdown } from "../LinksColumns";
+import { AboutLinksDropdown, EventsLinksDropdown } from "../LinksColumns";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -80,13 +80,6 @@ const Navbar = () => {
         </div>
         <div className="flex items-center justify-end">
           <div className="hidden lg:flex flex-row items-center justify-end gap-10">
-            <HomeLinksDropdown
-              active={active}
-              setActive={setActive}
-              handleLinkClick={handleLinkClick}
-              homeLinks={homeLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-            />
             <AboutLinksDropdown
               active={active}
               setActive={setActive}
@@ -99,13 +92,6 @@ const Navbar = () => {
               setActive={setActive}
               handleLinkClick={handleLinkClick}
               eventsLinks={eventsLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
-            />
-            <HikeLinksDropdown
-              active={active}
-              setActive={setActive}
-              handleLinkClick={handleLinkClick}
-              hikeLinks={hikeLinks}
               className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
             <Link 
@@ -148,10 +134,8 @@ const Navbar = () => {
                   setActive={setActive}
                   mobile={mobile}
                   setMobile={setMobile}
-                  homeLinks={homeLinks}
                   aboutLinks={aboutLinks}
                   eventsLinks={eventsLinks}
-                  hikeLinks={hikeLinks}
                   handleLinkClick={handleLinkClick}
                 />
               )}

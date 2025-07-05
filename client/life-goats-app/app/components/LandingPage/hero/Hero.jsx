@@ -33,7 +33,7 @@ const Hero = () => {
             className="flex justify-center items-center mx-auto pb-10 text-white font-body w-[90%] lg:w-[80%] xl:w-full max-w-md md:max-w-7xl font-bold lg:text-[30px] md:text-[24px] text-[20px] lg:leading-[60px] leading-[35px] my-auto z-40 text-center drop-shadow-md"
           >
             <p className="lg:text-[50px] sm:text-[40px] text-[26px] max-w-sm sm:max-w-5xl md:max-w-7xl drop-shadow-xl">
-            A community and event series for people centered professionals who value relationship building and spending quality time together in the great outdoors.
+            A community and event series for people who value relationship building and spending quality time together in the great outdoors.
             </p>
           </motion.div>
         
