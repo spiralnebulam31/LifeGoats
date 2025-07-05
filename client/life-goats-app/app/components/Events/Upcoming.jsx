@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../motion/motion";
 import {
-  floatFromDownMainTitle,
   floatFromLeftContact,
   floatFromRightContact,
 } from "../../../motion/home-sections";
@@ -11,10 +10,16 @@ import GoatPrintsWalking from "../../components/Loaders/GoatPrintsWalking";
 import { upcomingEvents } from "@/public/assets/index.js";
 import Link from "next/link";
 import Image from "next/image";
+import PropTypes from 'prop-types';
 
 const MotionImage = motion.create(Image);
 
 const Upcoming = () => {
+
+  Upcoming.propTypes = {
+    isSmallScreen: PropTypes.bool,
+  };
+
   return (
     <motion.div className="bg-background relative top-[50px] mb-10 z-20 w-[80%] lg:w-[70%] text-center mx-auto">
         <MotionImage

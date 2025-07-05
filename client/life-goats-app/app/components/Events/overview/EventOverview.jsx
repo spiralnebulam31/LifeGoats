@@ -6,8 +6,24 @@ import {
   floatFromDownMainTitle,
 } from "../../../../motion/home-sections";
 import OverviewCard from "./OverviewCard";
+import PropTypes from 'prop-types';
 
 const EventOverview = ( { title, mainTitle, overviewData } ) => {
+
+  EventOverview.propTypes = {
+    title: PropTypes.string.isRequired,   
+    mainTitle: PropTypes.string.isRequired,
+    overviewData: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,   
+        image: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  };
+
   return (
     <section
       className="bg-gradient-to-b from-blue-400 via-blue-100 to-background

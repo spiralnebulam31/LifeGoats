@@ -12,7 +12,7 @@ const Subscribe = () => {
         <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate">
           <p className="font-bold">This page has moved.</p>
           <br />
-          <p>If you're looking for the subscribe page, you can find it{" "}
+          <p>If you&apos;re looking for the subscribe page, you can find it{" "}
           <Link href="/subscriptions?action=subscribe" className="cursor-pointer underline text-secondary hover:text-tertiary">here</Link>.
           </p> 
           <br />

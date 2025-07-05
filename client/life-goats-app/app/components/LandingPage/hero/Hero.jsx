@@ -11,6 +11,7 @@ import {
   olympus2024BG3,
 } from "@/public/assets/index";
 import Image from 'next/image';
+import Link from "next/link";
 
 const Hero = () => {
 
@@ -43,7 +44,7 @@ const Hero = () => {
           animate="animate"
           className="absolute bottom-16 my-2 w-full flex justify-center items-center mx-auto z-40"
         >
-          <a href="/#intro">
+          <Link href="/#intro">
             <motion.div
               variants={heroGoatPrintsVariant}
               initial="initial"
@@ -61,7 +62,7 @@ const Hero = () => {
                 />
               </motion.div>
             </motion.div>
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

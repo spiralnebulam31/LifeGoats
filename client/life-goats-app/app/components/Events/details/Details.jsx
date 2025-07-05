@@ -2,7 +2,6 @@
 
 import DetailsCardLarge from "./DetailsCardLarge";
 import {
-  floatFromDownPreTitle,
   floatFromDownMainTitle,
   floatFromLeftDetails1,
   floatFromLeftDetails2,
@@ -14,8 +13,32 @@ import {
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import PropTypes from 'prop-types';
 
 const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) => {
+
+  Details.propTypes = {
+    title: PropTypes.string.isRequired,
+    mainTitle: PropTypes.string.isRequired,
+    details: PropTypes.arrayOf(
+      PropTypes.shape({     
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    images: PropTypes.arrayOf(
+      PropTypes.shape({
+        image: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+      })      
+    ).isRequired,
+    bgColor: PropTypes.string,
+    titleColor: PropTypes.string,
+  };
+
   const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();

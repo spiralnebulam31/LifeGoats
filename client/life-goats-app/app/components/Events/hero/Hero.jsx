@@ -14,8 +14,19 @@ import {
   calendar,
 } from "@/public/assets/index.js";
 import Image from "next/image";
+import PropTypes from 'prop-types';
+import Link from "next/link";
 
 const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
+
+  Hero.propTypes = {
+    image: PropTypes.string.isRequired,
+    locationTitle: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,      
+    p1: PropTypes.string.isRequired,
+    p2: PropTypes.string.isRequired,
+    slider: PropTypes.bool.isRequired,
+  };
 
   return (
     <section className="bg-background sticky top-0 w-screen h-screen mx-auto overflow-hidden z-10">
@@ -78,7 +89,7 @@ const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
           animate="animate"
           className="absolute bottom-5 md:bottom-70 w-full flex justify-center items-center mx-auto z-40"
         >
-          <a href="/#intro">
+          <Link href="/#intro">
             <motion.div
               variants={heroGoatPrintsVariant}
               className="w-[35px] h-[75px] rounded-3xl border-4 border-primary flex justify-start items-start z-40"
@@ -93,7 +104,7 @@ const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
                 />
               </motion.div>
             </motion.div>
-          </a>
+          </Link>
         </motion.div>)}
       </div>
     </section>

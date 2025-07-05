@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { floatFromLeftContact, floatFromRightContact } from "../../motion/home-sections";
 import { floatFromDownPreTitle, floatFromDownMainTitle } from "../../motion/home-sections";
 import emailjs from "@emailjs/browser";
-import { phone, phoneHover, email, emailHover, email2, email2Hover, transparentMountainBG2 } from "@/public/assets";
+import { phone, phoneHover, email, emailHover, transparentMountainBG2 } from "@/public/assets";
 import Image from "next/image";
 import dotenv from 'dotenv';
 import process from 'process';
@@ -20,9 +20,6 @@ const Contact = ({
   emailIsHovered,
   handleEmailMouseEnter,
   handleEmailMouseLeave,
-  email2IsHovered,
-  handleEmail2MouseEnter,
-  handleEmail2MouseLeave,
   isSmallScreen,
 }) => {
 
