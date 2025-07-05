@@ -15,4 +15,12 @@ export const pastEventsData = [
       title: "Mt. Olympus October 2024",
       text: ""
     },
+    {
+      index: 2,
+      alt: "Mt Olympus June 2025",
+      src: "/assets/events/mt-olympus-jun-2025.jpg",
+      link: "/events/past/mt-olympus-jun-2025",
+      title: "Mt. Olympus June 2025",
+      text: ""
+    },
   ];
