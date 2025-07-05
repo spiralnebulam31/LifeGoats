@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { mobileNav, linkReveal, listItem } from "../../../motion/motion";
-import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";  
+import Link from "next/link";  
 
 import PropTypes from 'prop-types';
 
