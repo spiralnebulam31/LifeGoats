@@ -5,15 +5,10 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
   floatFromLeftContact,
-  floatFromRightContact,
 } from "../../../../motion/home-sections";
-import { fadeIn } from "../../../../motion/motion";
 import { mtOlympusOct2024TeamData } from "../../../../data/team";
-import { theTeam } from "@/public/assets/the-team";
 import TeamBubble from "./TeamBubble";
 import Image from "next/image";
-
-const MotionImage = motion.create(Image);
 
 const TheTeamOct2024 = () => {
   return (

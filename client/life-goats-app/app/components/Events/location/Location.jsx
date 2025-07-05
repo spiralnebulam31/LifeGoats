@@ -20,6 +20,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Location = ({ isSmallScreen, title, mainTitle, locationData, locationDataInfo, image1, image2, imageAlt1, imageAlt2, googleMapsLink }) => {
+
+  Location.propTypes = {
+    isSmallScreen: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    mainTitle: PropTypes.string.isRequired, 
+    locationData: PropTypes.object.isRequired,
+    locationDataInfo: PropTypes.arrayOf(
+      PropTypes.shape({
+        paragraph: PropTypes.string,
+        googleMapsLink: PropTypes.string,
+      })
+    ).isRequired,
+    image1: PropTypes.string.isRequired,
+    image2: PropTypes.string.isRequired,    
+    imageAlt1: PropTypes.string.isRequired,
+    imageAlt2: PropTypes.string.isRequired,
+    googleMapsLink: PropTypes.string.isRequired,
+  };
+
   const mapDisplayRef = useRef();
   const locationInfoRef = useRef();
   const mountainStefaniRef = useRef();
@@ -168,9 +187,6 @@ const Location = ({ isSmallScreen, title, mainTitle, locationData, locationDataI
       </motion.div>
     </section>
   );
-};
-Location.propTypes = {
-  isSmallScreen: PropTypes.bool.isRequired,
 };
 
 export default Location;

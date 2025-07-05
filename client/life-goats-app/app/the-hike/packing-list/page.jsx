@@ -37,7 +37,7 @@ const PackingList = () => {
           initial="initial"
           whileInView="animate"
         >
-          Let's get ready and pack our bags!
+          Let&apos;s get ready and pack our bags!
         </motion.p>
         <motion.div
           className="w-[90%] mx-auto"

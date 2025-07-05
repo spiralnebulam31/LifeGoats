@@ -10,8 +10,24 @@ import {
   } from "../../../../motion/home-sections";
 import "./Gallery.css";
 import Image from "next/image";
+import PropTypes from 'prop-types';
 
 const Gallery = ( { title, mainTitle, imagesArray } ) => {
+
+    Gallery.propTypes = {
+        title: PropTypes.string.isRequired,         
+        mainTitle: PropTypes.string.isRequired,
+        imagesArray: PropTypes.arrayOf(
+            PropTypes.shape({
+                src: PropTypes.string.isRequired,
+                thumbnail: PropTypes.string.isRequired,
+                alt: PropTypes.string.isRequired,
+                date: PropTypes.string.isRequired,
+                location: PropTypes.string.isRequired,
+            })
+        ).isRequired,
+    };
+
     const [images] = useState(imagesArray.map(img => ({
         itemImageSrc: img.src,
         thumbnailImageSrc: img.thumbnail,

@@ -4,10 +4,24 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from '../../../../motion/home-sections';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 const MotionImage = motion.create(Image);
 
 const Intro = ( { title, mainTitle, image, introText } ) => {
+
+  Intro.propTypes = {
+    title: PropTypes.string.isRequired,   
+    mainTitle: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    introText: PropTypes.arrayOf(
+      PropTypes.shape({
+        paragraph: PropTypes.string,
+        lastParagraph: PropTypes.string,
+        endText: PropTypes.string,
+      })
+    ).isRequired,
+  };
 
   const photoRef = useRef();
   const textRef = useRef();

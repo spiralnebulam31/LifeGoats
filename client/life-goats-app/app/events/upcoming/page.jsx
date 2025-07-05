@@ -1,6 +1,6 @@
 'use client';
 
-import Upcoming from "../../components/Events/Upcoming";
+// import Upcoming from "../../components/Events/Upcoming";
 import { motion } from "framer-motion";
 import {
   floatFromDownMainTitle,

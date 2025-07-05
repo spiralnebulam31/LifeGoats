@@ -2,8 +2,21 @@ import DetailCard from './DetailCard.jsx';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from "react-responsive";
 import { fadeIn } from '../../../../motion/motion.js';
+import PropTypes from 'prop-types';
 
 const DetailsCardLarge = ( { details } ) => {
+
+  DetailsCardLarge.propTypes = {
+    details: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  };  
 
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 

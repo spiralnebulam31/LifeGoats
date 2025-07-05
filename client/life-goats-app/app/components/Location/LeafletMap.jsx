@@ -5,8 +5,34 @@ import L from "leaflet";
 import { mapPin, pinShadow } from "@/public/assets/index.js";
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
+import PropTypes from 'prop-types';
 
 const LeafletMap = ({ locationData, zoom, width, widthMd, widthLg, widthXl, height, heightMd, heightLg, heightXl }) => {
+
+  LeafletMap.propTypes = {
+    locationData: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        lat: PropTypes.number.isRequired,             
+        lng: PropTypes.number.isRequired,
+        image: PropTypes.string,
+        alt: PropTypes.string,
+        description: PropTypes.string,
+        extraDescription: PropTypes.string,
+      })
+    ).isRequired,
+    zoom: PropTypes.number.isRequired,
+    width: PropTypes.string.isRequired,
+    widthMd: PropTypes.string.isRequired,
+    widthLg: PropTypes.string.isRequired,
+    widthXl: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    heightMd: PropTypes.string.isRequired,
+    heightLg: PropTypes.string.isRequired,
+    heightXl: PropTypes.string.isRequired,
+  }; 
+
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
   const isMediumScreen = useMediaQuery({ query: "(min-width: 769px) and (max-width: 1024px)" });
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1025px) and (max-width: 1440px)" });

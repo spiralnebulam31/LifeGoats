@@ -40,7 +40,7 @@ const NewsletterDecember2024 = () => {
             </div>
             <div className="quote">
                 <p>🎶And then that word grew louder and louder</p>
-                <p>'Til it was a battle cry! 🎶 (<a href="https://www.youtube.com/watch?v=dq8-d8bG6hY" target="_blank"
+                <p>&apos;Til it was a battle cry! 🎶 (<a href="https://www.youtube.com/watch?v=dq8-d8bG6hY" target="_blank" rel="noreferrer"
                         alt="song link">Regina Spector -The Call</a>)</p>
             </div>
             <div className="italic-p">
@@ -258,7 +258,7 @@ const NewsletterDecember2024 = () => {
                         <p>Melanie’s treat of a relaxing pilates session - just what our soar muscles needed
                             after descending the mountain</p>
                         <a href="https://ibb.co/k5HSW4T">
-                            <Image src="https://i.ibb.co/9c8rCb0/Image-20241222-WA0004.jpg" alt="Melanie's pilates session"
+                            <Image src="https://i.ibb.co/9c8rCb0/Image-20241222-WA0004.jpg" alt="Melanie&apos;s pilates session"
                                 className="rounded-corners shadow" width={700} height={700} />
                         </a>
                     </li>
@@ -291,7 +291,7 @@ const NewsletterDecember2024 = () => {
                     the group in the future. We love hearing from you :)</p>
                 <p><em>We aren’t trying to be a cult... Although we would make a pretty darn good one ;)</em></p>
                 <p>Go ahead and subscribe.</p>
-                <a href="https://www.lifegoats.com/subscriptions?action=subscribe" target="_blank">
+                <a href="https://www.lifegoats.com/subscriptions?action=subscribe" target="_blank" rel="noreferrer">
                     <button className="subscribe-btn rounded-corners">Subscribe</button>
                 </a>
             </div>
@@ -305,13 +305,15 @@ const NewsletterDecember2024 = () => {
         </section>
     </div>
     <footer className="newsletter-footer">
-        <p><a href="https://www.lifegoats.com" target="_blank"><strong>Life Goats</strong></a> Newsletter - December
+        <p><a href="https://www.lifegoats.com" target="_blank" rel="noreferrer"><strong>Life Goats</strong></a> Newsletter - December
             2024</p>
             <p>Your privacy matters to us. Read our{' '}
-            <a href="https://www.lifegoats.com/privacy-policy" target="_blank">privacy policy</a>{' '}
+            <a href="https://www.lifegoats.com/privacy-policy" target="_blank" rel="noreferrer"
+            >privacy policy</a>{' '}
             to see how we protect your info.</p>
-        <p>If you don't wish to receive our newsletters, you can{' '}
-        <a href="https://www.lifegoats.com/subscriptions?action=unsubscribe" target="_blank">unsubscribe</a>.</p>
+        <p>If you don&apos;t wish to receive our newsletters, you can{' '}
+        <a href="https://www.lifegoats.com/subscriptions?action=unsubscribe" target="_blank" rel="noreferrer"
+        >unsubscribe</a>.</p>
     </footer>
     </div>
     </>
