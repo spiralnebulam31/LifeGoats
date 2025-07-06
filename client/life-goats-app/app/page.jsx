@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {
   Hero,
   Intro,
-  Testimonials,
+  // Testimonials,
   CoreValues,
   Parallax,
   Contact,
@@ -24,7 +24,7 @@ const LandingPage = ({
     <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
       <Hero isSmallScreen={isSmallScreen} />
       <Intro isSmallScreen={isSmallScreen} />
-      <Testimonials isSmallScreen={isSmallScreen} />
+      {/* <Testimonials isSmallScreen={isSmallScreen} /> */}
       <CoreValues isSmallScreen={isSmallScreen} />
       <Parallax />
       <Contact

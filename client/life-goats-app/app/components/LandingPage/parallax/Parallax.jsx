@@ -11,7 +11,7 @@ const Parallax = () => {
       <div className="relative w-screen h-full">
         <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center mx-auto">
           <h1 className="w-[90%] md:w-[75%] lg:w-[60%] text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-background
-          font-bold font-links text-center drop-shadow-lg text-shadow-lg leading-8">
+          font-bold font-body text-center drop-shadow-lg text-shadow-lg leading-8">
           “Give the ones you love wings to fly, roots to come back and reasons to stay.”
           </h1>
         </div>
