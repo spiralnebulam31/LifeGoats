@@ -45,17 +45,27 @@ function SubscriptionsPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const url =
-      action === "unsubscribe" ? "/api/unsubscribe" : "/api/subscribe";
-
+  
+    const url = action === "unsubscribe" ? "/api/unsubscribe" : "/api/subscribe";
+  
     try {
       const response = await fetch(url, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
+  
+      // Check if response is ok first
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
+      // Check if response is actually JSON
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Server returned non-JSON response");
+      }
+  
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {

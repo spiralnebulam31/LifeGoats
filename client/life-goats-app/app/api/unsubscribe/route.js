@@ -1,16 +1,12 @@
-/**
- * This file is responsible for handling the POST request to delete a user from the subscription list.
- * It receives the user's email from the request body (the input of the user in the frontend form),
- * validates the input, and deletes the user's data from the subscriptions collection in the database.
- */
 import clientPromise from "@/lib/mongodb";
-import transporter from "@/lib/nodemailer"; // Import Nodemailer transporter
+import transporter from "@/lib/nodemailer";
 
 export async function POST(req) {
   try {
     const body = await req.json();
     const { email } = body;
 
+    // Validate required fields
     if (!email) {
       return new Response(
         JSON.stringify({ message: "Email is required." }),
@@ -22,36 +18,38 @@ export async function POST(req) {
     const db = client.db("life-goats");
     const collection = db.collection("subscriptions");
 
-    // Delete user data associated with the provided email
-    const result = await collection.deleteOne({ email });
+    // Check if the user exists
+    const existingUser = await collection.findOne({ email });
 
-    if (result.deletedCount === 0) {
+    if (!existingUser) {
       return new Response(
-        JSON.stringify({ message: "Email not found." }),
-        { status: 404 }
+        JSON.stringify({ message: "This email is not subscribed to our newsletter." }),
+        { status: 200 }
       );
     }
 
-    // Send an email notification to the admin (or you) about the deletion
+    // Remove the user from the database
+    await collection.deleteOne({ email });
+
+    // Send an email notification to the admin about the unsubscription
     const mailOptions = {
-      from: process.env.EMAIL_USER, // sender address
-      to: process.env.EMAIL_USER, // recipient address
-      subject: "User Deleted from Subscriptions", // email subject
-      text: `User with email ${email} has been deleted from the subscriptions list.`, // email content
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      subject: "Newsletter Unsubscription",
+      text: `${email} has unsubscribed from the newsletter.`,
     };
 
     await transporter.sendMail(mailOptions);
 
     return new Response(
-      JSON.stringify({ message: "We're sad to see you go, but we respect your request! You have successfully unsubscribed and all your data has been deleted from our database." }),
+      JSON.stringify({ message: "Successfully unsubscribed! You will no longer receive the Life Goats newsletter." }),
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error deleting user:", error);
+    console.error("Error unsubscribing user:", error);
     return new Response(
       JSON.stringify({ message: "Internal server error" }),
       { status: 500 }
     );
   }
 }
-
