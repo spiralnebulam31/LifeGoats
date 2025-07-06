@@ -214,7 +214,7 @@ function SubscriptionsPage() {
             {action === "unsubscribe" && (
               <>
                 <p className="mb-4 mt-4 text-primary">
-                  If you've unsubscribed accidentally and realize you miss us,
+                  If you&apos;ve unsubscribed accidentally and realize you miss us,
                   you can always resubscribe by clicking the button below.
                 </p>
                 <Link href="/subscriptions?action=subscribe">
