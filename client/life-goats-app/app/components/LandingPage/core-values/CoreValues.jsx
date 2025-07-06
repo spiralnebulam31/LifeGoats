@@ -27,7 +27,7 @@ const CoreValues = () => {
           animate="animate"
           viewport={{ once: true }}
         >
-          The herd&apos;s
+          Our
         </motion.p>
         <motion.h2
           className="text-earth font-bold font-title uppercase md:text-[55px]
