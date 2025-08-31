@@ -52,7 +52,7 @@ function ConfirmedSubscription() {
             <GoatPrintsWalking />
           </motion.div> */}
 
-          <p className="mt-2 pb-4 text-center text-primary font-body">
+          {/* <p className="mt-2 pb-4 text-center text-primary font-body">
             Changed your mind? You can unsubscribe anytime by clicking{" "}
             <Link href="/subscriptions?action=unsubscribe">
               <span className="font-links underline text-secondary hover:text-tertiary">
@@ -60,7 +60,7 @@ function ConfirmedSubscription() {
               </span>
             </Link>
             .
-          </p>
+          </p> */}
         </div>
       </motion.div>
     </motion.div>
