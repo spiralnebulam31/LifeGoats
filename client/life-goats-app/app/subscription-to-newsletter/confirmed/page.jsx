@@ -5,7 +5,7 @@ import { fadeIn } from "../../../motion/motion";
 import { hikingBoots } from "@/public/assets/subscriptions";
 // import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 function ConfirmedSubscription() {
   return (
