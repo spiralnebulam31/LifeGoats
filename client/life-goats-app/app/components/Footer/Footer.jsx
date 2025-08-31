@@ -7,7 +7,6 @@ import AccessibilityModal from "./AccessibilityModal";
 import LocationModal from "./LocationModal";
 
 const Footer = () => {
-
   const { modalState, setModalState } = useContext(StateContext);
 
   const { locationOpen, accessibilityOpen } = modalState;
@@ -24,12 +23,11 @@ const Footer = () => {
       locationOpen,
       accessibilityOpen: !accessibilityOpen,
     });
-  }
+  };
 
   return (
     <footer className="bg-primary bg-contain bg-center bg-no-repeat fixed z-1 bottom-0 left-0 right-0 w-full h-[180px] flex flex-col items-center justify-center overflow-hidden">
       <div className="flex flex-col justify-center items-center align-middle mx-auto my-auto gap-3">
-       
         {/*Copyright & Developer*/}
         <div className="flex flex-row justify-center items-center">
           <p className="text-background font-body font-bold text-lg">
@@ -74,10 +72,7 @@ const Footer = () => {
             Location
           </button>
 
-          <LocationModal
-            isOpen={locationOpen}
-            onClose={toggleLocationModal}
-          />
+          <LocationModal isOpen={locationOpen} onClose={toggleLocationModal} />
 
           <span className="text-secondary font-links font-bold mx-2">|</span>
 
@@ -92,10 +87,10 @@ const Footer = () => {
         {/*Subscribe to our newsletter*/}
         <div className="flex justify-center items-center">
           <Link
-            href="/subscriptions?action=subscribe"
+            href="/subscription-to-newsletter"
             className="bg-secondary text-background font-links uppercase cursor-pointer font-bold text-md no-underline hover:bg-tertiary hover:text-earth py-2 px-4 rounded-lg tracking-wider"
           >
-            Subscribe to our newsletter
+            Newsletter
           </Link>
         </div>
 
