@@ -102,7 +102,7 @@ const PrivacyPolicyPage = () => {
               href="mailto:lifegoatsconnect@gmail.com"
               className="cursor-pointer underline text-secondary hover:text-tertiary font-links"
             >
-              admin@lifegoats.com
+              lifegoatsconnect@gmail.com
             </a>
             .
           </p>
