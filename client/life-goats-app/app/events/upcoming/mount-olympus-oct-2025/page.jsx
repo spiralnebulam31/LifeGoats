@@ -1,46 +1,44 @@
-'use client';
+"use client";
 
 import {
-    Hero,
-    // Intro,
-    // Details,
-    // Location,
-    // Gallery,
-    // TheTeamOct2024
-  } from "../../../components/Events";
-  import {
-    heroBackgroundOct25,
-    // aboutPhotoOct24
-  } from "@/public/assets/index.js";
+  Hero,
+  // Intro,
+  // Details,
+  // Location,
+  // TheTeamOct2024
+} from "../../../components/Events";
+import {
+  heroBackgroundOct25,
+  // aboutPhotoOct24
+} from "@/public/assets/index.js";
 //   import { introTextOct24 } from '../../../../data/intro';
 //   import { detailsOct24, detailsImagesOct24 } from "../../../../data/details";
 //   import { mountainLemos, mountainView } from "@/public/assets/index.js";
 //   import { locationDataMay24, locationDataInfoMay24 } from "../../../../data/location";
-//   import { mtOlympusOct2024Images } from '../../../../data/galleries/mt-olympus-oct-2024';
-  import { useMediaQuery } from 'react-responsive';
-  
-  const LandingPage = () => {
-    const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+import { useMediaQuery } from "react-responsive";
 
-    return (
-      <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
-        <Hero 
-          isSmallScreen={isSmallScreen} 
-          image={heroBackgroundOct25}
-          locationTitle="Location to be decided" 
-          date="Sat 25th - Tue 28th October 2025"
-          p1="More info coming soon..."
-          p2=""
-          slider={false}
-        />
-        {/* <Intro
+const LandingPage = () => {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
+
+  return (
+    <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
+      <Hero
+        isSmallScreen={isSmallScreen}
+        image={heroBackgroundOct25}
+        locationTitle="Location to be decided"
+        date="Sat 25th - Tue 28th October 2025"
+        p1="We are looking forward to our next planned gathering! Weather permitting, we would like to spend two nights at the Plateau of the Muses - the basecamp at the top of Olympus."
+        p2="Above the clouds, away from good cell reception and enjoying each other's company in the fresh mountain air :)  A break from the ‘simulation’ - as Shahd put it last year…"
+        slider={false}
+      />
+      {/* <Intro
           isSmallScreen={isSmallScreen} 
           title="A brief summary of"
           mainTitle="The Retreat"
           image={aboutPhotoOct24}
           introText={introTextOct24}
         /> */}
-        {/* <Details 
+      {/* <Details 
           isSmallScreen={isSmallScreen} 
           title="The retreat in brief"
           mainTitle="Details"
@@ -49,7 +47,7 @@ import {
           bgColor="gradient"
           titleColor="white"
         /> */}
-        {/* <Location 
+      {/* <Location 
           isSmallScreen={isSmallScreen} 
           title="discover"
           mainTitle="The Location"
@@ -61,18 +59,12 @@ import {
           locationDataInfo={locationDataInfoMay24} // it's the same as the May 24 data
           googleMapsLink="https://maps.app.goo.gl/RMdWS12Tge9Jnxot5"
         /> */}
-        {/* <Gallery 
-          isSmallScreen={isSmallScreen} 
-          title="Our Memories"
-          mainTitle="Gallery"
-          imagesArray={mtOlympusOct2024Images}
-        />
+      {/*
         <TheTeamOct2024
           isSmallScreen={isSmallScreen} 
         /> */}
-      </div>
-    );
-  };
-  
-  export default LandingPage;
-  
+    </div>
+  );
+};
+
+export default LandingPage;
