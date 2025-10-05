@@ -4,8 +4,8 @@ export const teamData = [
       alt: "Maria",
       image: "/assets/the-team/page/Maria.jpg",
       title: "Maria Telikiozoglou",
-      url: "https://www.instagram.com/maleetsee/",
-      text: "Maria is an American-Greek <a href='https://www.mariatelikiozoglou.com/'>team building and leadership coach</a> for small family businesses and founder of our life goats community.  Passionate about work/life integration, outdoor recreation, building and nurturing relationships, collaborations, self-leadership and cultivating peace, possibility and prosperity.",
+      url: "https://www.mariatelikiozoglou.com/",
+      text: "Maria is an American-Greek team building and leadership coach</a> for small family businesses and founder of our life goats community.  Passionate about work/life integration, outdoor recreation, building and nurturing relationships, collaborations, self-leadership and cultivating peace, possibility and prosperity.",
     },
     {
       index: 2,
@@ -13,7 +13,7 @@ export const teamData = [
       image: "/assets/the-team/page/Anastasia.svg",
       title: "Anastasia Adamoudi",
       url: "https://linktr.ee/spiralnebula",
-      text: "Anastasia is a Greek <a href='https://anastasiaadamoudi.com/'>web developer</a> living in the UK, using her creativity to help people and businesses establish their online presence. Co-founder of our life goats community, she believes in social contribution, collaboration and sustainability. Enjoys time in nature, gardening, yoga, choir singing and exploring new places.",
+      text: "Anastasia is a Greek web developer living in the UK, using her creativity to help people and businesses establish their online presence. Co-founder of our life goats community, she believes in social contribution, collaboration and sustainability. Enjoys time in nature, gardening, yoga, choir singing and exploring new places.",
     },
   ];
 
