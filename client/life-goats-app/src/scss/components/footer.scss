@@ -1,0 +1,13 @@
+@use '../mixins/typography-scale' as typ;
+
+.footer__title {
+  @include typ.heading-lg;
+}
+
+.footer__link {
+  @include typ.body-md;
+}
+
+.footer__text {
+  @include typ.body-sm;
+}

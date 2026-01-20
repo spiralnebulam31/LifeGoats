@@ -1,0 +1,11 @@
+@mixin link-base {
+  color: $color-tertiary;
+  font-family: $font-links;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  &:hover {
+    color: $color-secondary;
+  }
+}

@@ -1,0 +1,62 @@
+@use '../variables/typography' as *;
+@use './responsive-font-size' as rfs;
+
+@mixin body-sm {
+  @include rfs.responsive-font-size($font-size-body-sm, $font-size-body-md);
+  font-family: $font-body;
+  font-weight: $font-weight-body;
+}
+
+@mixin body-md {
+  @include rfs.responsive-font-size($font-size-body-md, $font-size-body-lg);
+  font-family: $font-body;
+  font-weight: $font-weight-body;
+}
+
+@mixin body-lg {
+  @include rfs.responsive-font-size($font-size-body-lg, $font-size-heading-xs);
+  font-family: $font-body;
+  font-weight: $font-weight-body;
+}
+
+@mixin heading-xs {
+  @include rfs.responsive-font-size($font-size-heading-xs, $font-size-heading-sm);
+  font-family: $font-title;
+  font-weight: $font-weight-title;
+}
+
+@mixin heading-sm {
+  @include rfs.responsive-font-size($font-size-heading-sm, $font-size-heading-md);
+  font-family: $font-title;
+  font-weight: $font-weight-title;
+}
+
+@mixin heading-md {
+  @include rfs.responsive-font-size($font-size-heading-md, $font-size-heading-lg);
+  font-family: $font-title;
+  font-weight: $font-weight-title;
+}
+
+@mixin heading-lg {
+  @include rfs.responsive-font-size($font-size-heading-lg, $font-size-heading-xl);
+  font-family: $font-title;
+  font-weight: $font-weight-title;
+}
+
+@mixin heading-xl {
+  @include rfs.responsive-font-size($font-size-heading-xl, $font-size-title);
+  font-family: $font-title;
+  font-weight: $font-weight-title;
+}
+
+@mixin title {
+  @include rfs.responsive-font-size($font-size-title, $font-size-heading-xl);
+  font-family: $font-title;
+  font-weight: $font-weight-title;
+}
+
+@mixin subtitle {
+  @include rfs.responsive-font-size($font-size-subtitle, $font-size-title);
+  font-family: $font-subtitle;
+  font-weight: $font-weight-subtitle;
+}

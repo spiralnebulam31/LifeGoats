@@ -1,0 +1,19 @@
+@use '../../../../../src/scss/mixins/typography-scale' as typ;
+
+.testimonials-section__pretitle {
+  @include typ.subtitle;
+}
+
+.testimonials-section__title {
+  @include typ.main-head-text;
+}
+
+.testimonials-card__text,
+.testimonials-page-card__text {
+  @include typ.body-md;
+}
+
+.testimonials-card__name,
+.testimonials-page-card__name {
+  @include typ.subtitle;
+}

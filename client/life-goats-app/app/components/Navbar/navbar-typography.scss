@@ -1,0 +1,13 @@
+@use '../../../../src/scss/mixins/typography-scale' as typ;
+
+.navbar__title {
+  @include typ.heading-md;
+}
+
+.navbar__link {
+  @include typ.body-md;
+}
+
+.mobile-menu__link {
+  @include typ.body-lg;
+}

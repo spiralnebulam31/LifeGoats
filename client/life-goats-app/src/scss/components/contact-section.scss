@@ -1,0 +1,207 @@
+.contact-section {
+  overflow: hidden;
+  z-index: 10;
+  background: linear-gradient(to bottom, #60a5fa, #dbeafe, $color-background);
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 11rem;
+  padding-top: 1.5rem;
+}
+.contact-section__title-container {
+  text-align: center;
+  width: 80%;
+  @include respond-to(lg) {
+    width: 90%;
+  }
+  margin: 0 auto;
+  padding-top: 2rem;
+  margin-bottom: 1.25rem;
+  z-index: 10;
+  overflow: hidden;
+}
+.contact-section__pretitle {
+  font-size: 1.125rem;
+  color: $color-background;
+  font-family: $font-subtitle;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.contact-section__title {
+  @include typ.heading-lg;
+}
+.contact-section__text {
+  @include typ.body-md;
+}
+.contact-section__content {
+  display: flex;
+  flex-direction: column;
+  @include respond-to(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  text-align: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 5rem;
+  @include respond-to(sm) {
+    margin-bottom: 11rem;
+  }
+  @include respond-to(lg) {
+    margin-bottom: 60vh;
+  }
+}
+.contact-section__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  @include respond-to(lg) {
+    width: 50%;
+  }
+  margin: 0 auto;
+  align-items: center;
+}
+.contact-section__info-text {
+  color: $color-primary;
+  font-family: $font-body;
+  font-size: 1.125rem;
+  max-width: 100%;
+  @include respond-to(sm) {
+    padding-left: 4rem;
+    padding-right: 1.5rem;
+  }
+  padding-top: 0.25rem;
+  @include respond-to(lg) {
+    padding-top: 2.5rem;
+  }
+  margin-bottom: 1.25rem;
+  line-height: 1.875rem;
+}
+.contact-section__info-container {
+  background: $color-background;
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  width: 90%;
+  @include respond-to(md) {
+    width: 60%;
+  }
+  margin: 0 auto;
+  @include respond-to(lg) {
+    margin-left: 4rem;
+  }
+}
+.contact-section__links {
+  @include contact-link;
+  padding-bottom: 0.75rem;
+  padding-top: 1.25rem;
+}
+.contact-section__form-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  @include respond-to(lg) {
+    width: 50%;
+  }
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  @include respond-to(lg) {
+    margin-top: 3.5rem;
+  }
+}
+.contact-section__form-text {
+  color: $color-primary;
+  font-family: $font-body;
+  font-size: 1.125rem;
+  max-width: 40rem;
+  @include respond-to(xl) {
+    max-width: 96rem;
+  }
+  padding-bottom: 1.25rem;
+  margin: 0 auto;
+}
+.contact-section__form-wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  @include respond-to(lg) {
+    width: 60%;
+  }
+}
+.contact-section__form {
+  width: 100%;
+}
+.contact-section__form-button-wrapper {
+  margin-bottom: 0.25rem;
+}
+.contact-section__form-button {
+  @include contact-form-button;
+}
+.contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding-bottom: 0.75rem;
+  padding-top: 1.25rem;
+}
+.contact-link__anchor {
+  color: $color-secondary;
+  font-family: $font-links;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 1rem;
+  @include respond-to(lg) {
+    font-size: 1.25rem;
+  }
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+  &:hover {
+    color: $color-tertiary;
+  }
+}
+.contact-link__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.contact-link__text {
+  margin-left: 0.5rem;
+}
+.contact-input {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  background: $color-background;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  width: 80%;
+  @include respond-to(md) {
+    width: 60%;
+  }
+  @include respond-to(lg) {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+.contact-input__field {
+  border: 1px solid $color-primary;
+  padding: 0.5rem 0.75rem;
+  font-family: $font-body;
+  background: $color-background;
+  width: 100%;
+  border-radius: 0.75rem;
+  color: $color-primary;
+}
