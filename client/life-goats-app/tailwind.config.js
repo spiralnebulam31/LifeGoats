@@ -34,11 +34,11 @@ export const theme = {
       button: "0px 4px 4px rgba(0, 0, 0, 0.25)"
     },
     screens: {
-      'xs': '390px',
-      'sm': '540px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px'
+      'xs': '375px',
+      'sm': '600px',
+      'md': '900px',
+      'lg': '1200px',
+      'xl': '1700px'
     },
   },
 };

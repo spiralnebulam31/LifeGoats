@@ -17,6 +17,8 @@ import {
   phoneHover,
   email,
   emailHover,
+  instagramIcon,
+  instagramIconHover,
   transparentMountainBG2,
 } from "@/public/assets";
 import Image from "next/image";
@@ -32,6 +34,9 @@ const Contact = ({
   emailIsHovered,
   handleEmailMouseEnter,
   handleEmailMouseLeave,
+  instagramIconIsHovered,
+  handleInstagramIconMouseEnter,
+  handleInstagramIconMouseLeave,
   isSmallScreen,
 }) => {
   const leftSideRef = useRef();
@@ -40,7 +45,7 @@ const Contact = ({
   const form = useRef();
 
   const openPopup = () => {
-    alert("Email Sent! Maria will reply to you as soon as possible.");
+    alert("Email Sent! We will reply to you as soon as possible.");
   };
 
   const templateCode = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CODE;
@@ -127,7 +132,16 @@ const Contact = ({
                 onMouseEnter={handlePhoneMouseEnter}
                 onMouseLeave={handlePhoneMouseLeave}
                 icon={phoneIsHovered ? phoneHover : phone}
-                text="+306980489843 (Maria WhatsApp)"
+                text="+306980489843 (Maria's WhatsApp)"
+              />
+              <ContactLink
+                href="https://www.instagram.com/anastasia.ad.m31/"
+                target="_blank"
+                rel="noreferrer"
+                onMouseEnter={handleInstagramIconMouseEnter}
+                onMouseLeave={handleInstagramIconMouseLeave}
+                icon={instagramIconIsHovered ? instagramIconHover : instagramIcon}
+                text="anastasia.ad.m31 (Natasa's Instagram)"
               />
             </div>
             {/* End of Contact Links */}

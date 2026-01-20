@@ -20,6 +20,8 @@ import calendar from './hero/calendar.svg';
 
 import aboutPhotoMay24 from './about/about-photo-may24.svg';
 import aboutPhotoOct24 from './about/about-photo-oct24.webp';
+import aboutPhotoJun25 from './about/about-photo-jun25.jpg';
+import aboutPhotoOct25 from './about/about-photo-oct25.jpg';
 
 import goat from './overview/goat.webp';
 import nature from './overview/nature.webp';
@@ -50,6 +52,8 @@ import email2 from './contact/email.svg';
 import email2Hover from './contact/email-hover.svg';
 import phone from './contact/phone.svg';
 import phoneHover from './contact/phone-hover.svg';
+import instagramIcon from './contact/instagram.svg';
+import instagramIconHover from './contact/instagram-hover.svg';
 import transparentMountainBG2 from './contact/transparent-mountain-bg-2.svg';
 
 import facebook from './social/facebook.svg';
@@ -86,6 +90,8 @@ export {
     calendar,
     aboutPhotoMay24,
     aboutPhotoOct24,
+    aboutPhotoJun25,
+    aboutPhotoOct25,
     goat,
     nature,
     peace,
@@ -112,6 +118,8 @@ export {
     email2Hover,
     phone,
     phoneHover,
+    instagramIcon,
+    instagramIconHover,
     facebook,
     facebookHover,
     instagram,
