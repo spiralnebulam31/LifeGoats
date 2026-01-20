@@ -1,0 +1,38 @@
+.core-values-card {
+  width: 280px;
+  height: 410px;
+  @include respond-to(lg) {
+    height: 480px;
+  }
+  z-index: 0;
+  background: $color-background;
+  margin: 0.75rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.core-values-card__image {
+  width: 100%;
+  object-fit: cover;
+  height: 10rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.core-values-card__content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.core-values-card__title {
+  @include typ.heading-md;
+}
+.core-values-card__text {
+  @include typ.body-md;
+  margin-bottom: 0.5rem;
+}

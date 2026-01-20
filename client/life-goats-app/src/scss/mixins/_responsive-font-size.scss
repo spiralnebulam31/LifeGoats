@@ -1,0 +1,22 @@
+// Responsive font-size mixin using clamp()
+// Usage: @include responsive-font-size($min-size, $max-size, $min-viewport, $max-viewport)
+// Example: @include responsive-font-size(1rem, 2rem, 390px, 1280px);
+@use "sass:math";
+@use "sass:string";
+
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@mixin responsive-font-size($min-size, $max-size, $min-viewport: 390px, $max-viewport: 1280px) {
+  $root-size: 16;
+  $min-size-rem: strip-unit($min-size);
+  $max-size-rem: strip-unit($max-size);
+  $min-viewport-rem: math.div(strip-unit($min-viewport), $root-size);
+  $max-viewport-rem: math.div(strip-unit($max-viewport), $root-size);
+  $slope: math.div(($max-size-rem - $min-size-rem), ($max-viewport-rem - $min-viewport-rem));
+  $y-intercept: -$min-viewport-rem * $slope + $min-size-rem;
+  $slope-dvw: $slope * 100;
+  $preferred-value: string.unquote("#{$y-intercept}rem + #{$slope-dvw}dvw");
+  font-size: clamp(#{$min-size}, #{$preferred-value}, #{$max-size});
+}
