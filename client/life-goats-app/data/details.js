@@ -129,3 +129,102 @@ export const detailsMay24 = [
       alt: "Swimming in a pond at Enipeas Gorge",
     },
   ];
+
+
+// June 2025
+export const detailsJun25 = [
+  {
+    name: "Accommodation",
+    icon: "/assets/details/accommodation-icon.svg",
+    alt: "accommodation icon",
+    text: "hotels, mountain refuge",
+  },
+  {
+    name: "Altitude",
+    icon: "/assets/details/altitude-icon.svg",
+    alt: "altitude icon",
+    text: 2803,
+    text2: " m",
+    initialNumber: 2700,
+  },
+  {
+    name: "Duration",
+    icon: "/assets/details/duration-icon.svg",
+    alt: "duration icon",
+    text: 4,
+    text2: " days",
+    initialNumber: 0,
+  },
+  {
+    name: "Elements",
+    icon: "/assets/details/elements-icon.svg",
+    alt: "elements icon",
+    text: "sea, mountain",
+  },
+  {
+    name: "Group",
+    icon: "/assets/details/group-icon.svg",
+    alt: "group icon",
+    text: 20,
+    text2: " people",
+    initialNumber: 0,
+  },
+];
+
+export const detailsImagesJun25 = [
+  { image: "/assets/details/jun2025/photo-1.jpg", alt: "" },
+  { image: "/assets/details/jun2025/photo-2.jpg", alt: "" },
+  { image: "/assets/details/jun2025/photo-3.jpg", alt: "" },
+  { image: "/assets/details/jun2025/photo-4.jpg", alt: "" },
+  { image: "/assets/details/jun2025/photo-5.jpg", alt: "" },
+  { image: "/assets/details/jun2025/photo-6.jpg", alt: "" },
+];
+
+// October 2025
+export const detailsOct25 = [
+  {
+    name: "Accommodation",
+    icon: "/assets/details/accommodation-icon.svg",
+    alt: "accommodation icon",
+    text: "hotels, mountain refuge",
+  },
+  {
+    name: "Altitude",
+    icon: "/assets/details/altitude-icon.svg",
+    alt: "altitude icon",
+    text: 2803,
+    text2: " m",
+    initialNumber: 2700,
+  },
+  {
+    name: "Duration",
+    icon: "/assets/details/duration-icon.svg",
+    alt: "duration icon",
+    text: 4,
+    text2: " days",
+    initialNumber: 0,
+  },
+  {
+    name: "Elements",
+    icon: "/assets/details/elements-icon.svg",
+    alt: "elements icon",
+    text: "sea, mountain",
+  },
+  {
+    name: "Group",
+    icon: "/assets/details/group-icon.svg",
+    alt: "group icon",
+    text: 15,
+    text2: " people",
+    initialNumber: 0,
+  },
+];
+
+export const detailsImagesOct25 = [
+  { image: "/assets/details/oct2025/photo-1.jpg", alt: "" },
+  { image: "/assets/details/oct2025/photo-2.jpg", alt: "" },
+  { image: "/assets/details/oct2025/photo-3.jpg", alt: "" },
+  { image: "/assets/details/oct2025/photo-4.jpg", alt: "" },
+  { image: "/assets/details/oct2025/photo-5.jpg", alt: "" },
+  { image: "/assets/details/oct2025/photo-6.jpg", alt: "" },
+];

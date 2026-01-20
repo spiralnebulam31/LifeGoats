@@ -18,6 +18,9 @@ const LandingPage = ({
   email2IsHovered,
   handleEmail2MouseEnter,
   handleEmail2MouseLeave,
+  instagramIconIsHovered,
+  handleInstagramIconMouseEnter,
+  handleInstagramIconMouseLeave,
   isSmallScreen,
 }) => {
   return (
@@ -38,6 +41,9 @@ const LandingPage = ({
         email2IsHovered={email2IsHovered}
         handleEmail2MouseEnter={handleEmail2MouseEnter}
         handleEmail2MouseLeave={handleEmail2MouseLeave}
+        instagramIconIsHovered={instagramIconIsHovered}
+        handleInstagramIconMouseEnter={handleInstagramIconMouseEnter}
+        handleInstagramIconMouseLeave={handleInstagramIconMouseLeave}
       />
     </div>
   );

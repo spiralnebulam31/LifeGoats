@@ -14,6 +14,7 @@ export function StateProvider({ children }) {
   const [phoneIsHovered, setPhoneIsHovered] = useState(false);
   const [emailIsHovered, setEmailIsHovered] = useState(false);
   const [email2IsHovered, setEmail2IsHovered] = useState(false);
+  const [instagramIconIsHovered, setInstagramIconIsHovered] = useState(false);
 
   const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' }); 
 
@@ -30,6 +31,8 @@ export function StateProvider({ children }) {
   const handleEmailMouseLeave = () => setEmailIsHovered(false);
   const handleEmail2MouseEnter = () => setEmail2IsHovered(true);
   const handleEmail2MouseLeave = () => setEmail2IsHovered(false);
+  const handleInstagramIconMouseEnter = () => setInstagramIconIsHovered(true);
+  const handleInstagramIconMouseLeave = () => setInstagramIconIsHovered(false);
 
   const value = {
     modalState,
@@ -38,12 +41,15 @@ export function StateProvider({ children }) {
     phoneIsHovered,
     emailIsHovered,
     email2IsHovered,
+    instagramIconIsHovered,
     handlePhoneMouseEnter,
     handlePhoneMouseLeave,
     handleEmailMouseEnter,
     handleEmailMouseLeave,
     handleEmail2MouseEnter,
     handleEmail2MouseLeave,
+    handleInstagramIconMouseEnter,
+    handleInstagramIconMouseLeave,
     isSmallScreen,
   };
 
