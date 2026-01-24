@@ -3,6 +3,7 @@ import Intro from "./intro/Intro";
 import EventOverview from "./overview/EventOverview";
 import Details from "./details/Details";
 import Location from "./location/Location";
+import Altimeter from "./altimeter/AltimeterComponent";
 import Gallery from "./image-display/Gallery";
 import TheTeamMay2024 from "./team/TheTeamMay2024";
 import TheTeamOct2024 from "./team/TheTeamOct2024";
@@ -13,6 +14,7 @@ export {
     EventOverview, 
     Details, 
     Location, 
+    Altimeter,
     Gallery, 
     TheTeamMay2024,
     TheTeamOct2024
