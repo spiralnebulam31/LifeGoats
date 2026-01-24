@@ -11,24 +11,12 @@ export const ascentData = [
         altitude: 1940,
         description: "The Petrostrouga Refuge is located at the foot of the Petrostrouga peak. It's a small refuge with a capacity of 20 people."
     },
-    // {
-    //     id: 3,
-    //     location: "Giosos Apostolidis Refuge 🏠",
-    //     altitude: 2697,
-    //     description: "The Apostolidis Refuge is located at the Muses Plateau. We're going to spend the night here before ascending to Mytikas peak."
-    // },
     {
         id: 3,
         location: "Christos Kakalos Refuge 🏠",
         altitude: 2650,
         description: "The Kakalos Refuge is located at the Muses Plateau. We spent the night there!"
     },
-    // {
-    //     id: 4,
-    //     location: "Mytikas Peak ⛰️",
-    //     altitude: 2917,
-    //     description: "Mytikas is the highest peak of Mount Olympus. We will be ascending to the peak from the Apostolidis Refuge early in the morning."
-    // },
     {
         id: 4,
         location: "Profitis Ilias Peak ⛰️",
@@ -44,18 +32,6 @@ export const descentData = [
         altitude: 2803,
         description: "Profitis Ilias is located near the two refuges on the Muses Plateau. We ascended there early in the morning before heading down the mountain. A small chapel is located on the peak."
     },
-    // {
-    //     id: 1,
-    //     location: "Mytikas Peak ⛰️",
-    //     altitude: 2917,
-    //     description: "Our descent from Mytikas peak will take us back to the Apostolidis Refuge."
-    // },
-    // {
-    //     id: 2,
-    //     location: "Giosos Apostolidis Refuge 🏠",
-    //     altitude: 2697,
-    //     description: "After a short break at the refuge to gather our things, we will start following the trail down the mountain."
-    // },
     {
         id: 2,
         location: "Christos Kakalos Refuge 🏠",

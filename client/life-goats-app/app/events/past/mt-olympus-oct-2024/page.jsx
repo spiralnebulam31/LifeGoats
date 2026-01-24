@@ -5,6 +5,7 @@ import {
     Intro,
     Details,
     Location,
+    Altimeter,
     Gallery,
     TheTeamOct2024
   } from "../../../components/Events";
@@ -60,6 +61,9 @@ import {
           locationData={locationDataMay24} // it's the same as the May 24 data
           locationDataInfo={locationDataInfoMay24} // it's the same as the May 24 data
           googleMapsLink="https://maps.app.goo.gl/RMdWS12Tge9Jnxot5"
+        />
+        <Altimeter 
+          isSmallScreen={isSmallScreen} 
         />
         <Gallery 
           isSmallScreen={isSmallScreen} 

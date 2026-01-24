@@ -5,7 +5,8 @@ import {
     Intro,
     EventOverview,
     Details,
-    Location,
+    // Location,
+    Altimeter,
     Gallery,
     TheTeamMay2024
   } from "../../../components/Events";
@@ -16,13 +17,18 @@ import {
   import { introTextMay24 } from '../../../../data/intro';
   import { overviewDataMay24 } from "../../../../data/overview";
   import { detailsMay24, detailsImagesMay24 } from "../../../../data/details";
-  import { mountainStefani, mountainEnipeas } from "@/public/assets/index.js";
-  import { locationDataMay24, locationDataInfoMay24 } from "../../../../data/location";
+  // import { mountainStefani, mountainEnipeas } from "@/public/assets/index.js";
+  // import { locationDataMay24, locationDataInfoMay24 } from "../../../../data/location";
   import { mtOlympusMay2024Images } from '../../../../data/galleries/mt-olympus-may-2024';
+  import { getRouteData } from '../../../../data/altimeter';
   import { useMediaQuery } from 'react-responsive';
   
   const LandingPage = () => {
     const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+    
+    // Get route data
+    const ascentData = getRouteData('gortsiaToMusesPlateau', 'ascent');
+    const descentData = getRouteData('gortsiaToMusesPlateau', 'descent');
 
     return (
       <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
@@ -58,7 +64,7 @@ import {
           bgColor="plain"
           titleColor="blue"
         />
-        <Location 
+        {/* <Location 
           isSmallScreen={isSmallScreen} 
           title="discover"
           mainTitle="The Location"
@@ -69,6 +75,13 @@ import {
           locationData={locationDataMay24}
           locationDataInfo={locationDataInfoMay24}
           googleMapsLink="https://maps.app.goo.gl/RMdWS12Tge9Jnxot5"
+        /> */}
+        <Altimeter 
+          isSmallScreen={isSmallScreen}
+          ascentData={ascentData}
+          descentData={descentData}
+          showBoth={true}
+          showTotals={true}
         />
         <Gallery 
           isSmallScreen={isSmallScreen} 
@@ -84,4 +97,3 @@ import {
   };
   
   export default LandingPage;
-  
