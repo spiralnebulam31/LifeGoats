@@ -44,7 +44,7 @@ export const metadata = {
     description: 'Our goal is to help each other press pause on the momentum of daily life, come together, connect, brainstorm, recharge and enjoy reinventing ourselves. As people-centered professionals, our performance depends on that.',
     images: [
       {
-        url: '/herd.JPG',
+        url: '/herd.jpg',
         width: 1200,
         height: 630,
         alt: 'Life Goats Community',
