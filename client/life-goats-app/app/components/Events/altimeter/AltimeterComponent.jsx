@@ -56,7 +56,7 @@ const Altimeter = ({
           whileInView="animate" 
           viewport={{ once: true }}
         >
-          Our Hike
+          Our Hikes
         </motion.h2>
       </motion.div>
 
