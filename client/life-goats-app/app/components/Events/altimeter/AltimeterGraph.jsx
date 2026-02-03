@@ -1,9 +1,11 @@
 import { Line } from 'react-chartjs-2';
 import { Chart, LinearScale, CategoryScale, Title, Tooltip, PointElement, LineElement, Filler } from 'chart.js';
+import PropTypes from 'prop-types';
 
 Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineElement, Filler);
 
-const AltimeterGraph = ({ points, title, difference, totalAltitude, totalAltitudeLoss = null, distanceCovered, isCircular = false }) => {
+// const AltimeterGraph = ({ points, title, difference, totalAltitude, totalAltitudeLoss = null, distanceCovered, isCircular = false }) => {
+  const AltimeterGraph = ({ points, title, difference, totalAltitude, totalAltitudeLoss = null, distanceCovered, isCircular = false }) => {
   // Extract altitude data from points
   const altitudes = points.map(point => point.altitude);
   
@@ -162,5 +164,16 @@ const AltimeterGraph = ({ points, title, difference, totalAltitude, totalAltitud
     </div>
   );
 };
-
+AltimeterGraph.propTypes = {
+  points: PropTypes.arrayOf(PropTypes.shape({
+    altitude: PropTypes.number.isRequired,
+    location: PropTypes.string.isRequired
+  })).isRequired,
+  title: PropTypes.string.isRequired,
+  difference: PropTypes.string.isRequired,
+  totalAltitude: PropTypes.number.isRequired,
+  totalAltitudeLoss: PropTypes.number,
+  distanceCovered: PropTypes.number.isRequired,
+  isCircular: PropTypes.bool
+};
 export default AltimeterGraph;

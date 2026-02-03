@@ -64,7 +64,6 @@ const Location = ({ isSmallScreen, title, mainTitle, locationData, locationDataI
           variants={floatFromDownPreTitle}
           initial="initial"
           whileInView="animate" 
-viewport={{ once: true }}
           viewport={{ once: true }}
         >
           {title}
@@ -75,7 +74,6 @@ viewport={{ once: true }}
           variants={floatFromDownMainTitle}
           initial="initial"
           whileInView="animate" 
-viewport={{ once: true }}
           viewport={{ once: true }}
         >
           {mainTitle}

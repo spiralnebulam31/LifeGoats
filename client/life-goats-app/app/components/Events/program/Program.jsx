@@ -43,7 +43,6 @@ const Program = ({
           variants={floatFromDownPreTitle}
           initial="initial"
           whileInView="animate" 
-viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Details about the
@@ -55,7 +54,6 @@ viewport={{ once: true }}
           variants={floatFromDownMainTitle}
           initial="initial"
           whileInView="animate" 
-viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Program
@@ -80,7 +78,7 @@ viewport={{ once: true }}
     variants={fadeIn}
     initial="initial"
     whileInView="animate" 
-viewport={{ once: true }}
+    viewport={{ once: true }}
   >
     {programData.map((item, index) => (
       <DateButton
@@ -99,7 +97,7 @@ viewport={{ once: true }}
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
-viewport={{ once: true }}
+        viewport={{ once: true }}
       >
         {programData.map((item, index) => (
           <ProgramTab
@@ -116,7 +114,7 @@ viewport={{ once: true }}
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
-viewport={{ once: true }}
+        viewport={{ once: true }}
       >
         <a
               href="/Life Goats The Program.pdf"

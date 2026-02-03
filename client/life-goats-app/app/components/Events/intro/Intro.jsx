@@ -37,16 +37,20 @@ const Intro = ( { title, mainTitle, image, introText } ) => {
         pt-14 mb-5 z-10 overflow-hidden">
           <motion.p className="md:text-[18px] text-[14px] text-secondary font-subtitle
           font-bold uppercase tracking-wider"
-          variants={floatFromDownPreTitle} initial="initial" whileInView="animate" 
-viewport={{ once: true }} viewport={{once: true}}
+          variants={floatFromDownPreTitle} 
+          initial="initial" 
+          whileInView="animate" 
+          viewport={{ once: true }}
           >
             {title}
           </motion.p>
           <motion.h2 className="text-earth font-bold font-title uppercase md:text-[55px]
           sm:text-[45px] text-[40px] outline-background-2 pb-2 mt-0"
           style={{ textShadow: "2px 2px 3px rgba(0,0,0,0.3)" }}
-          variants={floatFromDownMainTitle} initial="initial" whileInView="animate" 
-viewport={{ once: true }} viewport={{once: true}}
+          variants={floatFromDownMainTitle} 
+          initial="initial" 
+          whileInView="animate" 
+          viewport={{ once: true }}
           >
             {mainTitle}
           </motion.h2>
