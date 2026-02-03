@@ -31,8 +31,8 @@ import {
           image={heroBackgroundOct25}
           locationTitle="Mount Olympus" 
           date="Fri 24th - Tue 28th October 2025"
-          p1="A happy surprise!"
-          p2="An unexpected opportunity to come together and spend some more time at the Plateau of the Muses once again."
+          p1="Autumn days filled with golden hues and crisp mountain air."
+          p2="It was refreshing to see the changing colors of the season while surrounded by some familiar and some new faces!"
           slider={true}
         />
         <Intro
