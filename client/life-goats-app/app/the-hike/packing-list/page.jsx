@@ -35,7 +35,8 @@ const PackingList = () => {
           className="font-bold pt-14 pb-4 text-center"
           variants={fadeIn}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
         >
           Let&apos;s get ready and pack our bags!
         </motion.p>
@@ -43,7 +44,8 @@ const PackingList = () => {
           className="w-[90%] mx-auto"
           variants={fadeIn}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
         >
           <GoatPrintsWalking />
         </motion.div>

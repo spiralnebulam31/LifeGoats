@@ -22,7 +22,8 @@ function SuccessfulSubscription() {
         className="flex flex-col lg:flex-row justify-center items-center lg:items-start mx-auto pt-10 pb-16 font-body lg:text-lg text-md w-[90%] lg:w-[70%]"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         {/* Image */}
         <div className="mb-8 lg:mb-0 lg:mr-8 flex-shrink-0 w-full sm:w-[90%] md:w-[70%] lg:w-[50%]">
@@ -49,7 +50,8 @@ function SuccessfulSubscription() {
             className="w-[70%] mx-auto mb-4"
             variants={fadeIn}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
             <GoatPrintsWalking />
           </motion.div> */}

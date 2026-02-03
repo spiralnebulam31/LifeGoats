@@ -30,7 +30,8 @@ const TheRoute = () => {
         font-body md:text-[16px] text-[14px] w-full"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
      
     <RouteInfoTextDisplay routeText={routeText} />

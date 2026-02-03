@@ -24,7 +24,8 @@ const SafetyConsiderations = () => {
             Safety Considerations
           </motion.h1>
         </motion.div>
-        <motion.ul className="w-[80%] mx-auto text-left pb-10" variants={fadeIn} initial="initial" whileInView="animate">
+        <motion.ul className="w-[80%] mx-auto text-left pb-10" variants={fadeIn} initial="initial" whileInView="animate" 
+viewport={{ once: true }}>
         <li>
         <p className="pb-5 italic">{"\u279c"} Alternative plan:</p>
         <p>There are some things that are out of our control.</p>
@@ -48,10 +49,12 @@ const SafetyConsiderations = () => {
         </div>
       </motion.div>
       <div className="relative z-20 w-[80%] lg:w-[70%] mx-auto pt-10 pb-8 font-body lg:text-lg text-md">
-        <motion.p className="font-bold pt-14 pb-4 text-center" variants={fadeIn} initial="initial" whileInView="animate">
+        <motion.p className="font-bold pt-14 pb-4 text-center" variants={fadeIn} initial="initial" whileInView="animate" 
+viewport={{ once: true }}>
         Respect the mountain. Come prepared and with both ambition and humility...
         </motion.p>
-        <motion.div className="w-[90%] mx-auto" variants={fadeIn} initial="initial" whileInView="animate">
+        <motion.div className="w-[90%] mx-auto" variants={fadeIn} initial="initial" whileInView="animate" 
+viewport={{ once: true }}>
           <GoatPrintsWalking />
         </motion.div>
       </div>

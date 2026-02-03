@@ -44,7 +44,7 @@ const Altimeter = ({
           variants={floatFromDownPreTitle} 
           initial="initial" 
           whileInView="animate" 
-          viewport={{ once: true }}
+          viewport={{ once: true }} 
         >
           A glimpse at
         </motion.p>
@@ -69,7 +69,7 @@ const Altimeter = ({
           className="w-full lg:w-[48%]"
           variants={floatFromLeftAbout}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
           viewport={{ once: true }}
         >
           <AltimeterGraph 
@@ -89,7 +89,7 @@ const Altimeter = ({
             className="w-full lg:w-[48%]"
             variants={floatFromRightAbout}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
             viewport={{ once: true }}
           >
             <AltimeterGraph 

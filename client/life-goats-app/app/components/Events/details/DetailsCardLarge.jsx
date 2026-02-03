@@ -22,7 +22,8 @@ const DetailsCardLarge = ( { details } ) => {
 
   return (
     <motion.div className="flex items-center justify-center mx-auto"
-      variants={fadeIn} initial="initial" whileInView="animate"
+      variants={fadeIn} initial="initial" whileInView="animate" 
+viewport={{ once: true }}
     >
         <motion.div className="flex flex-wrap px-2 space-x-2 justify-center w-full mx-auto my-auto">
         

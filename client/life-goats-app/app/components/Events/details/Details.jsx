@@ -74,7 +74,8 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}`}
         >
           {title}
@@ -85,7 +86,7 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
           style={{ textShadow: "2px 2px 3px rgba(0,0,0,0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
           viewport={{ once: true }}
         >
           {mainTitle}

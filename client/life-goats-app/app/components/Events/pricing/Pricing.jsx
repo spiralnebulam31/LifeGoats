@@ -32,7 +32,8 @@ const Pricing = () => {
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Details about the
@@ -43,7 +44,8 @@ const Pricing = () => {
           style={{ textShadow: "2px 2px 3px rgba(0,0,0, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Pricing
@@ -55,7 +57,8 @@ const Pricing = () => {
         font-body md:text-[16px] text-[14px] w-[90%] lg:w-[70%]"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
       {pricingData.map((item, index) => (
         <motion.div
@@ -86,7 +89,8 @@ const Pricing = () => {
           font-body md:text-[16px] text-[14px] w-[80%] md:w-[55%]"
           variants={fadeIn}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
         >
         <p className="text-center text-bold text-tertiary uppercase font-links font-bold text-3xl py-2">Additional costs</p>
           {additionalCosts.map((item, index) => (
@@ -97,7 +101,8 @@ const Pricing = () => {
         <motion.div
           variants={fadeIn}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
         >
         <a
               href="/Life Goats Cost Analysis.pdf"
