@@ -22,10 +22,6 @@ import {
   transparentMountainBG2,
 } from "@/src/assets";
 import Image from "next/image";
-import dotenv from "dotenv";
-import process from "process";
-
-dotenv.config();
 
 const Contact = ({
   phoneIsHovered,
