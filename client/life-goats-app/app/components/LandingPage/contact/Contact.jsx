@@ -21,7 +21,7 @@ import {
   instagramIcon,
   instagramIconHover,
   transparentMountainBG2,
-} from "@/public/assets";
+} from "@/src/assets";
 import dotenv from "dotenv";
 import process from "process";
 

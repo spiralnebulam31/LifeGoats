@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../motion/motion";
 import GoatPrintsWalking from "../../components/Loaders/GoatPrintsWalking";
-import { safetyConsiderationsBG } from "@/public/assets";
+import { safetyConsiderationsBG } from "@/src/assets";
 import Image from "next/image";
 
 const SafetyConsiderations = () => {

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { directorsChairs } from "@/public/assets/the-team";
+import { directorsChairs } from "@/src/assets/the-team";
 import { teamData } from "../../../data/team";
 import TeamCard from "../../components/About/team/TeamCard";
 import Image from "next/image";
