@@ -8,7 +8,7 @@ import lifeGoatsLogo from './navbar/life-goats-logo.svg';
 import menuMountain from './navbar/menu-mountain.svg';
 import menuClose from './navbar/menu-close.svg';
 
-import introSectionImg from './homepage/intro-section-img.JPG';
+import introSectionImg from './homepage/intro-section-img.jpg';
 
 import heroBackgroundMay24 from './hero/hero-bg-may24.webp';
 import heroBackgroundOct24 from './hero/hero-bg-oct24.jpg';
