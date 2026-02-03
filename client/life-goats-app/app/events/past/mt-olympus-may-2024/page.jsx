@@ -12,7 +12,7 @@ import {
   import {
     heroBackgroundMay24,
     aboutPhotoMay24
-  } from "@/public/assets/index.js";
+  } from "@/src/assets/index.js";
   import { introTextMay24 } from '../../../../data/intro';
   import { overviewDataMay24 } from "../../../../data/overview";
   import { detailsMay24, detailsImagesMay24 } from "../../../../data/details";

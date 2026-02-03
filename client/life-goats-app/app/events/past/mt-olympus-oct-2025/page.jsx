@@ -10,7 +10,7 @@ import {
   import {
     heroBackgroundOct25,
     aboutPhotoOct25
-  } from "@/public/assets/index.js";
+  } from "@/src/assets/index.js";
   import { introTextOct25 } from '../../../../data/intro';
   import { detailsOct25, detailsImagesOct25 } from "../../../../data/details";
   import { mtOlympusOct2025Images } from '../../../../data/galleries/mt-olympus-oct-2025';

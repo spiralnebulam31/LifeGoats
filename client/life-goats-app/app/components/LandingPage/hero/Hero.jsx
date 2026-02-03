@@ -9,7 +9,7 @@ import {
 import {
   goatPrintsLight,
   olympus2024BG3,
-} from "@/public/assets/index";
+} from "@/src/assets/index";
 import Image from 'next/image';
 import Link from "next/link";
 
