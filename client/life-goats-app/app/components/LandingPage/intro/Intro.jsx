@@ -10,8 +10,8 @@ import {
   recharge,
   enjoy,
 } from "../../../../motion/intro-section";
-// import { introSectionImg } from "@/public/assets/index";
-// import Image from 'next/image';
+import { introSectionImg } from "@/src/assets/index";
+import Image from 'next/image';
 
 const Intro = () => {
   // New animation variants for the expanded content

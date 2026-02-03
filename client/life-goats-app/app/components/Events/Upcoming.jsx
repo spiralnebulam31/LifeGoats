@@ -7,7 +7,7 @@ import {
   floatFromRightContact,
 } from "../../../motion/home-sections";
 import GoatPrintsWalking from "../../components/Loaders/GoatPrintsWalking";
-import { upcomingEvents } from "@/public/assets/index.js";
+import { upcomingEvents } from "@/src/assets/index.js";
 import Link from "next/link";
 import Image from "next/image";
 import PropTypes from 'prop-types';

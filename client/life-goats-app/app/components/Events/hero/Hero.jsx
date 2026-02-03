@@ -12,7 +12,7 @@ import {
 import {
   goatPrints,
   calendar,
-} from "@/public/assets/index.js";
+} from "@/src/assets/index.js";
 import Image from "next/image";
 import PropTypes from 'prop-types';
 import Link from "next/link";
