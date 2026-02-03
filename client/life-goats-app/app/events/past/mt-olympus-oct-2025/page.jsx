@@ -4,79 +4,66 @@ import {
     Hero,
     Intro,
     Details,
-    // Location,
     Altimeter,
     Gallery,
-    // TheTeamOct2024
   } from "../../../components/Events";
   import {
     heroBackgroundOct25,
-    aboutPhotoOct24
+    aboutPhotoOct25
   } from "@/public/assets/index.js";
-  import { introTextOct24 } from '../../../../data/intro';
-  import { detailsOct24, detailsImagesOct24 } from "../../../../data/details";
-//   import { mountainLemos, mountainView } from "@/public/assets/index.js";
-//   import { locationDataMay24, locationDataInfoMay24 } from "../../../../data/location";
-  import { mtOlympusOct2024Images } from '../../../../data/galleries/mt-olympus-oct-2024';
+  import { introTextOct25 } from '../../../../data/intro';
+  import { detailsOct25, detailsImagesOct25 } from "../../../../data/details";
+  import { mtOlympusOct2025Images } from '../../../../data/galleries/mt-olympus-oct-2025';
+  import { getRouteData } from '../../../../data/altimeter';
   import { useMediaQuery } from 'react-responsive';
   
   const LandingPage = () => {
     const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+    
+    // Get route data
+    const ascentData = getRouteData('gortsiaToAgapitosViaStragos');
+    const descentData = getRouteData('agapitosToAgiosDionysiosViaPrionia');
 
     return (
       <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
         <Hero 
           isSmallScreen={isSmallScreen} 
           image={heroBackgroundOct25}
-          locationTitle="Location to be decided" 
+          locationTitle="Mount Olympus" 
           date="Fri 24th - Tue 28th October 2025"
-          p1="More info coming soon..."
-          p2=""
-          slider={false}
+          p1="A happy surprise!"
+          p2="An unexpected opportunity to come together and spend some more time at the Plateau of the Muses once again."
+          slider={true}
         />
         <Intro
           isSmallScreen={isSmallScreen} 
           title="A brief summary of"
           mainTitle="The Retreat"
-          image={aboutPhotoOct24}
-          introText={introTextOct24}
+          image={aboutPhotoOct25}
+          introText={introTextOct25}
         />
         <Details 
           isSmallScreen={isSmallScreen} 
           title="The retreat in brief"
           mainTitle="Details"
-          details={detailsOct24}
-          images={detailsImagesOct24}
+          details={detailsOct25}
+          images={detailsImagesOct25}
           bgColor="gradient"
           titleColor="white"
         />
-        {/* <Location 
-          isSmallScreen={isSmallScreen} 
-          title="discover"
-          mainTitle="The Location"
-          image1={mountainLemos}
-          image2={mountainView}
-          imageAlt1="Lemos passage on Mount Olympus"
-          imageAlt2="View from the Plateau of the Muses"
-          locationData={locationDataMay24} // it's the same as the May 24 data
-          locationDataInfo={locationDataInfoMay24} // it's the same as the May 24 data
-          googleMapsLink="https://maps.app.goo.gl/RMdWS12Tge9Jnxot5"
-        /> */}
         <Altimeter 
-          isSmallScreen={isSmallScreen} 
+          ascentData={ascentData}
+          descentData={descentData}
+          showBoth={true}
         />
         <Gallery 
-          isSmallScreen={isSmallScreen} 
+          isSmallScreen={isSmallScreen}
           title="Our Memories"
           mainTitle="Gallery"
-          imagesArray={mtOlympusOct2024Images}
+          imagesArray={mtOlympusOct2025Images}
         />
-        {/* <TheTeamOct2024
-          isSmallScreen={isSmallScreen} 
-        /> */}
       </div>
     );
   };
   
   export default LandingPage;
-  

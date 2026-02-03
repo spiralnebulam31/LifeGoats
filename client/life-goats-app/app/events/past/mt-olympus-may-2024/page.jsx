@@ -5,7 +5,6 @@ import {
     Intro,
     EventOverview,
     Details,
-    // Location,
     Altimeter,
     Gallery,
     TheTeamMay2024
@@ -17,8 +16,6 @@ import {
   import { introTextMay24 } from '../../../../data/intro';
   import { overviewDataMay24 } from "../../../../data/overview";
   import { detailsMay24, detailsImagesMay24 } from "../../../../data/details";
-  // import { mountainStefani, mountainEnipeas } from "@/public/assets/index.js";
-  // import { locationDataMay24, locationDataInfoMay24 } from "../../../../data/location";
   import { mtOlympusMay2024Images } from '../../../../data/galleries/mt-olympus-may-2024';
   import { getRouteData } from '../../../../data/altimeter';
   import { useMediaQuery } from 'react-responsive';
@@ -64,20 +61,7 @@ import {
           bgColor="plain"
           titleColor="blue"
         />
-        {/* <Location 
-          isSmallScreen={isSmallScreen} 
-          title="discover"
-          mainTitle="The Location"
-          image1={mountainStefani}
-          image2={mountainEnipeas}
-          imageAlt1="Stefani peak on Mount Olympus"
-          imageAlt2="Enipeas river on Mount Olympus"
-          locationData={locationDataMay24}
-          locationDataInfo={locationDataInfoMay24}
-          googleMapsLink="https://maps.app.goo.gl/RMdWS12Tge9Jnxot5"
-        /> */}
         <Altimeter 
-          isSmallScreen={isSmallScreen}
           ascentData={ascentData}
           descentData={descentData}
           showBoth={true}
