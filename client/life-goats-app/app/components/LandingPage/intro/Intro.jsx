@@ -43,7 +43,7 @@ const Intro = () => {
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
-viewport={{ once: true }}
+        viewport={{ once: true }}
         className="flex flex-col items-center justify-center text-center mx-auto w-[90%] lg:w-[60%] space-y-12"
       >
         {/* First paragraph - original with animations */}

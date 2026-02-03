@@ -81,7 +81,6 @@ const Contact = ({
           variants={floatFromDownPreTitle}
           initial="initial"
           whileInView="animate" 
-viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Ways to reach out
@@ -93,7 +92,6 @@ viewport={{ once: true }}
           variants={floatFromDownMainTitle}
           initial="initial"
           whileInView="animate" 
-viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Contact Life Goats
@@ -278,6 +276,12 @@ Contact.propTypes = {
   handleEmail2MouseEnter: PropTypes.func.isRequired,
   handleEmail2MouseLeave: PropTypes.func.isRequired,
   isSmallScreen: PropTypes.bool.isRequired,
+};
+
+Contact.propTypes = {
+  instagramIconIsHovered: PropTypes.bool.isRequired,
+  handleInstagramIconMouseEnter: PropTypes.func.isRequired,
+  handleInstagramIconMouseLeave: PropTypes.func.isRequired
 };
 
 export default Contact;

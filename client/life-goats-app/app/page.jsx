@@ -62,4 +62,20 @@ LandingPage.propTypes = {
   isSmallScreen: PropTypes.bool.isRequired,
 };
 
+LandingPage.propTypes = {
+  phoneIsHovered: PropTypes.bool,
+  handlePhoneMouseEnter: PropTypes.func,
+  handlePhoneMouseLeave: PropTypes.func,
+  emailIsHovered: PropTypes.bool,
+  handleEmailMouseEnter: PropTypes.func,
+  handleEmailMouseLeave: PropTypes.func,
+  email2IsHovered: PropTypes.bool,
+  handleEmail2MouseEnter: PropTypes.func,
+  handleEmail2MouseLeave: PropTypes.func,
+  instagramIconIsHovered: PropTypes.bool,
+  handleInstagramIconMouseEnter: PropTypes.func,
+  handleInstagramIconMouseLeave: PropTypes.func,
+  isSmallScreen: PropTypes.bool
+};
+
 export default LandingPage;

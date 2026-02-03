@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from "../../../../motion/home-sections";
 import AltimeterGraph from "./AltimeterGraph";
+import PropTypes from 'prop-types';
 
 const Altimeter = ({ 
   ascentData, 
@@ -106,6 +107,32 @@ const Altimeter = ({
       </motion.div>
     </section>
   );
+};
+
+Altimeter.propTypes = {
+  ascentData: PropTypes.shape({
+    points: PropTypes.arrayOf(PropTypes.shape({
+      location: PropTypes.string,
+      altitude: PropTypes.number
+    })),
+    totals: PropTypes.shape({
+      altitudeGain: PropTypes.number,
+      altitudeLoss: PropTypes.number,
+      distanceCovered: PropTypes.number
+    })
+  }),
+  descentData: PropTypes.shape({
+    points: PropTypes.arrayOf(PropTypes.shape({
+      location: PropTypes.string,
+      altitude: PropTypes.number
+    })),
+    totals: PropTypes.shape({
+      altitudeGain: PropTypes.number,
+      altitudeLoss: PropTypes.number,
+      distanceCovered: PropTypes.number
+    })
+  }),
+  showBoth: PropTypes.bool
 };
 
 export default Altimeter;
