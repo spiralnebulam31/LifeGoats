@@ -13,6 +13,26 @@ const Altimeter = ({
     return null;
   }
 
+  // Check if routes are circular (start and end at same point)
+  const isAscentCircular = ascentData?.points && ascentData.points.length > 0 && 
+    ascentData.points[0].location === ascentData.points[ascentData.points.length - 1].location;
+  const isDescentCircular = descentData?.points && descentData.points.length > 0 && 
+    descentData.points[0].location === descentData.points[descentData.points.length - 1].location;
+  
+  // Determine route titles
+  const getRouteTitle = (routeData, index, isCircular) => {
+    if (isCircular && showBoth && ascentData && descentData) {
+      return index === 0 ? "Route 1" : "Route 2";
+    }
+    if (isCircular) return "Circular Route";
+    return index === 0 ? "Ascent" : "Descent";
+  };
+  
+  const getRouteDifference = (routeData, index, isCircular) => {
+    if (isCircular) return "circular";
+    return index === 0 ? "gain" : "loss";
+  };
+
   return (
     <section
       className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
@@ -54,10 +74,12 @@ const Altimeter = ({
         >
           <AltimeterGraph 
             points={ascentData.points}
-            title="Ascent"
-            difference="gain"
+            title={getRouteTitle(ascentData, 0, isAscentCircular)}
+            difference={getRouteDifference(ascentData, 0, isAscentCircular)}
             totalAltitude={ascentData.totals.altitudeGain}
+            totalAltitudeLoss={isAscentCircular ? ascentData.totals.altitudeLoss : null}
             distanceCovered={ascentData.totals.distanceCovered}
+            isCircular={isAscentCircular}
           />
         </motion.div>
 
@@ -72,10 +94,12 @@ const Altimeter = ({
           >
             <AltimeterGraph 
               points={descentData.points}
-              title="Descent"
-              difference="loss"
-              totalAltitude={descentData.totals.altitudeLoss}
+              title={getRouteTitle(descentData, 1, isDescentCircular)}
+              difference={getRouteDifference(descentData, 1, isDescentCircular)}
+              totalAltitude={isDescentCircular ? descentData.totals.altitudeGain : descentData.totals.altitudeLoss}
+              totalAltitudeLoss={isDescentCircular ? descentData.totals.altitudeLoss : null}
               distanceCovered={descentData.totals.distanceCovered}
+              isCircular={isDescentCircular}
             />
           </motion.div>
         )}

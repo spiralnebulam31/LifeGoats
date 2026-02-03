@@ -11,7 +11,7 @@ const PastEvents = () => {
 
   return (
     <motion.div
-      className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden p-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto"
+      className="bg-background relative bg-cover w-full h-auto min-h-screen overflow-x-hidden p-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto"
     >
       <motion.div
         className="py-auto text-center w-[80%] lg:w-[90%] mx-auto
@@ -30,8 +30,8 @@ const PastEvents = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-2 md:mb-4">
+      <motion.div className="flex flex-row justify-center items-center w-full">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-2 md:mb-4 max-w-6xl w-full px-4">
           {pastEventsData.map((event, index) => (
             <motion.div
               key={index}

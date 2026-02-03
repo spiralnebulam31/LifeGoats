@@ -35,7 +35,7 @@ const Footer = () => {
             <span className="text-secondary font-links font-bold text-lg mx-2">
               ©
             </span>
-            2023-2025 Life Goats
+            2023-2026 Life Goats
           </p>
         </div>
 

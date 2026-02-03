@@ -12,7 +12,7 @@ import Link from "next/link";
 const TestimonialsPage = () => {
   return (
     <motion.div
-      className="bg-gradient-to-b from-secondary to-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden p-2 z-10 mb-[180px] mt-[60px] flex flex-col justify-center text-center mx-auto"
+      className="bg-gradient-to-b from-secondary to-background relative bg-cover w-full h-auto overflow-x-hidden p-2 z-10 mb-[180px] mt-[60px] flex flex-col justify-center text-center mx-auto"
     >
 
       <motion.div
@@ -42,24 +42,22 @@ const TestimonialsPage = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-10 mb-2 md:mb-4">
+      <motion.div className="flex flex-row justify-center items-start px-4">
+        <motion.div className="columns-1 md:columns-2 lg:columns-3 gap-2 w-full max-w-7xl">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="relative z-10"
+              className="relative z-10 break-inside-avoid mb-4 md:mb-6"
               initial={{
                 opacity: 0,
-                translateX: index % 2 === 0 ? -100 : 100,
-                translateY: -100,
+                translateY: 50,
               }}
               animate={{
                 opacity: 1,
-                translateX: 0,
                 translateY: 0,
                 transition: {
-                  duration: 0.8,
-                  delay: index * 0.2,
+                  duration: 0.6,
+                  delay: index * 0.1,
                 },
               }}
             >
