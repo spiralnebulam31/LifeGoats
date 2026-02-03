@@ -22,10 +22,6 @@ import {
   instagramIconHover,
   transparentMountainBG2,
 } from "@/src/assets";
-import dotenv from "dotenv";
-import process from "process";
-
-dotenv.config();
 
 const Contact = ({
   phoneIsHovered,
