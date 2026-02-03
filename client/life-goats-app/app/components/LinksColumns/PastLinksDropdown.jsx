@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
-import { downArrow, downArrowHover } from "@/public/assets";
+import { downArrow, downArrowHover } from "@/src/assets";
 import { useState } from "react";
 import PropTypes from 'prop-types';
 import Link from "next/link";

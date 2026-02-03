@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../motion/motion";
-import { hikingBoots } from "@/public/assets/subscriptions";
+import { hikingBoots } from "@/src/assets/subscriptions";
 // import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
 import Image from "next/image";
 // import Link from "next/link";

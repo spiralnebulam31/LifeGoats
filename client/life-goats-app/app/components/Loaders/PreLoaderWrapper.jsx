@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { lifeGoatsLogo } from '@/public/assets';
+import { lifeGoatsLogo } from '@/src/assets';
 import Image from 'next/image';
 import propTypes from 'prop-types';
 

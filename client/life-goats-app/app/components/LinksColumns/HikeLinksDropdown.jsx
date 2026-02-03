@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { downArrow, downArrowHover } from "@/public/assets";
+import { downArrow, downArrowHover } from "@/src/assets";
 import { useState } from "react";
 import PropTypes from 'prop-types';
 

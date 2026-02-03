@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../motion/motion";
 import GoatPrintsWalking from "../../components/Loaders/GoatPrintsWalking";
-import { historyBG } from "@/public/assets";
+import { historyBG } from "@/src/assets";
 import Image from "next/image";
 
 const TheHistory = () => {

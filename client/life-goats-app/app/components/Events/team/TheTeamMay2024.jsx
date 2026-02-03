@@ -9,7 +9,7 @@ import {
 } from "../../../../motion/home-sections";
 import { fadeIn } from "../../../../motion/motion";
 import { mtOlympusMay2024TeamData } from "../../../../data/team";
-import { theTeam } from "@/public/assets/the-team";
+import { theTeam } from "@/src/assets/the-team";
 import TeamBubble from "./TeamBubble";
 import Image from "next/image";
 

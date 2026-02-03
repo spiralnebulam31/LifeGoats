@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from 'next/image';
-import { goatPrintSingle } from "@/public/assets";
+import { goatPrintSingle } from "@/src/assets";
 import {
   stepTopRight,
   stepBottomRight,

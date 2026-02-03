@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { aboutLinks, eventsLinks } from "../../../data/navLinks";
-import { lifeGoatsLogo, menuMountain, menuClose } from "@/public/assets";
+import { lifeGoatsLogo, menuMountain, menuClose } from "@/src/assets";
 import MobileMenu from "./MobileMenu";
 import { AboutLinksDropdown, EventsLinksDropdown } from "../LinksColumns";
 
