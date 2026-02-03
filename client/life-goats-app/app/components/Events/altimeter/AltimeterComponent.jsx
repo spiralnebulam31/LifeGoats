@@ -74,7 +74,7 @@ const Altimeter = ({
               points={descentData.points}
               title="Descent"
               difference="loss"
-              totalAltitude={descentData.totals.altitudeGain}
+              totalAltitude={descentData.totals.altitudeLoss}
               distanceCovered={descentData.totals.distanceCovered}
             />
           </motion.div>
