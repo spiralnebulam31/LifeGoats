@@ -15,7 +15,8 @@ const PrivacyPolicyPage = () => {
         className="bg-background flex flex-col justify-center text-start mx-auto pt-10 pb-10 font-body lg:text-lg text-md w-[80%] lg:w-[70%]"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         <div>
           <h2 className="text-primary font-subtitle text-xl lg:text-2xl font-bold mb-2">

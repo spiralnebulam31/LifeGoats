@@ -78,7 +78,8 @@ const Testimonials = () => {
           className="flex justify-evenly items-center mx-auto"
           variants={floatFromDownMainTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
         >
           <button
             className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 mt-8 px-4 rounded-lg shadow-lg

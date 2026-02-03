@@ -82,7 +82,8 @@ const TheTeam = () => {
           className="w-[90%] md:w-[70%] lg:w-[50%] z-0 rounded-2xl shadow-lg"
           variants={fadeIn}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           width={1500}
           height={800}
         />
@@ -93,7 +94,8 @@ const TheTeam = () => {
           text-primary font-body text-[16px] py-5 md:mt-2 w-[90%] md:w-[70%] lg:w-[50%]"
         variants={floatFromLeftContact}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         <motion.p className="my-auto mr-4">
           Special thanks to our photographer{" "}
@@ -116,7 +118,8 @@ const TheTeam = () => {
           text-primary font-body text-[16px] py-5 w-[90%] md:w-[70%] lg:w-[50%]"
         variants={floatFromRightContact}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         <Image
           src={mtOlympusMay2024TeamData[7].image}
@@ -139,7 +142,8 @@ const TheTeam = () => {
           text-primary font-body text-[16px] py-5 w-[90%] md:w-[650%] lg:w-[50%]"
         variants={floatFromLeftContact}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         <motion.p className="my-auto mr-4">
           And the{" "}

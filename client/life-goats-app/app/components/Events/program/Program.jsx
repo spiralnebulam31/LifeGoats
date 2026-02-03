@@ -42,7 +42,8 @@ const Program = ({
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Details about the
@@ -53,7 +54,8 @@ const Program = ({
           style={{ textShadow: "2px 2px 3px rgba(0,0,0, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}
         >
           Program
@@ -77,7 +79,8 @@ const Program = ({
     className="flex flex-wrap lg:flex-row justify-center items-center mx-auto mb-2 text-primary font-body md:text-[16px] text-[14px] w-[80%] lg:w-[55%]"
     variants={fadeIn}
     initial="initial"
-    whileInView="animate"
+    whileInView="animate" 
+viewport={{ once: true }}
   >
     {programData.map((item, index) => (
       <DateButton
@@ -95,7 +98,8 @@ const Program = ({
         font-body md:text-[16px] text-[14px] w-[80%] lg:w-[63%] h-auto md:h-[430px]"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         {programData.map((item, index) => (
           <ProgramTab
@@ -111,7 +115,8 @@ const Program = ({
         font-body md:text-[16px] text-[14px] w-[80%] lg:w-[45%]"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         <a
               href="/Life Goats The Program.pdf"

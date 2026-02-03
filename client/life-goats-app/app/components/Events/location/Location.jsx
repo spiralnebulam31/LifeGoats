@@ -63,7 +63,8 @@ const Location = ({ isSmallScreen, title, mainTitle, locationData, locationDataI
           className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}
         >
           {title}
@@ -73,7 +74,8 @@ const Location = ({ isSmallScreen, title, mainTitle, locationData, locationDataI
           style={{ textShadow: "2px 2px 3px rgba(0, 0, 0, 0.5)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}
         >
           {mainTitle}

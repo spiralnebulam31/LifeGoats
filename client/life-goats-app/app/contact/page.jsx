@@ -80,7 +80,7 @@ const Contact = ({
           font-bold uppercase tracking-wider"
           variants={floatFromDownPreTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
           viewport={{ once: true }}
         >
           Ways to reach out
@@ -91,7 +91,7 @@ const Contact = ({
           style={{ textShadow: "3px 2px 3px rgba(0, 0, 0, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
           viewport={{ once: true }}
         >
           Contact Life Goats

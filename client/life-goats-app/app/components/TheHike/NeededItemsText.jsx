@@ -9,7 +9,8 @@ const NeededItemsText = () => {
       className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[90%]"
       variants={fadeIn}
       initial="initial"
-      whileInView="animate"
+      whileInView="animate" 
+viewport={{ once: true }}
     >
       <p>The mountain has its quirks just as every hiker has their own 😉</p>
       <br />

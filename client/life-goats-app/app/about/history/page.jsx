@@ -27,7 +27,8 @@ const TheHistory = () => {
             by Maria
           </motion.h2>
         </motion.div>
-        <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate">
+        <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate" 
+viewport={{ once: true }}>
           <p>Mount Olympus has always had a special place in my heart.</p>
           <br />
           <p>Let&apos;s rewind…</p>
@@ -46,10 +47,12 @@ const TheHistory = () => {
         </motion.div>
       </motion.div>
       <div className="relative z-20 w-[80%] lg:w-[70%] mx-auto pt-10 pb-8 font-body lg:text-lg text-md">
-        <motion.p className="font-bold pt-14 pb-4 text-center" variants={fadeIn} initial="initial" whileInView="animate">
+        <motion.p className="font-bold pt-14 pb-4 text-center" variants={fadeIn} initial="initial" whileInView="animate" 
+viewport={{ once: true }}>
           Stay tuned to read the rest of the story!
         </motion.p>
-        <motion.div className="w-[90%] mx-auto" variants={fadeIn} initial="initial" whileInView="animate">
+        <motion.div className="w-[90%] mx-auto" variants={fadeIn} initial="initial" whileInView="animate" 
+viewport={{ once: true }}>
           <GoatPrintsWalking />
         </motion.div>
       </div>

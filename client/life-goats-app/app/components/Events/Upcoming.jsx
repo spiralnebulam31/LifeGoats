@@ -45,7 +45,8 @@ const Upcoming = () => {
             className="w-[90%] mx-auto"
             variants={fadeIn}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
             <GoatPrintsWalking />
           </motion.div>

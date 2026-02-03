@@ -73,7 +73,8 @@ function SubscribeForm() {
         className="flex justify-center w-[90%] lg:w-[70%] mx-auto pt-8 pb-4"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         <div
           id="convertkit-target"
@@ -88,7 +89,8 @@ function SubscribeForm() {
         className="flex flex-col lg:flex-row justify-center items-center lg:items-start mx-auto pt-10 pb-16 font-body lg:text-lg text-md w-[90%] lg:w-[70%]"
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       ></motion.div>
     </motion.div>
   );

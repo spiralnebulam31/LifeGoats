@@ -75,7 +75,8 @@ const TheTeamOct2024 = () => {
           text-primary font-body text-[16px] py-5 md:mt-2 w-[90%] md:w-[70%] lg:w-[50%]"
         variants={floatFromLeftContact}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
       >
         <motion.p className="my-auto mr-4">
           And special thanks to our photographer{" "}

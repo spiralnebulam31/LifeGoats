@@ -23,7 +23,8 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
 <motion.div className="w-[90%] flex flex-col justify-center items-center mx-auto"
           variants={isSmallScreen ? stepsRepeatMobile : stepsRepeat}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
         >
           <motion.div className="flex flex-row justify-center items-center mt-6 w-[90%]">
             <MotionImage
@@ -32,7 +33,8 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
               className="w-[20px] h-auto object-contain"
               variants={stepTopLeft}
               initial="initial"
-              whileInView="animate"
+              whileInView="animate" 
+viewport={{ once: true }}
             />
             <MotionImage
               src={goatPrintSingle}
@@ -40,7 +42,8 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
               className="w-[20px] h-auto object-contain"
               variants={stepTopRight}
               initial="initial"
-              whileInView="animate"
+              whileInView="animate" 
+viewport={{ once: true }}
             />
           </motion.div>
           <motion.div className="flex flex-row justify-center items-center mb-5 w-[90%]">
@@ -50,7 +53,8 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
               className="w-[20px] h-auto object-contain"
               variants={stepBottomLeft}
               initial="initial"
-              whileInView="animate"
+              whileInView="animate" 
+viewport={{ once: true }}
             />
             <MotionImage
               src={goatPrintSingle}
@@ -58,7 +62,8 @@ const GoatPrintsWalking = ({ isSmallScreen }) => {
               className="w-[20px] h-auto object-contain"
               variants={stepBottomRight}
               initial="initial"
-              whileInView="animate"
+              whileInView="animate" 
+viewport={{ once: true }}
             />
           </motion.div>
         </motion.div>

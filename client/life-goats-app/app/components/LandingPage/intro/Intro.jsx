@@ -42,7 +42,8 @@ const Intro = () => {
       <motion.div
         variants={fadeIn}
         initial="initial"
-        whileInView="animate"
+        whileInView="animate" 
+viewport={{ once: true }}
         className="flex flex-col items-center justify-center text-center mx-auto w-[90%] lg:w-[60%] space-y-12"
       >
         {/* First paragraph - original with animations */}
@@ -50,7 +51,8 @@ const Intro = () => {
           className="pb-4"
           variants={paragraphVariants}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true }}
         >
         Our{" "}
@@ -58,7 +60,8 @@ const Intro = () => {
             className="font-title text-tertiary"
             variants={goal}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
             goal
           </motion.span>{" "}
@@ -66,7 +69,8 @@ const Intro = () => {
           <motion.span
             variants={comeTogether}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
             come together
           </motion.span>
@@ -74,7 +78,8 @@ const Intro = () => {
           <motion.span
             variants={connect}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
             connect
           </motion.span>
@@ -82,7 +87,8 @@ const Intro = () => {
           <motion.span
             variants={brainstorm}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
             brainstorm
           </motion.span>
@@ -90,12 +96,14 @@ const Intro = () => {
           <motion.span
             variants={recharge}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
             recharge
           </motion.span>{" "}
           and{" "}
-          <motion.span variants={enjoy} initial="initial" whileInView="animate">
+          <motion.span variants={enjoy} initial="initial" whileInView="animate" 
+viewport={{ once: true }}>
             enjoy reinventing ourselves
           </motion.span>
           .
@@ -106,7 +114,8 @@ const Intro = () => {
           className="relative"
           variants={highlightVariants}
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true, margin: "-100px" }}
         >
           Our{" "}
@@ -114,7 +123,8 @@ const Intro = () => {
               className="font-title text-tertiary text-[1.1em]"
               variants={goal}
               initial="initial"
-              whileInView="animate"
+              whileInView="animate" 
+viewport={{ once: true }}
             >
                mission
             </motion.span>{" "}
@@ -123,7 +133,8 @@ const Intro = () => {
             className="text-secondary"
             variants={comeTogether}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >
               family
             </motion.span>
@@ -132,14 +143,16 @@ const Intro = () => {
             className="text-secondary"
             variants={comeTogether}
             initial="initial"
-            whileInView="animate"
+            whileInView="animate" 
+viewport={{ once: true }}
           >harmony</motion.span>.
         </motion.div>
 
         {/* Supporting paragraphs with staggered animation */}
         <motion.div
           initial="initial"
-          whileInView="animate"
+          whileInView="animate" 
+viewport={{ once: true }}
           viewport={{ once: true, margin: "-50px" }}
         >
 
