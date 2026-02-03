@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import MapboxComponent from './GoogleMapComponent'; // Reusing the same file
+import SimpleMapComponent from './MapboxComponent';
 
 const MapDisplay = (props) => {
   const [isClient, setIsClient] = useState(false);
@@ -21,7 +21,7 @@ const MapDisplay = (props) => {
     );
   }
 
-  return <MapboxComponent {...props} />;
+  return <SimpleMapComponent {...props} />;
 };
 
 export default MapDisplay;
