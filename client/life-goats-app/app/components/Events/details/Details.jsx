@@ -93,11 +93,11 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
       </motion.div>
 
       <motion.div className="grid grid-cols-6 lg:grid-cols-4 gap-3 w-full h-full p-4 relative">
-        <motion.div className="order-4 lg:order-1 row-span-4 col-span-3 lg:row-span-3 lg:col-span-1">
+        <motion.div className="order-4 lg:order-1 row-span-4 col-span-3 lg:row-span-3 lg:col-span-1 flex items-center">
           <Image
             src={images[0].image}
             alt={images[0].alt}
-            className="rounded-2xl"
+            className="rounded-2xl w-full h-auto object-cover"
             variants={floatFromDownDetails}
             initial="initial"
             animate={oneInView ? "animate" : "initial"}
@@ -132,11 +132,11 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
             height={500}
           />
         </motion.div>
-        <motion.div className="order-5 lg:order-4 row-span-4 col-span-3 lg:row-span-3 lg:col-span-1">
+        <motion.div className="order-5 lg:order-4 row-span-4 col-span-3 lg:row-span-3 lg:col-span-1 flex items-center">
           <Image
             src={images[3].image}
             alt={images[3].alt}
-            className="rounded-2xl"
+            className="rounded-2xl w-full h-auto object-cover"
             variants={floatFromUpDetails}
             initial="initial"
             animate={fourInView ? "animate" : "initial"}

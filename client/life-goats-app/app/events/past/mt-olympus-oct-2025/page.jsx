@@ -25,7 +25,7 @@ import {
     const descentData = getRouteData('agapitosToAgiosDionysiosViaPrionia');
 
     return (
-      <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
+      <div className="bg-cover bg-n-repeat bg-center overflow-hidden mb-[180px]">
         <Hero 
           isSmallScreen={isSmallScreen} 
           image={heroBackgroundOct25}

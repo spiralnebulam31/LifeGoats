@@ -3,7 +3,7 @@ import { Chart, LinearScale, CategoryScale, Title, Tooltip, PointElement, LineEl
 
 Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineElement, Filler);
 
-const AltimeterGraph = ({ points, title, difference, totalAltitude, distanceCovered }) => {
+const AltimeterGraph = ({ points, title, difference, totalAltitude, totalAltitudeLoss = null, distanceCovered, isCircular = false }) => {
   // Extract altitude data from points
   const altitudes = points.map(point => point.altitude);
   
@@ -15,7 +15,7 @@ const AltimeterGraph = ({ points, title, difference, totalAltitude, distanceCove
     labels: labels,
     datasets: [
       {
-        label: title + ' altitude ' + difference + ': ' + totalAltitude,
+        label: isCircular ? `${title} altitude profile` : `${title} altitude ${difference}: ${totalAltitude}`,
         data: altitudes,
         borderColor: '#4D3D11',
         backgroundColor: '#7BA862',
@@ -116,25 +116,49 @@ const AltimeterGraph = ({ points, title, difference, totalAltitude, distanceCove
       </div>
       
       {/* Totals */}
-      <div className="flex flex-row gap-8 justify-center items-center bg-earth/10 rounded-lg p-6 w-full mt-4 shadow-md">
-        <div className="flex flex-col items-center">
-          <span className="text-secondary font-subtitle text-[12px] md:text-[14px] uppercase tracking-wider">
-            Altitude {difference === 'gain' ? 'Gain' : 'Loss'}
-          </span>
-          <span className="text-primary font-body text-[24px] md:text-[28px] font-bold">
-            {totalAltitude}m
-          </span>
-        </div>
-        <div className="h-12 w-[2px] bg-earth/30"></div>
-        <div className="flex flex-col items-center">
-          <span className="text-secondary font-subtitle text-[12px] md:text-[14px] uppercase tracking-wider">
-            Distance Covered
-          </span>
-          <span className="text-primary font-body text-[24px] md:text-[28px] font-bold">
-            {distanceCovered}km
-          </span>
-        </div>
-      </div>
+      {/* <div className={`flex flex-row ${isCircular ? 'gap-8' : 'gap-8'} justify-center items-center bg-earth/10 rounded-lg p-6 w-full mt-4 shadow-md`}>
+        {isCircular ? (
+          <>
+            <div className="flex flex-col items-center">
+              <span className="text-secondary font-subtitle text-[12px] md:text-[14px] uppercase tracking-wider">
+                Altitude Difference
+              </span>
+              <span className="text-primary font-body text-[24px] md:text-[28px] font-bold">
+                {totalAltitude}m
+              </span>
+            </div>
+            <div className="h-12 w-[2px] bg-earth/30"></div>
+            <div className="flex flex-col items-center">
+              <span className="text-secondary font-subtitle text-[12px] md:text-[14px] uppercase tracking-wider">
+                Distance Covered
+              </span>
+              <span className="text-primary font-body text-[24px] md:text-[28px] font-bold">
+                {distanceCovered}km
+              </span>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="flex flex-col items-center">
+              <span className="text-secondary font-subtitle text-[12px] md:text-[14px] uppercase tracking-wider">
+                Altitude {difference === 'gain' ? 'Gain' : 'Loss'}
+              </span>
+              <span className="text-primary font-body text-[24px] md:text-[28px] font-bold">
+                {totalAltitude}m
+              </span>
+            </div>
+            <div className="h-12 w-[2px] bg-earth/30"></div>
+            <div className="flex flex-col items-center">
+              <span className="text-secondary font-subtitle text-[12px] md:text-[14px] uppercase tracking-wider">
+                Distance Covered
+              </span>
+              <span className="text-primary font-body text-[24px] md:text-[28px] font-bold">
+                {distanceCovered}km
+              </span>
+            </div>
+          </>
+        )}
+      </div> */}
     </div>
   );
 };
