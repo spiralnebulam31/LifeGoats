@@ -23,7 +23,7 @@ const Altimeter = ({
   // Determine route titles
   const getRouteTitle = (routeData, index, isCircular) => {
     if (isCircular && showBoth && ascentData && descentData) {
-      return index === 0 ? "Route 1" : "Route 2";
+      return index === 0 ? "1st Route" : "2nd Route";
     }
     if (isCircular) return "Circular Route";
     return index === 0 ? "Ascent" : "Descent";
