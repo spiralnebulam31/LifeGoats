@@ -75,6 +75,10 @@ export const introTextOct25 = [
   },
   {
     paragraph:
+      "It was refreshing to see the changing colors of the season while surrounded by some familiar and some new faces!"
+  },
+  {
+    paragraph:
       "Diego the dog joined us this time and we enjoyed the views, each other’s company, and the gift of two beautifully sunny hiking days.",
   },
 ];

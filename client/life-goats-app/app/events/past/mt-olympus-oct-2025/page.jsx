@@ -32,7 +32,7 @@ import {
           locationTitle="Mount Olympus" 
           date="Fri 24th - Tue 28th October 2025"
           p1="Autumn days filled with golden hues and crisp mountain air."
-          p2="It was refreshing to see the changing colors of the season while surrounded by some familiar and some new faces!"
+          p2=""
           slider={true}
         />
         <Intro

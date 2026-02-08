@@ -32,8 +32,8 @@ import {
           locationTitle="Mount Olympus" 
           date="Fri 6th - Mon 9th June 2025"
           p1="Breathtaking views during hikes on Mount Olympus, refreshing dips into the crystal-clear waters of Enipeas river and warm cozy moments of connection at the Land of the Foot of the Mountain."
-          p2="More details about what happened in this retreat coming soon!"
-          slider={false}
+          p2=""
+          slider={true}
         />
         <Intro
           isSmallScreen={isSmallScreen} 
