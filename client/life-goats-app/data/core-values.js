@@ -1,29 +1,36 @@
+import {
+  community,
+  coreValuesNature,
+  lightheartedness,
+  growth,
+} from "@/src/assets/index.js";
+
 export const coreValues = [
     {
       index: 1,
       alt: "community",
-      image: "/assets/core-values/community.svg",
+      image: community,
       title: "Community",
       text: "Connection and relationship building is at the core of what we are after here. No man is an island. Relationships are the foundation of humanity folks. Together we are more. They expand our lives and our capacity to love and  help hold us accountable for making intentional life changes.",
     },
     {
       index: 2,
       alt: "nature",
-      image: "/assets/core-values/nature.svg",
+      image: coreValuesNature,
       title: "Nature Immersion",
       text: "Fresh mountain air and no WI-Fi is a good thing. Breath it in.",
     },
     {
       index: 3,
       alt: "lightheartedness",
-      image: "/assets/core-values/lightheartedness.svg",
+      image: lightheartedness,
       title: "Lightheartedness",
       text: "Laughter & humor seem so underrated. And at life goats events they are just plain inescapable.",
     },
     {
       index: 4,
       alt: "growth",
-      image: "/assets/core-values/growth.svg",
+      image: growth,
       title: "Growth",
       text: "Whether it’s through inward or outward exploration, pushing beyond our comfort zone is a critical part of life. In our Life Goats community, we relentlessly seek opportunities to expand our understanding of ourselves and the world around us. Our experiences are designed to encourage a growth mindset and to spark curiosity.",
     },

@@ -1,13 +1,45 @@
+import {
+  accommodationIcon,
+  altitudeIcon,
+  durationIcon,
+  elementsIcon,
+  groupIcon,
+  detailsMay24Photo1,
+  detailsMay24Photo2,
+  detailsMay24Photo3,
+  detailsMay24Photo4,
+  detailsMay24Photo5,
+  detailsMay24Photo6,
+  detailsOct24Photo1,
+  detailsOct24Photo2,
+  detailsOct24Photo3,
+  detailsOct24Photo4,
+  detailsOct24Photo5,
+  detailsOct24Photo6,
+  detailsJun25Photo1,
+  detailsJun25Photo2,
+  detailsJun25Photo3,
+  detailsJun25Photo4,
+  detailsJun25Photo5,
+  detailsJun25Photo6,
+  detailsOct25Photo1,
+  detailsOct25Photo2,
+  detailsOct25Photo3,
+  detailsOct25Photo4,
+  detailsOct25Photo5,
+  detailsOct25Photo6,
+} from "@/src/assets/index.js";
+
 export const detailsMay24 = [
     {
       name: "Accommodation",
-      icon: "/assets/details/accommodation-icon.svg",
+      icon: accommodationIcon,
       alt: "accommodation icon",
       text: "hotels, free camping, mountain refuge",
     },
     {
       name: "Altitude",
-      icon: "/assets/details/altitude-icon.svg",
+      icon: altitudeIcon,
       alt: "altitude icon",
       text: 2803,
       text2: " m",
@@ -15,7 +47,7 @@ export const detailsMay24 = [
     },
     {
       name: "Duration",
-      icon: "/assets/details/duration-icon.svg",
+      icon: durationIcon,
       alt: "duration icon",
       text: 4,
       text2: " days",
@@ -23,13 +55,13 @@ export const detailsMay24 = [
     },
     {
       name: "Elements",
-      icon: "/assets/details/elements-icon.svg",
+      icon: elementsIcon,
       alt: "elements icon",
       text: "mountain, sea, waterfalls",
     },
     {
       name: "Group",
-      icon: "/assets/details/group-icon.svg",
+      icon: groupIcon,
       alt: "group icon",
       text: 20,
       text2: " people",
@@ -40,13 +72,13 @@ export const detailsMay24 = [
   export const detailsOct24 = [
     {
       name: "Accommodation",
-      icon: "/assets/details/accommodation-icon.svg",
+      icon: accommodationIcon,
       alt: "accommodation icon",
       text: "hotels, mountain refuge",
     },
     {
       name: "Altitude",
-      icon: "/assets/details/altitude-icon.svg",
+      icon: altitudeIcon,
       alt: "altitude icon",
       text: 2803,
       text2: " m",
@@ -54,7 +86,7 @@ export const detailsMay24 = [
     },
     {
       name: "Duration",
-      icon: "/assets/details/duration-icon.svg",
+      icon: durationIcon,
       alt: "duration icon",
       text: 4,
       text2: " days",
@@ -62,13 +94,13 @@ export const detailsMay24 = [
     },
     {
       name: "Elements",
-      icon: "/assets/details/elements-icon.svg",
+      icon: elementsIcon,
       alt: "elements icon",
       text: "mountain, waterfalls",
     },
     {
       name: "Group",
-      icon: "/assets/details/group-icon.svg",
+      icon: groupIcon,
       alt: "group icon",
       text: 15,
       text2: " people",
@@ -78,54 +110,54 @@ export const detailsMay24 = [
 
   export const detailsImagesMay24 = [
     {
-      image: "/assets/details/may2024/photo-1.png",
+      image: detailsMay24Photo1,
       alt: "Maria and Natasa in a stream on the mountain",
     },
     {
-      image: "/assets/details/may2024/photo-2.svg",
+      image: detailsMay24Photo2,
       alt: "donkeys near the top of the mountain",
     },
     {
-      image: "/assets/details/may2024/photo-3.svg",
+      image: detailsMay24Photo3,
       alt: "king of the mountain",
     },
     {
-      image: "/assets/details/may2024/photo-4.png",
+      image: detailsMay24Photo4,
       alt: "trees on the mountain",
     },
     {
-      image: "/assets/details/may2024/photo-5.svg",
+      image: detailsMay24Photo5,
       alt: "Elizabeth on the mountain",
     },
     {
-      image: "/assets/details/may2024/photo-6.svg",
+      image: detailsMay24Photo6,
       alt: "Ruby on the mountain",
     },
   ];
 
   export const detailsImagesOct24 = [
     {
-      image: "/assets/details/oct2024/photo-1.webp",
+      image: detailsOct24Photo1,
       alt: "Mountain goat",
     },
     {
-      image: "/assets/details/oct2024/photo-2.webp",
+      image: detailsOct24Photo2,
       alt: "Hiker on the mountain",
     },
     {
-      image: "/assets/details/oct2024/photo-3.webp",
+      image: detailsOct24Photo3,
       alt: "Hikers on windy mountain",
     },
     {
-      image: "/assets/details/oct2024/photo-4.webp",
+      image: detailsOct24Photo4,
       alt: "Interesting sign on the mountain",
     },
     {
-      image: "/assets/details/oct2024/photo-5.webp",
+      image: detailsOct24Photo5,
       alt: "Hikers about to start the hike",
     },
     {
-      image: "/assets/details/oct2024/photo-6.webp",
+      image: detailsOct24Photo6,
       alt: "Swimming in a pond at Enipeas Gorge",
     },
   ];
@@ -135,13 +167,13 @@ export const detailsMay24 = [
 export const detailsJun25 = [
   {
     name: "Accommodation",
-    icon: "/assets/details/accommodation-icon.svg",
+    icon: accommodationIcon,
     alt: "accommodation icon",
     text: "camping at the land, mountain refuge",
   },
   {
     name: "Altitude",
-    icon: "/assets/details/altitude-icon.svg",
+    icon: altitudeIcon,
     alt: "altitude icon",
     text: 2100,
     text2: " m",
@@ -149,7 +181,7 @@ export const detailsJun25 = [
   },
   {
     name: "Duration",
-    icon: "/assets/details/duration-icon.svg",
+    icon: durationIcon,
     alt: "duration icon",
     text: 4,
     text2: " days",
@@ -157,13 +189,13 @@ export const detailsJun25 = [
   },
   {
     name: "Elements",
-    icon: "/assets/details/elements-icon.svg",
+    icon: elementsIcon,
     alt: "elements icon",
     text: "mountain, waterfalls",
   },
   {
     name: "Group",
-    icon: "/assets/details/group-icon.svg",
+    icon: groupIcon,
     alt: "group icon",
     text: 3,
     text2: " people",
@@ -172,25 +204,25 @@ export const detailsJun25 = [
 ];
 
 export const detailsImagesJun25 = [
-  { image: "/assets/details/jun2025/photo-1.jpg", alt: "" },
-  { image: "/assets/details/jun2025/photo-2.jpg", alt: "" },
-  { image: "/assets/details/jun2025/photo-3.jpg", alt: "" },
-  { image: "/assets/details/jun2025/photo-4.jpg", alt: "" },
-  { image: "/assets/details/jun2025/photo-5.jpg", alt: "" },
-  { image: "/assets/details/jun2025/photo-6.jpg", alt: "" },
+  { image: detailsJun25Photo1, alt: "" },
+  { image: detailsJun25Photo2, alt: "" },
+  { image: detailsJun25Photo3, alt: "" },
+  { image: detailsJun25Photo4, alt: "" },
+  { image: detailsJun25Photo5, alt: "" },
+  { image: detailsJun25Photo6, alt: "" },
 ];
 
 // October 2025
 export const detailsOct25 = [
   {
     name: "Accommodation",
-    icon: "/assets/details/accommodation-icon.svg",
+    icon: accommodationIcon,
     alt: "accommodation icon",
     text: "village rooms, mountain refuge",
   },
   {
     name: "Altitude",
-    icon: "/assets/details/altitude-icon.svg",
+    icon: altitudeIcon,
     alt: "altitude icon",
     text: 2100,
     text2: " m",
@@ -198,7 +230,7 @@ export const detailsOct25 = [
   },
   {
     name: "Duration",
-    icon: "/assets/details/duration-icon.svg",
+    icon: durationIcon,
     alt: "duration icon",
     text: 4,
     text2: " days",
@@ -206,13 +238,13 @@ export const detailsOct25 = [
   },
   {
     name: "Elements",
-    icon: "/assets/details/elements-icon.svg",
+    icon: elementsIcon,
     alt: "elements icon",
     text: "mountain, waterfalls",
   },
   {
     name: "Group",
-    icon: "/assets/details/group-icon.svg",
+    icon: groupIcon,
     alt: "group icon",
     text: 9,
     text2: " people",
@@ -221,10 +253,10 @@ export const detailsOct25 = [
 ];
 
 export const detailsImagesOct25 = [
-  { image: "/assets/details/oct2025/photo-1.jpg", alt: "" },
-  { image: "/assets/details/oct2025/photo-2.jpg", alt: "" },
-  { image: "/assets/details/oct2025/photo-3.jpg", alt: "" },
-  { image: "/assets/details/oct2025/photo-4.jpg", alt: "" },
-  { image: "/assets/details/oct2025/photo-5.jpg", alt: "" },
-  { image: "/assets/details/oct2025/photo-6.jpg", alt: "" },
+  { image: detailsOct25Photo1, alt: "" },
+  { image: detailsOct25Photo2, alt: "" },
+  { image: detailsOct25Photo3, alt: "" },
+  { image: detailsOct25Photo4, alt: "" },
+  { image: detailsOct25Photo5, alt: "" },
+  { image: detailsOct25Photo6, alt: "" },
 ];

@@ -7,7 +7,7 @@ const CoreValuesCard = ({ alt, image, title, text }) => {
       className="w-[280px] h-[410px] lg:h-[480px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
       >
         <img
-          src={image}
+          src={image.src || image}
           alt={alt}
           className="w-full object-cover h-40 rounded-t-xl"
         />

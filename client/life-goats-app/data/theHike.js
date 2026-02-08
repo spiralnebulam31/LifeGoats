@@ -1,3 +1,23 @@
+import {
+    petrostrouga_drawing,
+    kakalos_drawing,
+    agapitos_drawing,
+    prionia_drawing,
+    walking,
+    walking2,
+    walking3,
+    walking4,
+    petrostrouga,
+    kakalos,
+    kakalos2,
+    mytikas,
+    mytikas2,
+    profitis_ilias,
+    profitis_ilias2,
+    profitis_ilias3,
+    prionia
+} from "@/src/assets/index.js";
+
 export const ascentData = [
     {
         id: 1,
@@ -79,28 +99,28 @@ export const routeLinks = [
         id: 1,
         title: "Petrostrouga Refuge",
         link: "https://petrostrouga.gr/",
-        photo: "/assets/the-hike/petrostrouga-drawing.svg",
+        photo: petrostrouga_drawing,
         alt: "Petrostrouga Refuge"
     },
     {
         id: 2,
         title: "Christos Kakalos Refuge",
         link: "https://www.olympus-climbing.gr/index.php?page=refuges&id=4&language=en",
-        photo: "/assets/the-hike/kakalos-drawing.svg",
+        photo: kakalos_drawing,
         alt: "Kakalos Refuge"
     },
     {
         id: 3,
         title: "Spilios Agapitos Refuge",
         link: "https://www.mountolympus.gr/en/",
-        photo: "/assets/the-hike/agapitos-drawing.svg",
+        photo: agapitos_drawing,
         alt: "Agapitos Refuge"
     },
     {
         id: 4,
         title: "Prionia Parking Lot",
         link: "https://youingreece.com/mount-olympus/prionia",
-        photo: "/assets/the-hike/prionia-drawing.svg",
+        photo: prionia_drawing,
         alt: "Prionia"
     }
 ];
@@ -108,79 +128,79 @@ export const routeLinks = [
 export const imageSliderData = [
     {
         id: 1,
-        photo: "/assets/the-hike/walking.webp",
+        photo: walking,
         alt: "Hiking on the trail",
         caption: "Hiking on the trail"
     },
     {
         id: 2,
-        photo: "/assets/the-hike/walking2.webp",
+        photo: walking2,
         alt: "Hiking on the trail",
         caption: "Hiking on the trail"
     },
     {
         id: 3,
-        photo: "/assets/the-hike/walking3.webp",
+        photo: walking3,
         alt: "Hiking on the trail",
         caption: "Hiking on the trail"
     },
     {
         id: 4,
-        photo: "/assets/the-hike/walking4.webp",
+        photo: walking4,
         alt: "Hiking on the trail",
         caption: "Hiking on the trail"
     },
     {
         id: 5,
-        photo: "/assets/the-hike/petrostrouga.webp",
+        photo: petrostrouga,
         alt: "Petrostrouga Refuge",
         caption: "Petrostrouga Refuge"
     },
     {
         id: 6,
-        photo: "/assets/the-hike/kakalos.webp",
+        photo: kakalos,
         alt: "Apostolidis Refuge",
         caption: "Apostolidis Refuge"
     },
     {
         id: 7,
-        photo: "/assets/the-hike/kakalos2.webp",
+        photo: kakalos2,
         alt: "Apostolidis Refuge",
         caption: "Apostolidis Refuge"
     },
     {
         id: 8,
-        photo: "/assets/the-hike/mytikas.webp",
+        photo: mytikas,
         alt: "Mytikas Peak",
         caption: "Mytikas Peak"
     },
     {
         id: 9,
-        photo: "/assets/the-hike/mytikas2.webp",
+        photo: mytikas2,
         alt: "Mytikas Peak",
         caption: "Mytikas Peak"
     },
     {
         id: 10,
-        photo: "/assets/the-hike/profitis-ilias.webp",
+        photo: profitis_ilias,
         alt: "Mytikas Peak",
         caption: "Mytikas Peak"
     },
     {
         id: 11,
-        photo: "/assets/the-hike/profitis-ilias2.webp",
+        photo: profitis_ilias2,
         alt: "Hiking on the trail",
         caption: "Hiking on the trail"
     },
     {
         id: 12,
-        photo: "/assets/the-hike/profitis-ilias3.webp",
+        photo: profitis_ilias3,
         alt: "Hiking on the trail",
         caption: "Hiking on the trail"
     },
     {
         id: 13,
-        photo: "/assets/the-hike/prionia.webp",
+        photo: prionia,
         alt: "Prionia",
         caption: "Prionia"
     }
