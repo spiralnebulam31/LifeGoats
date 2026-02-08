@@ -31,7 +31,7 @@ const PastEvents = () => {
       </motion.div>
 
       <motion.div className="flex flex-row justify-center items-center w-full">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-2 md:mb-4 max-w-6xl w-full px-4">
+        <motion.div className={`grid gap-8 md:gap-20 mb-2 md:mb-4 max-w-6xl w-full px-4 ${pastEventsData.length === 1 ? 'grid-cols-1 justify-items-center' : 'grid-cols-1 md:grid-cols-2'}`}>
           {pastEventsData.map((event, index) => (
             <motion.div
               key={index}
@@ -51,7 +51,7 @@ const PastEvents = () => {
                 }
               }}
               >
-              <EventCard key={index} {...event} />
+              <EventCard key={index} {...event} isClickable={true} />
             </motion.div>
           ))}
         </motion.div>
