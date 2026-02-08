@@ -11,7 +11,7 @@ import EventCard from "../../components/Events/EventCard";
 
 const UpcomingEvents = () => {
   return (
-    <div className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto">
+    <div className="bg-background relative bg-cover w-full h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto">
       <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto my-10 overflow-hidden">
         <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold"
           variants={floatFromDownMainTitle}
@@ -27,7 +27,7 @@ const UpcomingEvents = () => {
 
       {/* Comment out the code below if there ARE upcoming events to show */}
       <motion.div className="flex flex-row justify-evenly items-center">
-              <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 mb-2 md:mb-4">
+              <motion.div className={`grid gap-8 md:gap-20 mb-2 md:mb-4 ${upcomingEventsData.length === 1 ? 'grid-cols-1 justify-items-center' : 'grid-cols-1 md:grid-cols-2'}`}>
                 {upcomingEventsData.map((event, index) => (
                   <motion.div
                     key={index}
