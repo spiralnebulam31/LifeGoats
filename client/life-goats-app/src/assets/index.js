@@ -70,7 +70,77 @@ import safetyConsiderationsBG from './safety-considerations-bg.webp';
 import subscribeBG from './subscribe-bg.jpg';
 
 import mtOlympusMay2024 from './events/mt-olympus-may-2024.webp';
+import mtOlympusOct2024 from './events/mt-olympus-oct-2024.jpg';
+import mtOlympusJun2025 from './events/mt-olympus-jun-2025.jpg';
+import mtOlympusOct2025 from './events/mt-olympus-oct-2025.jpg';
+import toBeDecided2026 from './events/to-be-decided-2026.jpg';
 import upcomingEvents from './events/upcoming-events.webp';
+
+// Core values icons
+import community from './core-values/community.svg';
+import coreValuesNature from './core-values/nature.svg';
+import lightheartedness from './core-values/lightheartedness.svg';
+import growth from './core-values/growth.svg';
+
+// Details icons
+import accommodationIcon from './details/accommodation-icon.svg';
+import altitudeIcon from './details/altitude-icon.svg';
+import durationIcon from './details/duration-icon.svg';
+import elementsIcon from './details/elements-icon.svg';
+import groupIcon from './details/group-icon.svg';
+
+// Details photos - May 2024
+import detailsMay24Photo1 from './details/may2024/photo-1.png';
+import detailsMay24Photo2 from './details/may2024/photo-2.svg';
+import detailsMay24Photo3 from './details/may2024/photo-3.svg';
+import detailsMay24Photo4 from './details/may2024/photo-4.png';
+import detailsMay24Photo5 from './details/may2024/photo-5.svg';
+import detailsMay24Photo6 from './details/may2024/photo-6.svg';
+
+// Details photos - Oct 2024
+import detailsOct24Photo1 from './details/oct2024/photo-1.webp';
+import detailsOct24Photo2 from './details/oct2024/photo-2.webp';
+import detailsOct24Photo3 from './details/oct2024/photo-3.webp';
+import detailsOct24Photo4 from './details/oct2024/photo-4.webp';
+import detailsOct24Photo5 from './details/oct2024/photo-5.webp';
+import detailsOct24Photo6 from './details/oct2024/photo-6.webp';
+
+// Details photos - Jun 2025
+import detailsJun25Photo1 from './details/jun2025/photo-1.jpg';
+import detailsJun25Photo2 from './details/jun2025/photo-2.jpg';
+import detailsJun25Photo3 from './details/jun2025/photo-3.jpg';
+import detailsJun25Photo4 from './details/jun2025/photo-4.jpg';
+import detailsJun25Photo5 from './details/jun2025/photo-5.jpg';
+import detailsJun25Photo6 from './details/jun2025/photo-6.jpg';
+
+// Details photos - Oct 2025
+import detailsOct25Photo1 from './details/oct2025/photo-1.jpg';
+import detailsOct25Photo2 from './details/oct2025/photo-2.jpg';
+import detailsOct25Photo3 from './details/oct2025/photo-3.jpg';
+import detailsOct25Photo4 from './details/oct2025/photo-4.jpg';
+import detailsOct25Photo5 from './details/oct2025/photo-5.jpg';
+import detailsOct25Photo6 from './details/oct2025/photo-6.jpg';
+
+// Hike assets
+import {
+    petrostrouga_drawing,
+    kakalos_drawing,
+    agapitos_drawing,
+    prionia_drawing,
+    walking,
+    walking2,
+    walking3,
+    walking4,
+    petrostrouga,
+    kakalos,
+    kakalos2,
+    mytikas,
+    mytikas2,
+    profitis_ilias,
+    profitis_ilias2,
+    profitis_ilias3,
+    prionia
+} from './the-hike/index.js';
 
 export {
     goatPrintSingle,
@@ -131,5 +201,66 @@ export {
     safetyConsiderationsBG,
     subscribeBG,
     mtOlympusMay2024,
-    upcomingEvents
+    mtOlympusOct2024,
+    mtOlympusJun2025,
+    mtOlympusOct2025,
+    toBeDecided2026,
+    upcomingEvents,
+    // Core values
+    community,
+    coreValuesNature,
+    lightheartedness,
+    growth,
+    // Details icons
+    accommodationIcon,
+    altitudeIcon,
+    durationIcon,
+    elementsIcon,
+    groupIcon,
+    // Details photos - May 2024
+    detailsMay24Photo1,
+    detailsMay24Photo2,
+    detailsMay24Photo3,
+    detailsMay24Photo4,
+    detailsMay24Photo5,
+    detailsMay24Photo6,
+    // Details photos - Oct 2024
+    detailsOct24Photo1,
+    detailsOct24Photo2,
+    detailsOct24Photo3,
+    detailsOct24Photo4,
+    detailsOct24Photo5,
+    detailsOct24Photo6,
+    // Details photos - Jun 2025
+    detailsJun25Photo1,
+    detailsJun25Photo2,
+    detailsJun25Photo3,
+    detailsJun25Photo4,
+    detailsJun25Photo5,
+    detailsJun25Photo6,
+    // Details photos - Oct 2025
+    detailsOct25Photo1,
+    detailsOct25Photo2,
+    detailsOct25Photo3,
+    detailsOct25Photo4,
+    detailsOct25Photo5,
+    detailsOct25Photo6,
+    // Hike assets
+    petrostrouga_drawing,
+    kakalos_drawing,
+    agapitos_drawing,
+    prionia_drawing,
+    walking,
+    walking2,
+    walking3,
+    walking4,
+    petrostrouga,
+    kakalos,
+    kakalos2,
+    mytikas,
+    mytikas2,
+    profitis_ilias,
+    profitis_ilias2,
+    profitis_ilias3,
+    prionia
 }

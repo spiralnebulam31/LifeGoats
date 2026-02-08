@@ -13,6 +13,11 @@ import Ruby from "./events/mt-olympus-may-2024/Ruby.svg";
 import Goats from "./events/mt-olympus-may-2024/Goats.svg";
 import theTeam from "./events/mt-olympus-may-2024/the-team.webp";
 
+import HrvaMtOlympusOct2024 from "./events/mt-olympus-oct-2024/Hrva.svg";
+import MariaMtOlympusOct2024 from "./events/mt-olympus-oct-2024/Maria.svg";
+import SavvasMtOlympusOct2024 from "./events/mt-olympus-oct-2024/Savvas.svg";
+import YanMtOlympusOct2024 from "./events/mt-olympus-oct-2024/Yan.svg";
+
 export { 
     directorsChairs,
     Anastasia2,
@@ -26,5 +31,9 @@ export {
     Stratos,
     Ruby,
     Goats,
-    theTeam
+    theTeam,
+    HrvaMtOlympusOct2024,
+    MariaMtOlympusOct2024,
+    SavvasMtOlympusOct2024,
+    YanMtOlympusOct2024
 };

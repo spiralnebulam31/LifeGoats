@@ -1,6 +1,8 @@
+import { lifeGoatsWalkingMountain } from "@/src/assets/index.js";
+
 const Parallax = () => {
   const sectionStyle = {
-    backgroundImage: `url('/assets/parallax/life-goats-walking-mountain.webp')`,
+    backgroundImage: `url('${lifeGoatsWalkingMountain.src}')`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   };
