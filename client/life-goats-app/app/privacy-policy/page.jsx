@@ -5,14 +5,14 @@ import { fadeIn } from "../../motion/motion";
 
 const PrivacyPolicyPage = () => {
   return (
-    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mt-[70px] mb-[180px] flex flex-col justify-center text-center mx-auto">
-      <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto pt-10 mb-3 overflow-hidden">
+    <motion.div className="bg-background relative bg-cover w-screen max-w-full h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-x-hidden overflow-hidden pt-2 pb-2 z-10 mt-[70px] mb-[180px] flex flex-col justify-center text-center mx-auto">
+      <motion.div className="flex flex-col justify-center text-center w-[90%] max-w-full mx-auto pt-10 mb-3 overflow-hidden">
         <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold">
           Privacy Policy
         </motion.h1>
       </motion.div>
       <motion.div
-        className="bg-background flex flex-col justify-center text-start mx-auto pt-10 pb-10 font-body lg:text-lg text-md w-[80%] lg:w-[70%]"
+        className="bg-background flex flex-col justify-center text-start mx-auto pt-10 pb-10 font-body lg:text-lg text-md w-[80%] max-w-full lg:w-[70%]"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 

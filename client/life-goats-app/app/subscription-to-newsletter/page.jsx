@@ -57,9 +57,9 @@ function SubscribeForm() {
   }, []);
 
   return (
-    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mt-[60px] mb-[180px] flex flex-col justify-center text-center mx-auto">
+    <motion.div className="bg-background relative bg-cover w-screen max-w-full h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-x-hidden overflow-hidden pt-2 pb-2 z-10 mt-[60px] mb-[180px] flex flex-col justify-center text-center mx-auto">
       {/* Title and Subtitle */}
-      <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto pt-10 mb-1">
+      <motion.div className="flex flex-col justify-center text-center w-[90%] max-w-full mx-auto pt-10 mb-1">
         <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold">
           Subscribe
         </motion.h1>
@@ -70,7 +70,7 @@ function SubscribeForm() {
 
       {/* ConvertKit Form Target Container */}
       <motion.div
-        className="flex justify-center w-[90%] lg:w-[70%] mx-auto pt-8 pb-4"
+        className="flex justify-center w-[90%] max-w-full lg:w-[70%] mx-auto pt-8 pb-4"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
@@ -78,7 +78,7 @@ viewport={{ once: true }}
       >
         <div
           id="convertkit-target"
-          className="w-full max-w-md mx-auto text-center"
+          className="w-full mx-auto text-center"
         >
           {/* The form will be moved here by JavaScript */}
         </div>
@@ -86,7 +86,7 @@ viewport={{ once: true }}
 
       {/* Content Section */}
       <motion.div
-        className="flex flex-col lg:flex-row justify-center items-center lg:items-start mx-auto pt-10 pb-16 font-body lg:text-lg text-md w-[90%] lg:w-[70%]"
+        className="flex flex-col lg:flex-row justify-center items-center lg:items-start mx-auto pt-10 pb-16 font-body lg:text-lg text-md w-[90%] max-w-full lg:w-[70%]"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 

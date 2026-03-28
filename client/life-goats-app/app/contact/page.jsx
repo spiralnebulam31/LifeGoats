@@ -66,11 +66,11 @@ const Contact = ({
   return (
     <section
       id="contact"
-      className="overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background
-    relative bg-cover w-full h-full inset-0 mx-auto pb-14 sm:pb-20 md:pb-36 lg:pb-20 xl:pb-36 mb-[180px] mt-[60px]"
+      className="overflow-x-hidden overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background
+    relative bg-cover w-full max-w-full h-full inset-0 mx-auto pb-14 sm:pb-20 md:pb-36 lg:pb-20 xl:pb-36 mb-[180px] mt-[60px]"
     >
       {/* Title */}
-      <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
+      <motion.div className="text-center w-[80%] max-w-full lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
         <motion.p
           className="md:text-[18px] text-[14px] text-background font-subtitle
           font-bold uppercase tracking-wider"
@@ -95,10 +95,10 @@ const Contact = ({
       </motion.div>
       {/* End of title */}
 
-      <motion.div className="flex flex-col lg:flex-row justify-center lg:justify-between text-center gap-2 mt-1 mb-20 sm:mb-44 lg:mb-[60vh]">
+      <motion.div className="flex flex-col lg:flex-row justify-center lg:justify-between text-center gap-2 mt-1 mb-20 sm:mb-44 lg:mb-[60vh] max-w-full">
         {/* Contact Information */}
         <motion.div
-          className="flex flex-col justify-center text-center w-[80%] lg:w-1/2 mx-auto items-center"
+          className="flex flex-col justify-center text-center w-[80%] max-w-full lg:w-1/2 mx-auto items-center"
           variants={floatFromLeftContact}
           initial="initial"
           whileInView={isSmallScreen ? "initial" : "animate"}
@@ -111,7 +111,7 @@ const Contact = ({
           </div>
 
           {/* Contact Info Container */}
-          <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] md:w-[60%] mx-auto lg:mx-16">
+          <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] max-w-full md:w-[60%] mx-auto lg:mx-16">
             {/* Contact Links */}
             <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
               <ContactLink
@@ -131,13 +131,13 @@ const Contact = ({
                 text="+306980489843 (Maria's WhatsApp)"
               />
               <ContactLink
-                href="https://www.instagram.com/anastasia.ad.m31/"
+                href="tel:+306973900026"
                 target="_blank"
                 rel="noreferrer"
-                onMouseEnter={handleInstagramIconMouseEnter}
-                onMouseLeave={handleInstagramIconMouseLeave}
-                icon={instagramIconIsHovered ? instagramIconHover : instagramIcon}
-                text="anastasia.ad.m31 (Natasa's Instagram)"
+                onMouseEnter={handlePhoneMouseEnter}
+                onMouseLeave={handlePhoneMouseLeave}
+                icon={phoneIsHovered ? phoneHover : phone}
+                text="+306973900026 (Natasa's WhatsApp)"
               />
             </div>
             {/* End of Contact Links */}
@@ -148,7 +148,7 @@ const Contact = ({
 
         {/* Contact Form */}
         <motion.div
-          className="flex flex-col text-center justify-center w-[80%] lg:w-1/2 mx-auto mt-10 lg:mt-14"
+          className="flex flex-col text-center justify-center w-[80%] max-w-full lg:w-1/2 mx-auto mt-10 lg:mt-14"
           variants={floatFromRightContact}
           initial="initial"
           whileInView={isSmallScreen ? "initial" : "animate"}
@@ -158,7 +158,7 @@ const Contact = ({
             Or send us a message below:
           </p>
 
-          <div className="flex justify-center text-center mx-auto w-full lg:w-[60%]">
+          <div className="flex justify-center text-center mx-auto w-full max-w-full lg:w-[60%]">
             <form ref={form} onSubmit={sendEmail} className="w-full">
               {/* Form Inputs */}
               <ContactInput
@@ -204,27 +204,27 @@ const Contact = ({
 
 // Additional components (helper components)
 const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
-  <div className="flex justify-center items-center gap-5 pb-3">
+  <div className="flex justify-center pb-3 w-full">
     <a
       href={href}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       target="_blank"
       rel="noreferrer"
-      className="text-secondary hover:text-tertiary flex items-center whitespace-nowrap text-md lg:text-xl tracking-wide"
-    >
+      className="text-secondary hover:text-tertiary inline-flex flex-row items-center text-md lg:text-xl tracking-wide gap-2"
+      style={{textAlign: 'center'}}>
       <Image
         src={icon}
         alt={`${text} icon`}
-        className="w-[20px] h-[20px] object-contain"
+        className="w-[20px] h-[20px] object-contain flex-shrink-0 mr-2"
       />
-      <p className="ml-2">{text}</p>
+      <span className="break-words text-center">{text}</span>
     </a>
   </div>
 );
 
 const ContactInput = ({ type, placeholder, name }) => (
-  <div className="mb-4 flex items-center bg-background drop-shadow-xl p-2 rounded-lg w-[80%] md:w-[60%] lg:w-[90%] mx-auto lg:ml-[5%]">
+  <div className="mb-4 flex items-center bg-background drop-shadow-xl p-2 rounded-lg w-[80%] max-w-full md:w-[60%] lg:w-[90%] mx-auto lg:ml-[5%]">
     {type === "textarea" ? (
       <textarea
         name={name}

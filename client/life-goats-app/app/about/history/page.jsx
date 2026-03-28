@@ -9,7 +9,7 @@ import Image from "next/image";
 const TheHistory = () => {
   return (
     <motion.div
-      className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto"
+      className="bg-background relative bg-cover w-screen max-w-full h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-x-hidden overflow-hidden pt-2 pb-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto"
     >
       <Image
         src={historyBG}
@@ -18,8 +18,8 @@ const TheHistory = () => {
         width={1920}
         height={1080}
       />
-      <motion.div className="bg-background rounded-2xl drop-shadow-xl opacity-80 relative top-[100px] mb-10 z-20 w-[80%] lg:w-[70%] text-center mx-auto">
-        <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto pt-10 mb-3 overflow-hidden">
+      <motion.div className="bg-background rounded-2xl drop-shadow-xl opacity-80 relative top-[100px] mb-10 z-20 w-[80%] max-w-full lg:w-[70%] text-center mx-auto">
+        <motion.div className="flex flex-col justify-center text-center w-[90%] max-w-full mx-auto pt-10 mb-3 overflow-hidden">
           <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold">
             A brief history
           </motion.h1>
@@ -27,8 +27,7 @@ const TheHistory = () => {
             by Maria
           </motion.h2>
         </motion.div>
-        <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate" 
-viewport={{ once: true }}>
+        <motion.div className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] max-w-full lg:w-[70%]" variants={fadeIn} initial="initial" whileInView="animate" viewport={{ once: true }}>
           <p>Mount Olympus has always had a special place in my heart.</p>
           <br />
           <p>Let&apos;s rewind…</p>
@@ -46,13 +45,11 @@ viewport={{ once: true }}>
           <p>Exploring mountain trails and endless hours at the beach, we camped at the Land as often as the weather conditions allowed.</p>
         </motion.div>
       </motion.div>
-      <div className="relative z-20 w-[80%] lg:w-[70%] mx-auto pt-10 pb-8 font-body lg:text-lg text-md">
-        <motion.p className="font-bold pt-14 pb-4 text-center" variants={fadeIn} initial="initial" whileInView="animate" 
-viewport={{ once: true }}>
+      <div className="relative z-20 w-[80%] max-w-full lg:w-[70%] mx-auto pt-10 pb-8 font-body lg:text-lg text-md">
+        <motion.p className="font-bold pt-14 pb-4 text-center" variants={fadeIn} initial="initial" whileInView="animate" viewport={{ once: true }}>
           Stay tuned to read the rest of the story!
         </motion.p>
-        <motion.div className="w-[90%] mx-auto" variants={fadeIn} initial="initial" whileInView="animate" 
-viewport={{ once: true }}>
+        <motion.div className="w-[90%] max-w-full mx-auto" variants={fadeIn} initial="initial" whileInView="animate" viewport={{ once: true }}>
           <GoatPrintsWalking />
         </motion.div>
       </div>

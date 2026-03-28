@@ -35,7 +35,10 @@ const Footer = () => {
             <span className="text-secondary font-links font-bold text-lg mx-2">
               ©
             </span>
-            2023-2026 Life Goats
+            2026{' '}
+            <Link href="/" className="text-background hover:text-secondary font-links font-bold underline text-lg transition-colors">
+              Life Goats
+            </Link>
           </p>
         </div>
 
