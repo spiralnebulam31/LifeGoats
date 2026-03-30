@@ -137,7 +137,7 @@ const Contact = ({
                 onMouseEnter={handlePhoneMouseEnter}
                 onMouseLeave={handlePhoneMouseLeave}
                 icon={phoneIsHovered ? phoneHover : phone}
-                text="+306973900026 (Natasa's WhatsApp)"
+                text="+306973900026 (Anastasia's WhatsApp)"
               />
             </div>
             {/* End of Contact Links */}
