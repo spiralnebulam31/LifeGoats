@@ -37,7 +37,7 @@ const rubik = Rubik({
 export const metadata = {
   title: 'Life Goats',
   description: 'A community and event series for people centered professionals who value relationship building and spending quality time together in the great outdoors.',
-  keywords: 'Life Goats, life goats, outdoor events, community, relationship building, people centered professionals, great outdoors, Mount Olympus',
+  keywords: 'Life Goats, life goats, outdoor events, outdoor community, relationship building, the great outdoors, Mount Olympus, greek outdoor community, hiking retreats, hiking retreats Greece, outdoor community Greece, outdoor events Greece, hiking retreats Mount Olympus, outdoor community Mount Olympus, outdoor events Mount Olympus',
   metadataBase: new URL('https://www.lifegoats.com'),
   openGraph: {
     title: 'Life Goats: A community and event series for people centered professionals who value relationship building and spending quality time together in the great outdoors',
@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
       <body>
         {/* Google Tag Manager (noscript) */}
           <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ2PRD76"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
         {/* End Google Tag Manager (noscript) */}
 
         <StateProvider>
