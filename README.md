@@ -21,7 +21,7 @@ You can visit the live website here:
 
 ## Logo
 
-<img src="./client/life-goats-app/src/assets/navbar/life-goats-logo.svg" alt="drawing" width="200"/>
+<img src="./src/assets/navbar/life-goats-logo.svg" alt="drawing" width="200"/>
 
 
 
@@ -37,14 +37,7 @@ You can visit the live website here:
 
 ## Installation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-Install my-project with npm:
-
-```bash
-  npm install my-project
-  cd my-project
-```
+This project is built with [Next.js](https://nextjs.org/). See [Run Locally](#run-locally) for setup.
 
 
 
@@ -60,13 +53,7 @@ Clone the project:
 Go to the project directory:
 
 ```bash
-  cd my-project
-```
-
-Go to the client directory:
-
-```bash
-  cd client
+  cd LifeGoats
 ```
 
 Install dependencies:
@@ -75,16 +62,13 @@ Install dependencies:
   npm install
 ```
 
-Start the server to run the client:
+Start the development server:
 
 ```bash
   npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-
-There is a Node.js server connected with the app, to be developed and used in the future.
 
 
 
@@ -95,6 +79,6 @@ There is a Node.js server connected with the app, to be developed and used in th
 
 **Collaboration:** Trello
 
-**Development:** React.js, React Router, TailwindCSS, Framer Motion, Chart.js, Node.js, Express
+**Development:** Next.js, React.js, TailwindCSS, Framer Motion, Chart.js
 
 
