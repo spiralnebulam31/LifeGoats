@@ -1,8 +1,8 @@
 // Drawings/SVG assets
-import petrostrouga_drawing from "./petrostrouga-drawing.svg";
-import kakalos_drawing from "./kakalos-drawing.svg";
-import agapitos_drawing from "./agapitos-drawing.svg";
-import prionia_drawing from "./prionia-drawing.svg";
+import petrostrouga_drawing from "./petrostrouga-drawing.webp";
+import kakalos_drawing from "./kakalos-drawing.webp";
+import agapitos_drawing from "./agapitos-drawing.webp";
+import prionia_drawing from "./prionia-drawing.webp";
 
 // Photo assets
 import walking from "./walking.webp";

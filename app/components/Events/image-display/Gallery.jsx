@@ -133,7 +133,7 @@ const Gallery = ( { title, mainTitle, imagesArray } ) => {
                 {images.length === 0 ? (
                     <div>No images available</div>
                 ) : (
-                    <Galleria value={images} responsiveOptions={responsiveOptions} numVisible={5} style={{ maxWidth: '640px' }} 
+                    <Galleria id="event-gallery" value={images} responsiveOptions={responsiveOptions} numVisible={5} style={{ maxWidth: '640px' }} 
     item={itemTemplate} thumbnail={thumbnailTemplate} />
                 )}
             </motion.div>

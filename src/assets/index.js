@@ -18,7 +18,7 @@ import goatPrints from './hero/goat-prints.svg';
 import goatPrintsLight from './hero/goat-prints-light.svg';
 import calendar from './hero/calendar.svg';
 
-import aboutPhotoMay24 from './about/about-photo-may24.svg';
+import aboutPhotoMay24 from './about/about-photo-may24.webp';
 import aboutPhotoOct24 from './about/about-photo-oct24.webp';
 import aboutPhotoJun25 from './about/about-photo-jun25.jpg';
 import aboutPhotoOct25 from './about/about-photo-oct25.jpg';
@@ -54,7 +54,7 @@ import phone from './contact/phone.svg';
 import phoneHover from './contact/phone-hover.svg';
 import instagramIcon from './contact/instagram.svg';
 import instagramIconHover from './contact/instagram-hover.svg';
-import transparentMountainBG2 from './contact/transparent-mountain-bg-2.svg';
+import transparentMountainBG2 from './contact/transparent-mountain-bg-2.webp';
 
 import facebook from './social/facebook.svg';
 import facebookHover from './social/facebook-hover.svg';
@@ -91,11 +91,11 @@ import groupIcon from './details/group-icon.svg';
 
 // Details photos - May 2024
 import detailsMay24Photo1 from './details/may2024/photo-1.png';
-import detailsMay24Photo2 from './details/may2024/photo-2.svg';
-import detailsMay24Photo3 from './details/may2024/photo-3.svg';
+import detailsMay24Photo2 from './details/may2024/photo-2.webp';
+import detailsMay24Photo3 from './details/may2024/photo-3.webp';
 import detailsMay24Photo4 from './details/may2024/photo-4.png';
-import detailsMay24Photo5 from './details/may2024/photo-5.svg';
-import detailsMay24Photo6 from './details/may2024/photo-6.svg';
+import detailsMay24Photo5 from './details/may2024/photo-5.webp';
+import detailsMay24Photo6 from './details/may2024/photo-6.webp';
 
 // Details photos - Oct 2024
 import detailsOct24Photo1 from './details/oct2024/photo-1.webp';
