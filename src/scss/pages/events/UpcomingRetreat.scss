@@ -1,0 +1,401 @@
+/**
+ * Upcoming retreat page (app/events/upcoming/mt-olympus-summer-2027).
+ */
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+@mixin retreat-card {
+  border-radius: vars.radius(2xl);
+  background: vars.color(background);
+  box-shadow: vars.shadow(lg);
+}
+
+@mixin retreat-content-width($max: 1152) {
+  width: 90%;
+  max-width: vars.rem($max);
+  margin-inline: auto;
+}
+
+.retreat {
+  position: relative;
+  z-index: vars.z-index(raised);
+  padding-top: vars.space(xl);
+  padding-bottom: vars.space(5xl);
+  background-color: vars.color(background);
+  color: vars.color(primary);
+  font-family: vars.font(body);
+
+  &--to-sky {
+    @include mix.sky-gradient($from: background);
+  }
+
+  &--from-sky {
+    @include mix.sky-gradient;
+  }
+
+  &__header {
+    @include mix.section-header;
+  }
+
+  &__pretitle {
+    @include mix.section-pretitle-text;
+    color: vars.color(secondary);
+  }
+
+  // The top of these sections is the blue sky, where the blue pretitle
+  // wouldn't be readable.
+  &--from-sky &__pretitle {
+    color: vars.color(primary);
+  }
+
+  &__title {
+    @include mix.section-title-text;
+    padding-bottom: vars.space(sm);
+  }
+
+  &__lead {
+    max-width: vars.rem(720);
+    margin: 0 auto vars.space(2xl);
+    padding-inline: vars.space(md);
+    font-size: vars.font-size(md);
+    line-height: vars.line-height(relaxed);
+    text-align: center;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: vars.space(md);
+  }
+
+  &__cta {
+    display: inline-block;
+    padding: vars.space(xs) vars.space(xl);
+    border: 2px solid vars.color(primary);
+    border-radius: vars.radius(2xl);
+    background-color: vars.color(primary);
+    color: vars.color(background);
+    font-family: vars.font(links);
+    font-size: vars.font-size(md);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border-color 150ms ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      border-color: vars.color(tertiary-light);
+      background-color: vars.color(tertiary-light);
+      color: vars.color(earth);
+    }
+
+    &--secondary {
+      background-color: transparent;
+      color: vars.color(primary);
+    }
+  }
+
+  &__signature {
+    margin-top: vars.space(2xl);
+    color: vars.color(earth);
+    font-family: vars.font(subtitle);
+    font-size: vars.font-size(md);
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &--closing {
+    margin-bottom: 0;
+  }
+}
+
+.retreat-intro {
+  @include retreat-content-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: vars.space(2xl);
+
+  @include mix.respond-to(lg) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &__media {
+    width: 100%;
+
+    @include mix.respond-to(lg) {
+      width: 45%;
+      flex-shrink: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: vars.radius(2xl);
+    filter: vars.drop-shadow(xl);
+
+    @include mix.respond-to(lg) {
+      aspect-ratio: auto;
+    }
+  }
+
+  &__text {
+    font-size: vars.font-size(base);
+    line-height: vars.line-height(relaxed);
+
+    > p + p {
+      margin-top: vars.space(sm);
+    }
+  }
+
+  &__highlight {
+    margin-top: vars.space(xl);
+    padding: vars.space(lg);
+    border-left: 6px solid vars.color(tertiary-dark);
+    border-radius: vars.radius(2xl);
+    background: vars.color(tertiary-light);
+  }
+
+  &__highlight-title {
+    margin-bottom: vars.space(2xs);
+    color: vars.color(earth);
+    font-family: vars.font(subtitle);
+    font-size: vars.font-size(lg);
+    line-height: vars.line-height(snug);
+    font-weight: 700;
+  }
+}
+
+.retreat-facts {
+  @include retreat-content-width;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: vars.space(lg);
+
+  @include mix.respond-to(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mix.respond-to(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  &__item {
+    @include retreat-card;
+    padding: vars.space(lg);
+    text-align: center;
+  }
+
+  &__label {
+    color: vars.color(secondary);
+    font-family: vars.font(subtitle);
+    font-size: vars.font-size(sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__value {
+    margin-top: vars.space(2xs);
+    color: vars.color(earth);
+    font-family: vars.font(subtitle);
+    font-size: vars.font-size(lg);
+    line-height: vars.line-height(snug);
+    font-weight: 700;
+  }
+
+  &__note {
+    margin-top: vars.space(3xs);
+    font-size: vars.font-size(sm);
+  }
+}
+
+.retreat-plans {
+  @include retreat-content-width;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: vars.space(2xl);
+
+  @include mix.respond-to(lg) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.retreat-plan {
+  @include retreat-card;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &--featured {
+    border: 3px solid vars.color(tertiary-dark);
+
+    @include mix.respond-to(lg) {
+      grid-column: 1 / -1;
+      flex-direction: row;
+    }
+  }
+
+  &__media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+
+  &--featured &__media {
+    @include mix.respond-to(lg) {
+      width: 50%;
+      flex-shrink: 0;
+      aspect-ratio: auto;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__body {
+    flex: 1;
+    padding: vars.space(xl);
+    text-align: left;
+  }
+
+  &__label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: vars.space(2xs);
+    color: vars.color(secondary);
+    font-family: vars.font(links);
+    font-size: vars.font-size(sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__badge {
+    padding: vars.space(3xs) vars.space(2xs);
+    border-radius: vars.radius(full);
+    background: vars.color(tertiary-light);
+    color: vars.color(earth);
+    font-size: vars.font-size(2xs);
+  }
+
+  &__title {
+    margin-top: vars.space(2xs);
+    color: vars.color(earth);
+    font-family: vars.font(subtitle);
+    font-size: vars.font-size(xl);
+    line-height: vars.line-height(snug);
+    font-weight: 700;
+  }
+
+  &__tagline {
+    margin-top: vars.space(3xs);
+    color: vars.color(tertiary-dark);
+    font-weight: 700;
+  }
+
+  &__summary {
+    margin-top: vars.space(sm);
+    line-height: vars.line-height(relaxed);
+  }
+
+  &__list {
+    margin-top: vars.space(sm);
+    padding-left: vars.space(lg);
+    list-style: disc outside;
+    line-height: vars.line-height(relaxed);
+
+    > li + li {
+      margin-top: vars.space(2xs);
+    }
+  }
+
+  &__days {
+    margin-top: vars.space(md);
+  }
+
+  &__days-toggle {
+    color: vars.color(secondary);
+    font-family: vars.font(links);
+    font-weight: 700;
+    text-decoration-line: underline;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+    transition: color 150ms ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      color: vars.color(tertiary-dark);
+    }
+  }
+
+  &__day-title {
+    margin-top: vars.space(md);
+    color: vars.color(earth);
+    font-family: vars.font(subtitle);
+    font-size: vars.font-size(md);
+    font-weight: 700;
+  }
+}
+
+.retreat-practical {
+  @include retreat-content-width;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: vars.space(lg);
+
+  @include mix.respond-to(md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__item {
+    @include retreat-card;
+    padding: vars.space(xl);
+    line-height: vars.line-height(relaxed);
+  }
+
+  &__title {
+    margin-bottom: vars.space(2xs);
+    color: vars.color(earth);
+    font-family: vars.font(subtitle);
+    font-size: vars.font-size(lg);
+    font-weight: 700;
+  }
+}
+
+.retreat-photos {
+  @include retreat-content-width(1280);
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: vars.space(md);
+
+  @include mix.respond-to(sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include mix.respond-to(lg) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  &__item {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: vars.radius(2xl);
+    box-shadow: vars.shadow(lg);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
