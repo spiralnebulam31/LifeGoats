@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment.
+
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import { useState } from 'react';
 import { Galleria } from 'primereact/galleria';

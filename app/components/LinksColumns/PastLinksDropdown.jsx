@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment.
+
 import { motion } from "framer-motion";
 import { downArrow, downArrowHover } from "@/src/assets";
 import { useState } from "react";

@@ -9,11 +9,8 @@
 
 @mixin page-body-text {
   font-family: vars.font(body);
-
-  @include mix.respond-to(lg) {
-    font-size: vars.rem(18);
-    line-height: vars.rem(28);
-  }
+  font-size: vars.font-size(base);
+  line-height: vars.line-height(normal);
 }
 
 .page {
@@ -26,9 +23,9 @@
   width: 100vw;
   height: auto;
   min-height: 100%;
-  margin: 0 auto vars.rem(180);
+  margin: 0 auto vars.$footer-height;
   overflow: hidden;
-  padding-block: vars.rem(8);
+  padding-block: vars.space(2xs);
   background-color: vars.color(background);
   background-size: cover;
   text-align: center;
@@ -48,11 +45,11 @@
   }
 
   &--below-nav {
-    margin-top: vars.rem(70);
+    margin-top: vars.$navbar-height;
   }
 
   &--below-nav-tight {
-    margin-top: vars.rem(60);
+    margin-top: vars.$navbar-height;
   }
 
   &__backdrop {
@@ -71,7 +68,7 @@
     top: vars.rem(100);
     z-index: vars.z-index(above);
     width: 80%;
-    margin: 0 auto vars.rem(40);
+    margin: 0 auto vars.space(2xl);
     border-radius: vars.radius(2xl);
     background: vars.color(background);
     filter: vars.drop-shadow(xl);
@@ -92,18 +89,18 @@
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    margin: 0 auto vars.rem(12);
+    margin: 0 auto vars.space(xs);
     overflow: hidden;
-    padding-top: vars.rem(40);
+    padding-top: vars.space(2xl);
     text-align: center;
 
     &--tight {
-      margin-bottom: vars.rem(4);
+      margin-bottom: vars.space(3xs);
       overflow: visible;
     }
 
     &--spaced {
-      margin-block: vars.rem(40);
+      margin-block: vars.space(2xl);
       padding-top: 0;
     }
   }
@@ -112,42 +109,21 @@
     color: vars.color(earth);
     font-family: vars.font(title);
     font-weight: 700;
-    font-size: vars.rem(36);
-    line-height: vars.rem(40);
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(60);
-      line-height: 1;
-    }
+    font-size: vars.font-size(5xl);
+    line-height: vars.line-height(tight);
 
     &--compact {
-      padding-bottom: vars.rem(20);
-      font-size: vars.rem(30);
-      line-height: vars.rem(36);
-
-      @include mix.respond-to(md) {
-        font-size: vars.rem(36);
-        line-height: vars.rem(40);
-      }
-
-      @include mix.respond-to(lg) {
-        font-size: vars.rem(60);
-        line-height: 1;
-      }
+      padding-bottom: vars.space(md);
+      font-size: vars.font-size(4xl);
+      line-height: vars.line-height(tight);
     }
   }
 
   &__subtitle {
     color: vars.color(primary);
-    font-family: vars.font(subtitle);
-    font-weight: 700;
-    font-size: vars.rem(20);
-    line-height: vars.rem(28);
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(30);
-      line-height: vars.rem(36);
-    }
+    font-family: vars.font(subtitle);    font-weight: 700;
+    font-size: vars.font-size(xl);
+    line-height: vars.line-height(snug);
   }
 
   &__text {
@@ -157,8 +133,8 @@
     justify-content: center;
     width: 80%;
     margin-inline: auto;
-    padding-top: vars.rem(40);
-    padding-bottom: vars.rem(32);
+    padding-top: vars.space(2xl);
+    padding-bottom: vars.space(xl);
     background: vars.color(background);
     text-align: center;
 
@@ -173,8 +149,8 @@
     z-index: vars.z-index(above);
     width: 80%;
     margin-inline: auto;
-    padding-top: vars.rem(40);
-    padding-bottom: vars.rem(32);
+    padding-top: vars.space(2xl);
+    padding-bottom: vars.space(xl);
 
     @include mix.respond-to(lg) {
       width: 70%;
@@ -182,8 +158,8 @@
   }
 
   &__closing-text {
-    padding-top: vars.rem(56);
-    padding-bottom: vars.rem(16);
+    padding-top: vars.space(4xl);
+    padding-bottom: vars.space(sm);
     font-weight: 700;
     text-align: center;
   }

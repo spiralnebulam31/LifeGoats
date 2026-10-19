@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment.
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";

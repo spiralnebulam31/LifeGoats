@@ -8,32 +8,32 @@
   width: 100%;
   max-width: 100%;
   height: 100%;
-  margin: 0 auto vars.rem(180);
+  margin: 0 auto vars.$footer-height;
   overflow: hidden;
-  padding-top: vars.rem(24);
-  padding-bottom: vars.rem(56);
+  padding-top: vars.space(lg);
+  padding-bottom: vars.space(4xl);
   @include mix.sky-gradient;
   background-size: cover;
 
   @include mix.respond-to(sm) {
-    padding-bottom: vars.rem(80);
+    padding-bottom: vars.space(6xl);
   }
 
   @include mix.respond-to(md) {
-    padding-bottom: vars.rem(144);
+    padding-bottom: vars.space(8xl);
   }
 
   @include mix.respond-to(lg) {
-    padding-bottom: vars.rem(80);
+    padding-bottom: vars.space(6xl);
   }
 
   @include mix.respond-to(xl) {
-    padding-bottom: vars.rem(144);
+    padding-bottom: vars.space(8xl);
   }
 
   // Standalone /contact page.
   &--page {
-    margin-top: vars.rem(60);
+    margin-top: vars.$navbar-height;
     padding-top: 0;
   }
 
@@ -49,21 +49,21 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(16);
+    padding-bottom: vars.space(sm);
   }
 
   &__columns {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: vars.rem(8);
+    gap: vars.space(2xs);
     max-width: 100%;
-    margin-top: vars.rem(4);
-    margin-bottom: vars.rem(80);
+    margin-top: vars.space(3xs);
+    margin-bottom: vars.space(6xl);
     text-align: center;
 
     @include mix.respond-to(sm) {
-      margin-bottom: vars.rem(176);
+      margin-bottom: vars.space(8xl);
     }
 
     @include mix.respond-to(lg) {
@@ -94,19 +94,19 @@
 
   &__intro {
     max-width: 100%;
-    margin-bottom: vars.rem(20);
-    padding: vars.rem(4) vars.rem(24) 0;
+    margin-bottom: vars.space(md);
+    padding: vars.space(3xs) vars.space(lg) 0;
     color: vars.color(primary);
     font-family: vars.font(body);
-    font-size: vars.rem(18);
-    line-height: vars.rem(30);
+    font-size: vars.font-size(md);
+    line-height: vars.line-height(relaxed);
 
     @include mix.respond-to(sm) {
-      padding-inline: vars.rem(64);
+      padding-inline: vars.space(5xl);
     }
 
     @include mix.respond-to(lg) {
-      padding-top: vars.rem(40);
+      padding-top: vars.space(2xl);
     }
   }
 
@@ -114,7 +114,7 @@
     width: 90%;
     max-width: 100%;
     margin-inline: auto;
-    padding: vars.rem(8);
+    padding: vars.space(2xs);
     border-radius: vars.radius(2xl);
     background: vars.color(background);
     text-align: center;
@@ -125,43 +125,38 @@
     }
 
     @include mix.respond-to(lg) {
-      margin-inline: vars.rem(64);
+      margin-inline: vars.space(5xl);
     }
   }
 
   &__links {
     display: flex;
     flex-direction: column;
-    gap: vars.rem(20);
-    padding-top: vars.rem(20);
-    padding-bottom: vars.rem(12);
+    gap: vars.space(md);
+    padding-top: vars.space(md);
+    padding-bottom: vars.space(xs);
     font-family: vars.font(links);
-    font-size: vars.rem(18);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(md);
+    line-height: vars.line-height(normal);
   }
 
   &__link-row {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding-bottom: vars.rem(12);
+    padding-bottom: vars.space(xs);
   }
 
   &__link {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
-    gap: vars.rem(8);
+    gap: vars.space(2xs);
     color: vars.color(secondary);
     letter-spacing: 0.025em;
 
     &:hover {
       color: vars.color(tertiary);
-    }
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(20);
-      line-height: vars.rem(28);
     }
   }
 
@@ -169,7 +164,7 @@
     flex-shrink: 0;
     width: vars.rem(20);
     height: vars.rem(20);
-    margin-right: vars.rem(8);
+    margin-right: vars.space(2xs);
     object-fit: contain;
   }
 
@@ -179,21 +174,21 @@
   }
 
   &__form-column {
-    margin-top: vars.rem(40);
+    margin-top: vars.space(2xl);
 
     @include mix.respond-to(lg) {
-      margin-top: vars.rem(56);
+      margin-top: vars.space(4xl);
     }
   }
 
   &__form-intro {
     max-width: vars.rem(512);
     margin-inline: auto;
-    padding-bottom: vars.rem(20);
+    padding-bottom: vars.space(md);
     color: vars.color(primary);
     font-family: vars.font(body);
-    font-size: vars.rem(18);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(md);
+    line-height: vars.line-height(normal);
 
     @include mix.respond-to(xl) {
       max-width: vars.rem(1152);
@@ -222,8 +217,8 @@
     align-items: center;
     width: 80%;
     max-width: 100%;
-    margin: 0 auto vars.rem(16);
-    padding: vars.rem(8);
+    margin: 0 auto vars.space(sm);
+    padding: vars.space(2xs);
     border-radius: vars.radius(lg);
     background: vars.color(background);
     filter: vars.drop-shadow(xl);
@@ -240,7 +235,7 @@
 
   &__input {
     width: 100%;
-    padding: vars.rem(8) vars.rem(12);
+    padding: vars.space(2xs) vars.space(xs);
     border-width: 1px;
     border-radius: vars.radius(lg);
     background: vars.color(background);
@@ -249,17 +244,17 @@
   }
 
   &__submit-row {
-    margin-bottom: vars.rem(4);
+    margin-bottom: vars.space(3xs);
   }
 
   &__submit {
     align-items: center;
-    margin: vars.rem(4) auto 0;
-    padding: vars.rem(8) vars.rem(16);
+    margin: vars.space(3xs) auto 0;
+    padding: vars.space(2xs) vars.space(sm);
     border-radius: vars.radius(2xl);
     background-color: vars.color(primary);
-    color: vars.color(background);
-    font-family: vars.font(links);
+    color: vars.color(background);    font-family: vars.font(links);
+    font-size: vars.font-size(md);
     font-weight: 700;
     text-transform: uppercase;
     filter: vars.drop-shadow(xl);
@@ -267,11 +262,6 @@
     &:hover {
       background-color: vars.color(tertiary);
       color: vars.color(earth);
-    }
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(20);
-      line-height: vars.rem(28);
     }
   }
 

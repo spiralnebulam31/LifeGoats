@@ -2,20 +2,15 @@
  * _typography.scss — Shared text-role mixins.
  */
 @use "../variables" as vars;
-@use "./breakpoints" as bp;
 
 // Small uppercase line above a section title ("Our", "Ways to reach out").
 // Color varies per section, so callers set it.
 @mixin section-pretitle-text {
-  font-size: vars.rem(14);
+  font-size: vars.font-size(base);
   font-family: vars.font(subtitle);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-
-  @include bp.respond-to(md) {
-    font-size: vars.rem(18);
-  }
 }
 
 // Big section title ("Core Values", "Contact Life Goats").
@@ -24,29 +19,21 @@
   color: vars.color(earth);
   font-family: vars.font(title);
   font-weight: 700;
-  font-size: vars.rem(40);
+  font-size: vars.font-size(display);
   text-transform: uppercase;
-
-  @include bp.respond-to(sm) {
-    font-size: vars.rem(45);
-  }
-
-  @include bp.respond-to(md) {
-    font-size: vars.rem(55);
-  }
 }
 
 // Desktop nav links / dropdown toggles.
 @mixin nav-link-text {
   color: vars.color(primary);
-  font-size: vars.rem(20);
-  line-height: vars.rem(28);
+  font-size: vars.font-size(md);
+  line-height: vars.line-height(snug);
   font-weight: 700;
   font-family: vars.font(links);
   cursor: pointer;
 
   &:hover {
     color: vars.color(tertiary);
-    font-size: vars.rem(24);
+    font-size: vars.font-size(lg);
   }
 }

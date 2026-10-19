@@ -4,11 +4,7 @@
 @mixin program-body-text {
   color: vars.color(primary);
   font-family: vars.font(body);
-  font-size: vars.rem(14);
-
-  @include mix.respond-to(md) {
-    font-size: vars.rem(16);
-  }
+  font-size: vars.font-size(sm);
 }
 
 .program {
@@ -19,7 +15,7 @@
   height: auto;
   min-height: 100%;
   overflow: hidden;
-  padding-block: vars.rem(8);
+  padding-block: vars.space(2xs);
   @include mix.sky-gradient($from: background);
   background-size: cover;
 
@@ -34,7 +30,7 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(4);
+    padding-bottom: vars.space(3xs);
   }
 
   &__dates {
@@ -44,7 +40,7 @@
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: 0 auto vars.rem(8);
+    margin: 0 auto vars.space(2xs);
 
     @include mix.respond-to(lg) {
       flex-direction: row;
@@ -60,8 +56,8 @@
     align-items: flex-start;
     width: 80%;
     height: auto;
-    margin: vars.rem(8) auto 0;
-    padding-block: vars.rem(16);
+    margin: vars.space(2xs) auto 0;
+    padding-block: vars.space(sm);
     border-radius: vars.radius(2xl);
     background: vars.color(background);
     filter: vars.drop-shadow(xl);
@@ -82,8 +78,8 @@
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: vars.rem(8) auto 0;
-    padding-block: vars.rem(16);
+    margin: vars.space(2xs) auto 0;
+    padding-block: vars.space(sm);
 
     @include mix.respond-to(lg) {
       width: 45%;
@@ -91,12 +87,12 @@
   }
 
   &__link-text {
-    padding-top: vars.rem(12);
-    padding-bottom: vars.rem(8);
+    padding-top: vars.space(xs);
+    padding-bottom: vars.space(2xs);
     color: vars.color(primary);
     font-family: vars.font(links);
-    font-size: vars.rem(20);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(lg);
+    line-height: vars.line-height(snug);
     font-weight: 700;
     text-align: center;
     text-decoration-line: underline;
@@ -110,29 +106,28 @@
 
 .program-tab {
   &__title {
-    padding: vars.rem(4) vars.rem(16) vars.rem(12);
+    padding: vars.space(3xs) vars.space(sm) vars.space(xs);
     color: vars.color(tertiary);
     font-family: vars.font(links);
-    font-size: vars.rem(30);
-    line-height: vars.rem(36);
+    font-size: vars.font-size(4xl);
+    line-height: vars.line-height(tight);
     font-weight: 700;
     text-transform: uppercase;
   }
 
   &__description {
     @include program-body-text;
-    padding: vars.rem(4) vars.rem(32);
+    padding: vars.space(3xs) vars.space(xl);
   }
 }
 
 .date-button {
-  margin: vars.rem(8) vars.rem(16);
-  padding: vars.rem(4) vars.rem(8);
+  margin: vars.space(2xs) vars.space(sm);
+  padding: vars.space(3xs) vars.space(2xs);
   border-radius: vars.radius(2xl);
   background-color: vars.color(background);
   color: vars.color(primary);
-  font-family: vars.font(body);
-  font-size: vars.rem(14);
+  font-family: vars.font(body);  font-size: vars.font-size(md);
   font-weight: 700;
   text-transform: uppercase;
   filter: vars.drop-shadow(2xl);
@@ -152,17 +147,5 @@
       background-color: vars.color(tertiary);
       color: vars.color(earth);
     }
-  }
-
-  @include mix.respond-to(md) {
-    font-size: vars.rem(16);
-  }
-
-  @include mix.respond-to(lg) {
-    font-size: vars.rem(18);
-  }
-
-  @include mix.respond-to(xl) {
-    font-size: vars.rem(20);
   }
 }

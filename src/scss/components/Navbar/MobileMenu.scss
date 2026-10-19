@@ -9,9 +9,7 @@
   z-index: vars.z-index(raised);
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: vars.rem(240);
-  width: 70%;
+  align-items: flex-end;width: 70%;
   height: 100vh;
   margin: 0;
   background: vars.color(background);
@@ -25,10 +23,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: vars.rem(16);
+    gap: vars.space(sm);
     width: 90%;
     height: 100vh;
-    padding-inline: vars.rem(64);
+    padding-inline: vars.space(5xl);
     background: vars.color(background);
     font-family: vars.font(links);
     font-weight: 700;
@@ -39,8 +37,8 @@
   &__heading,
   &__link {
     color: vars.color(primary);
-    font-size: vars.rem(24);
-    line-height: vars.rem(32);
+    font-size: vars.font-size(2xl);
+    line-height: vars.line-height(snug);
     font-weight: 700;
     font-family: vars.font(subtitle);
     cursor: pointer;
@@ -51,7 +49,7 @@
   }
 
   &__heading {
-    margin-bottom: vars.rem(4);
+    margin-bottom: vars.space(3xs);
   }
 
   &__link--active {
@@ -62,8 +60,8 @@
   &__sublinks {
     display: flex;
     flex-direction: column;
-    gap: vars.rem(12);
-    padding-bottom: vars.rem(16);
+    gap: vars.space(xs);
+    padding-bottom: vars.space(sm);
   }
 
   &__item {
@@ -71,8 +69,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: vars.rem(16);
+    gap: vars.space(sm);
     width: 90%;
-    padding-inline: vars.rem(64);
+    padding-inline: vars.space(5xl);
   }
 }

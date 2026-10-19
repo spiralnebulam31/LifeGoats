@@ -1,3 +1,5 @@
+// Not used at the moment (only used by Testimonials.jsx, which is also unused).
+
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import "@/src/scss/components/LandingPage/testimonials/TestimonialsCard.scss";

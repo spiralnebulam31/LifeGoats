@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment (only used by Pricing.jsx, which is also unused).
+
 import { motion } from "framer-motion";
 
 import PropTypes from 'prop-types';

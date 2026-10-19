@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: vars.rem(20);
+    gap: vars.space(md);
     max-width: vars.rem(1280);
     margin-inline: auto;
 
@@ -45,24 +45,20 @@
     width: 90%;
     max-width: vars.rem(448);
     margin: auto;
-    padding-bottom: vars.rem(40);
+    padding-bottom: vars.space(2xl);
     color: vars.color(white);
     font-family: vars.font(body);
-    font-weight: 700;
-    font-size: vars.rem(20);
-    line-height: vars.rem(35);
+    font-weight: 700;    font-size: vars.font-size(xl);
+    line-height: vars.line-height(relaxed);
     text-align: center;
     filter: vars.drop-shadow(md);
 
     @include mix.respond-to(md) {
       max-width: vars.rem(1280);
-      font-size: vars.rem(24);
     }
 
     @include mix.respond-to(lg) {
       width: 80%;
-      font-size: vars.rem(30);
-      line-height: vars.rem(60);
     }
 
     @include mix.respond-to(xl) {
@@ -71,21 +67,15 @@
   }
 
   &__tagline {
-    max-width: vars.rem(384);
-    font-size: vars.rem(26);
+    max-width: vars.rem(384);    font-size: vars.font-size(4xl);
     filter: vars.drop-shadow(xl);
 
     @include mix.respond-to(sm) {
       max-width: vars.rem(1024);
-      font-size: vars.rem(40);
     }
 
     @include mix.respond-to(md) {
       max-width: vars.rem(1280);
-    }
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(50);
     }
   }
 
@@ -97,7 +87,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: vars.rem(8) auto;
+    margin: vars.space(2xs) auto;
   }
 
   &__slider-track {

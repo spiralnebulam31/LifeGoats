@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment.
+
 import { useState } from "react";
 import PropTypes from 'prop-types';
 import "@/src/scss/components/Events/program/Program.scss";

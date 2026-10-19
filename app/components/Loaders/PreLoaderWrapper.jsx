@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment.
+
 import { useState, useEffect, useRef } from 'react';
 import { lifeGoatsLogo } from '@/src/assets';
 import Image from 'next/image';

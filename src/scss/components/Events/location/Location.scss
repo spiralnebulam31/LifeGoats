@@ -9,8 +9,8 @@
   height: auto;
   min-height: 100%;
   overflow: hidden;
-  padding-top: vars.rem(8);
-  padding-bottom: vars.rem(48);
+  padding-top: vars.space(2xs);
+  padding-bottom: vars.space(3xl);
   background-color: vars.color(background);
   background-size: cover;
 
@@ -25,7 +25,7 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(4);
+    padding-bottom: vars.space(3xs);
   }
 
   &__body {
@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto vars.rem(16);
+    margin: 0 auto vars.space(sm);
 
     @include mix.respond-to(lg) {
       flex-direction: row;
@@ -46,12 +46,12 @@
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: 0 auto vars.rem(24);
-    padding-top: vars.rem(24);
+    margin: 0 auto vars.space(lg);
+    padding-top: vars.space(lg);
 
     @include mix.respond-to(lg) {
       width: 45%;
-      margin-left: vars.rem(80);
+      margin-left: vars.space(6xl);
       margin-right: auto;
     }
 
@@ -66,8 +66,8 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: vars.rem(-40) auto;
-    padding: vars.rem(16);
+    margin: vars.space(2xl, $negative: true) auto;
+    padding: vars.space(sm);
     border-radius: vars.radius(2xl);
     background: vars.color(background);
     filter: vars.drop-shadow(xl);
@@ -80,15 +80,15 @@
 
     @include mix.respond-to(lg) {
       width: 60%;
-      margin: vars.rem(8) vars.rem(-24) 0 vars.rem(-80);
+      margin: vars.space(2xs) vars.space(lg, $negative: true) 0 vars.space(6xl, $negative: true);
       transform: rotate(0deg);
     }
 
     @include mix.respond-to(xl) {
       width: 35%;
-      margin-top: vars.rem(-64);
-      margin-left: vars.rem(-96);
-      margin-right: vars.rem(-40);
+      margin-top: vars.space(5xl, $negative: true);
+      margin-left: vars.space(7xl, $negative: true);
+      margin-right: vars.space(2xl, $negative: true);
     }
   }
 
@@ -97,13 +97,8 @@
     color: vars.color(primary);
   }
 
-  &__paragraph {
-    padding-bottom: vars.rem(20);
-    font-size: vars.rem(14);
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(15);
-    }
+  &__paragraph {    padding-bottom: vars.space(md);
+    font-size: vars.font-size(xs);
   }
 
   &__maps {
@@ -112,14 +107,10 @@
   }
 
   &__maps-link {
-    font-size: vars.rem(15);
+    font-size: vars.font-size(sm);
 
     &:hover {
       color: vars.color(tertiary);
-    }
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(16);
     }
   }
 
@@ -131,8 +122,8 @@
     justify-content: center;
     width: 85%;
     height: auto;
-    margin: vars.rem(8) auto vars.rem(24);
-    padding-top: vars.rem(24);
+    margin: vars.space(2xs) auto vars.space(lg);
+    padding-top: vars.space(lg);
 
     @include mix.respond-to(md) {
       width: 70%;
@@ -140,14 +131,14 @@
 
     @include mix.respond-to(lg) {
       width: 40%;
-      margin-top: vars.rem(24);
-      margin-right: vars.rem(112);
+      margin-top: vars.space(lg);
+      margin-right: vars.space(7xl);
       margin-left: auto;
     }
 
     @include mix.respond-to(xl) {
       width: 28%;
-      margin-top: vars.rem(-64);
+      margin-top: vars.space(5xl, $negative: true);
     }
   }
 
@@ -156,12 +147,12 @@
     filter: vars.drop-shadow(xl);
 
     &--tilt-left {
-      margin-bottom: vars.rem(8);
+      margin-bottom: vars.space(2xs);
       transform: rotate(-6deg);
     }
 
     &--tilt-right {
-      margin-top: vars.rem(8);
+      margin-top: vars.space(2xs);
       transform: rotate(6deg);
     }
   }

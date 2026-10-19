@@ -19,16 +19,16 @@
   }
 
   &__info {
-    padding: vars.rem(16);
+    padding: vars.space(sm);
     background: vars.color(white);
   }
 
   &__locations > * + * {
-    margin-top: vars.rem(8);
+    margin-top: vars.space(2xs);
   }
 
   &__location {
-    padding-left: vars.rem(12);
+    padding-left: vars.space(xs);
   }
 
   &__location-name {
@@ -40,8 +40,8 @@
   &__coordinates,
   &__description {
     font-family: vars.font(body);
-    font-size: vars.rem(14);
-    line-height: vars.rem(20);
+    font-size: vars.font-size(sm);
+    line-height: vars.line-height(normal);
   }
 
   &__coordinates {
@@ -49,6 +49,6 @@
   }
 
   &__description {
-    margin-top: vars.rem(4);
+    margin-top: vars.space(3xs);
   }
 }

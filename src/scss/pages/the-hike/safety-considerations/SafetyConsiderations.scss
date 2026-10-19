@@ -4,27 +4,27 @@
   &__list {
     width: 80%;
     margin-inline: auto;
-    padding-bottom: vars.rem(40);
+    padding-bottom: vars.space(2xl);
     text-align: left;
   }
 
   &__label {
-    padding-bottom: vars.rem(20);
+    padding-bottom: vars.space(md);
     font-style: italic;
   }
 
   &__last-line {
-    padding-bottom: vars.rem(40);
+    padding-bottom: vars.space(2xl);
   }
 
   &__outro {
     width: 80%;
     margin-inline: auto;
-    padding-bottom: vars.rem(40);
+    padding-bottom: vars.space(2xl);
     font-weight: 700;
   }
 
   &__outro-line {
-    padding-bottom: vars.rem(20);
+    padding-bottom: vars.space(md);
   }
 }

@@ -133,7 +133,7 @@ viewport={{ once: true }}
       </motion.div>
 
       <motion.div
-        className="event-team__thanks event-team__thanks--wide"
+        className="event-team__thanks"
         variants={floatFromLeftContact}
         initial="initial"
         whileInView="animate" 

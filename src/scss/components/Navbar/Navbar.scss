@@ -7,14 +7,14 @@
   width: 100%;
   height: vars.rem(75);
   z-index: vars.z-index(modal);
-  padding: vars.rem(8) vars.rem(24);
+  padding: vars.space(2xs) vars.space(lg);
   background: vars.color(background);
   box-shadow: vars.shadow(xl);
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    gap: vars.rem(80);
+    gap: vars.space(6xl);
     width: 100%;
     margin-inline: auto;
   }
@@ -29,13 +29,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: vars.rem(8);
+    gap: vars.space(2xs);
   }
 
   &__logo {
     height: vars.rem(65);
     width: auto;
-    padding-bottom: vars.rem(4);
+    padding-bottom: vars.space(3xs);
     object-fit: contain;
     cursor: pointer;
   }
@@ -43,7 +43,7 @@
   &__title {
     display: none;
     color: vars.color(primary);
-    font-size: vars.rem(26);
+    font-size: vars.font-size(xl);
     font-family: vars.font(title);
     cursor: pointer;
 
@@ -63,7 +63,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: vars.rem(40);
+    gap: vars.space(2xl);
 
     @include mix.respond-to(lg) {
       display: flex;
@@ -79,7 +79,7 @@
     flex: 1 1 0%;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: vars.rem(4);
+    padding-bottom: vars.space(3xs);
 
     @include mix.respond-to(lg) {
       display: none;

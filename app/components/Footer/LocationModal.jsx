@@ -30,8 +30,8 @@ const LocationModal = ({ isOpen, onClose }) => {
       center
       closeIcon={closeIcon}
       classNames={{
-        overlay: "customOverlay",
-        modal: "customModal",
+        overlay: "footer-modal-overlay",
+        modal: "footer-modal-panel",
       }}
       id="locationModal"
       aria-labelledby="location-modal"

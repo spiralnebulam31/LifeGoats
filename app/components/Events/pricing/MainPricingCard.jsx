@@ -1,3 +1,5 @@
+// Not used at the moment (only used by Pricing.jsx, which is also unused).
+
 import { AnimatePresence, motion } from "framer-motion";
 import { locationIcon, priceIcon2 } from "@/src/assets";
 import { fadeIn } from "../../../../motion/motion";

@@ -2,6 +2,7 @@
 
 import DetailsCardLarge from "./DetailsCardLarge";
 import {
+  floatFromDownPreTitle,
   floatFromDownMainTitle,
   floatFromLeftDetails1,
   floatFromLeftDetails2,
@@ -67,6 +68,10 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
           className={`details__pretitle ${
             titleColor === "white" ? "details__pretitle--white" : ""
           }`}
+          variants={floatFromDownPreTitle}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
         >
           {title}
         </motion.p>

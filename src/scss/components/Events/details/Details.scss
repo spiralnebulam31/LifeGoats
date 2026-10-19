@@ -8,8 +8,8 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding-top: vars.rem(8);
-  padding-bottom: vars.rem(48);
+  padding-top: vars.space(2xs);
+  padding-bottom: vars.space(3xl);
   background-color: vars.color(background);
   background-size: cover;
 
@@ -18,7 +18,7 @@
   }
 
   &__header {
-    @include mix.section-header($margin-bottom: vars.rem(4));
+    @include mix.section-header($margin-bottom: 3xs);
   }
 
   &__pretitle {
@@ -32,7 +32,7 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(8);
+    padding-bottom: vars.space(2xs);
   }
 
   // 6-column mobile mosaic that becomes 4 columns at lg, with each cell
@@ -41,10 +41,10 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: vars.rem(12);
+    gap: vars.space(xs);
     width: 100%;
     height: 100%;
-    padding: vars.rem(16);
+    padding: vars.space(sm);
 
     @include mix.respond-to(lg) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -123,10 +123,10 @@
     justify-content: center;
     width: 100%;
     margin: auto;
-    padding-inline: vars.rem(8);
+    padding-inline: vars.space(2xs);
 
     > * + * {
-      margin-left: vars.rem(8);
+      margin-left: vars.space(2xs);
     }
   }
 
@@ -136,26 +136,26 @@
 
     &--top {
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: vars.rem(16);
-      margin-top: vars.rem(16);
-      margin-bottom: vars.rem(4);
+      gap: vars.space(sm);
+      margin-top: vars.space(sm);
+      margin-bottom: vars.space(3xs);
     }
 
     &--bottom {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: vars.rem(4);
-      margin-block: vars.rem(4);
-      padding-inline: vars.rem(80);
+      gap: vars.space(3xs);
+      margin-block: vars.space(3xs);
+      padding-inline: vars.space(6xl);
     }
 
     &--all {
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: vars.rem(16);
-      margin-top: vars.rem(16);
-      margin-bottom: vars.rem(4);
+      gap: vars.space(sm);
+      margin-top: vars.space(sm);
+      margin-bottom: vars.space(3xs);
 
       @include mix.respond-to(lg) {
-        gap: vars.rem(4);
+        gap: vars.space(3xs);
       }
     }
   }
@@ -174,15 +174,15 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    padding: vars.rem(4);
+    padding: vars.space(3xs);
     border-radius: vars.radius(2xl);
     background-color: vars.color(background);
     box-shadow: vars.shadow(md);
   }
 
   &__icon {
-    margin-bottom: vars.rem(4);
-    padding: vars.rem(8);
+    margin-bottom: vars.space(3xs);
+    padding: vars.space(2xs);
     border-radius: vars.radius(2xl);
     object-fit: contain;
     filter: hue-rotate(180deg);
@@ -199,29 +199,25 @@
     justify-content: space-evenly;
     align-items: center;
     height: vars.rem(80);
-    padding-inline: vars.rem(16);
+    padding-inline: vars.space(sm);
     border-radius: vars.radius(2xl);
     background-color: transparent;
 
     @include mix.respond-to(lg) {
-      padding-inline: vars.rem(4);
+      padding-inline: vars.space(3xs);
     }
   }
 
   &__name {
     max-width: vars.rem(1152);
     height: vars.rem(40);
-    margin-bottom: vars.rem(-16);
-    padding-inline: vars.rem(16);
+    margin-bottom: vars.space(sm, $negative: true);
+    padding-inline: vars.space(sm);
     color: vars.color(tertiary);
     font-family: vars.font(subtitle);
-    font-size: vars.rem(13);
+    font-size: vars.font-size(2xs);
     font-weight: 700;
     text-align: center;
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(14);
-    }
   }
 
   &__value {
@@ -233,12 +229,8 @@
     margin-inline: auto;
     color: vars.color(primary);
     font-family: vars.font(body);
-    font-size: vars.rem(15);
+    font-size: vars.font-size(sm);
     font-weight: 700;
     text-align: center;
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(16);
-    }
   }
 }

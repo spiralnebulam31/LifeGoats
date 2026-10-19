@@ -6,7 +6,7 @@
   top: vars.rem(50);
   z-index: vars.z-index(above);
   width: 80%;
-  margin: 0 auto vars.rem(40);
+  margin: 0 auto vars.space(2xl);
   background: vars.color(background);
   text-align: center;
 
@@ -37,27 +37,26 @@
     justify-content: center;
     width: 80%;
     margin-inline: auto;
-    padding-top: vars.rem(40);
-    padding-bottom: vars.rem(32);
-    background: vars.color(background);
-    font-family: vars.font(body);
+    padding-top: vars.space(2xl);
+    padding-bottom: vars.space(xl);
+    background: vars.color(background);    font-family: vars.font(body);
+    font-size: vars.font-size(base);
+    line-height: vars.line-height(normal);
     text-align: center;
 
     @include mix.respond-to(lg) {
       width: 70%;
-      font-size: vars.rem(18);
-      line-height: vars.rem(28);
     }
   }
 
   &__text {
     margin-top: 0;
-    padding-bottom: vars.rem(16);
+    padding-bottom: vars.space(sm);
     font-weight: 700;
     text-align: center;
 
     &--note {
-      margin-top: vars.rem(8);
+      margin-top: vars.space(2xs);
     }
   }
 
@@ -78,8 +77,8 @@
   }
 
   &__cta {
-    margin-top: vars.rem(12);
-    padding: vars.rem(8) vars.rem(16);
+    margin-top: vars.space(xs);
+    padding: vars.space(2xs) vars.space(sm);
     border-radius: vars.radius(lg);
     background-color: vars.color(primary);
     color: vars.color(background);

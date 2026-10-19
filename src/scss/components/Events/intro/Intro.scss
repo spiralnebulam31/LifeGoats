@@ -11,13 +11,13 @@
   height: auto;
   min-height: 100%;
   overflow: hidden;
-  padding-top: vars.rem(8);
-  padding-bottom: vars.rem(48);
+  padding-top: vars.space(2xs);
+  padding-bottom: vars.space(3xl);
   @include mix.sky-gradient($from: background);
   background-size: cover;
 
   &__header {
-    @include mix.section-header($padding-top: vars.rem(56));
+    @include mix.section-header($padding-top: 4xl);
   }
 
   &__pretitle {
@@ -27,7 +27,7 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(8);
+    padding-bottom: vars.space(2xs);
   }
 
   &__body {
@@ -35,11 +35,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: vars.rem(8) auto vars.rem(32);
+    margin: vars.space(2xs) auto vars.space(xl);
 
     @include mix.respond-to(lg) {
       flex-direction: row;
-      margin-top: vars.rem(24);
+      margin-top: vars.space(lg);
     }
   }
 
@@ -60,8 +60,8 @@
 
   &__card {
     width: 85%;
-    margin-top: vars.rem(20);
-    padding-block: vars.rem(16);
+    margin-top: vars.space(md);
+    padding-block: vars.space(sm);
     border-radius: vars.radius(2xl);
     background: vars.color(background);
     filter: vars.drop-shadow(xl);
@@ -74,23 +74,19 @@
     @include mix.respond-to(lg) {
       width: 35%;
       margin-top: 0;
-      margin-left: vars.rem(-80);
+      margin-left: vars.space(6xl, $negative: true);
     }
   }
 
   &__paragraph-group {
     width: 100%;
-    padding: vars.rem(8) vars.rem(24);
+    padding: vars.space(2xs) vars.space(lg);
     color: vars.color(primary);
     font-family: vars.font(body);
   }
 
   &__paragraph {
-    font-size: vars.rem(14);
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(15);
-    }
+    font-size: vars.font-size(xs);
 
     &--bold {
       font-weight: 700;
@@ -98,12 +94,8 @@
   }
 
   &__end-text {
-    font-size: vars.rem(16);
+    font-size: vars.font-size(base);
     font-weight: 700;
     text-align: center;
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(17);
-    }
   }
 }

@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: vars.rem(20);
+    gap: vars.space(md);
     max-width: vars.rem(1280);
     margin-inline: auto;
 
@@ -52,44 +52,34 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: vars.rem(4);
-    margin-top: vars.rem(16);
-    margin-bottom: vars.rem(16);
+    gap: vars.space(3xs);
+    margin-top: vars.space(sm);
+    margin-bottom: vars.space(sm);
     color: vars.color(earth);
     font-family: vars.font(title);
     font-weight: 700;
-    font-size: vars.rem(70);
-    line-height: vars.rem(70);
+    font-size: vars.font-size(hero);
+    line-height: vars.line-height(none);
 
     @include mix.respond-to(md) {
-      gap: vars.rem(16);
-      font-size: vars.rem(75);
+      gap: vars.space(sm);
     }
 
     @include mix.respond-to(lg) {
-      margin-top: vars.rem(8);
-      font-size: vars.rem(85);
-      line-height: vars.rem(80);
+      margin-top: vars.space(2xs);
     }
   }
 
   &__location {
     z-index: vars.z-index(header);
     max-width: vars.rem(448);
-    margin-bottom: vars.rem(16);
-    color: vars.color(primary);
-    font-weight: 700;
-    font-size: vars.rem(28);
+    margin-bottom: vars.space(sm);
+    color: vars.color(primary);    font-weight: 700;
+    font-size: vars.font-size(3xl);
     text-align: center;
 
     @include mix.respond-to(md) {
       max-width: vars.rem(576);
-      font-size: vars.rem(32);
-    }
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(38);
-      line-height: vars.rem(40);
     }
   }
 
@@ -100,23 +90,17 @@
   &__details {
     z-index: vars.z-index(header);
     max-width: vars.rem(448);
-    margin-top: vars.rem(8);
-    margin-bottom: vars.rem(12);
+    margin-top: vars.space(2xs);
+    margin-bottom: vars.space(xs);
     color: vars.color(primary);
     font-family: vars.font(body);
     font-weight: 700;
-    font-size: vars.rem(20);
-    line-height: vars.rem(35);
+    font-size: vars.font-size(lg);
+    line-height: vars.line-height(relaxed);
     text-align: center;
 
     @include mix.respond-to(md) {
       max-width: vars.rem(672);
-      font-size: vars.rem(24);
-    }
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(26);
-      line-height: vars.rem(40);
     }
   }
 
@@ -125,14 +109,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: vars.rem(8);
+    gap: vars.space(2xs);
   }
 
   &__calendar {
     z-index: vars.z-index(header);
     width: vars.rem(40);
     height: vars.rem(40);
-    margin-bottom: vars.rem(20);
+    margin-bottom: vars.space(md);
     object-fit: contain;
 
     @include mix.respond-to(md) {
@@ -142,36 +126,22 @@
   }
 
   &__date {
-    margin-bottom: vars.rem(20);
+    margin-bottom: vars.space(md);
   }
 
   &__p1 {
     max-width: vars.rem(384);
-    font-size: vars.rem(23);
+    font-size: vars.font-size(xl);
 
     @include mix.respond-to(md) {
       max-width: vars.rem(672);
-      font-size: vars.rem(28);
-    }
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(30);
     }
   }
 
   &__p2 {
-    margin-top: vars.rem(16);
-    font-family: vars.font(subtitle);
-    font-weight: 700;
-    font-size: vars.rem(26);
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(30);
-    }
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(32);
-    }
+    margin-top: vars.space(sm);
+    font-family: vars.font(subtitle);    font-weight: 700;
+    font-size: vars.font-size(2xl);
   }
 
   &__slider {

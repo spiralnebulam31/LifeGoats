@@ -4,11 +4,7 @@
 @mixin pricing-body-text {
   color: vars.color(primary);
   font-family: vars.font(body);
-  font-size: vars.rem(14);
-
-  @include mix.respond-to(md) {
-    font-size: vars.rem(16);
-  }
+  font-size: vars.font-size(sm);
 }
 
 .pricing {
@@ -18,8 +14,8 @@
   width: 100vw;
   height: auto;
   overflow: hidden;
-  padding-top: vars.rem(8);
-  padding-bottom: vars.rem(48);
+  padding-top: vars.space(2xs);
+  padding-bottom: vars.space(3xl);
   @include mix.sky-gradient;
   background-size: cover;
 
@@ -34,7 +30,7 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(8);
+    padding-bottom: vars.space(2xs);
   }
 
   &__cards {
@@ -43,10 +39,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: vars.rem(48);
+    gap: vars.space(3xl);
     width: 90%;
     margin-inline: auto;
-    padding-block: vars.rem(16);
+    padding-block: vars.space(sm);
 
     @include mix.respond-to(md) {
       flex-direction: row;
@@ -70,8 +66,8 @@
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin: vars.rem(20) auto vars.rem(28);
-    padding-block: vars.rem(16);
+    margin: vars.space(md) auto vars.space(xl);
+    padding-block: vars.space(sm);
     border-radius: vars.radius(2xl);
     background: vars.color(background);
     filter: vars.drop-shadow(xl);
@@ -82,11 +78,11 @@
   }
 
   &__additional-title {
-    padding-block: vars.rem(8);
+    padding-block: vars.space(2xs);
     color: vars.color(tertiary);
     font-family: vars.font(links);
-    font-size: vars.rem(30);
-    line-height: vars.rem(36);
+    font-size: vars.font-size(4xl);
+    line-height: vars.line-height(tight);
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
@@ -97,11 +93,11 @@
     justify-content: center;
     width: 70%;
     margin-inline: auto;
-    padding-top: vars.rem(12);
+    padding-top: vars.space(xs);
     color: vars.color(primary);
     font-family: vars.font(links);
-    font-size: vars.rem(20);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(lg);
+    line-height: vars.line-height(snug);
     font-weight: 700;
     text-align: center;
     text-decoration-line: underline;
@@ -117,16 +113,12 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-inline: auto;
-    padding-top: vars.rem(16);
+    padding-top: vars.space(sm);
     font-family: vars.font(subtitle);
-    font-size: vars.rem(16);
+    font-size: vars.font-size(base);
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(20);
-    }
   }
 
   &__prints {
@@ -143,28 +135,28 @@
   height: auto;
   min-height: vars.rem(340);
   margin-inline: auto;
-  padding-top: vars.rem(20);
+  padding-top: vars.space(md);
   border-radius: vars.radius(2xl);
   background: vars.color(background);
   filter: vars.drop-shadow(xl);
 
   &__title {
-    padding-bottom: vars.rem(16);
+    padding-bottom: vars.space(sm);
     color: vars.color(tertiary);
     font-family: vars.font(links);
-    font-size: vars.rem(30);
-    line-height: vars.rem(36);
+    font-size: vars.font-size(4xl);
+    line-height: vars.line-height(tight);
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
   }
 
   &__accommodation {
-    padding-bottom: vars.rem(16);
+    padding-bottom: vars.space(sm);
     color: vars.color(primary);
     font-family: vars.font(body);
-    font-size: vars.rem(18);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(md);
+    line-height: vars.line-height(normal);
     font-weight: 700;
     text-align: center;
 
@@ -189,13 +181,13 @@
     align-items: center;
 
     &--location {
-      padding-bottom: vars.rem(16);
+      padding-bottom: vars.space(sm);
     }
   }
 
   &__icon {
     height: auto;
-    margin-right: vars.rem(4);
+    margin-right: vars.space(3xs);
 
     &--location {
       width: vars.rem(20);
@@ -217,20 +209,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: vars.rem(12);
+    padding-bottom: vars.space(xs);
   }
 
   &__price-line {
-    padding-bottom: vars.rem(4);
+    padding-bottom: vars.space(3xs);
 
     &--last {
-      padding-bottom: vars.rem(8);
+      padding-bottom: vars.space(2xs);
     }
   }
 
   &__price {
-    font-size: vars.rem(36);
-    line-height: vars.rem(40);
+    font-size: vars.font-size(5xl);
+    line-height: vars.line-height(tight);
     font-weight: 700;
   }
 
@@ -247,13 +239,13 @@
     text-align: center;
 
     &--less {
-      padding-bottom: vars.rem(16);
+      padding-bottom: vars.space(sm);
     }
   }
 
   &__toggle {
     color: vars.color(primary);
-    font-size: vars.rem(14);
+    font-size: vars.font-size(sm);
     font-weight: 300;
     text-decoration-line: underline;
     cursor: pointer;
@@ -271,7 +263,7 @@
   }
 
   &__notes {
-    padding-bottom: vars.rem(8);
+    padding-bottom: vars.space(2xs);
     color: vars.color(primary);
     font-family: vars.font(body);
     text-align: center;
@@ -286,13 +278,13 @@
   align-items: center;
   width: 90%;
   margin-inline: auto;
-  padding-block: vars.rem(12);
+  padding-block: vars.space(xs);
   background: vars.color(background);
 
   &__text {
     color: vars.color(primary);
-    font-size: vars.rem(18);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(md);
+    line-height: vars.line-height(normal);
     text-align: center;
   }
 }
