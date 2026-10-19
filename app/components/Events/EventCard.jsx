@@ -4,7 +4,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import "@/src/scss/components/Events/EventCard.scss";
 
-const EventCard = ({ alt, src, link, title, isClickable = true }) => {
+const EventCard = ({ alt, src, link, title, isClickable = true, isAboveFold = false }) => {
 
   const cardContent = (
     <>
@@ -17,6 +17,7 @@ const EventCard = ({ alt, src, link, title, isClickable = true }) => {
           className="event-card__image"
           width={450}
           height={250}
+          loading={isAboveFold ? "eager" : "lazy"}
         />
       </motion.div>        
     
@@ -51,6 +52,7 @@ EventCard.propTypes = {
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   isClickable: PropTypes.bool,
+  isAboveFold: PropTypes.bool,
 };
 
 export default EventCard;
