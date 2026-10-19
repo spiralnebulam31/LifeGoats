@@ -36,7 +36,7 @@ Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineEle
         title: {
           display: true,
           text: 'Altimeter (m)',
-          color: '#7BA862',
+          color: '#4a6d37',
           font: {
             size: 18,
             family: 'Neucha',
@@ -69,7 +69,7 @@ Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineEle
       title: {
         display: true,
         text: 'The ' + title,
-        color: '#7BA862',
+        color: '#4a6d37',
         font: {
           size: 35,
           family: 'Cinzel',
@@ -91,7 +91,7 @@ Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineEle
           weight: 'normal',
           color: '#e6ecf0',
         },
-        backgroundColor: '#607DFA',
+        backgroundColor: '#3d59d9',
         callbacks: {
           label: function(context) {
             const altitude = context.parsed.y;

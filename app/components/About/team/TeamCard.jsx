@@ -29,11 +29,12 @@ const TeamCard = ({ alt, image, title, text, url }) => {
           height={400}
         />
         <div className="team-card__body">
-        <a href={url} target="_blank" rel="noreferrer">
           <h2 className="team-card__name">
-            {title}
+            <a href={url} target="_blank" rel="noreferrer">
+              {title}
+              <span className="visually-hidden"> (opens in a new tab)</span>
+            </a>
           </h2>
-        </a>
           <p className="team-card__text">
           {parse(text, { replace: transform })}
           </p>

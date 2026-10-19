@@ -15,7 +15,7 @@ const SafetyConsiderations = () => {
     >
       <Image
         src={safetyConsiderationsBG}
-        alt="mountain background"
+        alt=""
         className="page__backdrop"
         width={1920}
         height={1080}

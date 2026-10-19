@@ -26,7 +26,7 @@
     color: vars.color(secondary);
 
     &--white {
-      color: vars.color(background);
+      color: vars.color(primary);
     }
   }
 
@@ -213,7 +213,7 @@
     height: vars.rem(40);
     margin-bottom: vars.space(sm, $negative: true);
     padding-inline: vars.space(sm);
-    color: vars.color(tertiary);
+    color: vars.color(tertiary-dark);
     font-family: vars.font(subtitle);
     font-size: vars.font-size(2xs);
     font-weight: 700;

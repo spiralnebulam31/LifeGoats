@@ -31,9 +31,11 @@
   font-weight: 700;
   font-family: vars.font(links);
   cursor: pointer;
+  text-underline-offset: 0.25em;
 
-  &:hover {
-    color: vars.color(tertiary);
-    font-size: vars.font-size(lg);
+  &:hover,
+  &:focus-visible {
+    color: vars.color(tertiary-dark);
+    text-decoration-line: underline;
   }
 }

@@ -10,6 +10,7 @@
   overflow: hidden;
   padding-top: vars.space(2xs);
   padding-bottom: vars.space(3xl);
+
   @include mix.sky-gradient;
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,7 +21,7 @@
 
   &__pretitle {
     @include mix.section-pretitle-text;
-    color: vars.color(background);
+    color: vars.color(primary);
   }
 
   &__title {
@@ -101,7 +102,7 @@
   }
 
   &__title {
-    color: vars.color(tertiary);
+    color: vars.color(tertiary-dark);
     font-family: vars.font(subtitle);
     font-weight: 700;
   }

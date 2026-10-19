@@ -146,7 +146,7 @@
   }
 
   &__name {
-    color: vars.color(tertiary);
+    color: vars.color(tertiary-dark);
     font-family: vars.font(subtitle);
     font-size: vars.font-size(md);
     font-weight: 700;
@@ -184,7 +184,7 @@
   }
 
   &__title {
-    color: vars.color(tertiary);
+    color: vars.color(tertiary-dark);
     font-family: vars.font(subtitle);
     font-size: vars.font-size(md);
     font-weight: 700;

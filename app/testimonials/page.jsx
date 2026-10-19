@@ -28,7 +28,7 @@ const TestimonialsPage = () => {
         >
           A word
         </motion.p>
-        <motion.h2
+        <motion.h1
           className="testimonials-page__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
@@ -37,7 +37,7 @@ const TestimonialsPage = () => {
           viewport={{ once: true }}
         >
           From our goats...
-        </motion.h2>
+        </motion.h1>
       </motion.div>
 
       <motion.div className="testimonials-page__row">

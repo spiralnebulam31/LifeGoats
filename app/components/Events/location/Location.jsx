@@ -126,12 +126,12 @@ const Location = ({ isSmallScreen, title, mainTitle, locationData, locationDataI
                 <p className="location__maps">
                   <Link
                     href={googleMapsLink}
-                    alt="Google Maps link"
                     target="_blank"
                     rel="noreferrer"
                     className="location__maps-link"
                   >
                     See on Google Maps
+                    <span className="visually-hidden"> (opens in a new tab)</span>
                   </Link>
                 </p>
               )}

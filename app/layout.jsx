@@ -1,6 +1,7 @@
 import { Navbar, Footer } from './components/index';
 // import PreLoaderWrapper from './components/Loaders/PreLoaderWrapper';
 import { StateProvider } from '../providers/StateProvider';
+import { MotionProvider } from '../providers/MotionProvider';
 import '../src/scss/styles.scss';
 import { Catamaran, Cinzel, Open_Sans, Rubik } from 'next/font/google';
 import Script from 'next/script';
@@ -107,12 +108,20 @@ export default function RootLayout({ children }) {
           height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
         {/* End Google Tag Manager (noscript) */}
 
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+
         <StateProvider>
-          {/* <PreLoaderWrapper> */}
-            <Navbar />
-            {children}
-            <Footer />
-          {/* </PreLoaderWrapper> */}
+          <MotionProvider>
+            {/* <PreLoaderWrapper> */}
+              <Navbar />
+              <main id="main-content" tabIndex={-1}>
+                {children}
+              </main>
+              <Footer />
+            {/* </PreLoaderWrapper> */}
+          </MotionProvider>
         </StateProvider>
       </body>
     </html>

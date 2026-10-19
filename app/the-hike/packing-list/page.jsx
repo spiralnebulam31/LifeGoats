@@ -13,7 +13,7 @@ const PackingList = () => {
     <motion.div className="page">
       <Image
         src={neededItemsBG}
-        alt="mountain background"
+        alt=""
         className="page__backdrop"
         width={1920}
         height={1080}

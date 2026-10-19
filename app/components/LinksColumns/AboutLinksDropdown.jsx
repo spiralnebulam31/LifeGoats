@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { downArrow, downArrowHover } from "@/src/assets";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PropTypes from 'prop-types';
 import "@/src/scss/components/LinksColumns/LinksDropdown.scss";
 import Link from "next/link";
@@ -20,29 +20,48 @@ const AboutLinksDropdown = ({ active, setActive, handleLinkClick, aboutLinks }) 
       setIsHovered(false);
     };
 
+  const isOpen = active === "About";
+  const toggleRef = useRef(null);
+
+  const closeOnEscape = (event) => {
+    if (event.key === "Escape" && isOpen) {
+      setActive(null);
+      toggleRef.current?.focus();
+    }
+  };
+
+  const closeWhenFocusLeaves = (event) => {
+    if (isOpen && !event.currentTarget.contains(event.relatedTarget)) {
+      setActive(null);
+    }
+  };
+
   return (
-    <div className="links-dropdown">
+    <div className="links-dropdown" onKeyDown={closeOnEscape} onBlur={closeWhenFocusLeaves}>
       <div>
         <button
           type="button"
           className="links-dropdown__toggle"
+          ref={toggleRef}
+          aria-expanded={isOpen}
+          aria-controls="about-links"
           onClick={() => setActive(active === "About" ? null : "About")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="links-dropdown__label">
-            <p>About</p>
+          <span className="links-dropdown__label">
+            <span>About</span>
             <Image
               src={isHovered ? downArrowHover : downArrow}
-              alt="down arrow"
+              alt=""
               className="links-dropdown__arrow"
               width={20}
               height={20}
             />
-          </div>
+          </span>
         </button>
       </div>
-      {active === "About" && (
+      {isOpen && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -50,7 +69,7 @@ const AboutLinksDropdown = ({ active, setActive, handleLinkClick, aboutLinks }) 
           transition={{ duration: 0.2 }}
           className="links-dropdown__panel"
         >
-          <div className="links-dropdown__list" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+          <div id="about-links" className="links-dropdown__list">
             {aboutLinks.map((link) => (
               <Link 
                 key={link.id}

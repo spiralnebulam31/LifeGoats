@@ -33,7 +33,7 @@ const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
     <section className="event-hero">
       <Image
         src={image}
-        alt="hero background"
+        alt=""
         className="event-hero__background"
         width={2400}
         height={1600}
@@ -66,7 +66,7 @@ const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
             <div className="event-hero__date-row">
               <Image
                 src={calendar}
-                alt="calendar"
+                alt=""
                 className="event-hero__calendar"
                 width={50}
                 height={50}
@@ -90,7 +90,7 @@ const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
           animate="animate"
           className="event-hero__slider"
         >
-          <Link href="/#intro">
+          <Link href="/#intro" aria-label="Scroll to the introduction">
             <motion.div
               variants={heroGoatPrintsVariant}
               className="event-hero__slider-track"
@@ -98,7 +98,7 @@ const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
               <motion.div variants={goatPrintsSliderVariant}>
                 <Image
                   src={goatPrints}
-                  alt="goat hoof prints"
+                  alt=""
                   className="event-hero__slider-prints"
                   width={60}
                   height={60}

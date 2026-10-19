@@ -10,15 +10,18 @@ import "@/src/scss/components/Footer/FooterModal.scss";
 
 const LocationModal = ({ isOpen, onClose }) => {
   const closeIcon = (
-    <svg fill="#7BA862" viewBox="0 0 20 20" width={28} height={28}>
-      <path
-        fillRule="evenodd"
-        d="M4,4 L16,16 M4,16 L16,4"
-        stroke="#7BA862"
-        strokeWidth="3"
-        clipRule="evenodd"
-      ></path>
-    </svg>
+    <>
+      <svg fill="#4a6d37" aria-hidden="true" focusable="false" viewBox="0 0 20 20" width={28} height={28}>
+        <path
+          fillRule="evenodd"
+          d="M4,4 L16,16 M4,16 L16,4"
+          stroke="#4a6d37"
+          strokeWidth="3"
+          clipRule="evenodd"
+        ></path>
+      </svg>
+      <span className="visually-hidden">Close</span>
+    </>
   );
 
   const locationData = footerLocation;
@@ -34,12 +37,12 @@ const LocationModal = ({ isOpen, onClose }) => {
         modal: "footer-modal-panel",
       }}
       id="locationModal"
-      aria-labelledby="location-modal"
+      ariaLabelledby="location-modal-title"
     >
       <div className="footer-modal">
-        <h1 className="footer-modal__title">
+        <h2 id="location-modal-title" className="footer-modal__title">
           Location
-        </h1>
+        </h2>
         <MapDisplay
           locationData={locationData}
           zoom={6}
@@ -55,12 +58,12 @@ const LocationModal = ({ isOpen, onClose }) => {
         <p className="footer-modal__maps">
           <Link
             href="https://maps.app.goo.gl/RymGxrJB2mA4APUE7"
-            alt="Google Maps link"
             target="_blank"
             rel="noreferrer"
             className="footer-modal__maps-link"
           >
             See on Google Maps
+            <span className="visually-hidden"> (opens in a new tab)</span>
           </Link>
         </p>
       </div>

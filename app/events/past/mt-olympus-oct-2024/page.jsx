@@ -14,7 +14,8 @@ import {
   import { introTextOct24 } from '../../../../data/intro';
   import { detailsOct24, detailsImagesOct24 } from "../../../../data/details";
   import { mtOlympusOct2024Images } from '../../../../data/galleries/mt-olympus-oct-2024';
-  import { getRouteData } from '../../../../data/altimeter';  import { useMediaQuery } from 'react-responsive';
+  import { getRouteData } from '../../../../data/altimeter';
+  import { useMediaQuery } from 'react-responsive';
   import "@/src/scss/pages/Landing.scss";
   
   const LandingPage = () => {

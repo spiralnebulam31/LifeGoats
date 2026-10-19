@@ -74,7 +74,8 @@
     z-index: vars.z-index(header);
     max-width: vars.rem(448);
     margin-bottom: vars.space(sm);
-    color: vars.color(primary);    font-weight: 700;
+    color: vars.color(primary);
+    font-weight: 700;
     font-size: vars.font-size(3xl);
     text-align: center;
 
@@ -140,7 +141,8 @@
 
   &__p2 {
     margin-top: vars.space(sm);
-    font-family: vars.font(subtitle);    font-weight: 700;
+    font-family: vars.font(subtitle);
+    font-weight: 700;
     font-size: vars.font-size(2xl);
   }
 

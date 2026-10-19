@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
@@ -17,6 +17,7 @@ const Navbar = () => {
   const [targetSection, setTargetSection] = useState(null);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const menuToggleRef = useRef(null);
 
   const router = useRouter();
   const pathname = usePathname();
@@ -48,7 +49,18 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY, handleScroll]);
+  }, [lastScrollY, handleScroll]);  // Escape closes the mobile menu and returns focus to its toggle button.
+  useEffect(() => {
+    if (!mobile) return;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setMobile(false);
+        menuToggleRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobile]);
 
   return (
     <motion.nav
@@ -56,12 +68,14 @@ const Navbar = () => {
       animate={{ y: showNavbar ? 0 : "-100%" }}
       transition={{ duration: 0.3 }}
       className="navbar"
+      aria-label="Main"
+      onFocus={() => setShowNavbar(true)}
     >
       <div className="navbar__inner">
         <div className="navbar__brand">
           <Link
-            href="/"
-            className="navbar__home-link"
+            href="/"            className="navbar__home-link"
+            aria-label="Life Goats home"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -69,7 +83,7 @@ const Navbar = () => {
           >
             <Image
               src={lifeGoatsLogo}
-              alt="logo"
+              alt=""
               className="navbar__logo"
               width={85}
               height={85}
@@ -115,14 +129,23 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar__toggle">
-            <Image
-              src={mobile ? menuClose : menuMountain}
-              alt="menu"
-              className="navbar__toggle-icon"
+            <button
+              type="button"
+              ref={menuToggleRef}
+              className="navbar__toggle-button"
+              aria-expanded={mobile}
+              aria-controls="mobile-menu"
+              aria-label={mobile ? "Close menu" : "Open menu"}
               onClick={() => setMobile(!mobile)}
-              width={85}
-              height={85}
-            />
+            >
+              <Image
+                src={mobile ? menuClose : menuMountain}
+                alt=""
+                className="navbar__toggle-icon"
+                width={85}
+                height={85}
+              />
+            </button>
           </div>
           <motion.div>
             <AnimatePresence>

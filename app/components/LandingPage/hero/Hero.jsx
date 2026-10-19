@@ -20,7 +20,7 @@ const Hero = () => {
     <section className="home-hero">
       <Image
         src={olympus2024BG3}
-        alt="hero background"
+        alt=""
         className="home-hero__background"
         with={1920}
         height={1080}
@@ -33,9 +33,8 @@ const Hero = () => {
             animate="animate"
             className="home-hero__intro"
           >
-            <p className="home-hero__tagline">
-            A community and event series for people who value relationship building and spending quality time together in the great outdoors.
-            </p>
+            <h1 className="home-hero__tagline">
+            A community and event series for people who value relationship building and spending quality time together in the great outdoors.            </h1>
           </motion.div>
         
         {/* Goat print slider */}
@@ -45,7 +44,7 @@ const Hero = () => {
           animate="animate"
           className="home-hero__slider"
         >
-          <Link href="/#intro">
+          <Link href="/#intro" aria-label="Scroll to the introduction">
             <motion.div
               variants={heroGoatPrintsVariant}
               initial="initial"
@@ -55,7 +54,7 @@ const Hero = () => {
               <motion.div variants={goatPrintsSliderVariant} initial="initial" animate="animate">
                 <Image
                   src={goatPrintsLight}
-                  alt="goat hoof prints"
+                  alt=""
                   className="home-hero__slider-prints"
                   width={60}
                   height={60}
