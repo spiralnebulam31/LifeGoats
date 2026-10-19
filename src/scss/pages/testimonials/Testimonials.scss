@@ -76,6 +76,7 @@
   }
 
   &__cta {
+    display: inline-block;
     margin-block: vars.space(xl);
     padding: vars.space(2xs) vars.space(sm);
     border-radius: vars.radius(lg);
@@ -86,8 +87,10 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     box-shadow: vars.shadow(lg);
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       background-color: vars.color(tertiary-light);
       color: vars.color(earth);
     }

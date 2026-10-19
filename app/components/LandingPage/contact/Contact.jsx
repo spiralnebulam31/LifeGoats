@@ -15,25 +15,13 @@ import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import {
   phone,
-  phoneHover,
   email,
-  emailHover,
   instagramIcon,
-  instagramIconHover,
   transparentMountainBG2,
 } from "@/src/assets";
 import "@/src/scss/components/LandingPage/contact/Contact.scss";
 
 const Contact = ({
-  phoneIsHovered,
-  handlePhoneMouseEnter,
-  handlePhoneMouseLeave,
-  emailIsHovered,
-  handleEmailMouseEnter,
-  handleEmailMouseLeave,
-  instagramIconIsHovered,
-  handleInstagramIconMouseEnter,
-  handleInstagramIconMouseLeave,
   isSmallScreen,
 }) => {
   const leftSideRef = useRef();
@@ -114,23 +102,17 @@ const Contact = ({
             <div className="contact__links">
               <ContactLink
                 href="mailto:lifegoatsconnect@gmail.com"
-                onMouseEnter={handleEmailMouseEnter}
-                onMouseLeave={handleEmailMouseLeave}
-                icon={emailIsHovered ? emailHover : email}
+                icon={email}
                 text="lifegoatsconnect@gmail.com"
               />
               <ContactLink
                 href="tel:+306980489843"
-                onMouseEnter={handlePhoneMouseEnter}
-                onMouseLeave={handlePhoneMouseLeave}
-                icon={phoneIsHovered ? phoneHover : phone}
+                icon={phone}
                 text="+306980489843 (Maria's WhatsApp)"
               />
               <ContactLink
                 href="tel:+306973900026"
-                onMouseEnter={handlePhoneMouseEnter}
-                onMouseLeave={handlePhoneMouseLeave}
-                icon={phoneIsHovered ? phoneHover : phone}
+                icon={phone}
                 text="+306973900026 (Anastasia's WhatsApp)"
               />
             </div>
@@ -203,18 +185,16 @@ const Contact = ({
 };
 
 // Additional components (helper components)
-const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
+const ContactLink = ({ href, icon, text }) => (
   <div className="contact__link-row">
     <a
       href={href}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
       className="contact__link"
       style={{textAlign: 'center'}}>
-      <Image
-        src={icon}
-        alt=""
+      <span
         className="contact__link-icon"
+        style={{ "--icon-src": `url(${icon.src})` }}
+        aria-hidden="true"
       />
       <span className="contact__link-text">{text}</span>
     </a>
@@ -256,9 +236,7 @@ const ContactInput = ({ type, placeholder, name, label, autoComplete }) => {
 
 ContactLink.propTypes = {
   href: PropTypes.string.isRequired,
-  onMouseEnter: PropTypes.func.isRequired,
-  onMouseLeave: PropTypes.func.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.object.isRequired,
   text: PropTypes.string.isRequired,
 };
 
@@ -271,22 +249,7 @@ ContactInput.propTypes = {
 };
 
 Contact.propTypes = {
-  phoneIsHovered: PropTypes.bool.isRequired,
-  handlePhoneMouseEnter: PropTypes.func.isRequired,
-  handlePhoneMouseLeave: PropTypes.func.isRequired,
-  emailIsHovered: PropTypes.bool.isRequired,
-  handleEmailMouseEnter: PropTypes.func.isRequired,
-  handleEmailMouseLeave: PropTypes.func.isRequired,
-  email2IsHovered: PropTypes.bool.isRequired,
-  handleEmail2MouseEnter: PropTypes.func.isRequired,
-  handleEmail2MouseLeave: PropTypes.func.isRequired,
   isSmallScreen: PropTypes.bool.isRequired,
-};
-
-Contact.propTypes = {
-  instagramIconIsHovered: PropTypes.bool.isRequired,
-  handleInstagramIconMouseEnter: PropTypes.func.isRequired,
-  handleInstagramIconMouseLeave: PropTypes.func.isRequired
 };
 
 export default Contact;

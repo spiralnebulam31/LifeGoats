@@ -57,6 +57,18 @@
     text-decoration-line: underline;
   }
 
+  &__sublink {
+    color: vars.color(primary);
+    text-underline-offset: 0.2em;
+    transition: color 150ms ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      color: vars.color(tertiary-dark);
+      text-decoration-line: underline;
+    }
+  }
+
   &__sublinks {
     display: flex;
     flex-direction: column;

@@ -2,6 +2,9 @@
 @use "../../globals/mixins" as mix;
 
 .event-card {
+  display: block;
+  border-radius: vars.radius(2xl);
+
   &--static {
     cursor: default;
   }
@@ -26,6 +29,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 300ms ease-in-out;
   }
 
   &__body {
@@ -49,5 +53,18 @@
     font-size: vars.font-size(lg);
     font-weight: 700;
     text-align: center;
+    text-underline-offset: 0.2em;
+    transition: color 150ms ease-in-out;
+  }
+
+  &--link:hover &__image,
+  &--link:focus-visible &__image {
+    transform: scale(1.05);
+  }
+
+  &--link:hover &__title,
+  &--link:focus-visible &__title {
+    color: vars.color(secondary);
+    text-decoration-line: underline;
   }
 }

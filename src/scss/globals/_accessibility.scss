@@ -35,6 +35,10 @@
   &:focus-visible {
     transform: translateY(0);
   }
+
+  &:hover {
+    background: vars.color(secondary-dark);
+  }
 }
 
 // Hides content visually while keeping it available to screen readers.

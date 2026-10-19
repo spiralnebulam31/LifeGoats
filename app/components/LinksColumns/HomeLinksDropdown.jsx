@@ -3,23 +3,12 @@
 // Not used at the moment.
 
 import { motion } from "framer-motion";
-import { downArrow, downArrowHover } from "@/src/assets";
-import { useState, useRef } from "react";
+import { downArrow } from "@/src/assets";
+import { useRef } from "react";
 import PropTypes from 'prop-types';
 import "@/src/scss/components/LinksColumns/LinksDropdown.scss";
-import Image from "next/image";
 
 const HomeLinksDropdown = ({ active, setActive, handleLinkClick, homeLinks }) => {
-
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleMouseEnter = () => {
-      setIsHovered(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setIsHovered(false);
-    };
 
   const isOpen = active === "Home";
   const toggleRef = useRef(null);
@@ -47,17 +36,13 @@ const HomeLinksDropdown = ({ active, setActive, handleLinkClick, homeLinks }) =>
           aria-expanded={isOpen}
           aria-controls="home-links"
           onClick={() => setActive(active === "Home" ? null : "Home")}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
           <span className="links-dropdown__label">
             <span>Home</span>
-            <Image
-              src={isHovered ? downArrowHover : downArrow}
-              alt=""
+            <span
               className="links-dropdown__arrow"
-              width={20}
-              height={20}
+              style={{ "--icon-src": `url(${downArrow.src})` }}
+              aria-hidden="true"
             />
           </span>
         </button>

@@ -4,23 +4,12 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
-import { downArrow, downArrowHover } from "@/src/assets";
-import { useState, useRef } from "react";
+import { downArrow } from "@/src/assets";
+import { useRef } from "react";
 import PropTypes from 'prop-types';
 import "@/src/scss/components/LinksColumns/LinksDropdown.scss";
 
 const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) => {
-
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   const isOpen = active === "Hike";
   const toggleRef = useRef(null);
@@ -48,17 +37,13 @@ const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) =>
           aria-expanded={isOpen}
           aria-controls="hike-links"
           onClick={() => setActive(active === "Hike" ? null : "Hike")}
-          onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
         >
         <span className="links-dropdown__label">
         <span>The Hike</span>
-            <Image
-              src={isHovered ? downArrowHover : downArrow}
-              alt=""
+            <span
               className="links-dropdown__arrow"
-              width={20}
-              height={20}
+              style={{ "--icon-src": `url(${downArrow.src})` }}
+              aria-hidden="true"
             />
             </span>
         </button>

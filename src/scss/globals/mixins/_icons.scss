@@ -1,0 +1,29 @@
+/**
+ * _icons.scss — Single-colour icons drawn with a CSS mask.
+ */
+@use "../variables" as vars;
+
+// Paints a single-colour SVG in any theme colour. The SVG is passed in from
+// the .jsx as the --icon-src custom property (a build-time-hashed asset URL
+// the SCSS side can't know), so hover/focus colours are just a
+// background-color change on the element.
+// Usage: @include mix.mask-icon(primary);
+@mixin mask-icon($color: primary) {
+  display: inline-block;
+  background-color: vars.color($color);
+  -webkit-mask: var(--icon-src) center / contain no-repeat;
+  mask: var(--icon-src) center / contain no-repeat;
+  transition: background-color 150ms ease-in-out;
+}
+
+// Icon-only buttons and links (close, menu, scroll-down): grow a little on
+// hover and keyboard focus. Each caller sets its own hover colour alongside.
+// Usage: @include mix.icon-hover;
+@mixin icon-hover($scale: 1.15) {
+  transition: transform 150ms ease-in-out, color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale($scale);
+  }
+}

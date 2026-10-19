@@ -38,6 +38,7 @@
     padding-bottom: vars.space(3xs);
     object-fit: contain;
     cursor: pointer;
+    transition: transform 150ms ease-in-out;
   }
 
   &__title {
@@ -46,10 +47,21 @@
     font-size: vars.font-size(xl);
     font-family: vars.font(title);
     cursor: pointer;
+    transition: color 150ms ease-in-out;
 
     @include mix.respond-to(lg) {
       display: block;
     }
+  }
+
+  &__home-link:hover &__logo,
+  &__home-link:focus-visible &__logo {
+    transform: scale(1.05);
+  }
+
+  &__home-link:hover &__title,
+  &__home-link:focus-visible &__title {
+    color: vars.color(tertiary-dark);
   }
 
   &__menu {
@@ -86,11 +98,20 @@
     }
   }
 
-  &__toggle-icon {
-    height: vars.rem(60);
-    width: auto;
-    object-fit: contain;
-    cursor: pointer;
+  &__toggle-button {
+    display: flex;
     z-index: vars.z-index(dropdown);
+    @include mix.icon-hover;
+  }
+
+  &__toggle-icon {
+    @include mix.mask-icon(primary);
+    width: vars.rem(60);
+    height: vars.rem(60);
+  }
+
+  &__toggle-button:hover &__toggle-icon,
+  &__toggle-button:focus-visible &__toggle-icon {
+    background-color: vars.color(tertiary-dark);
   }
 }
