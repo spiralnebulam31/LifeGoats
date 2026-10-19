@@ -97,7 +97,8 @@
     color: vars.color(primary);
   }
 
-  &__paragraph {    padding-bottom: vars.space(md);
+  &__paragraph {
+    padding-bottom: vars.space(md);
     font-size: vars.font-size(xs);
   }
 
@@ -110,7 +111,7 @@
     font-size: vars.font-size(sm);
 
     &:hover {
-      color: vars.color(tertiary);
+      color: vars.color(tertiary-dark);
     }
   }
 

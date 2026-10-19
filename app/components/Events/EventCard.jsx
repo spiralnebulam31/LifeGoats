@@ -35,7 +35,7 @@ const EventCard = ({ alt, src, link, title, isClickable = true, isAboveFold = fa
   return (
     <>
       {isClickable ? (
-        <Link href={link} alt={title} target="_blank" rel="noreferrer">
+        <Link href={link}>
           {cardContent}
         </Link>
       ) : (

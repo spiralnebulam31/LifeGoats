@@ -13,6 +13,7 @@
   overflow: hidden;
   padding-top: vars.space(2xs);
   padding-bottom: vars.space(3xl);
+
   @include mix.sky-gradient($from: background);
   background-size: cover;
 

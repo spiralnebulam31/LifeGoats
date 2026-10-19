@@ -16,7 +16,8 @@
   background-size: cover;
   color: vars.color(primary);
   font-family: vars.font(body);
-  font-weight: 700;  font-size: vars.font-size(2xl);
+  font-weight: 700;
+  font-size: vars.font-size(2xl);
   line-height: vars.line-height(relaxed);
 
   @include mix.respond-to(md) {
@@ -50,7 +51,7 @@
   }
 
   &__keyword {
-    color: vars.color(tertiary);
+    color: vars.color(tertiary-dark);
     font-family: vars.font(title);
 
     &--large {

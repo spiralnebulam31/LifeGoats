@@ -13,7 +13,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
   const [isEventsOpen, setIsEventsOpen] = useState(false);
 
   return (
-    <motion.div
+    <motion.div      id="mobile-menu"
       className="mobile-menu"
       variants={mobileNav}
       initial="initial"
@@ -28,12 +28,15 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
       >
 
         {/* About Section */}
-        <h2
+        <button
+          type="button"
           className="mobile-menu__heading"
+          aria-expanded={isAboutOpen}
+          aria-controls="mobile-menu-about"
           onClick={() => setIsAboutOpen(!isAboutOpen)}
         >
           About
-        </h2>
+        </button>
         <AnimatePresence>
           {isAboutOpen && (
             <motion.div
@@ -45,6 +48,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
                 open: { opacity: 1, height: "auto" },
                 closed: { opacity: 0, height: 0 },
               }}
+              id="mobile-menu-about"
               className="mobile-menu__sublinks"
             >
               {aboutLinks.map((link) => (
@@ -57,12 +61,15 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
         </AnimatePresence>
 
         {/* Events Section */}
-        <h2
+        <button
+          type="button"
           className="mobile-menu__heading"
+          aria-expanded={isEventsOpen}
+          aria-controls="mobile-menu-events"
           onClick={() => setIsEventsOpen(!isEventsOpen)}
         >
           Events
-        </h2>
+        </button>
         <AnimatePresence>
           {isEventsOpen && (
             <motion.div
@@ -74,6 +81,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
                 open: { opacity: 1, height: "auto" },
                 closed: { opacity: 0, height: 0 },
               }}
+              id="mobile-menu-events"
               className="mobile-menu__sublinks"
             >
               {eventsLinks.map((link) => (

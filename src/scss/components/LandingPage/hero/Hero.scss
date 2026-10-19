@@ -48,7 +48,8 @@
     padding-bottom: vars.space(2xl);
     color: vars.color(white);
     font-family: vars.font(body);
-    font-weight: 700;    font-size: vars.font-size(xl);
+    font-weight: 700;
+    font-size: vars.font-size(xl);
     line-height: vars.line-height(relaxed);
     text-align: center;
     filter: vars.drop-shadow(md);
@@ -67,7 +68,8 @@
   }
 
   &__tagline {
-    max-width: vars.rem(384);    font-size: vars.font-size(4xl);
+    max-width: vars.rem(384);
+    font-size: vars.font-size(4xl);
     filter: vars.drop-shadow(xl);
 
     @include mix.respond-to(sm) {

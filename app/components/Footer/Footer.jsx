@@ -3,27 +3,16 @@
 import { useContext } from "react";
 import Link from "next/link";
 import { StateContext } from "../../../contexts/StateContext";
-import AccessibilityModal from "./AccessibilityModal";
 import LocationModal from "./LocationModal";
 import "@/src/scss/components/Footer/Footer.scss";
 
 const Footer = () => {
   const { modalState, setModalState } = useContext(StateContext);
 
-  const { locationOpen, accessibilityOpen } = modalState;
+  const { locationOpen } = modalState;
 
   const toggleLocationModal = () => {
-    setModalState({
-      locationOpen: !locationOpen,
-      accessibilityOpen,
-    });
-  };
-
-  const toggleAccessibilityModal = () => {
-    setModalState({
-      locationOpen,
-      accessibilityOpen: !accessibilityOpen,
-    });
+    setModalState({ ...modalState, locationOpen: !locationOpen });
   };
 
   return (
@@ -66,7 +55,7 @@ const Footer = () => {
             Team
           </Link>
 
-          <span className="site-footer__separator">|</span>
+          <span className="site-footer__separator" aria-hidden="true">|</span>
 
           <button
             type="button"
@@ -78,7 +67,7 @@ const Footer = () => {
 
           <LocationModal isOpen={locationOpen} onClose={toggleLocationModal} />
 
-          <span className="site-footer__separator">|</span>
+          <span className="site-footer__separator" aria-hidden="true">|</span>
 
           <Link
             href="/contact"
@@ -98,7 +87,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        {/*Privacy & Accessibility Modals*/}
+        {/*Privacy & Accessibility*/}
         <div className="site-footer__links">
           <Link
             href="/privacy-policy"
@@ -107,20 +96,14 @@ const Footer = () => {
             Privacy Policy
           </Link>
 
-          <span className="site-footer__separator">|</span>
+          <span className="site-footer__separator" aria-hidden="true">|</span>
 
-          <button
-            type="button"
-            onClick={toggleAccessibilityModal}
+          <Link
+            href="/accessibility-statement"
             className="site-footer__link"
           >
-            Web Accessibility Statement
-          </button>
-
-          <AccessibilityModal
-            isOpen={accessibilityOpen}
-            onClose={toggleAccessibilityModal}
-          />
+            Accessibility Statement
+          </Link>
         </div>
       </div>
     </footer>

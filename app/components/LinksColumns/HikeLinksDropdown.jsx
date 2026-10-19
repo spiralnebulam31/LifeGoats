@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { downArrow, downArrowHover } from "@/src/assets";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PropTypes from 'prop-types';
 import "@/src/scss/components/LinksColumns/LinksDropdown.scss";
 
@@ -22,29 +22,48 @@ const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) =>
     setIsHovered(false);
   };
 
+  const isOpen = active === "Hike";
+  const toggleRef = useRef(null);
+
+  const closeOnEscape = (event) => {
+    if (event.key === "Escape" && isOpen) {
+      setActive(null);
+      toggleRef.current?.focus();
+    }
+  };
+
+  const closeWhenFocusLeaves = (event) => {
+    if (isOpen && !event.currentTarget.contains(event.relatedTarget)) {
+      setActive(null);
+    }
+  };
+
   return (
-    <div className="links-dropdown">
+    <div className="links-dropdown" onKeyDown={closeOnEscape} onBlur={closeWhenFocusLeaves}>
       <div>
         <button
           type="button"
           className="links-dropdown__toggle"
+          ref={toggleRef}
+          aria-expanded={isOpen}
+          aria-controls="hike-links"
           onClick={() => setActive(active === "Hike" ? null : "Hike")}
           onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-        <div className="links-dropdown__label">
-        <p>The Hike</p>
+        <span className="links-dropdown__label">
+        <span>The Hike</span>
             <Image
               src={isHovered ? downArrowHover : downArrow}
-              alt="down arrow"
+              alt=""
               className="links-dropdown__arrow"
               width={20}
               height={20}
             />
-            </div>
+            </span>
         </button>
       </div>
-      {active === "Hike" && (
+      {isOpen && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -52,7 +71,7 @@ const HikeLinksDropdown = ({ active, setActive, handleLinkClick, hikeLinks }) =>
           transition={{ duration: 0.2 }}
           className="links-dropdown__panel"
         >
-          <div className="links-dropdown__list" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+          <div id="hike-links" className="links-dropdown__list">
             {hikeLinks.map((link) => (
               <Link
                 key={link.id}

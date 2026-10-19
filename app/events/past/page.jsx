@@ -17,7 +17,7 @@ const PastEvents = () => {
       <motion.div
         className="past-events__header"
       >
-        <motion.h2
+        <motion.h1
           className="past-events__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
@@ -26,7 +26,7 @@ const PastEvents = () => {
           viewport={{ once: true }}
         >
           Past Events
-        </motion.h2>
+        </motion.h1>
       </motion.div>
 
       <motion.div className="event-list event-list--centered">

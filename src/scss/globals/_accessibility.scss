@@ -1,0 +1,65 @@
+/**
+ * _accessibility.scss — Site-wide focus, skip link, screen-reader-only and
+ * reduced-motion rules.
+ */
+@use "./variables" as vars;
+
+// One consistent, clearly visible keyboard-focus ring. :focus-visible only
+// shows it for keyboard navigation, never after a mouse click.
+:focus-visible {
+  outline: 3px solid vars.color(secondary-dark);
+  outline-offset: 2px;
+  border-radius: vars.radius(base);
+}
+
+// Focused programmatically by the skip link; no ring needed on the whole
+// content region.
+#main-content:focus {
+  outline: none;
+}
+
+// Off-screen until a keyboard user tabs to it, then shown above the navbar.
+.skip-link {
+  position: fixed;
+  top: vars.space(2xs);
+  left: vars.space(2xs);
+  z-index: calc(#{vars.z-index(modal)} + 1);
+  padding: vars.space(2xs) vars.space(sm);
+  border-radius: vars.radius(lg);
+  background: vars.color(primary);
+  color: vars.color(background);
+  font-family: vars.font(links);
+  font-weight: 700;
+  transform: translateY(-200%);
+
+  &:focus-visible {
+    transform: translateY(0);
+  }
+}
+
+// Hides content visually while keeping it available to screen readers.
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

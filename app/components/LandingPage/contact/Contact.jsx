@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useId, useRef } from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import {
@@ -121,8 +121,6 @@ const Contact = ({
               />
               <ContactLink
                 href="tel:+306980489843"
-                target="_blank"
-                rel="noreferrer"
                 onMouseEnter={handlePhoneMouseEnter}
                 onMouseLeave={handlePhoneMouseLeave}
                 icon={phoneIsHovered ? phoneHover : phone}
@@ -130,8 +128,6 @@ const Contact = ({
               />
               <ContactLink
                 href="tel:+306973900026"
-                target="_blank"
-                rel="noreferrer"
                 onMouseEnter={handlePhoneMouseEnter}
                 onMouseLeave={handlePhoneMouseLeave}
                 icon={phoneIsHovered ? phoneHover : phone}
@@ -163,16 +159,21 @@ const Contact = ({
                 type="text"
                 placeholder="Your name"
                 name="from_name"
+                label="Name"
+                autoComplete="name"
               />
               <ContactInput
                 type="email"
                 placeholder="Your email address"
                 name="user_email"
+                label="Email address"
+                autoComplete="email"
               />
               <ContactInput
                 type="textarea"
                 placeholder="Your message"
                 name="message"
+                label="Message"
               />
 
               {/* Submit Button */}
@@ -193,7 +194,7 @@ const Contact = ({
       <div className="contact__mountains">
         <Image
           src={transparentMountainBG2}
-          alt="transparent mountain background"
+          alt=""
           className="contact__mountains-image"
         />
       </div>
@@ -208,13 +209,11 @@ const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
       href={href}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      target="_blank"
-      rel="noreferrer"
       className="contact__link"
       style={{textAlign: 'center'}}>
       <Image
         src={icon}
-        alt={`${text} icon`}
+        alt=""
         className="contact__link-icon"
       />
       <span className="contact__link-text">{text}</span>
@@ -222,26 +221,36 @@ const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
   </div>
 );
 
-const ContactInput = ({ type, placeholder, name }) => (
-  <div className="contact__field">
-    {type === "textarea" ? (
-      <textarea
-        name={name}
-        placeholder={placeholder}
-        className="contact__input"
-        required
-      />
-    ) : (
-      <input
-        type={type}
-        placeholder={placeholder}
-        name={name}
-        className="contact__input"
-        required
-      />
-    )}
-  </div>
-);
+const ContactInput = ({ type, placeholder, name, label, autoComplete }) => {
+  const id = useId();
+
+  return (
+    <div className="contact__field">
+      <label htmlFor={id} className="visually-hidden">
+        {label}
+      </label>
+      {type === "textarea" ? (
+        <textarea
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          className="contact__input"
+          required
+        />
+      ) : (
+        <input
+          id={id}
+          type={type}
+          placeholder={placeholder}
+          name={name}
+          autoComplete={autoComplete}
+          className="contact__input"
+          required
+        />
+      )}
+    </div>
+  );
+};
 
 // PropTypes
 
@@ -257,6 +266,8 @@ ContactInput.propTypes = {
   type: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  autoComplete: PropTypes.string,
 };
 
 Contact.propTypes = {

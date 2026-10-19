@@ -12,6 +12,7 @@
   overflow: hidden;
   padding-top: vars.space(lg);
   padding-bottom: vars.space(4xl);
+
   @include mix.sky-gradient;
   background-size: cover;
 
@@ -44,7 +45,7 @@
 
   &__pretitle {
     @include mix.section-pretitle-text;
-    color: vars.color(background);
+    color: vars.color(primary);
   }
 
   &__title {
@@ -156,7 +157,7 @@
     letter-spacing: 0.025em;
 
     &:hover {
-      color: vars.color(tertiary);
+      color: vars.color(tertiary-dark);
     }
   }
 
@@ -253,14 +254,15 @@
     padding: vars.space(2xs) vars.space(sm);
     border-radius: vars.radius(2xl);
     background-color: vars.color(primary);
-    color: vars.color(background);    font-family: vars.font(links);
+    color: vars.color(background);
+    font-family: vars.font(links);
     font-size: vars.font-size(md);
     font-weight: 700;
     text-transform: uppercase;
     filter: vars.drop-shadow(xl);
 
     &:hover {
-      background-color: vars.color(tertiary);
+      background-color: vars.color(tertiary-light);
       color: vars.color(earth);
     }
   }

@@ -39,7 +39,8 @@
     margin-inline: auto;
     padding-top: vars.space(2xl);
     padding-bottom: vars.space(xl);
-    background: vars.color(background);    font-family: vars.font(body);
+    background: vars.color(background);
+    font-family: vars.font(body);
     font-size: vars.font-size(base);
     line-height: vars.line-height(normal);
     text-align: center;
@@ -89,7 +90,7 @@
     box-shadow: vars.shadow(lg);
 
     &:hover {
-      background-color: vars.color(tertiary);
+      background-color: vars.color(tertiary-light);
       color: vars.color(earth);
     }
   }

@@ -1,7 +1,9 @@
-@use "../../globals/variables" as vars;
-@use "../../globals/mixins" as mix;
+/**
+ * Shared by the Privacy Policy and Accessibility Statement pages.
+ */
+@use "../globals/variables" as vars;
 
-.privacy {
+.policy {
   &__body {
     padding-bottom: vars.space(2xl);
     text-align: start;
@@ -16,24 +18,36 @@
     font-weight: 700;
   }
 
-  &__rights {
+  &__list {
     margin-top: vars.space(sm);
-    list-style: disc inside;
+    padding-left: vars.space(lg);
+    list-style: disc outside;
     text-align: left;
+
+    > li + li {
+      margin-top: vars.space(3xs);
+    }
   }
 
   &__contact {
     margin-top: vars.space(sm);
   }
 
-  &__email {
+  &__link {
     color: vars.color(secondary);
     font-family: vars.font(links);
     text-decoration-line: underline;
     cursor: pointer;
 
     &:hover {
-      color: vars.color(tertiary);
+      color: vars.color(tertiary-dark);
     }
+  }
+
+  &__meta {
+    margin-top: vars.space(xl);
+    color: vars.color(primary);
+    font-size: vars.font-size(sm);
+    font-style: italic;
   }
 }

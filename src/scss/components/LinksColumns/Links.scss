@@ -20,9 +20,10 @@
     font-weight: 500;
     cursor: pointer;
 
-    &:hover {
-      color: vars.color(tertiary);
-      font-size: vars.font-size(2xl);
+    &:hover,
+    &:focus-within {
+      color: vars.color(tertiary-dark);
+      text-decoration-line: underline;
     }
   }
 }

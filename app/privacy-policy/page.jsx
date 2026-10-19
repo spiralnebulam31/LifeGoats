@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../motion/motion";
 import "@/src/scss/pages/Page.scss";
-import "@/src/scss/pages/privacy-policy/PrivacyPolicy.scss";
+import "@/src/scss/pages/Policy.scss";
 
 const PrivacyPolicyPage = () => {
   return (
@@ -14,14 +14,14 @@ const PrivacyPolicyPage = () => {
         </motion.h1>
       </motion.div>
       <motion.div
-        className="page__text privacy__body"
+        className="page__text policy__body"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
 viewport={{ once: true }}
       >
         <div>
-          <h2 className="privacy__heading">
+          <h2 className="policy__heading">
             What We Collect
           </h2>
           <p>
@@ -31,7 +31,7 @@ viewport={{ once: true }}
             newsletter form, sending us an email or contacting us via phone).
           </p>
           <br />
-          <h2 className="privacy__heading">
+          <h2 className="policy__heading">
             How We Use Your Information
           </h2>
           <p>
@@ -42,7 +42,7 @@ viewport={{ once: true }}
             you back the same way.
           </p>
           <br />
-          <h2 className="privacy__heading">
+          <h2 className="policy__heading">
             Data Security
           </h2>
           <p>
@@ -52,7 +52,7 @@ viewport={{ once: true }}
             Life Goats core team has access.
           </p>
           <br />
-          <h2 className="privacy__heading">
+          <h2 className="policy__heading">
             How long we keep your data for
           </h2>
           <p>
@@ -61,7 +61,7 @@ viewport={{ once: true }}
             all your data will be deleted from our systems.
           </p>
           <br />
-          <h2 className="privacy__heading">
+          <h2 className="policy__heading">
             GDPR Compliance
           </h2>
           <p>
@@ -69,7 +69,7 @@ viewport={{ once: true }}
             Regulation (GDPR) to protect your privacy and personal data. Under
             GDPR, you have the following rights regarding your data:
           </p>
-          <ul className="privacy__rights">
+          <ul className="policy__list">
             <li>
               <strong>Right to Access:</strong> You can request a copy of the
               personal data we hold about you.
@@ -99,11 +99,11 @@ viewport={{ once: true }}
               marketing.
             </li>
           </ul>
-          <p className="privacy__contact">
+          <p className="policy__contact">
             To exercise any of these rights, please contact us at{" "}
             <a
               href="mailto:lifegoatsconnect@gmail.com"
-              className="privacy__email"
+              className="policy__link"
             >
               lifegoatsconnect@gmail.com
             </a>

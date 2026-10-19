@@ -30,7 +30,7 @@ viewport={{ once: true }}
           <motion.div className="goat-prints__row goat-prints__row--top">
             <MotionImage
               src={goatPrintSingle}
-              alt="Goat Print"
+              alt=""
               className="goat-prints__print"
               variants={stepTopLeft}
               initial="initial"
@@ -39,7 +39,7 @@ viewport={{ once: true }}
             />
             <MotionImage
               src={goatPrintSingle}
-              alt="Goat Print"
+              alt=""
               className="goat-prints__print"
               variants={stepTopRight}
               initial="initial"
@@ -50,7 +50,7 @@ viewport={{ once: true }}
           <motion.div className="goat-prints__row goat-prints__row--bottom">
             <MotionImage
               src={goatPrintSingle}
-              alt="Goat Print"
+              alt=""
               className="goat-prints__print"
               variants={stepBottomLeft}
               initial="initial"
@@ -59,7 +59,7 @@ viewport={{ once: true }}
             />
             <MotionImage
               src={goatPrintSingle}
-              alt="Goat Print"
+              alt=""
               className="goat-prints__print"
               variants={stepBottomRight}
               initial="initial"

@@ -88,7 +88,7 @@
     box-shadow: vars.shadow(lg);
 
     &:hover {
-      background-color: vars.color(tertiary);
+      background-color: vars.color(tertiary-light);
       color: vars.color(earth);
     }
   }

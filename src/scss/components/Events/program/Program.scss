@@ -16,6 +16,7 @@
   min-height: 100%;
   overflow: hidden;
   padding-block: vars.space(2xs);
+
   @include mix.sky-gradient($from: background);
   background-size: cover;
 
@@ -99,7 +100,7 @@
     cursor: pointer;
 
     &:hover {
-      color: vars.color(tertiary);
+      color: vars.color(tertiary-dark);
     }
   }
 }
@@ -107,7 +108,7 @@
 .program-tab {
   &__title {
     padding: vars.space(3xs) vars.space(sm) vars.space(xs);
-    color: vars.color(tertiary);
+    color: vars.color(tertiary-dark);
     font-family: vars.font(links);
     font-size: vars.font-size(4xl);
     line-height: vars.line-height(tight);
@@ -127,7 +128,8 @@
   border-radius: vars.radius(2xl);
   background-color: vars.color(background);
   color: vars.color(primary);
-  font-family: vars.font(body);  font-size: vars.font-size(md);
+  font-family: vars.font(body);
+  font-size: vars.font-size(md);
   font-weight: 700;
   text-transform: uppercase;
   filter: vars.drop-shadow(2xl);
@@ -139,12 +141,12 @@
   }
 
   &--active {
-    background-color: vars.color(tertiary);
+    background-color: vars.color(tertiary-light);
     color: vars.color(earth);
     filter: none;
 
     &:hover {
-      background-color: vars.color(tertiary);
+      background-color: vars.color(tertiary-light);
       color: vars.color(earth);
     }
   }

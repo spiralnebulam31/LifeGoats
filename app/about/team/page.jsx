@@ -15,11 +15,12 @@ const TheTeam = () => {
     >
  <Image
         src={directorsChairs}
-        alt="mountain background"
+        alt=""
         className="page__backdrop"
         width={1920}
-        height={1080}
-      />
+        height={1080}      />
+
+      <h1 className="visually-hidden">The Life Goats team</h1>
 
       <motion.div className="team-page__row">
       <motion.div className="team-page__members">

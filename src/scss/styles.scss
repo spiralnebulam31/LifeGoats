@@ -1,9 +1,9 @@
 /**
  * Global entry point. Imported once from app/layout.jsx.
  *
- * Declares --life-goats-* custom properties (via _themes) exactly once,
- * plus the site-wide reset. Component-level styles live colocated with
- * each component and are imported directly from their .jsx files.
+ * Declares --life-goats-* custom properties (via _themes) exactly once, * plus the site-wide reset and accessibility rules. Component and page styles
+ * live in ./components and ./pages and are imported from their .jsx files.
  */
 @use "./globals/themes";
 @use "./globals/reset";
+@use "./globals/accessibility";
