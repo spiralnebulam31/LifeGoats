@@ -49,7 +49,7 @@ const UpcomingEvents = () => {
                       }
                     }}
                     >
-                    <EventCard key={index} {...event} isClickable={false} />
+                    <EventCard key={index} {...event} isClickable={false} isAboveFold={index < 2} />
                   </motion.div>
                 ))}
               </motion.div>

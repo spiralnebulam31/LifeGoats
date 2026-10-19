@@ -50,7 +50,7 @@ const PastEvents = () => {
                 }
               }}
               >
-              <EventCard key={index} {...event} isClickable={true} />
+              <EventCard key={index} {...event} isClickable={true} isAboveFold={index < 2} />
             </motion.div>
           ))}
         </motion.div>
