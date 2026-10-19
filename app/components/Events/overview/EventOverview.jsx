@@ -7,6 +7,7 @@ import {
 } from "../../../../motion/home-sections";
 import OverviewCard from "./OverviewCard";
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/overview/EventOverview.scss";
 
 const EventOverview = ( { title, mainTitle, overviewData } ) => {
 
@@ -26,16 +27,13 @@ const EventOverview = ( { title, mainTitle, overviewData } ) => {
 
   return (
     <section
-      className="bg-gradient-to-b from-blue-400 via-blue-100 to-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
+      className="event-overview"
     >
       <motion.div
-        className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-8 mb-5 z-10 overflow-hidden"
+        className="event-overview__header"
       >
         <motion.p
-          className="md:text-[18px] text-[14px] text-background font-subtitle
-          font-bold uppercase tracking-wider"
+          className="event-overview__pretitle"
           variants={floatFromDownPreTitle}
           initial="initial"
           animate="animate"
@@ -44,8 +42,7 @@ const EventOverview = ( { title, mainTitle, overviewData } ) => {
           {title}
         </motion.p>
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-0"
+          className="event-overview__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -56,12 +53,12 @@ const EventOverview = ( { title, mainTitle, overviewData } ) => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 mb-2 md:mb-4">
+      <motion.div className="event-overview__row">
+        <motion.div className="event-overview__grid">
           {overviewData.map((overview, index) => (
             <motion.div
               key={index}
-              className="relative z-10"
+              className="event-overview__item"
               initial={{
                 opacity: 0,
                 translateX: index % 2 === 0 ? -100 : 100,

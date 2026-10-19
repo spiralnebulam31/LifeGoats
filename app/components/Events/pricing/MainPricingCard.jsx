@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { locationIcon, priceIcon2 } from "@/src/assets";
 import { fadeIn } from "../../../../motion/motion";
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/pricing/Pricing.scss";
 
 const MainPricingCard = ({
   index,
@@ -19,10 +20,9 @@ const MainPricingCard = ({
   return (
     <motion.div
       key={index}
-      className="flex flex-col justify-start pt-5 mx-auto bg-background rounded-2xl drop-shadow-xl text-primary
-            font-body md:text-[16px] text-[14px] w-[250px] h-auto min-h-[340px]"
+      className="pricing-card"
     >
-      <p className="pb-4 text-center text-bold text-tertiary uppercase font-links font-bold text-3xl">
+      <p className="pricing-card__title">
         🐐{title}
       </p>
       {link ? (
@@ -31,54 +31,54 @@ const MainPricingCard = ({
           target="_blank"
           rel="noreferrer"
           alt={alt}
-          className="pb-4 text-center text-bold text-primary hover:text-secondary cursor-pointer visited:text-earth font-body underline font-bold text-lg"
+          className="pricing-card__accommodation pricing-card__accommodation--link"
         >
           {accommodation}
         </a>
       ) : (
-        <p className="pb-4 text-center text-bold text-primary font-body font-bold text-lg">
+        <p className="pricing-card__accommodation">
           {accommodation}
         </p>
       )}
 
-      <div className="flex flex-row justify-center items-center pb-4">
+      <div className="pricing-card__row pricing-card__row--location">
         <img
           src={locationIcon}
           alt="location of accommodation icon"
-          className="w-[20px] h-auto mr-1"
+          className="pricing-card__icon pricing-card__icon--location"
         />
-        <p className="text-center text-bold text-primary font-body text-md">
+        <p className="pricing-card__text">
           {location}
         </p>
       </div>
 
-      <div className="flex flex-col justify-center items-center pb-3">
-        <div className="flex flex-row justify-center items-center">
+      <div className="pricing-card__price-block">
+        <div className="pricing-card__row">
           <img
             src={priceIcon2}
             alt="price icon"
-            className="w-[30px] h-auto mr-1"
+            className="pricing-card__icon pricing-card__icon--price"
           />
-          <p className="pb-1 text-center text-bold text-primary font-body text-md">
+          <p className="pricing-card__text pricing-card__price-line">
             from
           </p>
         </div>
-        <p className="pb-1 text-center font-bold text-primary font-body text-4xl">
+        <p className="pricing-card__text pricing-card__price-line pricing-card__price">
           {pricePerNight}
         </p>
-        <p className="pb-1 text-center text-primary font-body text-md">
+        <p className="pricing-card__text pricing-card__price-line">
           per night
         </p>
-        <p className="pb-2 text-center text-primary font-body text-md">
-          (<span className="font-bold">{priceForFiveNights}</span> for 5 nights)
+        <p className="pricing-card__text pricing-card__price-line pricing-card__price-line--last">
+          (<span className="pricing-card__bold">{priceForFiveNights}</span> for 5 nights)
         </p>
       </div>
 
       {!isOpen && (
         /* Read More Link */
-        <div className="flex w-full mx-auto items-center justify-center text-center">
+        <div className="pricing-card__toggle-row">
           <p
-            className="text-primary hover:text-secondary underline font-light text-[14px] cursor-pointer"
+            className="pricing-card__toggle"
             onClick={toggleOpen}
             alt="click to read more"
           >
@@ -102,11 +102,11 @@ const MainPricingCard = ({
           >
             {/* Rest of the expanded content */}
             <motion.div
-              className="flex flex-col w-[90%] mx-auto"
+              className="pricing-card__expanded"
               variants={fadeIn}
             >
               {notes && (
-                <ul className="pb-2 text-center text-bold text-primary font-body text-md">
+                <ul className="pricing-card__notes">
                   {notes.map((note, index) => (
                     <li key={index}>➤ {note}</li>
                   ))}
@@ -114,9 +114,9 @@ const MainPricingCard = ({
               )}
 
               {/* Read Less Link */}
-              <div className="flex w-full mx-auto items-center justify-center text-center pb-4">
+              <div className="pricing-card__toggle-row pricing-card__toggle-row--less">
                 <p
-                  className="text-primary hover:text-secondary underline font-light text-[14px] cursor-pointer"
+                  className="pricing-card__toggle"
                   onClick={toggleOpen}
                   alt="click to read less"
                 >

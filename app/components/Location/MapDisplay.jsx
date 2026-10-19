@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import SimpleMapComponent from './MapboxComponent';
+import "@/src/scss/components/Location/Map.scss";
 
 const MapDisplay = (props) => {
   const [isClient, setIsClient] = useState(false);
@@ -14,9 +15,9 @@ const MapDisplay = (props) => {
     return (
       <div 
         style={{ width: props.width, height: props.height }} 
-        className="bg-gray-200 rounded-2xl drop-shadow-xl flex items-center justify-center"
+        className="map map--loading"
       >
-        <span className="text-gray-500">Loading map...</span>
+        <span className="map__loading-text">Loading map...</span>
       </div>
     );
   }

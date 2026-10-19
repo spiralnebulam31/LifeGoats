@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/program/Program.scss";
 import ProgramTab from "./ProgramTab";
 import DateButton from "./DateButton";
 import { programData } from "../../../../data/program";
@@ -29,17 +30,13 @@ const Program = ({
   
   return (
     <section
-      className="bg-gradient-to-b from-background via-blue-100 to-blue-400
-      relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 bottom-0 top-0
-      overflow-hidden pt-2 pb-2 z-10"
+      className="program"
     >
       <motion.div
-        className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-8 mb-5 z-10 overflow-hidden"
+        className="program__header"
       >
         <motion.p
-          className="md:text-[18px] text-[14px] text-secondary font-subtitle
-          font-bold uppercase tracking-wider"
+          className="program__pretitle"
           variants={floatFromDownPreTitle}
           initial="initial"
           whileInView="animate" 
@@ -48,8 +45,7 @@ const Program = ({
           Details about the
         </motion.p>
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 mt-0"
+          className="program__title"
           style={{ textShadow: "2px 2px 3px rgba(0,0,0, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -74,7 +70,7 @@ const Program = ({
 
 {!isSmallScreen && (
   <motion.div
-    className="flex flex-wrap lg:flex-row justify-center items-center mx-auto mb-2 text-primary font-body md:text-[16px] text-[14px] w-[80%] lg:w-[55%]"
+    className="program__dates"
     variants={fadeIn}
     initial="initial"
     whileInView="animate" 
@@ -92,8 +88,7 @@ const Program = ({
 )}
 
       <motion.div
-        className="flex flex-col justify-start items-start mx-auto mt-2 py-4 bg-background rounded-2xl drop-shadow-xl text-primary
-        font-body md:text-[16px] text-[14px] w-[80%] lg:w-[63%] h-auto md:h-[430px]"
+        className="program__tabs"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
@@ -109,8 +104,7 @@ const Program = ({
       </motion.div>
 
       <motion.div
-        className="flex flex-col justify-center items-center mx-auto mt-2 py-4 text-primary
-        font-body md:text-[16px] text-[14px] w-[80%] lg:w-[45%]"
+        className="program__links"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
@@ -122,7 +116,7 @@ const Program = ({
               target="_blank"
               rel="noreferrer"
             >
-              <p className="pt-3 pb-2 text-center text-bold cursor-pointer font-bold font-links text-bold underline text-primary hover:text-tertiary text-xl">Click here to download the program as a PDF file</p>
+              <p className="program__link-text">Click here to download the program as a PDF file</p>
             </a>
 
             <a
@@ -130,7 +124,7 @@ const Program = ({
               target="_blank"
               rel="noreferrer"
             >
-              <p className="pt-3 pb-2 text-center text-bold cursor-pointer font-bold font-links text-bold underline text-primary hover:text-tertiary text-xl">Click here for more information about the hike</p>
+              <p className="program__link-text">Click here for more information about the hike</p>
             </a>
 
 

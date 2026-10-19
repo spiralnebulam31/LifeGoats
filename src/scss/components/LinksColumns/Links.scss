@@ -1,0 +1,28 @@
+@use "../../globals/variables" as vars;
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: vars.rem(24);
+  width: 30%;
+  padding-inline: vars.rem(64);
+  font-family: vars.font(links);
+  font-weight: 700;
+  text-align: center;
+  list-style: none;
+
+  &__item {
+    width: vars.rem(86);
+    font-size: vars.rem(20);
+    line-height: vars.rem(28);
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.color(tertiary);
+      font-size: vars.rem(24);
+    }
+  }
+}

@@ -5,40 +5,42 @@ import { fadeIn } from "../../../motion/motion";
 import { hikingBoots } from "@/src/assets/subscriptions";
 // import GoatPrintsWalking from "../components/Loaders/GoatPrintsWalking";
 import Image from "next/image";
+import "@/src/scss/pages/Page.scss";
+import "@/src/scss/pages/subscription-to-newsletter/Subscription.scss";
 // import Link from "next/link";
 
 function ConfirmedSubscription() {
   return (
-    <motion.div className="bg-background relative bg-cover w-screen h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-hidden pt-2 pb-2 z-10 mt-[60px] mb-[180px] flex flex-col justify-center text-center mx-auto">
+    <motion.div className="page page--full-height page--below-nav-tight">
       {/* Title and Subtitle */}
-      <motion.div className="flex flex-col justify-center text-center w-[90%] mx-auto pt-10 mb-1">
-        <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold">
+      <motion.div className="page__heading page__heading--tight">
+        <motion.h1 className="page__title">
           Subscription confirmed!
         </motion.h1>
       </motion.div>
 
       {/* Content Section */}
       <motion.div
-        className="flex flex-col lg:flex-row justify-center items-center lg:items-start mx-auto pt-10 pb-16 font-body lg:text-lg text-md w-[90%] lg:w-[70%]"
+        className="subscription__content"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
 viewport={{ once: true }}
       >
         {/* Image */}
-        <div className="mb-8 lg:mb-0 lg:mr-8 flex-shrink-0 w-full sm:w-[90%] md:w-[70%] lg:w-[50%]">
+        <div className="subscription__image-wrap">
           <Image
             src={hikingBoots}
             alt="Hiking Boots with a mountain background"
-            className="rounded-lg shadow-lg w-full h-auto"
+            className="subscription__image"
             width={1000} // Arbitrary large value for responsiveness
             height={1000} // Arbitrary large value for responsiveness
           />
         </div>
 
         {/* Success Message */}
-        <div className="w-full sm:w-[90%] md:w-[70%] lg:w-[40%] text-center">
-          <p className="mb-4 text-primary font-body">
+        <div className="subscription__message">
+          <p className="subscription__message-text">
             Your subscription has been confirmed. From now on you will be
             receiving the Life Goats newsletter ;)
           </p>

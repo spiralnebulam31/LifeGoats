@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/overview/EventOverview.scss";
 
 const OverviewCard = ({ alt, image, title, text }) => {
 
@@ -12,18 +13,18 @@ const OverviewCard = ({ alt, image, title, text }) => {
 
   return (
     <motion.div
-      className="w-[280px] h-[400px] lg:h-[470px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
+      className="overview-card"
       >
         <img
           src={image.src || image}
           alt={alt}
-          className="w-full object-cover h-40 rounded-t-xl"
+          className="overview-card__image"
         />
-        <div className="px-6 pt-3 pb-1 flex flex-col mx-auto">
-          <h2 className="text-tertiary font-subtitle text-center text-[14px] font-bold max-w-6xl pt-2 pb-1">
+        <div className="overview-card__body">
+          <h2 className="overview-card__title">
             {title}
           </h2>
-          <p className="text-primary font-body text-center text-[14px] lg:text-[16px] max-w-6xl pt-2 pb-1">
+          <p className="overview-card__text">
             {text}
           </p>
         </div>

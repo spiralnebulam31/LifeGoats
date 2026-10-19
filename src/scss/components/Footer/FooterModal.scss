@@ -1,0 +1,60 @@
+/**
+ * Shared content styling for the footer's react-responsive-modal dialogs
+ * (AccessibilityModal and LocationModal).
+ */
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.footer-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  padding: vars.rem(16);
+
+  &__title {
+    margin-bottom: vars.rem(16);
+    color: vars.color(earth);
+    font-size: vars.rem(24);
+    line-height: vars.rem(32);
+    font-weight: 700;
+    font-family: vars.font(subtitle);
+  }
+
+  &__text {
+    margin-bottom: vars.rem(16);
+    color: vars.color(primary);
+    font-size: vars.rem(18);
+    line-height: vars.rem(28);
+    font-family: vars.font(body);
+  }
+
+  &__email {
+    color: vars.color(secondary);
+    font-family: vars.font(links);
+
+    &:hover {
+      color: vars.color(tertiary);
+    }
+  }
+
+  &__maps {
+    margin-top: vars.rem(20);
+    font-family: vars.font(links);
+    font-weight: 700;
+  }
+
+  &__maps-link {
+    color: vars.color(secondary);
+    font-size: vars.rem(15);
+
+    &:hover {
+      color: vars.color(tertiary);
+    }
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(16);
+    }
+  }
+}

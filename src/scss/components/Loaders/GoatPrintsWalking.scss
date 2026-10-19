@@ -1,0 +1,32 @@
+@use "../../globals/variables" as vars;
+
+.goat-prints {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin-inline: auto;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+    &--top {
+      margin-top: vars.rem(24);
+    }
+
+    &--bottom {
+      margin-bottom: vars.rem(20);
+    }
+  }
+
+  &__print {
+    width: vars.rem(20);
+    height: auto;
+    object-fit: contain;
+  }
+}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { floatFromLeftAbout, floatFromRightAbout, floatFromDownPreTitle, floatFromDownMainTitle } from "../../../../motion/home-sections";
 import AltimeterGraph from "./AltimeterGraph";
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/altimeter/Altimeter.scss";
 
 const Altimeter = ({ 
   ascentData, 
@@ -36,12 +37,11 @@ const Altimeter = ({
 
   return (
     <section
-      className="bg-background relative bg-cover w-screen h-auto min-h-full inset-0 left-0 right-0 top-0
-      overflow-hidden pt-2 pb-2 z-10 mx-auto"
+      className="altimeter"
     >
-      <motion.div className="text-center w-[80%] lg:w-full mx-auto pt-14 mb-5 z-10 overflow-hidden">
+      <motion.div className="altimeter__header">
         <motion.p 
-          className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider"
+          className="altimeter__pretitle"
           variants={floatFromDownPreTitle} 
           initial="initial" 
           whileInView="animate" 
@@ -50,7 +50,7 @@ const Altimeter = ({
           A glimpse at
         </motion.p>
         <motion.h2 
-          className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] outline-background-2 pb-2 mt-0"
+          className="altimeter__title"
           style={{ textShadow: "2px 2px 3px rgba(0,0,0,0.3)" }}
           variants={floatFromDownMainTitle} 
           initial="initial" 
@@ -62,12 +62,11 @@ const Altimeter = ({
       </motion.div>
 
       <motion.div
-        className="flex flex-col lg:flex-row gap-8 lg:gap-12 justify-center items-start mx-auto pt-5 pb-10 text-primary
-        font-body md:text-[16px] text-[14px] w-[90%] lg:w-[85%]"
+        className="altimeter__graphs"
       >
         {/* Ascent Graph with Totals */}
         <motion.div
-          className="w-full lg:w-[48%]"
+          className="altimeter__graph-column"
           variants={floatFromLeftAbout}
           initial="initial"
           whileInView="animate" 
@@ -87,7 +86,7 @@ const Altimeter = ({
         {/* Descent Graph with Totals */}
         {showBoth && descentData && (
           <motion.div
-            className="w-full lg:w-[48%]"
+            className="altimeter__graph-column"
             variants={floatFromRightAbout}
             initial="initial"
             whileInView="animate" 

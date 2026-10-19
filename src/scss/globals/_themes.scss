@@ -1,0 +1,35 @@
+/**
+ * _themes.scss — --life-goats-color-* custom property declarations.
+ *
+ * This is the ONLY file that declares these custom properties. It is @used
+ * exactly once, from the global entry point (styles.scss), so the values
+ * aren't duplicated into every component's compiled CSS output.
+ *
+ * Only one (light) theme exists today; a second can be added later as a
+ * :root[data-theme="..."] block reusing the same token names.
+ */
+
+:root {
+  color-scheme: light;
+
+  // ── Brand colors ─────────────────────────────────────────────────────────
+  --life-goats-color-background:     #e6ecf0;
+  --life-goats-color-primary:        #303848;
+  --life-goats-color-secondary:      #607dfa;
+  --life-goats-color-secondary-dark: #19329e;
+  --life-goats-color-tertiary:       #7ba862;
+  --life-goats-color-tertiary-light: #c8f2b1;
+  --life-goats-color-earth:          #4d3d11;
+
+  // ── Supporting palette ───────────────────────────────────────────────────
+  --life-goats-color-blue-100:       #dbeafe;
+  --life-goats-color-blue-400:       #60a5fa;
+  --life-goats-color-gray-100:       #f3f4f6;
+  --life-goats-color-gray-200:       #e5e7eb;
+  --life-goats-color-gray-500:       #6b7280;
+  --life-goats-color-gray-600:       #4b5563;
+
+  // ── Plain colors ─────────────────────────────────────────────────────────
+  --life-goats-color-white:          #ffffff;
+  --life-goats-color-black:          #000000;
+}

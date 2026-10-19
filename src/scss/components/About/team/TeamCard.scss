@@ -1,0 +1,105 @@
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+// Used by TeamCard and the About › Team page (app/about/team/page.jsx).
+.team-page {
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__members {
+    display: flex;
+    flex-direction: column;
+    gap: vars.rem(32);
+    margin: vars.rem(32) auto;
+
+    @include mix.respond-to(lg) {
+      flex-direction: row;
+      gap: vars.rem(80);
+    }
+  }
+
+  &__member {
+    position: relative;
+    z-index: vars.z-index(raised);
+  }
+}
+
+.team-card {
+  z-index: vars.z-index(base);
+  width: vars.rem(280);
+  height: vars.rem(550);
+  margin: vars.rem(12);
+  overflow: hidden;
+  padding-block: vars.rem(20);
+  border-radius: vars.radius(2xl);
+  background: vars.color(background);
+  box-shadow: vars.shadow(lg);
+  opacity: 0.8;
+
+  @include mix.respond-to(lg) {
+    width: vars.rem(350);
+  }
+
+  &__photo {
+    display: flex;
+    justify-content: center;
+    width: vars.rem(208);
+    height: vars.rem(208);
+    margin-inline: auto;
+    border-radius: vars.radius(full);
+    object-fit: cover;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    padding: vars.rem(12) vars.rem(24) vars.rem(4);
+  }
+
+  &__name,
+  &__text {
+    max-width: vars.rem(1152);
+    padding-top: vars.rem(8);
+    padding-bottom: vars.rem(4);
+    text-align: center;
+  }
+
+  &__name {
+    color: vars.color(tertiary);
+    font-family: vars.font(subtitle);
+    font-size: vars.rem(18);
+    font-weight: 700;
+    text-decoration-line: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.color(earth);
+    }
+  }
+
+  &__text {
+    color: vars.color(primary);
+    font-family: vars.font(body);
+    font-size: vars.rem(16);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(18);
+    }
+  }
+
+  // Links inside the bio HTML (rendered via html-react-parser).
+  &__link {
+    font-family: vars.font(links);
+    text-decoration-line: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.color(secondary);
+    }
+  }
+}

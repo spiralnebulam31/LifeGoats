@@ -1,0 +1,206 @@
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+.event-hero {
+  position: sticky;
+  top: 0;
+  z-index: vars.z-index(raised);
+  width: 100vw;
+  height: 100vh;
+  margin-inline: auto;
+  overflow: hidden;
+  background: vars.color(background);
+
+  &__background {
+    position: absolute;
+    inset: 0;
+    z-index: vars.z-index(raised);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &__content {
+    position: absolute;
+    inset: 0;
+    top: vars.rem(150);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: vars.rem(20);
+    max-width: vars.rem(1280);
+    margin-inline: auto;
+
+    @include mix.respond-to(md) {
+      top: vars.rem(160);
+    }
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  &__title {
+    z-index: vars.z-index(header);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: vars.rem(4);
+    margin-top: vars.rem(16);
+    margin-bottom: vars.rem(16);
+    color: vars.color(earth);
+    font-family: vars.font(title);
+    font-weight: 700;
+    font-size: vars.rem(70);
+    line-height: vars.rem(70);
+
+    @include mix.respond-to(md) {
+      gap: vars.rem(16);
+      font-size: vars.rem(75);
+    }
+
+    @include mix.respond-to(lg) {
+      margin-top: vars.rem(8);
+      font-size: vars.rem(85);
+      line-height: vars.rem(80);
+    }
+  }
+
+  &__location {
+    z-index: vars.z-index(header);
+    max-width: vars.rem(448);
+    margin-bottom: vars.rem(16);
+    color: vars.color(primary);
+    font-weight: 700;
+    font-size: vars.rem(28);
+    text-align: center;
+
+    @include mix.respond-to(md) {
+      max-width: vars.rem(576);
+      font-size: vars.rem(32);
+    }
+
+    @include mix.respond-to(lg) {
+      font-size: vars.rem(38);
+      line-height: vars.rem(40);
+    }
+  }
+
+  &__location-name {
+    font-family: vars.font(subtitle);
+  }
+
+  &__details {
+    z-index: vars.z-index(header);
+    max-width: vars.rem(448);
+    margin-top: vars.rem(8);
+    margin-bottom: vars.rem(12);
+    color: vars.color(primary);
+    font-family: vars.font(body);
+    font-weight: 700;
+    font-size: vars.rem(20);
+    line-height: vars.rem(35);
+    text-align: center;
+
+    @include mix.respond-to(md) {
+      max-width: vars.rem(672);
+      font-size: vars.rem(24);
+    }
+
+    @include mix.respond-to(lg) {
+      font-size: vars.rem(26);
+      line-height: vars.rem(40);
+    }
+  }
+
+  &__date-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: vars.rem(8);
+  }
+
+  &__calendar {
+    z-index: vars.z-index(header);
+    width: vars.rem(40);
+    height: vars.rem(40);
+    margin-bottom: vars.rem(20);
+    object-fit: contain;
+
+    @include mix.respond-to(md) {
+      width: vars.rem(50);
+      height: vars.rem(50);
+    }
+  }
+
+  &__date {
+    margin-bottom: vars.rem(20);
+  }
+
+  &__p1 {
+    max-width: vars.rem(384);
+    font-size: vars.rem(23);
+
+    @include mix.respond-to(md) {
+      max-width: vars.rem(672);
+      font-size: vars.rem(28);
+    }
+
+    @include mix.respond-to(lg) {
+      font-size: vars.rem(30);
+    }
+  }
+
+  &__p2 {
+    margin-top: vars.rem(16);
+    font-family: vars.font(subtitle);
+    font-weight: 700;
+    font-size: vars.rem(26);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(30);
+    }
+
+    @include mix.respond-to(lg) {
+      font-size: vars.rem(32);
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    bottom: vars.rem(20);
+    z-index: vars.z-index(header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__slider-track {
+    z-index: vars.z-index(header);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: vars.rem(35);
+    height: vars.rem(75);
+    border: 4px solid vars.color(primary);
+    border-radius: vars.radius(3xl);
+  }
+
+  // Its width/height are overridden to `auto` by the inline style in Hero.jsx.
+  &__slider-prints {
+    z-index: vars.z-index(modal);
+    width: vars.rem(60);
+    height: vars.rem(60);
+    object-fit: contain;
+  }
+}

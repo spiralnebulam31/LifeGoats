@@ -1,0 +1,66 @@
+/**
+ * Shared by TestimonialsCard (landing page, fixed height) and
+ * TestimonialsPageCard (/testimonials, .testimonials-card--page).
+ */
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+.testimonials-card {
+  z-index: vars.z-index(base);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: vars.rem(4);
+  width: vars.rem(340);
+  height: vars.rem(300);
+  margin: auto;
+  overflow: hidden;
+  padding-inline: vars.rem(8);
+  border-radius: vars.radius(2xl);
+  background: vars.color(background);
+  box-shadow: vars.shadow(lg);
+  text-align: center;
+
+  @include mix.respond-to(md) {
+    width: vars.rem(400);
+  }
+
+  &--page {
+    height: auto;
+
+    @include mix.respond-to(md) {
+      width: vars.rem(340);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    padding: vars.rem(12) vars.rem(8) vars.rem(4);
+    text-align: center;
+  }
+
+  &__text,
+  &__name {
+    padding-block: vars.rem(8);
+    color: vars.color(primary);
+    text-align: center;
+    font-size: vars.rem(14);
+  }
+
+  &__text {
+    font-family: vars.font(body);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(16);
+    }
+  }
+
+  &__name {
+    font-family: vars.font(subtitle);
+    font-weight: 700;
+    font-style: italic;
+  }
+}

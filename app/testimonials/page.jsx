@@ -8,20 +8,19 @@ import {
 import { testimonials } from "../../data/testimonials";
 import { TestimonialsPageCard } from "../components/LandingPage/testimonials";
 import Link from "next/link";
+import "@/src/scss/pages/testimonials/Testimonials.scss";
 
 const TestimonialsPage = () => {
   return (
     <motion.div
-      className="bg-gradient-to-b from-secondary to-background relative bg-cover w-full h-auto overflow-x-hidden p-2 z-10 mb-[180px] mt-[60px] flex flex-col justify-center text-center mx-auto"
+      className="testimonials-page"
     >
 
       <motion.div
-        className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-8 mb-8 z-10 overflow-hidden"
+        className="testimonials-page__header"
       >
 <motion.p
-          className="md:text-[18px] text-[14px] text-background font-subtitle
-          font-bold uppercase tracking-wider"
+          className="testimonials-page__pretitle"
           variants={floatFromDownPreTitle}
           initial="initial"
           animate="animate"
@@ -30,8 +29,7 @@ const TestimonialsPage = () => {
           A word
         </motion.p>
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-0"
+          className="testimonials-page__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -42,12 +40,12 @@ const TestimonialsPage = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-center items-start px-4">
-        <motion.div className="columns-1 md:columns-2 lg:columns-3 gap-2 w-full max-w-7xl">
+      <motion.div className="testimonials-page__row">
+        <motion.div className="testimonials-page__columns">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="relative z-10 break-inside-avoid mb-4 md:mb-6"
+              className="testimonials-page__item"
               initial={{
                 opacity: 0,
                 translateY: 50,
@@ -69,14 +67,13 @@ const TestimonialsPage = () => {
 
       <Link href="/contact">
         <motion.div
-          className="flex justify-evenly items-center mx-auto"
+          className="testimonials-page__cta-row"
           variants={floatFromDownMainTitle}
           initial="initial"
           animate="animate"
         >
           <button
-            className="bg-primary text-background font-subtitle font-bold uppercase tracking-wider py-2 my-8 px-4 rounded-lg shadow-lg
-          hover:bg-tertiary hover:text-earth"
+            className="testimonials-page__cta"
           >
             Have you been to one of our events? Share your experience with us!
           </button>

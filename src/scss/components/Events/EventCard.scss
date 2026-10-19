@@ -1,0 +1,52 @@
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.event-card {
+  &--static {
+    cursor: default;
+  }
+
+  &__frame {
+    z-index: vars.z-index(base);
+    width: vars.rem(310);
+    height: vars.rem(200);
+    margin: vars.rem(12);
+    overflow: hidden;
+    border-radius: vars.radius(2xl);
+    background: vars.color(background);
+    box-shadow: vars.shadow(lg);
+
+    @include mix.respond-to(lg) {
+      width: vars.rem(450);
+      height: vars.rem(250);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: vars.rem(310);
+    height: auto;
+    margin-inline: auto;
+    padding: vars.rem(4) vars.rem(24);
+
+    @include mix.respond-to(lg) {
+      width: vars.rem(450);
+    }
+  }
+
+  &__title {
+    max-width: vars.rem(1152);
+    padding-block: vars.rem(4);
+    color: vars.color(tertiary);
+    font-family: vars.font(subtitle);
+    font-size: vars.rem(20);
+    font-weight: 700;
+    text-align: center;
+  }
+}

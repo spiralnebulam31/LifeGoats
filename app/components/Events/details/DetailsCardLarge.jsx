@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useMediaQuery } from "react-responsive";
 import { fadeIn } from '../../../../motion/motion.js';
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/details/Details.scss";
 
 const DetailsCardLarge = ( { details } ) => {
 
@@ -21,20 +22,20 @@ const DetailsCardLarge = ( { details } ) => {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
-    <motion.div className="flex items-center justify-center mx-auto"
+    <motion.div className="details-card-large"
       variants={fadeIn} initial="initial" whileInView="animate" 
 viewport={{ once: true }}
     >
-        <motion.div className="flex flex-wrap px-2 space-x-2 justify-center w-full mx-auto my-auto">
+        <motion.div className="details-card-large__inner">
         
         {isSmallScreen && (
           <div>
-          <motion.div className="grid grid-cols-3 gap-4 mb-1 mt-4 mx-auto">
+          <motion.div className="details-card-large__grid details-card-large__grid--top">
             {details.slice(0,3).map((detail, index) => (
               <DetailCard key={index} {...detail} />
             ))}
           </motion.div>
-          <motion.div className="grid grid-cols-2 gap-1 my-1 mx-auto px-20 -py-3">
+          <motion.div className="details-card-large__grid details-card-large__grid--bottom">
             {details.slice(3,5).map((detail, index) => (
               <DetailCard key={index} {...detail} />
             ))}
@@ -43,7 +44,7 @@ viewport={{ once: true }}
           )}
 
           {!isSmallScreen && (
-          <motion.div className="grid grid-cols-5 gap-4 lg:gap-1 mb-1 mt-4 mx-auto">
+          <motion.div className="details-card-large__grid details-card-large__grid--all">
             {details.map((detail, index) => (
               <DetailCard key={index} {...detail} />
             ))}

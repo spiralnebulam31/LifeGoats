@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import parse, { domToReact } from 'html-react-parser';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
+import "@/src/scss/components/About/team/TeamCard.scss";
 
 const transform = (node) => {
   if (node.type === 'tag' && node.name === 'a') {
     return (
-      <a href={node.attribs.href} className="font-links cursor-pointer underline hover:text-secondary">
+      <a href={node.attribs.href} className="team-card__link">
         {domToReact(node.children)}
       </a>
     );
@@ -18,22 +19,22 @@ const transform = (node) => {
 const TeamCard = ({ alt, image, title, text, url }) => {
   return (
     <motion.div
-      className="w-[280px] lg:w-[350px] h-[550px] z-0 bg-background m-3 py-5 rounded-2xl shadow-lg opacity-80 overflow-hidden"
+      className="team-card"
       >
         <Image
           src={image}
           alt={alt}
-          className="flex justify-center mx-auto w-52 h-52 object-cover rounded-full"
+          className="team-card__photo"
           width={400}
           height={400}
         />
-        <div className="px-6 pt-3 pb-1 flex flex-col mx-auto">
+        <div className="team-card__body">
         <a href={url} target="_blank" rel="noreferrer">
-          <h2 className="text-tertiary hover:text-earth font-subtitle underline cursor-pointer text-center text-[18px] font-bold max-w-6xl pt-2 pb-1">
+          <h2 className="team-card__name">
             {title}
           </h2>
         </a>
-          <p className="text-primary font-body text-center text-[16px] md:text-[18px] max-w-6xl pt-2 pb-1">
+          <p className="team-card__text">
           {parse(text, { replace: transform })}
           </p>
         </div>

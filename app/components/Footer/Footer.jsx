@@ -5,6 +5,7 @@ import Link from "next/link";
 import { StateContext } from "../../../contexts/StateContext";
 import AccessibilityModal from "./AccessibilityModal";
 import LocationModal from "./LocationModal";
+import "@/src/scss/components/Footer/Footer.scss";
 
 const Footer = () => {
   const { modalState, setModalState } = useContext(StateContext);
@@ -26,17 +27,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary bg-contain bg-center bg-no-repeat fixed z-1 bottom-0 left-0 right-0 w-full h-[180px] flex flex-col items-center justify-center overflow-hidden">
-      <div className="flex flex-col justify-center items-center align-middle mx-auto my-auto gap-3">
+    <footer className="site-footer">
+      <div className="site-footer__inner">
         {/*Copyright & Developer*/}
-        <div className="flex flex-row justify-center items-center">
-          <p className="text-background font-body font-bold text-lg">
+        <div className="site-footer__row">
+          <p className="site-footer__copyright">
             Copyright
-            <span className="text-secondary font-links font-bold text-lg mx-2">
+            <span className="site-footer__copyright-symbol">
               ©
             </span>
             2026{' '}
-            <Link href="/" className="text-background hover:text-secondary font-links font-bold underline text-lg transition-colors">
+            <Link href="/" className="site-footer__home-link">
               Life Goats
             </Link>
           </p>
@@ -57,61 +58,61 @@ const Footer = () => {
         </div> */}
 
         {/*Page links*/}
-        <div className="flex flex-row gap-2">
+        <div className="site-footer__links">
           <Link
             href="/about/team"
-            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+            className="site-footer__link"
           >
             Team
           </Link>
 
-          <span className="text-secondary font-links font-bold mx-2">|</span>
+          <span className="site-footer__separator">|</span>
 
           <button
             type="button"
             onClick={toggleLocationModal}
-            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+            className="site-footer__link"
           >
             Location
           </button>
 
           <LocationModal isOpen={locationOpen} onClose={toggleLocationModal} />
 
-          <span className="text-secondary font-links font-bold mx-2">|</span>
+          <span className="site-footer__separator">|</span>
 
           <Link
             href="/contact"
-            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+            className="site-footer__link"
           >
             Contact
           </Link>
         </div>
 
         {/*Subscribe to our newsletter*/}
-        <div className="flex justify-center items-center">
+        <div className="site-footer__row">
           <Link
             href="/subscription-to-newsletter"
-            className="bg-secondary text-background font-links uppercase cursor-pointer font-bold text-md no-underline hover:bg-tertiary hover:text-earth py-2 px-4 rounded-lg tracking-wider"
+            className="site-footer__newsletter"
           >
             Newsletter
           </Link>
         </div>
 
         {/*Privacy & Accessibility Modals*/}
-        <div className="flex flex-row gap-2">
+        <div className="site-footer__links">
           <Link
             href="/privacy-policy"
-            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+            className="site-footer__link"
           >
             Privacy Policy
           </Link>
 
-          <span className="text-secondary font-links font-bold mx-2">|</span>
+          <span className="site-footer__separator">|</span>
 
           <button
             type="button"
             onClick={toggleAccessibilityModal}
-            className="text-tertiary hover:text-secondary font-links font-bold text-md no-underline"
+            className="site-footer__link"
           >
             Web Accessibility Statement
           </button>

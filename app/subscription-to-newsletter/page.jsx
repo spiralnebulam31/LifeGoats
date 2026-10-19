@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../motion/motion";
 import { useEffect } from "react";
+import "@/src/scss/pages/Page.scss";
+import "@/src/scss/pages/subscription-to-newsletter/Subscription.scss";
 
 function SubscribeForm() {
   useEffect(() => {
@@ -57,20 +59,20 @@ function SubscribeForm() {
   }, []);
 
   return (
-    <motion.div className="bg-background relative bg-cover w-screen max-w-full h-auto min-h-screen inset-0 left-0 right-0 top-0 overflow-x-hidden overflow-hidden pt-2 pb-2 z-10 mt-[60px] mb-[180px] flex flex-col justify-center text-center mx-auto">
+    <motion.div className="page page--contained page--full-height page--below-nav-tight">
       {/* Title and Subtitle */}
-      <motion.div className="flex flex-col justify-center text-center w-[90%] max-w-full mx-auto pt-10 mb-1">
-        <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold">
+      <motion.div className="page__heading page__heading--tight">
+        <motion.h1 className="page__title">
           Subscribe
         </motion.h1>
-        <motion.h2 className="text-primary font-subtitle text-xl lg:text-3xl font-bold">
+        <motion.h2 className="page__subtitle">
           to our newsletter
         </motion.h2>
       </motion.div>
 
       {/* ConvertKit Form Target Container */}
       <motion.div
-        className="flex justify-center w-[90%] max-w-full lg:w-[70%] mx-auto pt-8 pb-4"
+        className="subscription__form-wrap"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
@@ -78,7 +80,7 @@ viewport={{ once: true }}
       >
         <div
           id="convertkit-target"
-          className="w-full mx-auto text-center"
+          className="subscription__form-target"
         >
           {/* The form will be moved here by JavaScript */}
         </div>
@@ -86,7 +88,7 @@ viewport={{ once: true }}
 
       {/* Content Section */}
       <motion.div
-        className="flex flex-col lg:flex-row justify-center items-center lg:items-start mx-auto pt-10 pb-16 font-body lg:text-lg text-md w-[90%] max-w-full lg:w-[70%]"
+        className="subscription__content"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 

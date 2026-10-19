@@ -14,8 +14,8 @@ import {
   import { introTextJun25 } from '../../../../data/intro';
   import { detailsJun25, detailsImagesJun25 } from "../../../../data/details";
   import { mtOlympusJun2025Images } from '../../../../data/galleries/mt-olympus-jun-2025';
-  import { getRouteData } from '../../../../data/altimeter';
-  import { useMediaQuery } from 'react-responsive';
+  import { getRouteData } from '../../../../data/altimeter';  import { useMediaQuery } from 'react-responsive';
+  import "@/src/scss/pages/Landing.scss";
   
   const LandingPage = () => {
     const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
@@ -25,7 +25,7 @@ import {
     const descentData = getRouteData('agiosKonstantinosToOrliasCircular');
 
     return (
-      <div className="bg-cover bg-n-repeat bg-center overflow-hidden mb-[180px]">
+      <div className="landing landing--footer-gap">
         <Hero 
           isSmallScreen={isSmallScreen} 
           image={heroBackgroundJun25} 

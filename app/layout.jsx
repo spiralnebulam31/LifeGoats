@@ -1,7 +1,7 @@
 import { Navbar, Footer } from './components/index';
 // import PreLoaderWrapper from './components/Loaders/PreLoaderWrapper';
 import { StateProvider } from '../providers/StateProvider';
-import './globals.css';
+import '../src/scss/styles.scss';
 import { Catamaran, Cinzel, Open_Sans, Rubik } from 'next/font/google';
 import Script from 'next/script';
 import PropTypes from 'prop-types';
@@ -76,16 +76,6 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         
-        {/* Add the scroll behavior styles */}
-        <style>
-          {`
-            html {
-              scroll-behavior: smooth;
-              scroll-padding-top: 60px;
-            }
-          `}
-        </style>
-
         {/* Add schema.org JSON-LD */}
         <script
           type="application/ld+json"

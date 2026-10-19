@@ -1,0 +1,44 @@
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.privacy {
+  &__body {
+    padding-bottom: vars.rem(40);
+    text-align: start;
+  }
+
+  &__heading {
+    margin-bottom: vars.rem(8);
+    color: vars.color(primary);
+    font-family: vars.font(subtitle);
+    font-size: vars.rem(20);
+    line-height: vars.rem(28);
+    font-weight: 700;
+
+    @include mix.respond-to(lg) {
+      font-size: vars.rem(24);
+      line-height: vars.rem(32);
+    }
+  }
+
+  &__rights {
+    margin-top: vars.rem(16);
+    list-style: disc inside;
+    text-align: left;
+  }
+
+  &__contact {
+    margin-top: vars.rem(16);
+  }
+
+  &__email {
+    color: vars.color(secondary);
+    font-family: vars.font(links);
+    text-decoration-line: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.color(tertiary);
+    }
+  }
+}

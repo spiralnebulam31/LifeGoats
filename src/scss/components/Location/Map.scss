@@ -1,0 +1,54 @@
+@use "../../globals/variables" as vars;
+
+.map {
+  overflow: hidden;
+  border-radius: vars.radius(2xl);
+  background: vars.color(gray-100);
+  filter: vars.drop-shadow(xl);
+
+  &--loading {
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: vars.color(gray-200);
+  }
+
+  &__loading-text {
+    color: vars.color(gray-500);
+  }
+
+  &__info {
+    padding: vars.rem(16);
+    background: vars.color(white);
+  }
+
+  &__locations > * + * {
+    margin-top: vars.rem(8);
+  }
+
+  &__location {
+    padding-left: vars.rem(12);
+  }
+
+  &__location-name {
+    color: vars.color(primary);
+    font-weight: 700;
+    font-family: vars.font(subtitle);
+  }
+
+  &__coordinates,
+  &__description {
+    font-family: vars.font(body);
+    font-size: vars.rem(14);
+    line-height: vars.rem(20);
+  }
+
+  &__coordinates {
+    color: vars.color(gray-600);
+  }
+
+  &__description {
+    margin-top: vars.rem(4);
+  }
+}

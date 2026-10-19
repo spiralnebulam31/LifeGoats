@@ -11,6 +11,7 @@ import { upcomingEvents } from "@/src/assets/index.js";
 import Link from "next/link";
 import Image from "next/image";
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/Upcoming.scss";
 
 const MotionImage = motion.create(Image);
 
@@ -21,28 +22,28 @@ const Upcoming = () => {
   };
 
   return (
-    <motion.div className="bg-background relative top-[50px] mb-10 z-20 w-[80%] lg:w-[70%] text-center mx-auto">
+    <motion.div className="upcoming">
         <MotionImage
           src={upcomingEvents}
           alt="hikers on Muses Plateau"
-          className="flex mx-auto rounded-2xl shadow-lg w-[90%] md:w-[70%] lg:w-[60%] xl:[40%] h-auto"
+          className="upcoming__image"
           variants={floatFromLeftContact}
           initial="initial"
           animate="animate"
         />
         <motion.div
-          className="bg-background flex flex-col justify-center text-center mx-auto pt-10 pb-8 font-body lg:text-lg text-md w-[80%] lg:w-[70%]"
+          className="upcoming__content"
           variants={floatFromRightContact}
           initial="initial"
           animate="animate"
         >
           <motion.p
-            className="font-bold mt-0 pb-4 text-center"
+            className="upcoming__text"
           >
             More retreats and events coming soon. Stay tuned!
           </motion.p>
           <motion.div
-            className="w-[90%] mx-auto"
+            className="upcoming__prints"
             variants={fadeIn}
             initial="initial"
             whileInView="animate" 
@@ -51,17 +52,16 @@ viewport={{ once: true }}
             <GoatPrintsWalking />
           </motion.div>
           <motion.p
-            className="font-bold mt-2 pb-4 text-center"
+            className="upcoming__text upcoming__text--note"
           >
-            If you have any suggestions or ideas for future events, don&apos;t hesitate to send us a <span className="line-through font-links">goat</span> note!
+            If you have any suggestions or ideas for future events, don&apos;t hesitate to send us a <span className="upcoming__strike">goat</span> note!
           </motion.p>
           <motion.div
-            className="flex justify-center items-center"
+            className="upcoming__cta-row"
           >
             <Link
               href="/contact"
-              className="bg-primary text-background font-links font-bold uppercase tracking-wider py-2 mt-3 px-4 rounded-lg shadow-lg
-          hover:bg-tertiary hover:text-earth"
+              className="upcoming__cta"
             >
               Contact Us
             </Link>

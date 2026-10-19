@@ -6,20 +6,19 @@ import {
 } from "../../../motion/home-sections";
 import { pastEventsData } from "../../../data/past-events";
 import EventCard from "../../components/Events/EventCard";
+import "@/src/scss/pages/events/EventList.scss";
 
 const PastEvents = () => {
 
   return (
     <motion.div
-      className="bg-background relative bg-cover w-full h-auto min-h-screen overflow-x-hidden p-2 z-10 mb-[180px] flex flex-col justify-center text-center mx-auto"
+      className="past-events"
     >
       <motion.div
-        className="py-auto text-center w-[80%] lg:w-[90%] mx-auto
-        mt-2 mb-5 z-10 overflow-hidden"
+        className="past-events__header"
       >
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-20"
+          className="past-events__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -30,12 +29,12 @@ const PastEvents = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-center items-center w-full">
-        <motion.div className={`grid gap-8 md:gap-20 mb-2 md:mb-4 max-w-6xl w-full px-4 ${pastEventsData.length === 1 ? 'grid-cols-1 justify-items-center' : 'grid-cols-1 md:grid-cols-2'}`}>
+      <motion.div className="event-list event-list--centered">
+        <motion.div className={`event-list__grid event-list__grid--wide ${pastEventsData.length === 1 ? 'event-list__grid--single' : 'event-list__grid--double'}`}>
           {pastEventsData.map((event, index) => (
             <motion.div
               key={index}
-              className="relative z-10"
+              className="event-list__item"
               initial={{
                 opacity: 0,
                 translateX: index % 2 === 0 ? -100 : 100,

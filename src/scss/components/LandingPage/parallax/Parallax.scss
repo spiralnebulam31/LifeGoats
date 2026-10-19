@@ -1,0 +1,59 @@
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+.parallax {
+  position: relative;
+  inset: 0;
+  z-index: vars.z-index(raised);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: vars.rem(40);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__inner {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin-inline: auto;
+  }
+
+  &__quote {
+    width: 90%;
+    color: vars.color(background);
+    font-family: vars.font(body);
+    font-weight: 700;
+    font-size: vars.rem(30);
+    line-height: vars.rem(32);
+    text-align: center;
+    filter: vars.drop-shadow(lg);
+
+    @include mix.respond-to(md) {
+      width: 75%;
+      font-size: vars.rem(36);
+      line-height: vars.rem(40);
+    }
+
+    @include mix.respond-to(lg) {
+      width: 60%;
+      font-size: vars.rem(48);
+      line-height: 1;
+    }
+
+    @include mix.respond-to(xl) {
+      font-size: vars.rem(60);
+    }
+  }
+}

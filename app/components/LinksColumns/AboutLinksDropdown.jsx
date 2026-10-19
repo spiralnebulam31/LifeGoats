@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { downArrow, downArrowHover } from "@/src/assets";
 import { useState } from "react";
 import PropTypes from 'prop-types';
+import "@/src/scss/components/LinksColumns/LinksDropdown.scss";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -20,21 +21,21 @@ const AboutLinksDropdown = ({ active, setActive, handleLinkClick, aboutLinks }) 
     };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="links-dropdown">
       <div>
         <button
           type="button"
-          className={`text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7 ${isHovered ? 'hovered' : ''}`}
+          className="links-dropdown__toggle"
           onClick={() => setActive(active === "About" ? null : "About")}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="flex flex-row items-center justify-center gap-2">
-            <p className={`${isHovered ? 'hovered' : ''}`}>About</p>
+          <div className="links-dropdown__label">
+            <p>About</p>
             <Image
               src={isHovered ? downArrowHover : downArrow}
               alt="down arrow"
-              className={`h-[20px] w-auto ${isHovered ? 'hovered' : ''}`}
+              className="links-dropdown__arrow"
               width={20}
               height={20}
             />
@@ -47,14 +48,14 @@ const AboutLinksDropdown = ({ active, setActive, handleLinkClick, aboutLinks }) 
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.2 }}
-          className="origin-top-right absolute right-0 mt-2 w-56 rounded-md drop-shadow-lg bg-background ring-1 ring-primary ring-opacity-10 focus:outline-none"
+          className="links-dropdown__panel"
         >
-          <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+          <div className="links-dropdown__list" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {aboutLinks.map((link) => (
               <Link 
                 key={link.id}
                 href={link.link}
-                className="bg-background block px-4 py-2 text-lg font-links font-bold text-primary hover:bg-secondary hover:text-background"
+                className="links-dropdown__link"
                 onClick={() => {
                   handleLinkClick(link);
                 }}

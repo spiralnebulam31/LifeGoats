@@ -1,0 +1,52 @@
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.needed-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin-inline: auto;
+  padding-top: vars.rem(40);
+  padding-bottom: vars.rem(32);
+  background: vars.color(background);
+  font-family: vars.font(body);
+  text-align: center;
+
+  @include mix.respond-to(lg) {
+    font-size: vars.rem(18);
+    line-height: vars.rem(28);
+  }
+
+  &__highlight {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    background: vars.color(tertiary-light);
+
+    &--stacked {
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    margin-bottom: vars.rem(8);
+    color: vars.color(tertiary);
+    font-family: vars.font(subtitle);
+    font-size: vars.rem(20);
+    line-height: vars.rem(28);
+    font-weight: 700;
+  }
+
+  &__list {
+    text-align: left;
+  }
+
+  &__bold {
+    font-weight: 700;
+  }
+
+  &__note {
+    font-style: italic;
+  }
+}

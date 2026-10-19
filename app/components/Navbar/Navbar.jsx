@@ -9,6 +9,7 @@ import { aboutLinks, eventsLinks } from "../../../data/navLinks";
 import { lifeGoatsLogo, menuMountain, menuClose } from "@/src/assets";
 import MobileMenu from "./MobileMenu";
 import { AboutLinksDropdown, EventsLinksDropdown } from "../LinksColumns";
+import "@/src/scss/components/Navbar/Navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -54,13 +55,13 @@ const Navbar = () => {
       initial={{ y: 0 }}
       animate={{ y: showNavbar ? 0 : "-100%" }}
       transition={{ duration: 0.3 }}
-      className="fixed w-full top-0 z-50 bg-background shadow-xl px-6 py-2 h-[75px]"
+      className="navbar"
     >
-      <div className="flex w-full mx-auto justify-between gap-20">
-        <div className="flex justify-start">
-          <Link 
+      <div className="navbar__inner">
+        <div className="navbar__brand">
+          <Link
             href="/"
-            className="flex flex-row items-center justify-start gap-2"
+            className="navbar__home-link"
             onClick={() => {
               setActive("");
               window.scrollTo(0, 0);
@@ -69,34 +70,32 @@ const Navbar = () => {
             <Image
               src={lifeGoatsLogo}
               alt="logo"
-              className="h-[65px] w-auto cursor-pointer object-contain pb-1"
+              className="navbar__logo"
               width={85}
               height={85}
             />
-            <p className="text-primary text-[26px] font-title cursor-pointer lg:block hidden">
+            <p className="navbar__title">
               Life Goats
             </p>
           </Link>
         </div>
-        <div className="flex items-center justify-end">
-          <div className="hidden lg:flex flex-row items-center justify-end gap-10">
+        <div className="navbar__menu">
+          <div className="navbar__links">
             <AboutLinksDropdown
               active={active}
               setActive={setActive}
               handleLinkClick={handleLinkClick}
               aboutLinks={aboutLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
             <EventsLinksDropdown
               active={active}
               setActive={setActive}
               handleLinkClick={handleLinkClick}
               eventsLinks={eventsLinks}
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
             />
-            <Link 
+            <Link
               href="/testimonials"
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              className="navbar__link"
               onClick={() => {
                 setActive("Testimonials");
                 window.scrollTo(0, 0);
@@ -106,7 +105,7 @@ const Navbar = () => {
             </Link>
             <Link 
               href="/contact"
-              className="text-primary hover:text-tertiary text-[20px] font-bold font-links hover:text-[24px] cursor-pointer leading-7"
+              className="navbar__link"
               onClick={() => {
                 setActive("Contact");
                 window.scrollTo(0, 0);
@@ -115,11 +114,11 @@ const Navbar = () => {
               Contact
             </Link>
           </div>
-          <div className="lg:hidden flex flex-1 justify-end items-center pb-1">
+          <div className="navbar__toggle">
             <Image
               src={mobile ? menuClose : menuMountain}
               alt="menu"
-              className="h-[60px] w-auto cursor-pointer object-contain z-30"
+              className="navbar__toggle-icon"
               onClick={() => setMobile(!mobile)}
               width={85}
               height={85}

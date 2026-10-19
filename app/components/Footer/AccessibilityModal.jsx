@@ -1,6 +1,7 @@
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Footer/FooterModal.scss";
 
 const AccessibilityModal = ({ isOpen, onClose }) => {
 
@@ -26,12 +27,12 @@ const AccessibilityModal = ({ isOpen, onClose }) => {
     }}
     aria-labelledby="accessibility-statement-modal"
     >
-      <div className="flex flex-col items-center justify-center mx-auto p-4">
-        <h2 className="text-earth text-2xl font-bold mb-4 font-subtitle">Accessibility Statement</h2>
-        <p className="text-primary text-lg mb-4 font-body">
+      <div className="footer-modal">
+        <h2 className="footer-modal__title">Accessibility Statement</h2>
+        <p className="footer-modal__text">
         This website is built to be accessible to as many people as
                     possible. If you have any accessibility requirements, please
-                    contact the developer Anastasia at <a href="mailto: anastasiaadamoudi@gmail.com" className="text-secondary font-links hover:text-tertiary">anastasiaadamoudi@gmail.com</a> and she will do her best to accommodate them.
+                    contact the developer Anastasia at <a href="mailto: anastasiaadamoudi@gmail.com" className="footer-modal__email">anastasiaadamoudi@gmail.com</a> and she will do her best to accommodate them.
         </p>
       </div>
     </Modal>
