@@ -1,0 +1,21 @@
+/**
+ * _layout.scss — Shared layout mixins.
+ */
+@use "../variables" as vars;
+@use "./breakpoints" as bp;
+
+// The centered wrapper around a section's pretitle + title. Top padding and
+// bottom margin vary per section.
+@mixin section-header($padding-top: vars.rem(32), $margin-bottom: vars.rem(20)) {
+  z-index: vars.z-index(raised);
+  width: 80%;
+  margin-inline: auto;
+  margin-bottom: $margin-bottom;
+  padding-top: $padding-top;
+  overflow: hidden;
+  text-align: center;
+
+  @include bp.respond-to(lg) {
+    width: 90%;
+  }
+}

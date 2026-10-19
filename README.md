@@ -79,6 +79,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 **Collaboration:** Trello
 
-**Development:** Next.js, React.js, TailwindCSS, Framer Motion, Chart.js
+**Development:** Next.js, React.js, SCSS, Framer Motion, Chart.js
 
 

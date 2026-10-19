@@ -2,24 +2,25 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/team/Team.scss";
 
 const TeamBubble = ({ alt, image, title, responsibilty }) => {
   return (
     <motion.div
-      className="z-0 m-3 overflow-hidden"
+      className="team-bubble"
       >
         <Image
           src={image}
           alt={alt}
-          className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          className="event-team__avatar"
           width={300}
           height={300}
         />
-        <div className="px-6 pt-3 pb-1 flex flex-col mx-auto w-[150px] h-auto">
-          <h2 className="text-tertiary font-subtitle text-center text-[18px] font-bold max-w-6xl py-0">
+        <div className="team-bubble__body">
+          <h2 className="team-bubble__title">
             {title}
           </h2>
-          <p className="text-primary font-body text-center text-[14px] md:text-[16px] max-w-6xl py-0">
+          <p className="team-bubble__role">
             {responsibilty}
           </p>
         </div>

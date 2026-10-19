@@ -1,0 +1,97 @@
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.upcoming {
+  position: relative;
+  top: vars.rem(50);
+  z-index: vars.z-index(above);
+  width: 80%;
+  margin: 0 auto vars.rem(40);
+  background: vars.color(background);
+  text-align: center;
+
+  @include mix.respond-to(lg) {
+    width: 70%;
+  }
+
+  &__image {
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin-inline: auto;
+    border-radius: vars.radius(2xl);
+    box-shadow: vars.shadow(lg);
+
+    @include mix.respond-to(md) {
+      width: 70%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 60%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-inline: auto;
+    padding-top: vars.rem(40);
+    padding-bottom: vars.rem(32);
+    background: vars.color(background);
+    font-family: vars.font(body);
+    text-align: center;
+
+    @include mix.respond-to(lg) {
+      width: 70%;
+      font-size: vars.rem(18);
+      line-height: vars.rem(28);
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+    padding-bottom: vars.rem(16);
+    font-weight: 700;
+    text-align: center;
+
+    &--note {
+      margin-top: vars.rem(8);
+    }
+  }
+
+  &__strike {
+    font-family: vars.font(links);
+    text-decoration-line: line-through;
+  }
+
+  &__prints {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  &__cta-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cta {
+    margin-top: vars.rem(12);
+    padding: vars.rem(8) vars.rem(16);
+    border-radius: vars.radius(lg);
+    background-color: vars.color(primary);
+    color: vars.color(background);
+    font-family: vars.font(links);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: vars.shadow(lg);
+
+    &:hover {
+      background-color: vars.color(tertiary);
+      color: vars.color(earth);
+    }
+  }
+}

@@ -1,0 +1,82 @@
+/**
+ * Shared by the Past Events and Upcoming Events listing pages.
+ */
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.past-events {
+  position: relative;
+  z-index: vars.z-index(raised);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: 0 auto vars.rem(180);
+  overflow-x: hidden;
+  padding: vars.rem(8);
+  background-color: vars.color(background);
+  background-size: cover;
+  text-align: center;
+
+  &__header {
+    @include mix.section-header($padding-top: 0);
+    margin-top: vars.rem(8);
+  }
+
+  &__title {
+    @include mix.section-title-text;
+    margin-top: vars.rem(80);
+    padding-bottom: vars.rem(4);
+
+    @include mix.respond-to(md) {
+      padding-bottom: vars.rem(16);
+    }
+  }
+}
+
+.event-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  &--centered {
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: vars.rem(32);
+    margin-bottom: vars.rem(8);
+
+    @include mix.respond-to(md) {
+      gap: vars.rem(80);
+      margin-bottom: vars.rem(16);
+    }
+
+    &--wide {
+      width: 100%;
+      max-width: vars.rem(1152);
+      padding-inline: vars.rem(16);
+    }
+
+    &--single {
+      justify-items: center;
+    }
+
+    &--double {
+      @include mix.respond-to(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: vars.z-index(raised);
+  }
+}

@@ -8,21 +8,19 @@ import {
 } from "../../../../motion/home-sections";
 import { mtOlympusOct2024TeamData } from "../../../../data/team";
 import TeamBubble from "./TeamBubble";
+import "@/src/scss/components/Events/team/Team.scss";
 import Image from "next/image";
 
 const TheTeamOct2024 = () => {
   return (
     <section
-      className="bg-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10 mb-[180px]"
+      className="event-team"
     >
       <motion.div
-        className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-8 mb-5 z-10 overflow-hidden"
+        className="event-team__header"
       >
         <motion.p
-          className="md:text-[18px] text-[14px] text-secondary font-subtitle
-          font-bold uppercase tracking-wider"
+          className="event-team__pretitle"
           variants={floatFromDownPreTitle}
           initial="initial"
           animate="animate"
@@ -31,8 +29,7 @@ const TheTeamOct2024 = () => {
           Meet
         </motion.p>
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-0"
+          className="event-team__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -43,12 +40,12 @@ const TheTeamOct2024 = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-evenly items-center mx-auto">
-        <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-1 md:gap-4 mb-1 md:mb-3">
+      <motion.div className="event-team__row">
+        <motion.div className="event-team__grid event-team__grid--three">
           {mtOlympusOct2024TeamData.slice(0, 3).map((member, index) => (
             <motion.div
               key={index}
-              className="relative z-10"
+              className="event-team__item"
               initial={{
                 opacity: 0,
                 translateX: index % 2 === 0 ? -100 : 100,
@@ -71,16 +68,15 @@ const TheTeamOct2024 = () => {
       </motion.div>
 
       <motion.div
-        className="flex flex-row justify-center text-center mx-auto
-          text-primary font-body text-[16px] py-5 md:mt-2 w-[90%] md:w-[70%] lg:w-[50%]"
+        className="event-team__thanks event-team__thanks--spaced"
         variants={floatFromLeftContact}
         initial="initial"
         whileInView="animate" 
 viewport={{ once: true }}
       >
-        <motion.p className="my-auto mr-4">
+        <motion.p className="event-team__thanks-text event-team__thanks-text--before-image">
           And special thanks to our photographer{" "}
-          <span className="text-tertiary font-subtitle text-center text-[18px] font-bold">
+          <span className="event-team__name">
             {mtOlympusOct2024TeamData[3].title}{" "}
           </span>
         </motion.p>
@@ -88,7 +84,7 @@ viewport={{ once: true }}
         <Image
           src={mtOlympusOct2024TeamData[3].image}
           alt={mtOlympusOct2024TeamData[3].alt}
-          className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          className="event-team__avatar"
           width={300}
           height={300}
         />

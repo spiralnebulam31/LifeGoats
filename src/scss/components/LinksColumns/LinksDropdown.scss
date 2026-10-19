@@ -1,0 +1,66 @@
+/**
+ * Shared by every *LinksDropdown.jsx — they all render the same toggle
+ * button + dropdown panel markup, differing only in their label and links.
+ */
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.links-dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+
+  &__toggle {
+    @include mix.nav-link-text;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: vars.rem(8);
+  }
+
+  &__arrow {
+    height: vars.rem(20);
+    width: auto;
+  }
+
+  &__panel {
+    position: absolute;
+    right: 0;
+    width: vars.rem(224);
+    margin-top: vars.rem(8);
+    transform-origin: top right;
+    border-radius: vars.radius(md);
+    background: vars.color(background);
+    filter: vars.drop-shadow(lg);
+    box-shadow: 0 0 0 1px color-mix(in srgb, vars.color(primary) 10%, transparent);
+
+    &:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+  }
+
+  &__list {
+    padding-block: vars.rem(4);
+  }
+
+  &__link {
+    display: block;
+    padding: vars.rem(8) vars.rem(16);
+    background: vars.color(background);
+    color: vars.color(primary);
+    font-size: vars.rem(18);
+    line-height: vars.rem(28);
+    font-weight: 700;
+    font-family: vars.font(links);
+
+    &:hover {
+      background: vars.color(secondary);
+      color: vars.color(background);
+    }
+  }
+}

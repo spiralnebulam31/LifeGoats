@@ -2,6 +2,7 @@
 
 import { useMediaQuery } from "react-responsive";
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Location/Map.scss";
 
 const SimpleMapComponent = ({ locationData, zoom, width, widthMd, widthLg, widthXl, height, heightMd, heightLg, heightXl }) => {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 768px)" });
@@ -38,7 +39,7 @@ const SimpleMapComponent = ({ locationData, zoom, width, widthMd, widthLg, width
   const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${centerLng-0.1},${centerLat-0.1},${centerLng+0.1},${centerLat+0.1}&layer=mapnik&marker=${centerLat},${centerLng}`;
 
   return (
-    <div className="rounded-2xl drop-shadow-xl overflow-hidden bg-gray-100">
+    <div className="map">
       <iframe
         src={mapSrc}
         width="100%"
@@ -54,18 +55,18 @@ const SimpleMapComponent = ({ locationData, zoom, width, widthMd, widthLg, width
       />
       
       {/* Location info below map */}
-      <div className="p-4 bg-white">
-        <div className="space-y-2">
+      <div className="map__info">
+        <div className="map__locations">
           {locationData.map((location) => (
-            <div key={location.id} className="pl-3">
-              <h4 className="font-bold text-md font-subtitle text-primary">
+            <div key={location.id} className="map__location">
+              <h4 className="map__location-name">
                 {location.name}
               </h4>
-              <p className="font-body text-sm text-gray-600">
+              <p className="map__coordinates">
                 Coordinates: {location.lat}, {location.lng}
               </p>
               {!isSmallScreen && location.description && (
-                <p className="font-body text-sm mt-1">{location.description}</p>
+                <p className="map__description">{location.description}</p>
               )}
             </div>
           ))}

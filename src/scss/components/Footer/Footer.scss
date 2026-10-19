@@ -1,0 +1,109 @@
+@use "../../globals/variables" as vars;
+
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: vars.rem(180);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: vars.color(primary);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: vars.rem(12);
+    margin: auto;
+    vertical-align: middle;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    gap: vars.rem(8);
+  }
+
+  &__copyright {
+    color: vars.color(background);
+    font-family: vars.font(body);
+    font-weight: 700;
+    font-size: vars.rem(18);
+    line-height: vars.rem(28);
+  }
+
+  &__copyright-symbol {
+    margin-inline: vars.rem(8);
+    color: vars.color(secondary);
+    font-family: vars.font(links);
+    font-weight: 700;
+    font-size: vars.rem(18);
+    line-height: vars.rem(28);
+  }
+
+  &__home-link {
+    color: vars.color(background);
+    font-family: vars.font(links);
+    font-weight: 700;
+    font-size: vars.rem(18);
+    line-height: vars.rem(28);
+    text-decoration-line: underline;
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: vars.color(secondary);
+    }
+  }
+
+  &__link {
+    color: vars.color(tertiary);
+    font-family: vars.font(links);
+    font-weight: 700;
+    text-decoration-line: none;
+
+    &:hover {
+      color: vars.color(secondary);
+    }
+  }
+
+  &__separator {
+    margin-inline: vars.rem(8);
+    color: vars.color(secondary);
+    font-family: vars.font(links);
+    font-weight: 700;
+  }
+
+  &__newsletter {
+    padding: vars.rem(8) vars.rem(16);
+    border-radius: vars.radius(lg);
+    background-color: vars.color(secondary);
+    color: vars.color(background);
+    font-family: vars.font(links);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration-line: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: vars.color(tertiary);
+      color: vars.color(earth);
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { lifeGoatsLogo } from '@/src/assets';
 import Image from 'next/image';
 import propTypes from 'prop-types';
+import "@/src/scss/components/Loaders/PreLoaderWrapper.scss";
 
 export default function PreLoaderWrapper({ children }) {
   const [preloader, setPreloader] = useState(true);
@@ -28,7 +29,7 @@ export default function PreLoaderWrapper({ children }) {
   return (
     <>
       {preloader ? (
-        <div className="preloader flex flex-col items-center justify-center h-screen w-screen fixed top-0 left-0 bg-background z-50">
+        <div className="preloader">
           <Image 
             src={lifeGoatsLogo} 
             alt="logo"
@@ -36,7 +37,7 @@ export default function PreLoaderWrapper({ children }) {
             height={100}
             priority
             />
-          <h1 className="mt-2">Loading...</h1>
+          <h1 className="preloader__text">Loading...</h1>
         </div>
       ) : (
         children

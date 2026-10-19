@@ -1,0 +1,96 @@
+/**
+ * Shared by the subscribe page and its confirmed/successful result pages.
+ */
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.subscription {
+  &__form-wrap {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-inline: auto;
+    padding-top: vars.rem(32);
+    padding-bottom: vars.rem(16);
+
+    @include mix.respond-to(lg) {
+      width: 70%;
+    }
+  }
+
+  &__form-target {
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-inline: auto;
+    padding-top: vars.rem(40);
+    padding-bottom: vars.rem(64);
+    font-family: vars.font(body);
+
+    @include mix.respond-to(lg) {
+      flex-direction: row;
+      align-items: flex-start;
+      width: 70%;
+      font-size: vars.rem(18);
+      line-height: vars.rem(28);
+    }
+  }
+
+  &__image-wrap {
+    flex-shrink: 0;
+    width: 100%;
+    margin-bottom: vars.rem(32);
+
+    @include mix.respond-to(sm) {
+      width: 90%;
+    }
+
+    @include mix.respond-to(md) {
+      width: 70%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 50%;
+      margin-bottom: 0;
+      margin-right: vars.rem(32);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: vars.radius(lg);
+    box-shadow: vars.shadow(lg);
+  }
+
+  &__message {
+    width: 100%;
+    text-align: center;
+
+    @include mix.respond-to(sm) {
+      width: 90%;
+    }
+
+    @include mix.respond-to(md) {
+      width: 70%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 40%;
+    }
+  }
+
+  &__message-text {
+    margin-bottom: vars.rem(16);
+    color: vars.color(primary);
+    font-family: vars.font(body);
+  }
+}

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import "@/src/scss/pages/Landing.scss";
 import {
   Hero,
   Intro,
@@ -24,7 +25,7 @@ const LandingPage = ({
   isSmallScreen,
 }) => {
   return (
-    <div className="bg-cover bg-n-repeat bg-center overflow-hidden">
+    <div className="landing">
       <Hero isSmallScreen={isSmallScreen} />
       <Intro isSmallScreen={isSmallScreen} />
       {/* <Testimonials isSmallScreen={isSmallScreen} /> */}

@@ -1,6 +1,7 @@
 import { Line } from 'react-chartjs-2';
 import { Chart, LinearScale, CategoryScale, Title, Tooltip, PointElement, LineElement, Filler } from 'chart.js';
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/altimeter/Altimeter.scss";
 
 Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineElement, Filler);
 
@@ -111,9 +112,9 @@ Chart.register(LinearScale, CategoryScale, Title, Tooltip, PointElement, LineEle
   };
   
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="altimeter-graph">
       {/* Graph */}
-      <div className="w-full h-[350px] pb-5">
+      <div className="altimeter-graph__chart">
         <Line data={data} options={options} />
       </div>
       

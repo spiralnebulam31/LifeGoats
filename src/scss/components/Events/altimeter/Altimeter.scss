@@ -1,0 +1,81 @@
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+.altimeter {
+  position: relative;
+  inset: 0;
+  z-index: vars.z-index(raised);
+  width: 100vw;
+  height: auto;
+  min-height: 100%;
+  margin-inline: auto;
+  overflow: hidden;
+  padding-block: vars.rem(8);
+  background-color: vars.color(background);
+  background-size: cover;
+
+  &__header {
+    @include mix.section-header($padding-top: vars.rem(56));
+
+    @include mix.respond-to(lg) {
+      width: 100%;
+    }
+  }
+
+  &__pretitle {
+    @include mix.section-pretitle-text;
+    color: vars.color(secondary);
+  }
+
+  &__title {
+    @include mix.section-title-text;
+    padding-bottom: vars.rem(8);
+  }
+
+  &__graphs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: vars.rem(32);
+    width: 90%;
+    margin-inline: auto;
+    padding-top: vars.rem(20);
+    padding-bottom: vars.rem(40);
+    color: vars.color(primary);
+    font-family: vars.font(body);
+    font-size: vars.rem(14);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(16);
+    }
+
+    @include mix.respond-to(lg) {
+      flex-direction: row;
+      gap: vars.rem(48);
+      width: 85%;
+    }
+  }
+
+  &__graph-column {
+    width: 100%;
+
+    @include mix.respond-to(lg) {
+      width: 48%;
+    }
+  }
+}
+
+.altimeter-graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__chart {
+    width: 100%;
+    height: vars.rem(350);
+    padding-bottom: vars.rem(20);
+  }
+}

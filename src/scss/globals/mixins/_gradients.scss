@@ -1,0 +1,18 @@
+/**
+ * _gradients.scss — Shared gradient patterns.
+ */
+@use "../variables" as vars;
+
+// The blue "sky" gradient sections fade through, either from the sky down
+// into the page background or the reverse ($from: background).
+// Usage: @include mix.sky-gradient;
+//        @include mix.sky-gradient($from: background);
+@mixin sky-gradient($from: sky) {
+  @if $from == sky {
+    background-image: linear-gradient(to bottom, vars.color(blue-400), vars.color(blue-100), vars.color(background));
+  } @else if $from == background {
+    background-image: linear-gradient(to bottom, vars.color(background), vars.color(blue-100), vars.color(blue-400));
+  } @else {
+    @error "sky-gradient: unknown $from '#{$from}'. Valid: sky, background.";
+  }
+}

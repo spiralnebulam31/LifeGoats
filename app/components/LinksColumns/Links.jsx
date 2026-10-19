@@ -3,16 +3,17 @@
 import { motion } from "framer-motion";
 
 import PropTypes from 'prop-types';
+import "@/src/scss/components/LinksColumns/Links.scss";
 
 const Links = ({ links, onClick }) => (
   <motion.div
-    className="list-none font-links font-bold flex flex-col justify-center text-center items-center gap-6 px-16 w-[30%]"
+    className="links"
   >
     {links.map((link) => (
       <motion.div key={link.id}>
         <li
           key={link.id}
-          className="hover:text-tertiary text-[20px] hover:text-[24px] font-medium cursor-pointer leading-7 w-[86px]"
+          className="links__item"
           onClick={() => {
             onClick();
             window.scrollTo(0, 0);

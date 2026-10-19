@@ -6,6 +6,7 @@ import { mobileNav, linkReveal, listItem } from "../../../motion/motion";
 import Link from "next/link";  
 
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Navbar/MobileMenu.scss";
 
 const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -13,14 +14,14 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
 
   return (
     <motion.div
-      className="flex lg:hidden fixed right-0 top-0 bottom-0 w-[70%] h-screen mx-0 my-0 z-10 flex-col items-end gap-60 bg-background"
+      className="mobile-menu"
       variants={mobileNav}
       initial="initial"
       animate="animate"
       exit="initial"
     >
       <motion.div
-        className="list-none font-links font-bold flex flex-col justify-center text-center items-center gap-4 bg-background px-16 w-[90%] h-screen"
+        className="mobile-menu__panel"
         variants={linkReveal}
         initial="initial"
         animate="animate"
@@ -28,7 +29,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
 
         {/* About Section */}
         <h2
-          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
+          className="mobile-menu__heading"
           onClick={() => setIsAboutOpen(!isAboutOpen)}
         >
           About
@@ -44,7 +45,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
                 open: { opacity: 1, height: "auto" },
                 closed: { opacity: 0, height: 0 },
               }}
-              className="flex flex-col gap-3 pb-4"
+              className="mobile-menu__sublinks"
             >
               {aboutLinks.map((link) => (
                 <motion.div key={link.id} variants={listItem}>
@@ -57,7 +58,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
 
         {/* Events Section */}
         <h2
-          className="text-primary text-2xl font-bold mb-1 font-subtitle cursor-pointer hover:text-tertiary"
+          className="mobile-menu__heading"
           onClick={() => setIsEventsOpen(!isEventsOpen)}
         >
           Events
@@ -73,7 +74,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
                 open: { opacity: 1, height: "auto" },
                 closed: { opacity: 0, height: 0 },
               }}
-              className="flex flex-col gap-3 pb-4"
+              className="mobile-menu__sublinks"
             >
               {eventsLinks.map((link) => (
                 <motion.div key={link.id} variants={listItem}>
@@ -86,16 +87,16 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
 
         {/* Testimonials Section */}
         <motion.div
-          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+          className="mobile-menu__item"
           variants={linkReveal}
           initial="initial"
           animate="animate"
         >
           <Link
             href="/testimonials"
-            className={`${
-              active === "Testimonials" ? "text-secondary underline" : "text-primary"
-            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+            className={`mobile-menu__link ${
+              active === "Testimonials" ? "mobile-menu__link--active" : ""
+            }`}
             onClick={() => {
               setMobile(false);
               setActive("Testimonials");
@@ -108,16 +109,16 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
 
         {/* Contact Section */}
         <motion.div
-          className="flex flex-col justify-center items-center gap-4 px-16 w-[90%]"
+          className="mobile-menu__item"
           variants={linkReveal}
           initial="initial"
           animate="animate"
         >
           <Link
             href="/contact"
-            className={`${
-              active === "Contact" ? "text-secondary underline" : "text-primary"
-            } hover:text-tertiary text-2xl font-bold font-subtitle cursor-pointer`}
+            className={`mobile-menu__link ${
+              active === "Contact" ? "mobile-menu__link--active" : ""
+            }`}
             onClick={() => {
               setMobile(false);
               setActive("Contact");

@@ -3,16 +3,16 @@
 import { motion } from "framer-motion";
 
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Events/pricing/Pricing.scss";
 
 const AdditionalCostsCard = ({ index, description, details }) => {
   return (
             <motion.div
             key={index}
-            className="flex flex-col justify-center items-center mx-auto py-3 bg-background text-primary
-            font-body md:text-[16px] text-[14px] w-[90%]"
+            className="additional-costs-card"
             >
-            <p className="text-center text-bold text-primary text-lg">➤ {description}</p>
-            {details && <ul className="text-center text-bold text-primary text-lg">
+            <p className="additional-costs-card__text">➤ {description}</p>
+            {details && <ul className="additional-costs-card__text">
             {details.map((details, index) => (
             <li key={index}>
             ↪ {details}

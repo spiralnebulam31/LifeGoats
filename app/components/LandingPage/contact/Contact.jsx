@@ -22,6 +22,7 @@ import {
   instagramIconHover,
   transparentMountainBG2,
 } from "@/src/assets";
+import "@/src/scss/components/LandingPage/contact/Contact.scss";
 
 const Contact = ({
   phoneIsHovered,
@@ -66,14 +67,12 @@ const Contact = ({
   return (
     <section
       id="contact"
-      className="overflow-x-hidden overflow-hidden z-10 bg-gradient-to-b from-blue-400 via-blue-100 to-background
-    relative bg-cover w-full max-w-full h-full inset-0 mx-auto pb-14 sm:pb-20 md:pb-36 lg:pb-20 xl:pb-36 pt-6 mb-[180px]"
+      className="contact"
     >
       {/* Title */}
-      <motion.div className="text-center w-[80%] max-w-full lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
+      <motion.div className="contact__header">
         <motion.p
-          className="md:text-[18px] text-[14px] text-background font-subtitle
-          font-bold uppercase tracking-wider"
+          className="contact__pretitle"
           variants={floatFromDownPreTitle}
           initial="initial"
           whileInView="animate" 
@@ -82,8 +81,7 @@ const Contact = ({
           Ways to reach out
         </motion.p>
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-4 mt-0"
+          className="contact__title"
           style={{ textShadow: "3px 2px 3px rgba(0, 0, 0, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -95,25 +93,25 @@ const Contact = ({
       </motion.div>
       {/* End of title */}
 
-      <motion.div className="flex flex-col lg:flex-row justify-center lg:justify-between text-center gap-2 mt-1 mb-20 sm:mb-44 lg:mb-[60vh] max-w-full">
+      <motion.div className="contact__columns">
         {/* Contact Information */}
         <motion.div
-          className="flex flex-col justify-center text-center w-[80%] max-w-full lg:w-1/2 mx-auto items-center"
+          className="contact__info"
           variants={floatFromLeftContact}
           initial="initial"
           whileInView={isSmallScreen ? "initial" : "animate"}
           ref={leftSideRef}
         >
-          <div className="text-primary font-body text-lg max-w-full sm:px-16 px-6 pt-1 lg:pt-10 mb-5 leading-[30px]">
+          <div className="contact__intro">
             <p>
               For any questions or suggestions, feel free to reach out to us:
             </p>
           </div>
 
           {/* Contact Info Container */}
-          <div className="bg-background p-2 rounded-2xl drop-shadow-xl text-center w-[90%] max-w-full md:w-[60%] mx-auto lg:mx-16">
+          <div className="contact__card">
             {/* Contact Links */}
-            <div className="flex flex-col gap-5 pb-3 pt-5 font-links text-lg">
+            <div className="contact__links">
               <ContactLink
                 href="mailto:lifegoatsconnect@gmail.com"
                 onMouseEnter={handleEmailMouseEnter}
@@ -148,18 +146,18 @@ const Contact = ({
 
         {/* Contact Form */}
         <motion.div
-          className="flex flex-col text-center justify-center w-[80%] max-w-full lg:w-1/2 mx-auto mt-10 lg:mt-14"
+          className="contact__form-column"
           variants={floatFromRightContact}
           initial="initial"
           whileInView={isSmallScreen ? "initial" : "animate"}
           ref={rightSideRef}
         >
-          <p className="text-primary font-body text-lg max-w-lg xl:max-w-6xl pb-5 mx-auto">
+          <p className="contact__form-intro">
             Or send us a message below:
           </p>
 
-          <div className="flex justify-center text-center mx-auto w-full max-w-full lg:w-[60%]">
-            <form ref={form} onSubmit={sendEmail} className="w-full">
+          <div className="contact__form-wrap">
+            <form ref={form} onSubmit={sendEmail} className="contact__form">
               {/* Form Inputs */}
               <ContactInput
                 type="text"
@@ -178,10 +176,10 @@ const Contact = ({
               />
 
               {/* Submit Button */}
-              <div className="mb-1">
+              <div className="contact__submit-row">
                 <button
                   type="submit"
-                  className="bg-primary hover:bg-tertiary mt-1 font-links font-bold uppercase text-md md:text-xl text-background hover:text-earth py-2 px-4 rounded-2xl items-center mx-auto drop-shadow-xl"
+                  className="contact__submit"
                 >
                   Send
                 </button>
@@ -192,11 +190,11 @@ const Contact = ({
         {/* End of Contact Form */}
       </motion.div>
 
-      <div className="absolute right-0 left-0 bottom-0 z-20 bg-no-repeat w-full pointer-events-none">
+      <div className="contact__mountains">
         <Image
           src={transparentMountainBG2}
           alt="transparent mountain background"
-          className="w-screen h-auto"
+          className="contact__mountains-image"
         />
       </div>
     </section>
@@ -205,32 +203,32 @@ const Contact = ({
 
 // Additional components (helper components)
 const ContactLink = ({ href, onMouseEnter, onMouseLeave, icon, text }) => (
-  <div className="flex justify-center pb-3 w-full">
+  <div className="contact__link-row">
     <a
       href={href}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       target="_blank"
       rel="noreferrer"
-      className="text-secondary hover:text-tertiary inline-flex flex-row items-center text-md lg:text-xl tracking-wide gap-2"
+      className="contact__link"
       style={{textAlign: 'center'}}>
       <Image
         src={icon}
         alt={`${text} icon`}
-        className="w-[20px] h-[20px] object-contain flex-shrink-0 mr-2"
+        className="contact__link-icon"
       />
-      <span className="break-words text-center">{text}</span>
+      <span className="contact__link-text">{text}</span>
     </a>
   </div>
 );
 
 const ContactInput = ({ type, placeholder, name }) => (
-  <div className="mb-4 flex items-center bg-background drop-shadow-xl p-2 rounded-lg w-[80%] max-w-full md:w-[60%] lg:w-[90%] mx-auto lg:ml-[5%]">
+  <div className="contact__field">
     {type === "textarea" ? (
       <textarea
         name={name}
         placeholder={placeholder}
-        className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-primary font-body"
+        className="contact__input"
         required
       />
     ) : (
@@ -238,7 +236,7 @@ const ContactInput = ({ type, placeholder, name }) => (
         type={type}
         placeholder={placeholder}
         name={name}
-        className="border py-2 px-3 text-body bg-background w-full md:w-full rounded-lg text-primary font-body"
+        className="contact__input"
         required
       />
     )}

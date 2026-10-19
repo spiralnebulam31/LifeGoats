@@ -1,21 +1,22 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import "@/src/scss/components/LandingPage/core-values/CoreValues.scss";
 
 const CoreValuesCard = ({ alt, image, title, text }) => {
   return (
     <motion.div
-      className="w-[280px] h-[410px] lg:h-[480px] z-0 bg-background m-3 rounded-2xl shadow-lg overflow-hidden"
+      className="core-values-card"
       >
         <img
           src={image.src || image}
           alt={alt}
-          className="w-full object-cover h-40 rounded-t-xl"
+          className="core-values-card__image"
         />
-        <div className="px-6 pt-3 pb-1 flex flex-col mx-auto">
-          <h2 className="text-tertiary font-subtitle text-center text-[20px] font-bold max-w-6xl py-1">
+        <div className="core-values-card__body">
+          <h2 className="core-values-card__title">
             {title}
           </h2>
-          <p className="text-primary font-body text-center text-[14px] lg:text-[16px] max-w-6xl py-1 mb-2">
+          <p className="core-values-card__text">
             {text}
           </p>
         </div>

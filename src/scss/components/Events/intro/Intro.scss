@@ -1,0 +1,109 @@
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+.event-intro {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: vars.z-index(raised);
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow: hidden;
+  padding-top: vars.rem(8);
+  padding-bottom: vars.rem(48);
+  @include mix.sky-gradient($from: background);
+  background-size: cover;
+
+  &__header {
+    @include mix.section-header($padding-top: vars.rem(56));
+  }
+
+  &__pretitle {
+    @include mix.section-pretitle-text;
+    color: vars.color(secondary);
+  }
+
+  &__title {
+    @include mix.section-title-text;
+    padding-bottom: vars.rem(8);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: vars.rem(8) auto vars.rem(32);
+
+    @include mix.respond-to(lg) {
+      flex-direction: row;
+      margin-top: vars.rem(24);
+    }
+  }
+
+  &__image {
+    width: 75%;
+    height: auto;
+    border-radius: vars.radius(2xl);
+    filter: vars.drop-shadow(xl);
+
+    @include mix.respond-to(md) {
+      width: 80%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 55%;
+    }
+  }
+
+  &__card {
+    width: 85%;
+    margin-top: vars.rem(20);
+    padding-block: vars.rem(16);
+    border-radius: vars.radius(2xl);
+    background: vars.color(background);
+    filter: vars.drop-shadow(xl);
+    opacity: 0.85;
+
+    @include mix.respond-to(md) {
+      width: 80%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 35%;
+      margin-top: 0;
+      margin-left: vars.rem(-80);
+    }
+  }
+
+  &__paragraph-group {
+    width: 100%;
+    padding: vars.rem(8) vars.rem(24);
+    color: vars.color(primary);
+    font-family: vars.font(body);
+  }
+
+  &__paragraph {
+    font-size: vars.rem(14);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(15);
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__end-text {
+    font-size: vars.rem(16);
+    font-weight: 700;
+    text-align: center;
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(17);
+    }
+  }
+}

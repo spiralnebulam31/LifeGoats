@@ -8,7 +8,7 @@ import {
     floatFromDownPreTitle,
     floatFromDownMainTitle,
   } from "../../../../motion/home-sections";
-import "./Gallery.css";
+import "@/src/scss/components/Events/image-display/Gallery.scss";
 import Image from "next/image";
 import PropTypes from 'prop-types';
 
@@ -72,7 +72,7 @@ const Gallery = ( { title, mainTitle, imagesArray } ) => {
                         height={500}
                     />
                 </div>
-                <div className="text-center mt-2">
+                <div className="gallery__caption">
                     <p>{item.date} - {item.location}</p>
                 </div>
             </div>
@@ -106,10 +106,10 @@ const Gallery = ( { title, mainTitle, imagesArray } ) => {
     }
 
     return (
-        <section className="bg-background relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10">
-            <motion.div className="text-center w-[80%] lg:w-[90%] mx-auto pt-8 mb-5 z-10 overflow-hidden">
+        <section className="gallery">
+            <motion.div className="gallery__header">
                 <motion.p
-                    className="md:text-[18px] text-[14px] text-secondary font-subtitle font-bold uppercase tracking-wider"
+                    className="gallery__pretitle"
                     variants={floatFromDownPreTitle}
                     initial="initial"
                     animate="animate"
@@ -118,7 +118,7 @@ const Gallery = ( { title, mainTitle, imagesArray } ) => {
                     {title}
                 </motion.p>
                 <motion.h2
-                    className="text-earth font-bold font-title uppercase md:text-[55px] sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-0"
+                    className="gallery__title"
                     style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
                     variants={floatFromDownMainTitle}
                     initial="initial"
@@ -129,7 +129,7 @@ const Gallery = ( { title, mainTitle, imagesArray } ) => {
                 </motion.h2>
             </motion.div>
 
-            <motion.div className="flex justify-center items-center mx-auto">
+            <motion.div className="gallery__viewer">
                 {images.length === 0 ? (
                     <div>No images available</div>
                 ) : (

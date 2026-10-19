@@ -11,6 +11,7 @@ import { fadeIn } from "../../../../motion/motion";
 import { mtOlympusMay2024TeamData } from "../../../../data/team";
 import { theTeam } from "@/src/assets/the-team";
 import TeamBubble from "./TeamBubble";
+import "@/src/scss/components/Events/team/Team.scss";
 import Image from "next/image";
 
 const MotionImage = motion.create(Image);
@@ -18,16 +19,13 @@ const MotionImage = motion.create(Image);
 const TheTeam = () => {
   return (
     <section
-      className="bg-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10 mb-[180px]"
+      className="event-team"
     >
       <motion.div
-        className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-8 mb-5 z-10 overflow-hidden"
+        className="event-team__header"
       >
         <motion.p
-          className="md:text-[18px] text-[14px] text-secondary font-subtitle
-          font-bold uppercase tracking-wider"
+          className="event-team__pretitle"
           variants={floatFromDownPreTitle}
           initial="initial"
           animate="animate"
@@ -36,8 +34,7 @@ const TheTeam = () => {
           Meet
         </motion.p>
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-0"
+          className="event-team__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -48,12 +45,12 @@ const TheTeam = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-evenly items-center mx-auto">
-        <motion.div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-1 md:gap-4 mb-1 md:mb-3">
+      <motion.div className="event-team__row">
+        <motion.div className="event-team__grid event-team__grid--six">
           {mtOlympusMay2024TeamData.slice(0, 6).map((member, index) => (
             <motion.div
               key={index}
-              className="relative z-10"
+              className="event-team__item"
               initial={{
                 opacity: 0,
                 translateX: index % 2 === 0 ? -100 : 100,
@@ -75,11 +72,11 @@ const TheTeam = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-center items-center mx-auto py-5">
+      <motion.div className="event-team__photo-row">
         <MotionImage
           src={theTeam}
           alt="The Team"
-          className="w-[90%] md:w-[70%] lg:w-[50%] z-0 rounded-2xl shadow-lg"
+          className="event-team__photo"
           variants={fadeIn}
           initial="initial"
           whileInView="animate" 
@@ -90,16 +87,15 @@ viewport={{ once: true }}
       </motion.div>
 
       <motion.div
-        className="flex flex-row justify-center text-center mx-auto
-          text-primary font-body text-[16px] py-5 md:mt-2 w-[90%] md:w-[70%] lg:w-[50%]"
+        className="event-team__thanks event-team__thanks--spaced"
         variants={floatFromLeftContact}
         initial="initial"
         whileInView="animate" 
 viewport={{ once: true }}
       >
-        <motion.p className="my-auto mr-4">
+        <motion.p className="event-team__thanks-text event-team__thanks-text--before-image">
           Special thanks to our photographer{" "}
-          <span className="text-tertiary font-subtitle text-center text-[18px] font-bold">
+          <span className="event-team__name">
             {mtOlympusMay2024TeamData[6].title}{" "}
           </span>
         </motion.p>
@@ -107,15 +103,14 @@ viewport={{ once: true }}
         <Image
           src={mtOlympusMay2024TeamData[6].image}
           alt={mtOlympusMay2024TeamData[6].alt}
-          className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          className="event-team__avatar"
           width={300}
           height={300}
         />
       </motion.div>
 
       <motion.div
-        className="flex flex-row justify-center text-center mx-auto
-          text-primary font-body text-[16px] py-5 w-[90%] md:w-[70%] lg:w-[50%]"
+        className="event-team__thanks"
         variants={floatFromRightContact}
         initial="initial"
         whileInView="animate" 
@@ -124,30 +119,29 @@ viewport={{ once: true }}
         <Image
           src={mtOlympusMay2024TeamData[7].image}
           alt={mtOlympusMay2024TeamData[7].alt}
-          className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          className="event-team__avatar"
           width={300}
           height={300}
         />
 
-        <motion.p className="my-auto ml-4">
+        <motion.p className="event-team__thanks-text event-team__thanks-text--after-image">
           Special appearance by{" "}
-          <span className="text-tertiary font-subtitle text-center text-[18px] font-bold">
+          <span className="event-team__name">
             {mtOlympusMay2024TeamData[7].title}
           </span>
         </motion.p>
       </motion.div>
 
       <motion.div
-        className="flex flex-row justify-center text-center mx-auto
-          text-primary font-body text-[16px] py-5 w-[90%] md:w-[650%] lg:w-[50%]"
+        className="event-team__thanks event-team__thanks--wide"
         variants={floatFromLeftContact}
         initial="initial"
         whileInView="animate" 
 viewport={{ once: true }}
       >
-        <motion.p className="my-auto mr-4">
+        <motion.p className="event-team__thanks-text event-team__thanks-text--before-image">
           And the{" "}
-          <span className="text-tertiary font-subtitle text-center text-[18px] font-bold">
+          <span className="event-team__name">
             {mtOlympusMay2024TeamData[8].title}
           </span>{" "}
           as {mtOlympusMay2024TeamData[8].responsibilty}
@@ -156,7 +150,7 @@ viewport={{ once: true }}
         <Image
           src={mtOlympusMay2024TeamData[8].image}
           alt={mtOlympusMay2024TeamData[8].alt}
-          className="object-cover w-[150px] h-[150px] rounded-full shadow-lg"
+          className="event-team__avatar"
           width={300}
           height={300}
         />

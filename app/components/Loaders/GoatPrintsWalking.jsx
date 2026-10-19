@@ -15,22 +15,23 @@ import {
 const MotionImage = motion.create(Image);
 
 import PropTypes from 'prop-types';
+import "@/src/scss/components/Loaders/GoatPrintsWalking.scss";
 
 const GoatPrintsWalking = ({ isSmallScreen }) => {
 
     return (
 
-<motion.div className="w-[90%] flex flex-col justify-center items-center mx-auto"
+<motion.div className="goat-prints"
           variants={isSmallScreen ? stepsRepeatMobile : stepsRepeat}
           initial="initial"
           whileInView="animate" 
 viewport={{ once: true }}
         >
-          <motion.div className="flex flex-row justify-center items-center mt-6 w-[90%]">
+          <motion.div className="goat-prints__row goat-prints__row--top">
             <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
-              className="w-[20px] h-auto object-contain"
+              className="goat-prints__print"
               variants={stepTopLeft}
               initial="initial"
               whileInView="animate" 
@@ -39,18 +40,18 @@ viewport={{ once: true }}
             <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
-              className="w-[20px] h-auto object-contain"
+              className="goat-prints__print"
               variants={stepTopRight}
               initial="initial"
               whileInView="animate" 
 viewport={{ once: true }}
             />
           </motion.div>
-          <motion.div className="flex flex-row justify-center items-center mb-5 w-[90%]">
+          <motion.div className="goat-prints__row goat-prints__row--bottom">
             <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
-              className="w-[20px] h-auto object-contain"
+              className="goat-prints__print"
               variants={stepBottomLeft}
               initial="initial"
               whileInView="animate" 
@@ -59,7 +60,7 @@ viewport={{ once: true }}
             <MotionImage
               src={goatPrintSingle}
               alt="Goat Print"
-              className="w-[20px] h-auto object-contain"
+              className="goat-prints__print"
               variants={stepBottomRight}
               initial="initial"
               whileInView="animate" 

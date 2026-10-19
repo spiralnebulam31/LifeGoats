@@ -2,24 +2,26 @@
 
 import { motion } from "framer-motion";
 import { fadeIn } from "../../motion/motion";
+import "@/src/scss/pages/Page.scss";
+import "@/src/scss/pages/privacy-policy/PrivacyPolicy.scss";
 
 const PrivacyPolicyPage = () => {
   return (
-    <motion.div className="bg-background relative bg-cover w-screen max-w-full h-auto min-h-full inset-0 left-0 right-0 top-0 overflow-x-hidden overflow-hidden pt-2 pb-2 z-10 mt-[70px] mb-[180px] flex flex-col justify-center text-center mx-auto">
-      <motion.div className="flex flex-col justify-center text-center w-[90%] max-w-full mx-auto pt-10 mb-3 overflow-hidden">
-        <motion.h1 className="text-earth font-title text-4xl lg:text-6xl font-bold">
+    <motion.div className="page page--contained page--below-nav">
+      <motion.div className="page__heading">
+        <motion.h1 className="page__title">
           Privacy Policy
         </motion.h1>
       </motion.div>
       <motion.div
-        className="bg-background flex flex-col justify-center text-start mx-auto pt-10 pb-10 font-body lg:text-lg text-md w-[80%] max-w-full lg:w-[70%]"
+        className="page__text privacy__body"
         variants={fadeIn}
         initial="initial"
         whileInView="animate" 
 viewport={{ once: true }}
       >
         <div>
-          <h2 className="text-primary font-subtitle text-xl lg:text-2xl font-bold mb-2">
+          <h2 className="privacy__heading">
             What We Collect
           </h2>
           <p>
@@ -29,7 +31,7 @@ viewport={{ once: true }}
             newsletter form, sending us an email or contacting us via phone).
           </p>
           <br />
-          <h2 className="text-primary font-subtitle text-xl lg:text-2xl font-bold mb-2">
+          <h2 className="privacy__heading">
             How We Use Your Information
           </h2>
           <p>
@@ -40,7 +42,7 @@ viewport={{ once: true }}
             you back the same way.
           </p>
           <br />
-          <h2 className="text-primary font-subtitle text-xl lg:text-2xl font-bold mb-2">
+          <h2 className="privacy__heading">
             Data Security
           </h2>
           <p>
@@ -50,7 +52,7 @@ viewport={{ once: true }}
             Life Goats core team has access.
           </p>
           <br />
-          <h2 className="text-primary font-subtitle text-xl lg:text-2xl font-bold mb-2">
+          <h2 className="privacy__heading">
             How long we keep your data for
           </h2>
           <p>
@@ -59,7 +61,7 @@ viewport={{ once: true }}
             all your data will be deleted from our systems.
           </p>
           <br />
-          <h2 className="text-primary font-subtitle text-xl lg:text-2xl font-bold mb-2">
+          <h2 className="privacy__heading">
             GDPR Compliance
           </h2>
           <p>
@@ -67,7 +69,7 @@ viewport={{ once: true }}
             Regulation (GDPR) to protect your privacy and personal data. Under
             GDPR, you have the following rights regarding your data:
           </p>
-          <ul className="list-disc list-inside text-left mt-4">
+          <ul className="privacy__rights">
             <li>
               <strong>Right to Access:</strong> You can request a copy of the
               personal data we hold about you.
@@ -97,11 +99,11 @@ viewport={{ once: true }}
               marketing.
             </li>
           </ul>
-          <p className="mt-4">
+          <p className="privacy__contact">
             To exercise any of these rights, please contact us at{" "}
             <a
               href="mailto:lifegoatsconnect@gmail.com"
-              className="cursor-pointer underline text-secondary hover:text-tertiary font-links"
+              className="privacy__email"
             >
               lifegoatsconnect@gmail.com
             </a>

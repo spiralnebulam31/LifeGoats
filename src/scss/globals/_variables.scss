@@ -1,0 +1,148 @@
+/**
+ * _variables.scss — Sass-only constants & accessor functions.
+ *
+ * Pure Sass: no CSS is emitted from this file. It is @use'd from every
+ * component's own .scss file for the functions below, and also from
+ * _themes.scss (the only file that actually declares --life-goats-*
+ * custom properties on :root).
+ *
+ * Colors are NOT declared here as Sass values — they live as CSS custom
+ * properties (see _themes.scss) so they can change at runtime without a
+ * rebuild. color() below just returns var(--life-goats-color-*).
+ */
+@use "sass:map";
+@use "sass:math";
+
+// =============================================================================
+// REM CONVERSION
+// =============================================================================
+// Converts a pixel value to rem, assuming a 16px root font size.
+// Usage: vars.rem(14) → 0.875rem
+@function rem($px) {
+  @return math.div($px, 16) * 1rem;
+}
+
+// =============================================================================
+// BREAKPOINTS
+// =============================================================================
+$life-goats-breakpoints: (
+  xs: 375px,
+  sm: 600px,
+  md: 900px,
+  lg: 1200px,
+  xl: 1700px,
+);
+
+@function breakpoint($name) {
+  @if not map.has-key($life-goats-breakpoints, $name) {
+    @error "breakpoint: unknown breakpoint '#{$name}'. Valid: #{map.keys($life-goats-breakpoints)}.";
+  }
+  @return map.get($life-goats-breakpoints, $name);
+}
+
+// =============================================================================
+// Z-INDEX
+// =============================================================================
+$life-goats-z-indexes: (
+  base:     0,
+  raised:   10,
+  above:    20,
+  dropdown: 30,
+  header:   40,
+  modal:    50,
+);
+
+@function z-index($layer) {
+  @if not map.has-key($life-goats-z-indexes, $layer) {
+    @error "z-index: unknown layer '#{$layer}'. Valid: #{map.keys($life-goats-z-indexes)}.";
+  }
+  @return map.get($life-goats-z-indexes, $layer);
+}
+
+// =============================================================================
+// BORDER RADIUS
+// =============================================================================
+$life-goats-radii: (
+  base: rem(4),
+  md:   rem(6),
+  lg:   rem(8),
+  xl:   rem(12),
+  2xl:  rem(16),
+  3xl:  rem(24),
+  full: 9999px,
+);
+
+@function radius($size) {
+  @if not map.has-key($life-goats-radii, $size) {
+    @error "radius: unknown size '#{$size}'. Valid: #{map.keys($life-goats-radii)}.";
+  }
+  @return map.get($life-goats-radii, $size);
+}
+
+// =============================================================================
+// SHADOWS
+// =============================================================================
+$life-goats-shadows: (
+  base:   (0 rem(1) rem(3) 0 rgba(0, 0, 0, 0.1), 0 rem(1) rem(2) rem(-1) rgba(0, 0, 0, 0.1)),
+  md:     (0 rem(4) rem(6) rem(-1) rgba(0, 0, 0, 0.1), 0 rem(2) rem(4) rem(-2) rgba(0, 0, 0, 0.1)),
+  lg:     (0 rem(10) rem(15) rem(-3) rgba(0, 0, 0, 0.1), 0 rem(4) rem(6) rem(-4) rgba(0, 0, 0, 0.1)),
+  xl:     (0 rem(20) rem(25) rem(-5) rgba(0, 0, 0, 0.1), 0 rem(8) rem(10) rem(-6) rgba(0, 0, 0, 0.1)),
+  2xl:    (0 rem(25) rem(50) rem(-12) rgba(0, 0, 0, 0.25)),
+  title:  (0 rem(4) rem(4) rgba(0, 0, 0, 0.25)),
+  button: (0 rem(4) rem(4) rgba(0, 0, 0, 0.25)),
+);
+
+@function shadow($size) {
+  @if not map.has-key($life-goats-shadows, $size) {
+    @error "shadow: unknown size '#{$size}'. Valid: #{map.keys($life-goats-shadows)}.";
+  }
+  @return map.get($life-goats-shadows, $size);
+}
+
+// =============================================================================
+// DROP SHADOWS
+// =============================================================================
+// Usage: filter: vars.drop-shadow(xl);
+$life-goats-drop-shadows: (
+  md: (drop-shadow(0 rem(4) rem(3) rgba(0, 0, 0, 0.07)) drop-shadow(0 rem(2) rem(2) rgba(0, 0, 0, 0.06))),
+  lg: (drop-shadow(0 rem(10) rem(8) rgba(0, 0, 0, 0.04)) drop-shadow(0 rem(4) rem(3) rgba(0, 0, 0, 0.1))),
+  xl: (drop-shadow(0 rem(20) rem(13) rgba(0, 0, 0, 0.03)) drop-shadow(0 rem(8) rem(5) rgba(0, 0, 0, 0.08))),
+  2xl: (drop-shadow(0 rem(25) rem(25) rgba(0, 0, 0, 0.15))),
+);
+
+@function drop-shadow($size) {
+  @if not map.has-key($life-goats-drop-shadows, $size) {
+    @error "drop-shadow: unknown size '#{$size}'. Valid: #{map.keys($life-goats-drop-shadows)}.";
+  }
+  @return map.get($life-goats-drop-shadows, $size);
+}
+
+// =============================================================================
+// FONTS
+// =============================================================================
+// Font roles. Catamaran and Cinzel load via
+// next/font in app/layout.jsx (exposed as --font-* custom properties);
+// Luckiest Guy and Neucha still load from the Google Fonts <link> there.
+$life-goats-fonts: (
+  title:    ("Luckiest Guy"),
+  subtitle: (var(--font-cinzel)),
+  body:     (var(--font-catamaran)),
+  links:    ("Neucha"),
+);
+
+@function font($role) {
+  @if not map.has-key($life-goats-fonts, $role) {
+    @error "font: unknown role '#{$role}'. Valid: #{map.keys($life-goats-fonts)}.";
+  }
+  @return map.get($life-goats-fonts, $role);
+}
+
+// =============================================================================
+// COLOR ACCESSOR
+// =============================================================================
+// Maps to the --life-goats-color-* custom properties declared in
+// _themes.scss.
+// Usage: vars.color(primary), vars.color(blue-400), vars.color(white)
+@function color($name) {
+  @return var(--life-goats-color-#{$name});
+}

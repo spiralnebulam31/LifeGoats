@@ -1,0 +1,173 @@
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+.location {
+  position: relative;
+  inset: 0;
+  z-index: vars.z-index(raised);
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow: hidden;
+  padding-top: vars.rem(8);
+  padding-bottom: vars.rem(48);
+  background-color: vars.color(background);
+  background-size: cover;
+
+  &__header {
+    @include mix.section-header;
+  }
+
+  &__pretitle {
+    @include mix.section-pretitle-text;
+    color: vars.color(secondary);
+  }
+
+  &__title {
+    @include mix.section-title-text;
+    padding-bottom: vars.rem(4);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto vars.rem(16);
+
+    @include mix.respond-to(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__map {
+    z-index: vars.z-index(base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto vars.rem(24);
+    padding-top: vars.rem(24);
+
+    @include mix.respond-to(lg) {
+      width: 45%;
+      margin-left: vars.rem(80);
+      margin-right: auto;
+    }
+
+    @include mix.respond-to(xl) {
+      width: 35%;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: vars.z-index(raised);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: vars.rem(-40) auto;
+    padding: vars.rem(16);
+    border-radius: vars.radius(2xl);
+    background: vars.color(background);
+    filter: vars.drop-shadow(xl);
+    opacity: 0.85;
+    transform: rotate(6deg);
+
+    @include mix.respond-to(md) {
+      width: 70%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 60%;
+      margin: vars.rem(8) vars.rem(-24) 0 vars.rem(-80);
+      transform: rotate(0deg);
+    }
+
+    @include mix.respond-to(xl) {
+      width: 35%;
+      margin-top: vars.rem(-64);
+      margin-left: vars.rem(-96);
+      margin-right: vars.rem(-40);
+    }
+  }
+
+  &__info-item {
+    align-items: center;
+    color: vars.color(primary);
+  }
+
+  &__paragraph {
+    padding-bottom: vars.rem(20);
+    font-size: vars.rem(14);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(15);
+    }
+  }
+
+  &__maps {
+    font-family: vars.font(links);
+    font-weight: 700;
+  }
+
+  &__maps-link {
+    font-size: vars.rem(15);
+
+    &:hover {
+      color: vars.color(tertiary);
+    }
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(16);
+    }
+  }
+
+  &__photos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: auto;
+    margin: vars.rem(8) auto vars.rem(24);
+    padding-top: vars.rem(24);
+
+    @include mix.respond-to(md) {
+      width: 70%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 40%;
+      margin-top: vars.rem(24);
+      margin-right: vars.rem(112);
+      margin-left: auto;
+    }
+
+    @include mix.respond-to(xl) {
+      width: 28%;
+      margin-top: vars.rem(-64);
+    }
+  }
+
+  &__photo {
+    border-radius: vars.radius(2xl);
+    filter: vars.drop-shadow(xl);
+
+    &--tilt-left {
+      margin-bottom: vars.rem(8);
+      transform: rotate(-6deg);
+    }
+
+    &--tilt-right {
+      margin-top: vars.rem(8);
+      transform: rotate(6deg);
+    }
+  }
+
+  &__photo-image {
+    border-radius: vars.radius(2xl);
+    filter: vars.drop-shadow(xl);
+  }
+}

@@ -7,21 +7,19 @@ import {
 } from "../../../../motion/home-sections";
 import { coreValues } from "../../../../data/core-values";
 import CoreValuesCard from "./CoreValuesCard";
+import "@/src/scss/components/LandingPage/core-values/CoreValues.scss";
 
 const CoreValues = () => {
   return (
     <section
       id="core-values"
-      className="bg-background
-      relative bg-cover bg-no-repeat w-full h-full inset-0 overflow-hidden pt-2 pb-12 z-10"
+      className="core-values"
     >
       <motion.div
-        className="text-center w-[80%] lg:w-[90%] mx-auto
-        pt-8 mb-5 z-10 overflow-hidden"
+        className="core-values__header"
       >
         <motion.p
-          className="md:text-[18px] text-[14px] text-primary font-subtitle
-          font-bold uppercase tracking-wider"
+          className="core-values__pretitle"
           variants={floatFromDownPreTitle}
           initial="initial"
           animate="animate"
@@ -30,8 +28,7 @@ const CoreValues = () => {
           Our
         </motion.p>
         <motion.h2
-          className="text-earth font-bold font-title uppercase md:text-[55px]
-          sm:text-[45px] text-[40px] outline-background-2 pb-1 md:pb-4 mt-0"
+          className="core-values__title"
           style={{ textShadow: "2px 2px 3px rgba(255,255,255, 0.3)" }}
           variants={floatFromDownMainTitle}
           initial="initial"
@@ -42,12 +39,12 @@ const CoreValues = () => {
         </motion.h2>
       </motion.div>
 
-      <motion.div className="flex flex-row justify-evenly items-center">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8 mb-2 md:mb-4">
+      <motion.div className="core-values__row">
+        <motion.div className="core-values__grid">
           {coreValues.map((value, index) => (
             <motion.div
               key={index}
-              className="relative z-10"
+              className="core-values__item"
               initial={{
                 opacity: 0,
                 translateX: index % 2 === 0 ? -100 : 100,

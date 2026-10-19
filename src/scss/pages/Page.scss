@@ -1,0 +1,195 @@
+/**
+ * Shared layout for the standalone content pages (About › History & Team,
+ * The Hike pages, Privacy Policy, Upcoming Events, the subscription pages):
+ * a full-width shell, optionally with a faded background photo, a centered
+ * title block, a body text column and a closing line + goat prints.
+ */
+@use "../globals/variables" as vars;
+@use "../globals/mixins" as mix;
+
+@mixin page-body-text {
+  font-family: vars.font(body);
+
+  @include mix.respond-to(lg) {
+    font-size: vars.rem(18);
+    line-height: vars.rem(28);
+  }
+}
+
+.page {
+  position: relative;
+  inset: 0;
+  z-index: vars.z-index(raised);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto vars.rem(180);
+  overflow: hidden;
+  padding-block: vars.rem(8);
+  background-color: vars.color(background);
+  background-size: cover;
+  text-align: center;
+
+  // Never wider than the page, so the scrollbar's width can't cause a
+  // horizontal scroll.
+  &--contained {
+    max-width: 100%;
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+
+  &--full-height {
+    min-height: 100vh;
+  }
+
+  &--below-nav {
+    margin-top: vars.rem(70);
+  }
+
+  &--below-nav-tight {
+    margin-top: vars.rem(60);
+  }
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: vars.z-index(raised);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &__card {
+    position: relative;
+    top: vars.rem(100);
+    z-index: vars.z-index(above);
+    width: 80%;
+    margin: 0 auto vars.rem(40);
+    border-radius: vars.radius(2xl);
+    background: vars.color(background);
+    filter: vars.drop-shadow(xl);
+    opacity: 0.8;
+    text-align: center;
+
+    @include mix.respond-to(lg) {
+      width: 70%;
+    }
+
+    &--solid {
+      opacity: 0.9;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto vars.rem(12);
+    overflow: hidden;
+    padding-top: vars.rem(40);
+    text-align: center;
+
+    &--tight {
+      margin-bottom: vars.rem(4);
+      overflow: visible;
+    }
+
+    &--spaced {
+      margin-block: vars.rem(40);
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    color: vars.color(earth);
+    font-family: vars.font(title);
+    font-weight: 700;
+    font-size: vars.rem(36);
+    line-height: vars.rem(40);
+
+    @include mix.respond-to(lg) {
+      font-size: vars.rem(60);
+      line-height: 1;
+    }
+
+    &--compact {
+      padding-bottom: vars.rem(20);
+      font-size: vars.rem(30);
+      line-height: vars.rem(36);
+
+      @include mix.respond-to(md) {
+        font-size: vars.rem(36);
+        line-height: vars.rem(40);
+      }
+
+      @include mix.respond-to(lg) {
+        font-size: vars.rem(60);
+        line-height: 1;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: vars.color(primary);
+    font-family: vars.font(subtitle);
+    font-weight: 700;
+    font-size: vars.rem(20);
+    line-height: vars.rem(28);
+
+    @include mix.respond-to(lg) {
+      font-size: vars.rem(30);
+      line-height: vars.rem(36);
+    }
+  }
+
+  &__text {
+    @include page-body-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-inline: auto;
+    padding-top: vars.rem(40);
+    padding-bottom: vars.rem(32);
+    background: vars.color(background);
+    text-align: center;
+
+    @include mix.respond-to(lg) {
+      width: 70%;
+    }
+  }
+
+  &__closing {
+    @include page-body-text;
+    position: relative;
+    z-index: vars.z-index(above);
+    width: 80%;
+    margin-inline: auto;
+    padding-top: vars.rem(40);
+    padding-bottom: vars.rem(32);
+
+    @include mix.respond-to(lg) {
+      width: 70%;
+    }
+  }
+
+  &__closing-text {
+    padding-top: vars.rem(56);
+    padding-bottom: vars.rem(16);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__prints {
+    width: 90%;
+    margin-inline: auto;
+  }
+}

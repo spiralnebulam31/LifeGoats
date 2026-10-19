@@ -1,0 +1,78 @@
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: vars.z-index(raised);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: vars.rem(240);
+  width: 70%;
+  height: 100vh;
+  margin: 0;
+  background: vars.color(background);
+
+  @include mix.respond-to(lg) {
+    display: none;
+  }
+
+  &__panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: vars.rem(16);
+    width: 90%;
+    height: 100vh;
+    padding-inline: vars.rem(64);
+    background: vars.color(background);
+    font-family: vars.font(links);
+    font-weight: 700;
+    text-align: center;
+    list-style: none;
+  }
+
+  &__heading,
+  &__link {
+    color: vars.color(primary);
+    font-size: vars.rem(24);
+    line-height: vars.rem(32);
+    font-weight: 700;
+    font-family: vars.font(subtitle);
+    cursor: pointer;
+
+    &:hover {
+      color: vars.color(tertiary);
+    }
+  }
+
+  &__heading {
+    margin-bottom: vars.rem(4);
+  }
+
+  &__link--active {
+    color: vars.color(secondary);
+    text-decoration-line: underline;
+  }
+
+  &__sublinks {
+    display: flex;
+    flex-direction: column;
+    gap: vars.rem(12);
+    padding-bottom: vars.rem(16);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: vars.rem(16);
+    width: 90%;
+    padding-inline: vars.rem(64);
+  }
+}

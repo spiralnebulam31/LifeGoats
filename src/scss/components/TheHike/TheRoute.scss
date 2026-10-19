@@ -1,0 +1,57 @@
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.the-route {
+  position: relative;
+  inset: 0;
+  z-index: vars.z-index(raised);
+  width: 100vw;
+  height: auto;
+  min-height: 100%;
+  margin-bottom: vars.rem(180);
+  overflow: hidden;
+  padding-block: vars.rem(8);
+  background-color: vars.color(background);
+  background-size: cover;
+
+  &__altimeters,
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    padding-bottom: vars.rem(12);
+    color: vars.color(primary);
+    font-family: vars.font(body);
+    font-size: vars.rem(14);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(16);
+    }
+  }
+
+  &__altimeters {
+    align-items: center;
+    gap: vars.rem(16);
+    width: 90%;
+    padding-top: vars.rem(112);
+
+    @include mix.respond-to(lg) {
+      flex-direction: row;
+      gap: vars.rem(80);
+      width: 80%;
+    }
+  }
+
+  &__info {
+    align-items: flex-start;
+    gap: vars.rem(40);
+    width: 100%;
+    padding-top: vars.rem(4);
+
+    @include mix.respond-to(lg) {
+      padding-top: vars.rem(40);
+      padding-bottom: vars.rem(40);
+    }
+  }
+}

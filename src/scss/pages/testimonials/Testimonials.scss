@@ -1,0 +1,95 @@
+@use "../../globals/variables" as vars;
+@use "../../globals/mixins" as mix;
+
+.testimonials-page {
+  position: relative;
+  z-index: vars.z-index(raised);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: vars.rem(60) auto vars.rem(180);
+  overflow-x: hidden;
+  padding: vars.rem(8);
+  background-image: linear-gradient(to bottom, vars.color(secondary), vars.color(background));
+  background-size: cover;
+  text-align: center;
+
+  &__header {
+    @include mix.section-header($margin-bottom: vars.rem(32));
+  }
+
+  &__pretitle {
+    @include mix.section-pretitle-text;
+    color: vars.color(background);
+  }
+
+  &__title {
+    @include mix.section-title-text;
+    padding-bottom: vars.rem(4);
+
+    @include mix.respond-to(md) {
+      padding-bottom: vars.rem(16);
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-inline: vars.rem(16);
+  }
+
+  &__columns {
+    width: 100%;
+    max-width: vars.rem(1280);
+    columns: 1;
+    column-gap: vars.rem(8);
+
+    @include mix.respond-to(md) {
+      columns: 2;
+    }
+
+    @include mix.respond-to(lg) {
+      columns: 3;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: vars.z-index(raised);
+    margin-bottom: vars.rem(16);
+    break-inside: avoid;
+
+    @include mix.respond-to(md) {
+      margin-bottom: vars.rem(24);
+    }
+  }
+
+  &__cta-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  &__cta {
+    margin-block: vars.rem(32);
+    padding: vars.rem(8) vars.rem(16);
+    border-radius: vars.radius(lg);
+    background-color: vars.color(primary);
+    color: vars.color(background);
+    font-family: vars.font(subtitle);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: vars.shadow(lg);
+
+    &:hover {
+      background-color: vars.color(tertiary);
+      color: vars.color(earth);
+    }
+  }
+}

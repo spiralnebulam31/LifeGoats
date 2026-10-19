@@ -1,0 +1,212 @@
+@use "../../../globals/variables" as vars;
+@use "../../../globals/mixins" as mix;
+
+// Shared by TheTeamMay2024, TheTeamOct2024 and TeamBubble.
+.event-team {
+  position: relative;
+  inset: 0;
+  z-index: vars.z-index(raised);
+  width: 100%;
+  height: 100%;
+  margin-bottom: vars.rem(180);
+  overflow: hidden;
+  padding-top: vars.rem(8);
+  padding-bottom: vars.rem(48);
+  background-color: vars.color(background);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__header {
+    @include mix.section-header;
+  }
+
+  &__pretitle {
+    @include mix.section-pretitle-text;
+    color: vars.color(secondary);
+  }
+
+  &__title {
+    @include mix.section-title-text;
+    padding-bottom: vars.rem(4);
+
+    @include mix.respond-to(md) {
+      padding-bottom: vars.rem(16);
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  &__grid {
+    display: grid;
+    gap: vars.rem(4);
+    margin-bottom: vars.rem(4);
+
+    @include mix.respond-to(md) {
+      gap: vars.rem(16);
+      margin-bottom: vars.rem(12);
+    }
+
+    @include mix.respond-to(lg) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    &--six {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      @include mix.respond-to(lg) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      @include mix.respond-to(xl) {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+    }
+
+    &--three {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+      @include mix.respond-to(lg) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: vars.z-index(raised);
+  }
+
+  &__photo-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    padding-block: vars.rem(20);
+  }
+
+  &__photo {
+    z-index: vars.z-index(base);
+    width: 90%;
+    border-radius: vars.radius(2xl);
+    box-shadow: vars.shadow(lg);
+
+    @include mix.respond-to(md) {
+      width: 70%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 50%;
+    }
+  }
+
+  &__thanks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin-inline: auto;
+    padding-block: vars.rem(20);
+    color: vars.color(primary);
+    font-family: vars.font(body);
+    font-size: vars.rem(16);
+    text-align: center;
+
+    @include mix.respond-to(md) {
+      width: 70%;
+    }
+
+    @include mix.respond-to(lg) {
+      width: 50%;
+    }
+
+    &--spaced {
+      @include mix.respond-to(md) {
+        margin-top: vars.rem(8);
+      }
+    }
+
+    &--wide {
+      @include mix.respond-to(md) {
+        width: 650%;
+      }
+
+      @include mix.respond-to(lg) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__thanks-text {
+    margin-block: auto;
+
+    &--before-image {
+      margin-right: vars.rem(16);
+    }
+
+    &--after-image {
+      margin-left: vars.rem(16);
+    }
+  }
+
+  &__name {
+    color: vars.color(tertiary);
+    font-family: vars.font(subtitle);
+    font-size: vars.rem(18);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__avatar {
+    width: vars.rem(150);
+    height: vars.rem(150);
+    border-radius: vars.radius(full);
+    object-fit: cover;
+    box-shadow: vars.shadow(lg);
+  }
+}
+
+.team-bubble {
+  z-index: vars.z-index(base);
+  margin: vars.rem(12);
+  overflow: hidden;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: vars.rem(150);
+    height: auto;
+    margin-inline: auto;
+    padding: vars.rem(12) vars.rem(24) vars.rem(4);
+  }
+
+  &__title,
+  &__role {
+    max-width: vars.rem(1152);
+    padding-block: 0;
+    text-align: center;
+  }
+
+  &__title {
+    color: vars.color(tertiary);
+    font-family: vars.font(subtitle);
+    font-size: vars.rem(18);
+    font-weight: 700;
+  }
+
+  &__role {
+    color: vars.color(primary);
+    font-family: vars.font(body);
+    font-size: vars.rem(14);
+
+    @include mix.respond-to(md) {
+      font-size: vars.rem(16);
+    }
+  }
+}

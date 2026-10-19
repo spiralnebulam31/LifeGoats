@@ -12,27 +12,28 @@ import {
 } from "@/src/assets/index";
 import Image from 'next/image';
 import Link from "next/link";
+import "@/src/scss/components/LandingPage/hero/Hero.scss";
 
 const Hero = () => {
 
   return (
-    <section className="bg-background sticky top-0 w-screen h-screen mx-auto overflow-hidden z-10">
+    <section className="home-hero">
       <Image
         src={olympus2024BG3}
         alt="hero background"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10"
+        className="home-hero__background"
         with={1920}
         height={1080}
       />
-      <div className="absolute inset-0 top-[100px] md:top-[30px] max-w-7xl mx-auto flex flex-row items-start gap-5">
+      <div className="home-hero__content">
         {/* Hero text */}
           <motion.div
             variants={floatFromUpHomeHeroTitle}
             initial="initial"
             animate="animate"
-            className="flex justify-center items-center mx-auto pb-10 text-white font-body w-[90%] lg:w-[80%] xl:w-full max-w-md md:max-w-7xl font-bold lg:text-[30px] md:text-[24px] text-[20px] lg:leading-[60px] leading-[35px] my-auto z-40 text-center drop-shadow-md"
+            className="home-hero__intro"
           >
-            <p className="lg:text-[50px] sm:text-[40px] text-[26px] max-w-sm sm:max-w-5xl md:max-w-7xl drop-shadow-xl">
+            <p className="home-hero__tagline">
             A community and event series for people who value relationship building and spending quality time together in the great outdoors.
             </p>
           </motion.div>
@@ -42,20 +43,20 @@ const Hero = () => {
           variants={heroGoatPrintsVariant}
           initial="initial"
           animate="animate"
-          className="absolute bottom-16 my-2 w-full flex justify-center items-center mx-auto z-40"
+          className="home-hero__slider"
         >
           <Link href="/#intro">
             <motion.div
               variants={heroGoatPrintsVariant}
               initial="initial"
               animate="animate"
-              className="w-[35px] h-[75px] rounded-3xl border-4 border-background flex justify-start items-start z-40"
+              className="home-hero__slider-track"
             >
               <motion.div variants={goatPrintsSliderVariant} initial="initial" animate="animate">
                 <Image
                   src={goatPrintsLight}
                   alt="goat hoof prints"
-                  className="w-[60px] h-[60px] object-contain z-50"
+                  className="home-hero__slider-prints"
                   width={60}
                   height={60}
                   style={{ width: "auto", height: "auto" }}

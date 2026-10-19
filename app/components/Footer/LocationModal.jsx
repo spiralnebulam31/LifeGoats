@@ -6,6 +6,7 @@ import MapDisplay from "../Location/MapDisplay";
 import { footerLocation } from "../../../data/location";
 import Link from "next/link";
 import PropTypes from "prop-types";
+import "@/src/scss/components/Footer/FooterModal.scss";
 
 const LocationModal = ({ isOpen, onClose }) => {
   const closeIcon = (
@@ -35,8 +36,8 @@ const LocationModal = ({ isOpen, onClose }) => {
       id="locationModal"
       aria-labelledby="location-modal"
     >
-      <div className="flex flex-col items-center justify-center mx-auto p-4">
-        <h1 className="text-earth text-2xl font-bold mb-4 font-subtitle">
+      <div className="footer-modal">
+        <h1 className="footer-modal__title">
           Location
         </h1>
         <MapDisplay
@@ -51,13 +52,13 @@ const LocationModal = ({ isOpen, onClose }) => {
           heightLg="180px"
           heightXl="180px"
         />
-        <p className="font-links font-bold mt-5">
+        <p className="footer-modal__maps">
           <Link
             href="https://maps.app.goo.gl/RymGxrJB2mA4APUE7"
             alt="Google Maps link"
             target="_blank"
             rel="noreferrer"
-            className="text-secondary hover:text-tertiary md:text-[16px] text-[15px]"
+            className="footer-modal__maps-link"
           >
             See on Google Maps
           </Link>

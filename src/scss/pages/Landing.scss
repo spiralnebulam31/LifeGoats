@@ -1,0 +1,14 @@
+/**
+ * Wrapper for the home page and the individual event pages.
+ */
+@use "../globals/variables" as vars;
+
+.landing {
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+
+  &--footer-gap {
+    margin-bottom: vars.rem(180);
+  }
+}
