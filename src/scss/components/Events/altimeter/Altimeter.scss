@@ -10,12 +10,12 @@
   min-height: 100%;
   margin-inline: auto;
   overflow: hidden;
-  padding-block: vars.rem(8);
+  padding-block: vars.space(2xs);
   background-color: vars.color(background);
   background-size: cover;
 
   &__header {
-    @include mix.section-header($padding-top: vars.rem(56));
+    @include mix.section-header($padding-top: 4xl);
 
     @include mix.respond-to(lg) {
       width: 100%;
@@ -29,7 +29,7 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(8);
+    padding-bottom: vars.space(2xs);
   }
 
   &__graphs {
@@ -37,22 +37,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: vars.rem(32);
+    gap: vars.space(xl);
     width: 90%;
     margin-inline: auto;
-    padding-top: vars.rem(20);
-    padding-bottom: vars.rem(40);
+    padding-top: vars.space(md);
+    padding-bottom: vars.space(2xl);
     color: vars.color(primary);
     font-family: vars.font(body);
-    font-size: vars.rem(14);
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(16);
-    }
+    font-size: vars.font-size(sm);
 
     @include mix.respond-to(lg) {
       flex-direction: row;
-      gap: vars.rem(48);
+      gap: vars.space(3xl);
       width: 85%;
     }
   }
@@ -76,6 +72,6 @@
   &__chart {
     width: 100%;
     height: vars.rem(350);
-    padding-bottom: vars.rem(20);
+    padding-bottom: vars.space(md);
   }
 }

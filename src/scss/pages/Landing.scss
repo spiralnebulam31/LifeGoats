@@ -9,6 +9,6 @@
   background-position: center;
 
   &--footer-gap {
-    margin-bottom: vars.rem(180);
+    margin-bottom: vars.$footer-height;
   }
 }

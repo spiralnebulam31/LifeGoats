@@ -9,15 +9,15 @@
   justify-content: center;
   width: 100%;
   height: auto;
-  margin: vars.rem(60) auto vars.rem(180);
+  margin: vars.$navbar-height auto vars.$footer-height;
   overflow-x: hidden;
-  padding: vars.rem(8);
+  padding: vars.space(2xs);
   background-image: linear-gradient(to bottom, vars.color(secondary), vars.color(background));
   background-size: cover;
   text-align: center;
 
   &__header {
-    @include mix.section-header($margin-bottom: vars.rem(32));
+    @include mix.section-header($margin-bottom: xl);
   }
 
   &__pretitle {
@@ -27,10 +27,10 @@
 
   &__title {
     @include mix.section-title-text;
-    padding-bottom: vars.rem(4);
+    padding-bottom: vars.space(3xs);
 
     @include mix.respond-to(md) {
-      padding-bottom: vars.rem(16);
+      padding-bottom: vars.space(sm);
     }
   }
 
@@ -39,14 +39,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding-inline: vars.rem(16);
+    padding-inline: vars.space(sm);
   }
 
   &__columns {
     width: 100%;
     max-width: vars.rem(1280);
     columns: 1;
-    column-gap: vars.rem(8);
+    column-gap: vars.space(2xs);
 
     @include mix.respond-to(md) {
       columns: 2;
@@ -60,11 +60,11 @@
   &__item {
     position: relative;
     z-index: vars.z-index(raised);
-    margin-bottom: vars.rem(16);
+    margin-bottom: vars.space(sm);
     break-inside: avoid;
 
     @include mix.respond-to(md) {
-      margin-bottom: vars.rem(24);
+      margin-bottom: vars.space(lg);
     }
   }
 
@@ -76,8 +76,8 @@
   }
 
   &__cta {
-    margin-block: vars.rem(32);
-    padding: vars.rem(8) vars.rem(16);
+    margin-block: vars.space(xl);
+    padding: vars.space(2xs) vars.space(sm);
     border-radius: vars.radius(lg);
     background-color: vars.color(primary);
     color: vars.color(background);

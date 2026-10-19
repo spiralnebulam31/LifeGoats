@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment.
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../../../motion";
 import "@/src/scss/components/TheHike/TheRoute.scss";

@@ -1,3 +1,5 @@
+// Not used at the moment (only used by Program.jsx, which is also unused).
+
 import PropTypes from 'prop-types';
 import "@/src/scss/components/Events/program/Program.scss";
 

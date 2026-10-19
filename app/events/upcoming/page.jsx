@@ -29,7 +29,7 @@ const UpcomingEvents = () => {
 
       {/* Comment out the code below if there ARE upcoming events to show */}
       <motion.div className="event-list">
-              <motion.div className={`event-list__grid ${upcomingEventsData.length === 1 ? 'event-list__grid--single' : 'event-list__grid--double'}`}>
+              <motion.div className={`event-list__grid ${upcomingEventsData.length > 1 ? 'event-list__grid--double' : ''}`}>
                 {upcomingEventsData.map((event, index) => (
                   <motion.div
                     key={index}

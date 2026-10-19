@@ -22,8 +22,8 @@ const AccessibilityModal = ({ isOpen, onClose }) => {
     center
     closeIcon={closeIcon}
     classNames={{
-      overlay: 'customOverlay',
-      modal: 'customModal',
+      overlay: 'footer-modal-overlay',
+      modal: 'footer-modal-panel',
     }}
     aria-labelledby="accessibility-statement-modal"
     >

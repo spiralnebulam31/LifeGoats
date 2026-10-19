@@ -8,7 +8,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  padding-top: vars.rem(40);
+  padding-top: vars.space(2xl);
   background-repeat: no-repeat;
   background-attachment: fixed;
 
@@ -35,25 +35,17 @@
     color: vars.color(background);
     font-family: vars.font(body);
     font-weight: 700;
-    font-size: vars.rem(30);
-    line-height: vars.rem(32);
+    font-size: vars.font-size(5xl);
+    line-height: vars.line-height(none);
     text-align: center;
     filter: vars.drop-shadow(lg);
 
     @include mix.respond-to(md) {
       width: 75%;
-      font-size: vars.rem(36);
-      line-height: vars.rem(40);
     }
 
     @include mix.respond-to(lg) {
       width: 60%;
-      font-size: vars.rem(48);
-      line-height: 1;
-    }
-
-    @include mix.respond-to(xl) {
-      font-size: vars.rem(60);
     }
   }
 }

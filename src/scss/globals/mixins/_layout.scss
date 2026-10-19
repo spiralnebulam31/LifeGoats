@@ -5,13 +5,22 @@
 @use "./breakpoints" as bp;
 
 // The centered wrapper around a section's pretitle + title. Top padding and
-// bottom margin vary per section.
-@mixin section-header($padding-top: vars.rem(32), $margin-bottom: vars.rem(20)) {
+// bottom margin vary per section; pass a spacing token name, or 0.
+@mixin section-header($padding-top: 2xl, $margin-bottom: md) {
   z-index: vars.z-index(raised);
   width: 80%;
   margin-inline: auto;
-  margin-bottom: $margin-bottom;
-  padding-top: $padding-top;
+  @if $margin-bottom == 0 {
+    margin-bottom: 0;
+  } @else {
+    margin-bottom: vars.space($margin-bottom);
+  }
+
+  @if $padding-top == 0 {
+    padding-top: 0;
+  } @else {
+    padding-top: vars.space($padding-top);
+  }
   overflow: hidden;
   text-align: center;
 

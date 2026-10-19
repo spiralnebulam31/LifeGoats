@@ -10,7 +10,7 @@
     z-index: vars.z-index(base);
     width: vars.rem(310);
     height: vars.rem(200);
-    margin: vars.rem(12);
+    margin: vars.space(xs);
     overflow: hidden;
     border-radius: vars.radius(2xl);
     background: vars.color(background);
@@ -34,7 +34,7 @@
     width: vars.rem(310);
     height: auto;
     margin-inline: auto;
-    padding: vars.rem(4) vars.rem(24);
+    padding: vars.space(3xs) vars.space(lg);
 
     @include mix.respond-to(lg) {
       width: vars.rem(450);
@@ -43,10 +43,10 @@
 
   &__title {
     max-width: vars.rem(1152);
-    padding-block: vars.rem(4);
+    padding-block: vars.space(3xs);
     color: vars.color(tertiary);
     font-family: vars.font(subtitle);
-    font-size: vars.rem(20);
+    font-size: vars.font-size(lg);
     font-weight: 700;
     text-align: center;
   }

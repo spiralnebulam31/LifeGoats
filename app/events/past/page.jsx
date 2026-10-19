@@ -30,7 +30,7 @@ const PastEvents = () => {
       </motion.div>
 
       <motion.div className="event-list event-list--centered">
-        <motion.div className={`event-list__grid event-list__grid--wide ${pastEventsData.length === 1 ? 'event-list__grid--single' : 'event-list__grid--double'}`}>
+        <motion.div className={`event-list__grid event-list__grid--wide ${pastEventsData.length > 1 ? 'event-list__grid--double' : ''}`}>
           {pastEventsData.map((event, index) => (
             <motion.div
               key={index}

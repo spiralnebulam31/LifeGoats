@@ -10,8 +10,8 @@
     justify-content: center;
     width: 90%;
     margin-inline: auto;
-    padding-top: vars.rem(32);
-    padding-bottom: vars.rem(16);
+    padding-top: vars.space(xl);
+    padding-bottom: vars.space(sm);
 
     @include mix.respond-to(lg) {
       width: 70%;
@@ -31,23 +31,22 @@
     align-items: center;
     width: 90%;
     margin-inline: auto;
-    padding-top: vars.rem(40);
-    padding-bottom: vars.rem(64);
+    padding-top: vars.space(2xl);    padding-bottom: vars.space(5xl);
     font-family: vars.font(body);
+    font-size: vars.font-size(base);
+    line-height: vars.line-height(normal);
 
     @include mix.respond-to(lg) {
       flex-direction: row;
       align-items: flex-start;
       width: 70%;
-      font-size: vars.rem(18);
-      line-height: vars.rem(28);
     }
   }
 
   &__image-wrap {
     flex-shrink: 0;
     width: 100%;
-    margin-bottom: vars.rem(32);
+    margin-bottom: vars.space(xl);
 
     @include mix.respond-to(sm) {
       width: 90%;
@@ -60,7 +59,7 @@
     @include mix.respond-to(lg) {
       width: 50%;
       margin-bottom: 0;
-      margin-right: vars.rem(32);
+      margin-right: vars.space(xl);
     }
   }
 
@@ -89,7 +88,7 @@
   }
 
   &__message-text {
-    margin-bottom: vars.rem(16);
+    margin-bottom: vars.space(sm);
     color: vars.color(primary);
     font-family: vars.font(body);
   }

@@ -10,6 +10,7 @@
  * properties (see _themes.scss) so they can change at runtime without a
  * rebuild. color() below just returns var(--life-goats-color-*).
  */
+@use "sass:list";
 @use "sass:map";
 @use "sass:math";
 
@@ -39,6 +40,116 @@ $life-goats-breakpoints: (
   }
   @return map.get($life-goats-breakpoints, $name);
 }
+
+// =============================================================================
+// FLUID SCALING
+// =============================================================================
+// fluid(16, 24) → a size that is 16px at $fluid-min-viewport, 24px at
+// $fluid-max-viewport, and scales linearly with the viewport in between.
+// Expressed in rem so it still respects the visitor's browser font size.
+$fluid-min-viewport: 375;
+$fluid-max-viewport: 1440;
+
+@function fluid($min-px, $max-px) {
+  @if $min-px == $max-px {
+    @return rem($min-px);
+  }
+  $slope: math.div($max-px - $min-px, $fluid-max-viewport - $fluid-min-viewport);
+  $intercept: $min-px - $slope * $fluid-min-viewport;
+  @return clamp(#{rem($min-px)}, #{rem($intercept)} + #{$slope * 100vw}, #{rem($max-px)});
+}
+
+// =============================================================================
+// FONT SIZES
+// =============================================================================
+// (mobile px, desktop px) pairs fed through fluid().
+// Usage: font-size: vars.font-size(lg);
+$life-goats-font-sizes: (
+  2xs:     (13, 14),
+  xs:      (14, 15),
+  sm:      (14, 16),
+  base:    (16, 18),
+  md:      (18, 20),
+  lg:      (20, 24),
+  xl:      (22, 28),
+  2xl:     (24, 32),
+  3xl:     (26, 40),
+  4xl:     (30, 48),
+  5xl:     (36, 60),
+  display: (40, 55),
+  hero:    (70, 85),
+);
+
+@function font-size($size) {
+  @if not map.has-key($life-goats-font-sizes, $size) {
+    @error "font-size: unknown size '#{$size}'. Valid: #{map.keys($life-goats-font-sizes)}.";
+  }
+  $pair: map.get($life-goats-font-sizes, $size);
+  @return fluid(list.nth($pair, 1), list.nth($pair, 2));
+}
+
+// =============================================================================
+// LINE HEIGHTS
+// =============================================================================
+// Unitless, so they follow whatever font size they're paired with.
+$life-goats-line-heights: (
+  none:    1,
+  tight:   1.15,
+  snug:    1.3,
+  normal:  1.5,
+  relaxed: 1.75,
+  loose:   2,
+);
+
+@function line-height($size) {
+  @if not map.has-key($life-goats-line-heights, $size) {
+    @error "line-height: unknown size '#{$size}'. Valid: #{map.keys($life-goats-line-heights)}.";
+  }
+  @return map.get($life-goats-line-heights, $size);
+}
+
+// =============================================================================
+// SPACING
+// =============================================================================
+// Paddings, margins and gaps. The three smallest steps stay fixed; the rest
+// scale from roughly 75% of their size on mobile up to the full size on desktop.
+// Usage: padding: vars.space(md) vars.space(xl);
+//        margin-left: vars.space(6xl, $negative: true);
+$life-goats-spacing: (
+  3xs: (4, 4),
+  2xs: (8, 8),
+  xs:  (12, 12),
+  sm:  (12, 16),
+  md:  (16, 20),
+  lg:  (20, 24),
+  xl:  (24, 32),
+  2xl: (32, 40),
+  3xl: (36, 48),
+  4xl: (40, 56),
+  5xl: (48, 64),
+  6xl: (56, 80),
+  7xl: (80, 112),
+  8xl: (96, 144),
+);
+
+@function space($size, $negative: false) {
+  @if not map.has-key($life-goats-spacing, $size) {
+    @error "space: unknown size '#{$size}'. Valid: #{map.keys($life-goats-spacing)}.";
+  }
+  $pair: map.get($life-goats-spacing, $size);
+  $value: fluid(list.nth($pair, 1), list.nth($pair, 2));
+  @if $negative {
+    @return calc(-1 * #{$value});
+  }
+  @return $value;
+}
+
+// =============================================================================
+// LAYOUT
+// =============================================================================
+// Fixed sizes other layout depends on, so they don't scale.
+$navbar-height: rem(75);
+$footer-height: rem(180);
 
 // =============================================================================
 // Z-INDEX

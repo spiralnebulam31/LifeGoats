@@ -8,9 +8,9 @@
   width: 100vw;
   height: auto;
   min-height: 100%;
-  margin-bottom: vars.rem(180);
+  margin-bottom: vars.$footer-height;
   overflow: hidden;
-  padding-block: vars.rem(8);
+  padding-block: vars.space(2xs);
   background-color: vars.color(background);
   background-size: cover;
 
@@ -20,38 +20,34 @@
     flex-direction: column;
     justify-content: center;
     margin-inline: auto;
-    padding-bottom: vars.rem(12);
+    padding-bottom: vars.space(xs);
     color: vars.color(primary);
     font-family: vars.font(body);
-    font-size: vars.rem(14);
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(16);
-    }
+    font-size: vars.font-size(sm);
   }
 
   &__altimeters {
     align-items: center;
-    gap: vars.rem(16);
+    gap: vars.space(sm);
     width: 90%;
-    padding-top: vars.rem(112);
+    padding-top: vars.space(7xl);
 
     @include mix.respond-to(lg) {
       flex-direction: row;
-      gap: vars.rem(80);
+      gap: vars.space(6xl);
       width: 80%;
     }
   }
 
   &__info {
     align-items: flex-start;
-    gap: vars.rem(40);
+    gap: vars.space(2xl);
     width: 100%;
-    padding-top: vars.rem(4);
+    padding-top: vars.space(3xs);
 
     @include mix.respond-to(lg) {
-      padding-top: vars.rem(40);
-      padding-bottom: vars.rem(40);
+      padding-top: vars.space(2xl);
+      padding-bottom: vars.space(2xl);
     }
   }
 }

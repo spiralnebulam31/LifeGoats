@@ -3,32 +3,27 @@
 
 .privacy {
   &__body {
-    padding-bottom: vars.rem(40);
+    padding-bottom: vars.space(2xl);
     text-align: start;
   }
 
   &__heading {
-    margin-bottom: vars.rem(8);
+    margin-bottom: vars.space(2xs);
     color: vars.color(primary);
     font-family: vars.font(subtitle);
-    font-size: vars.rem(20);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(lg);
+    line-height: vars.line-height(snug);
     font-weight: 700;
-
-    @include mix.respond-to(lg) {
-      font-size: vars.rem(24);
-      line-height: vars.rem(32);
-    }
   }
 
   &__rights {
-    margin-top: vars.rem(16);
+    margin-top: vars.space(sm);
     list-style: disc inside;
     text-align: left;
   }
 
   &__contact {
-    margin-top: vars.rem(16);
+    margin-top: vars.space(sm);
   }
 
   &__email {

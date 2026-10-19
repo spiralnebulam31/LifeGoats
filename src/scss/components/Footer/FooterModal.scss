@@ -5,28 +5,53 @@
 @use "../../globals/variables" as vars;
 @use "../../globals/mixins" as mix;
 
+// Passed to react-responsive-modal via its `classNames` prop.
+.footer-modal-overlay {
+  background: color-mix(in srgb, vars.color(primary) 70%, transparent);
+}
+
+.footer-modal-panel {
+  width: vars.rem(280);
+  max-width: calc(100vw - #{vars.space(xl)});
+  min-height: vars.rem(400);
+  border-radius: vars.radius(2xl);
+  background: vars.color(background);
+  box-shadow: 0 vars.rem(2) vars.rem(10) rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  @include mix.respond-to(md) {
+    width: vars.rem(400);
+    min-height: vars.rem(450);
+  }
+
+  @include mix.respond-to(lg) {
+    width: vars.rem(500);
+    min-height: vars.rem(350);
+  }
+}
+
 .footer-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-inline: auto;
-  padding: vars.rem(16);
+  padding: vars.space(sm);
 
   &__title {
-    margin-bottom: vars.rem(16);
+    margin-bottom: vars.space(sm);
     color: vars.color(earth);
-    font-size: vars.rem(24);
-    line-height: vars.rem(32);
+    font-size: vars.font-size(xl);
+    line-height: vars.line-height(snug);
     font-weight: 700;
     font-family: vars.font(subtitle);
   }
 
   &__text {
-    margin-bottom: vars.rem(16);
+    margin-bottom: vars.space(sm);
     color: vars.color(primary);
-    font-size: vars.rem(18);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(md);
+    line-height: vars.line-height(normal);
     font-family: vars.font(body);
   }
 
@@ -40,21 +65,17 @@
   }
 
   &__maps {
-    margin-top: vars.rem(20);
+    margin-top: vars.space(md);
     font-family: vars.font(links);
     font-weight: 700;
   }
 
   &__maps-link {
     color: vars.color(secondary);
-    font-size: vars.rem(15);
+    font-size: vars.font-size(sm);
 
     &:hover {
       color: vars.color(tertiary);
-    }
-
-    @include mix.respond-to(md) {
-      font-size: vars.rem(16);
     }
   }
 }

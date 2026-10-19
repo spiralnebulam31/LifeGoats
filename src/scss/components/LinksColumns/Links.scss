@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: vars.rem(24);
+  gap: vars.space(lg);
   width: 30%;
-  padding-inline: vars.rem(64);
+  padding-inline: vars.space(5xl);
   font-family: vars.font(links);
   font-weight: 700;
   text-align: center;
@@ -15,14 +15,14 @@
 
   &__item {
     width: vars.rem(86);
-    font-size: vars.rem(20);
-    line-height: vars.rem(28);
+    font-size: vars.font-size(lg);
+    line-height: vars.line-height(snug);
     font-weight: 500;
     cursor: pointer;
 
     &:hover {
       color: vars.color(tertiary);
-      font-size: vars.rem(24);
+      font-size: vars.font-size(2xl);
     }
   }
 }

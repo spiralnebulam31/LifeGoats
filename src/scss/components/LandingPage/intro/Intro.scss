@@ -11,26 +11,16 @@
   height: auto;
   min-height: 100%;
   overflow: hidden;
-  padding: vars.rem(40);
+  padding: vars.space(2xl);
   background-color: vars.color(background);
   background-size: cover;
   color: vars.color(primary);
   font-family: vars.font(body);
-  font-weight: 700;
-  font-size: vars.rem(20);
-  line-height: vars.rem(40);
-
-  @include mix.respond-to(sm) {
-    font-size: vars.rem(28);
-  }
+  font-weight: 700;  font-size: vars.font-size(2xl);
+  line-height: vars.line-height(relaxed);
 
   @include mix.respond-to(md) {
-    padding: vars.rem(64);
-  }
-
-  @include mix.respond-to(lg) {
-    font-size: vars.rem(34);
-    line-height: vars.rem(60);
+    padding: vars.space(5xl);
   }
 
   &__content {
@@ -43,7 +33,7 @@
     text-align: center;
 
     > * + * {
-      margin-top: vars.rem(48);
+      margin-top: vars.space(3xl);
     }
 
     @include mix.respond-to(lg) {
@@ -52,7 +42,7 @@
   }
 
   &__paragraph {
-    padding-bottom: vars.rem(16);
+    padding-bottom: vars.space(sm);
   }
 
   &__mission {

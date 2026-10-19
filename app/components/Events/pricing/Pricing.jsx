@@ -1,5 +1,7 @@
 'use client';
 
+// Not used at the moment.
+
 import { useState } from 'react';
 import MainPricingCard from './MainPricingCard';
 import AdditionalCostsCard from './AdditionalCostsCard';
