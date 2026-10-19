@@ -90,7 +90,7 @@ const Hero = ( { image, locationTitle, date, p1, p2, slider } ) => {
           animate="animate"
           className="event-hero__slider"
         >
-          <Link href="/#intro" aria-label="Scroll to the introduction">
+          <Link href="/#intro" className="event-hero__scroll-link" aria-label="Scroll to the introduction">
             <motion.div
               variants={heroGoatPrintsVariant}
               className="event-hero__slider-track"

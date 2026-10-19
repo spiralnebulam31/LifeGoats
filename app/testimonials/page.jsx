@@ -65,20 +65,16 @@ const TestimonialsPage = () => {
         </motion.div>
       </motion.div>
 
-      <Link href="/contact">
-        <motion.div
-          className="testimonials-page__cta-row"
-          variants={floatFromDownMainTitle}
-          initial="initial"
-          animate="animate"
-        >
-          <button
-            className="testimonials-page__cta"
-          >
-            Have you been to one of our events? Share your experience with us!
-          </button>
-        </motion.div>
-      </Link>
+      <motion.div
+        className="testimonials-page__cta-row"
+        variants={floatFromDownMainTitle}
+        initial="initial"
+        animate="animate"
+      >
+        <Link href="/contact" className="testimonials-page__cta">
+          Have you been to one of our events? Share your experience with us!
+        </Link>
+      </motion.div>
     </motion.div>
   );
 };

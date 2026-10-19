@@ -138,12 +138,10 @@ const Navbar = () => {
               aria-label={mobile ? "Close menu" : "Open menu"}
               onClick={() => setMobile(!mobile)}
             >
-              <Image
-                src={mobile ? menuClose : menuMountain}
-                alt=""
+              <span
                 className="navbar__toggle-icon"
-                width={85}
-                height={85}
+                style={{ "--icon-src": `url(${(mobile ? menuClose : menuMountain).src})` }}
+                aria-hidden="true"
               />
             </button>
           </div>

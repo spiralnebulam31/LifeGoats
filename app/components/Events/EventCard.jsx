@@ -35,11 +35,11 @@ const EventCard = ({ alt, src, link, title, isClickable = true, isAboveFold = fa
   return (
     <>
       {isClickable ? (
-        <Link href={link}>
+        <Link href={link} className="event-card event-card--link">
           {cardContent}
         </Link>
       ) : (
-        <div className="event-card--static">
+        <div className="event-card event-card--static">
           {cardContent}
         </div>
       )}

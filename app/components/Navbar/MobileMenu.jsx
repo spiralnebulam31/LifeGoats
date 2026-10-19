@@ -53,7 +53,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
             >
               {aboutLinks.map((link) => (
                 <motion.div key={link.id} variants={listItem}>
-                  <Link href={link.link} onClick={() => setMobile(false)}>{link.title}</Link>
+                  <Link href={link.link} className="mobile-menu__sublink" onClick={() => setMobile(false)}>{link.title}</Link>
                 </motion.div>
               ))}
             </motion.div>
@@ -86,7 +86,7 @@ const MobileMenu = ({ active, setActive, setMobile, aboutLinks, eventsLinks }) =
             >
               {eventsLinks.map((link) => (
                 <motion.div key={link.id} variants={listItem}>
-                  <Link href={link.link} onClick={() => setMobile(false)}>{link.title}</Link>
+                  <Link href={link.link} className="mobile-menu__sublink" onClick={() => setMobile(false)}>{link.title}</Link>
                 </motion.div>
               ))}
             </motion.div>

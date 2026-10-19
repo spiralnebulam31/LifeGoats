@@ -156,17 +156,23 @@
     color: vars.color(secondary);
     letter-spacing: 0.025em;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: vars.color(tertiary-dark);
     }
   }
 
   &__link-icon {
+    @include mix.mask-icon(primary);
     flex-shrink: 0;
     width: vars.rem(20);
     height: vars.rem(20);
     margin-right: vars.space(2xs);
-    object-fit: contain;
+  }
+
+  &__link:hover &__link-icon,
+  &__link:focus-visible &__link-icon {
+    background-color: vars.color(tertiary-dark);
   }
 
   &__link-text {

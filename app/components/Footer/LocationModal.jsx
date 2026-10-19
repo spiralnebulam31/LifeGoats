@@ -11,11 +11,11 @@ import "@/src/scss/components/Footer/FooterModal.scss";
 const LocationModal = ({ isOpen, onClose }) => {
   const closeIcon = (
     <>
-      <svg fill="#4a6d37" aria-hidden="true" focusable="false" viewBox="0 0 20 20" width={28} height={28}>
+      <svg fill="none" aria-hidden="true" focusable="false" viewBox="0 0 20 20" width={28} height={28}>
         <path
           fillRule="evenodd"
           d="M4,4 L16,16 M4,16 L16,4"
-          stroke="#4a6d37"
+          stroke="currentColor"
           strokeWidth="3"
           clipRule="evenodd"
         ></path>
@@ -35,6 +35,7 @@ const LocationModal = ({ isOpen, onClose }) => {
       classNames={{
         overlay: "footer-modal-overlay",
         modal: "footer-modal-panel",
+        closeButton: "footer-modal-close",
       }}
       id="locationModal"
       ariaLabelledby="location-modal-title"

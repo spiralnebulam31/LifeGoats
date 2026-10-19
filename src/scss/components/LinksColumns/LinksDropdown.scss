@@ -23,8 +23,14 @@
   }
 
   &__arrow {
+    @include mix.mask-icon(primary);
+    width: vars.rem(20);
     height: vars.rem(20);
-    width: auto;
+  }
+
+  &__toggle:hover &__arrow,
+  &__toggle:focus-visible &__arrow {
+    background-color: vars.color(tertiary-dark);
   }
 
   &__panel {

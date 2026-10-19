@@ -3,24 +3,13 @@
 // Not used at the moment.
 
 import { motion } from "framer-motion";
-import { downArrow, downArrowHover } from "@/src/assets";
-import { useState, useRef } from "react";
+import { downArrow } from "@/src/assets";
+import { useRef } from "react";
 import PropTypes from 'prop-types';
 import "@/src/scss/components/LinksColumns/LinksDropdown.scss";
 import Link from "next/link";
-import Image from "next/image";
 
 const PastLinksDropdown = ({ active, setActive, handleLinkClick, pastLinks }) => {
-
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleMouseEnter = () => {
-      setIsHovered(true);
-    };
-  
-    const handleMouseLeave = () => {
-      setIsHovered(false);
-    };
 
   const isOpen = active === "Past Events";
   const toggleRef = useRef(null);
@@ -48,17 +37,13 @@ const PastLinksDropdown = ({ active, setActive, handleLinkClick, pastLinks }) =>
           aria-expanded={isOpen}
           aria-controls="past-links"
           onClick={() => setActive(active === "Past Events" ? null : "Past Events")}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
           <span className="links-dropdown__label">
             <span>Past Events</span>
-            <Image
-              src={isHovered ? downArrowHover : downArrow}
-              alt=""
+            <span
               className="links-dropdown__arrow"
-              width={20}
-              height={20}
+              style={{ "--icon-src": `url(${downArrow.src})` }}
+              aria-hidden="true"
             />
           </span>
         </button>

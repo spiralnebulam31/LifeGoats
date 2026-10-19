@@ -29,6 +29,16 @@
   }
 }
 
+.footer-modal-close {
+  color: vars.color(tertiary-dark);
+  @include mix.icon-hover(1.2);
+
+  &:hover,
+  &:focus-visible {
+    color: vars.color(earth);
+  }
+}
+
 .footer-modal {
   display: flex;
   flex-direction: column;

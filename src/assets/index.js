@@ -47,22 +47,15 @@ import priceIcon from './pricing/price.svg';
 import priceIcon2 from './pricing/price2.svg';
 
 import email from './contact/email.svg';
-import emailHover from './contact/email-hover.svg';
 import email2 from './contact/email.svg';
-import email2Hover from './contact/email-hover.svg';
 import phone from './contact/phone.svg';
-import phoneHover from './contact/phone-hover.svg';
 import instagramIcon from './contact/instagram.svg';
-import instagramIconHover from './contact/instagram-hover.svg';
 import transparentMountainBG2 from './contact/transparent-mountain-bg-2.webp';
 
 import facebook from './social/facebook.svg';
-import facebookHover from './social/facebook-hover.svg';
 import instagram from './social/instagram.svg';
-import instagramHover from './social/instagram-hover.svg';
 
 import downArrow from './navigation/down-arrow.svg';
-import downArrowHover from './navigation/down-arrow-hover.svg';
 
 import neededItemsBG from './needed-items-bg.webp';
 import historyBG from './history-bg.webp';
@@ -183,19 +176,12 @@ export {
     priceIcon,
     priceIcon2,
     email,
-    emailHover,
     email2,
-    email2Hover,
     phone,
-    phoneHover,
     instagramIcon,
-    instagramIconHover,
     facebook,
-    facebookHover,
     instagram,
-    instagramHover,
     downArrow,
-    downArrowHover,
     neededItemsBG,
     historyBG,
     safetyConsiderationsBG,
