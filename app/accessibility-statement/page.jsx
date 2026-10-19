@@ -88,12 +88,12 @@ const AccessibilityStatementPage = () => {
               across the image.
             </li>
             <li>
-              The event photo galleries use a third-party gallery component
-              that hasn&apos;t yet been fully tested with screen readers.
+              Photos in the event galleries don&apos;t have individual
+              descriptions yet.
             </li>
             <li>
-              The December 2024 newsletter page is an archived copy of an email,
-              so its layout is simpler than the rest of the site.
+              Archived copies of our past newsletters use a simpler email
+              layout and may not meet every criterion.
             </li>
           </ul>
           <br />
@@ -121,12 +121,12 @@ const AccessibilityStatementPage = () => {
             If something on this site doesn&apos;t work for you, or you need
             any content in a different format, please email{" "}
             <a
-              href="mailto:anastasiaadamoudi@gmail.com?subject=Life%20Goats%20accessibility%20feedback"
+              href="mailto:lifegoatsconnect@gmail.com?subject=Accessibility%20feedback"
               className="policy__link"
             >
-              anastasiaadamoudi@gmail.com
+              lifegoatsconnect@gmail.com
             </a>
-            . We aim to reply within 5 working days.
+            .
           </p>
 
           <p className="policy__meta">
