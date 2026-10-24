@@ -9,14 +9,20 @@ import {
   floatFromDownPreTitle,
   floatFromDownMainTitle,
 } from "../../../../motion/home-sections";
-import { Hero } from "../../../components/Events";
+import { Hero, EventOverview, Details } from "../../../components/Events";
+import MapDisplay from "../../../components/Location/MapDisplay";
+import Pricing from "../../../components/Events/pricing/Pricing";
+import { overviewDataMay24 } from "../../../../data/overview";
 import {
   summer2027Hero,
   summer2027Intro,
-  summer2027Facts,
+  summer2027Details,
+  summer2027DetailsImages,
   summer2027Plans,
   summer2027Practical,
   summer2027Photos,
+  summer2027Pricing,
+  summer2027Contact,
 } from "../../../../data/mt-olympus-summer-2027";
 import "@/src/scss/pages/Landing.scss";
 import "@/src/scss/pages/events/UpcomingRetreat.scss";
@@ -138,7 +144,7 @@ const MtOlympusSummer2027 = () => {
 
       {/* Welcome */}
       <section className="retreat retreat--to-sky" aria-labelledby="retreat-welcome">
-        <SectionHeader pretitle="Summer 2027" title="Welcome" id="retreat-welcome" />
+        <SectionHeader pretitle="A welcome" title="Note" id="retreat-welcome" />
         <div className="retreat-intro">
           <motion.div
             className="retreat-intro__media"
@@ -161,8 +167,17 @@ const MtOlympusSummer2027 = () => {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {summer2027Intro.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+            {summer2027Intro.paragraphs.map((paragraph, index) => (
+              <div key={paragraph}>
+                <p>{paragraph}</p>
+                {index === 0 && (
+                  <p className="retreat-intro__link-row">
+                    <Link href={summer2027Intro.communityLink.href} className="retreat-intro__link">
+                      {summer2027Intro.communityLink.text}
+                    </Link>
+                  </p>
+                )}
+              </div>
             ))}
             <div className="retreat-intro__highlight">
               <h3 className="retreat-intro__highlight-title">{summer2027Intro.highlight.title}</h3>
@@ -172,26 +187,22 @@ const MtOlympusSummer2027 = () => {
         </div>
       </section>
 
+      {/* What to expect */}
+      <EventOverview
+        title="A retreat from us, for us."
+        mainTitle="What to expect"
+        overviewData={overviewDataMay24}
+      />
+
       {/* At a glance */}
-      <section className="retreat retreat--from-sky" aria-labelledby="retreat-glance">
-        <SectionHeader pretitle="The retreat" title="At a glance" id="retreat-glance" />
-        <dl className="retreat-facts">
-          {summer2027Facts.map((fact) => (
-            <motion.div
-              key={fact.label}
-              className="retreat-facts__item"
-              variants={fadeIn}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-            >
-              <dt className="retreat-facts__label">{fact.label}</dt>
-              <dd className="retreat-facts__value">{fact.value}</dd>
-              <dd className="retreat-facts__note">{fact.note}</dd>
-            </motion.div>
-          ))}
-        </dl>
-      </section>
+      <Details
+        title="The retreat"
+        mainTitle="At a glance"
+        details={summer2027Details}
+        images={summer2027DetailsImages}
+        bgColor="plain"
+        titleColor="blue"
+      />
 
       {/* Plans */}
       <section className="retreat" aria-labelledby="retreat-plans">
@@ -222,13 +233,37 @@ const MtOlympusSummer2027 = () => {
             >
               <h3 className="retreat-practical__title">{item.title}</h3>
               <p>{item.text}</p>
+              {item.map && (
+                <div className="retreat-practical__map">
+                  <MapDisplay
+                    locationData={item.map}
+                    zoom={11}
+                    width="100%"
+                    widthMd="100%"
+                    widthLg="100%"
+                    widthXl="100%"
+                    height="300px"
+                    heightMd="300px"
+                    heightLg="300px"
+                    heightXl="300px"
+                  />
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
       </section>
 
+      {/* Pricing */}
+      <Pricing
+        pricingData={summer2027Pricing.tiers}
+        additionalTitle={summer2027Pricing.includedTitle}
+        additionalCosts={summer2027Pricing.included}
+        note={summer2027Pricing.note}
+      />
+
       {/* Photos */}
-      <section className="retreat retreat--from-sky" aria-labelledby="retreat-photos">
+      <section className="retreat" aria-labelledby="retreat-photos">
         <SectionHeader pretitle="From our past retreats" title="A taste of the mountain" id="retreat-photos" />
         <ul className="retreat-photos">
           {summer2027Photos.map((photo) => (
@@ -249,8 +284,21 @@ const MtOlympusSummer2027 = () => {
         <SectionHeader pretitle="Interested?" title="Join us" id="retreat-contact" />
         <p className="retreat__lead">
           If you&apos;d like to join, or have any questions, we&apos;d love to
-          hear from you. You can also find out more about Life Goats on the
-          rest of our website.
+          hear from you. The quickest way to reach us is to{" "}
+          <a
+            href={`https://wa.me/${summer2027Contact.whatsappNumber}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="retreat__link"
+          >
+            message {summer2027Contact.name} on WhatsApp
+            <span className="visually-hidden"> (opens in a new tab)</span>
+          </a>{" "}
+          ({summer2027Contact.displayNumber}).
+        </p>
+        <p className="retreat__lead retreat__lead--small">
+          You can also use our contact form or find out more about Life Goats
+          on the rest of our website.
         </p>
         <div className="retreat__actions">
           <Link href="/contact" className="retreat__cta">Get in touch</Link>

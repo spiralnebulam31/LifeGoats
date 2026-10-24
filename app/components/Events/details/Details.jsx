@@ -97,8 +97,7 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
             initial="initial"
             animate={oneInView ? "animate" : "initial"}
             ref={ref1}
-            width={500}
-            height={500}
+            sizes="(min-width: 1200px) 25vw, 50vw"
           />
         </motion.div>
         <motion.div className="details__cell details__cell--2">
@@ -110,8 +109,7 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
             initial="initial"
             animate={twoInView ? "animate" : "initial"}
             ref={ref2}
-            width={500}
-            height={500}
+            sizes="(min-width: 1200px) 25vw, 50vw"
           />
         </motion.div>
         <motion.div className="details__cell details__cell--3">
@@ -123,8 +121,7 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
             initial="initial"
             animate={threeInView ? "animate" : "initial"}
             ref={ref3}
-            width={500}
-            height={500}
+            sizes="(min-width: 1200px) 25vw, 50vw"
           />
         </motion.div>
         <motion.div className="details__cell details__cell--4">
@@ -136,8 +133,7 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
             initial="initial"
             animate={fourInView ? "animate" : "initial"}
             ref={ref4}
-            width={500}
-            height={500}
+            sizes="(min-width: 1200px) 25vw, 50vw"
           />
         </motion.div>
         <motion.div className="details__cell details__cell--5">
@@ -152,8 +148,7 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
             initial="initial"
             animate={fiveInView ? "animate" : "initial"}
             ref={ref5}
-            width={500}
-            height={500}
+            sizes="(min-width: 1200px) 25vw, 50vw"
           />
         </motion.div>
         <motion.div className="details__cell details__cell--7">
@@ -165,8 +160,7 @@ const Details = ( { title, mainTitle, details, images, bgColor, titleColor } ) =
             initial="initial"
             animate={sixInView ? "animate" : "initial"}
             ref={ref6}
-            width={500}
-            height={500}
+            sizes="(min-width: 1200px) 25vw, 50vw"
           />
         </motion.div>
       </motion.div>
